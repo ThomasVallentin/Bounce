@@ -26,5 +26,8 @@
     <ClInclude Include="sources\vector3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="sources\ray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

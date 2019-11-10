@@ -1,33 +1,12 @@
 #include "vector3.h"
 
+// == Constructors ======================================================================
 
-vector3 operator+(const vector3& vec1, const vector3 vec2) {
-	return vector3(vec1.v[0] + vec2.v[0], vec1.v[1] + vec2.v[1], vec1.v[2] + vec2.v[2]);
-}
+vector3::vector3(float v0, float v1, float v2) { v[0]=v0; v[1]=v1; v[2]=v2; }
 
-vector3 operator-(const vector3& vec1, const vector3 vec2) {
-	return vector3(vec1.v[0] - vec2.v[0], vec1.v[1] - vec2.v[1], vec1.v[2] - vec2.v[2]);
-}
+vector3::vector3(const vector3& vec) { v[0]=vec.v[0] ; v[1]=vec.v[1] ; v[2]=vec.v[2]; }
 
-vector3 operator*(const vector3& vec1, const vector3 vec2) {
-	return vector3(vec1.v[0] * vec2.v[0], vec1.v[1] * vec2.v[1], vec1.v[2] * vec2.v[2]);
-}
-
-vector3 operator/(const vector3& vec1, const vector3 vec2) {
-	return vector3(vec1.v[0] / vec2.v[0], vec1.v[1] / vec2.v[1], vec1.v[2] / vec2.v[2]);
-}
-
-vector3 operator*(const vector3& vec, float f) {
-	return vector3(vec.v[0] * f, vec.v[1] * f, vec.v[2] * f);
-}
-
-vector3 operator*(float f, const vector3& vec) {
-	return vector3(vec.v[0] * f, vec.v[1] * f, vec.v[2] * f);
-}
-
-vector3 operator/(const vector3& vec, float f) {
-	return vector3(vec.v[0] / f, vec.v[1] / f, vec.v[2] / f);
-}
+// == Self Operators ====================================================================
 
 vector3& vector3::operator+=(const vector3& vec2)
 {
@@ -77,6 +56,8 @@ vector3& vector3::operator/=(const float f)
 	return *this;
 }
 
+// == Math Methods ======================================================================
+
 void vector3::normalize()
 {
 	float len = length();
@@ -88,14 +69,4 @@ void vector3::normalize()
 vector3 vector3::unitVector()
 {
 	return *this / length();
-}
-
-float dot(const vector3& vec1, const vector3& vec2) {
-	return vec1.v[0]*vec2.v[0] + vec1.v[1]*vec2.v[1] + vec1.v[2]*vec2.v[2];
-}
-
-vector3 cross(const vector3& vec1, const vector3& vec2) {
-	return vector3(vec1.v[1]*vec2.v[2] - vec1.v[2]*vec2.v[1],
-				   vec1.v[2]*vec2.v[0] - vec1.v[0]*vec2.v[2], 
-				   vec1.v[0]*vec2.v[1] - vec1.v[1]*vec2.v[0]);
 }
