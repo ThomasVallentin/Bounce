@@ -124,6 +124,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="sources\main.cpp" />
+    <ClCompile Include="sources\vector3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="sources\vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

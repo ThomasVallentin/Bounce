@@ -1,12 +1,13 @@
 #include <iostream>
 #include <fstream>
+#include "vector3.h"
 
 using namespace std;
 
 int main() {
 	cout << "Hello World, Bounce render !" << endl;
-	int xMax = 100;
-	int yMax = 50;
+	int xMax = 200;
+	int yMax = 100;
 
 	ofstream imageStream("D:/REPOSITORIES/Bounce/main/imageOutputs/test_gradient.ppm");
 
