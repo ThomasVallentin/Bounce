@@ -1,12 +1,13 @@
 #ifndef RAYH
 #define RAYH
+
 #include "vector3.h"
 
-class ray
+class Ray
 {
 public:
-	ray() {}
-	ray(const vector3& o, const vector3& d) { m_origin = o; m_direction = d; }
+	Ray() {}
+	Ray(const vector3& o, const vector3& d) { m_origin = o; m_direction = d; }
 
 	vector3 origin() const { return m_origin; }
 	vector3 direction() const { return m_direction; }

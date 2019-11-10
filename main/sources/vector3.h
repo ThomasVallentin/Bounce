@@ -1,7 +1,6 @@
 #ifndef VECTOR3H
 #define VECTOR3H
 
-#include <iostream>
 #include <math.h>
 
 // +====================================================================================+
@@ -19,7 +18,7 @@
 
 class vector3 {
 public:
-	vector3() {}
+	vector3() { v[0] = 0.0; v[1] = 0.0; v[2] = 0.0;}
 	vector3(float v0, float v1, float v2);
 	vector3(const vector3& vec);
 
@@ -53,46 +52,16 @@ private:
 	float v[3];
 };
 
-// == Utils Functions ===================================================================
+extern float dot(const vector3& vec1, const vector3& vec2);
+extern vector3 cross(const vector3& vec1, const vector3& vec2);
 
-float dot(const vector3& vec1, const vector3& vec2) {
-	return vec1.x() * vec2.x() + vec1.y() * vec2.y() + vec1.z() * vec2.z();
-}
+extern vector3 operator+(const vector3& vec1, const vector3 vec2);
+extern vector3 operator-(const vector3& vec1, const vector3 vec2);
+extern vector3 operator*(const vector3& vec1, const vector3 vec2);
+extern vector3 operator/(const vector3& vec1, const vector3 vec2);
 
-vector3 cross(const vector3& vec1, const vector3& vec2) {
-	return vector3(vec1.y() * vec2.z() - vec1.z() * vec2.y(),
-		vec1.z() * vec2.x() - vec1.x() * vec2.z(),
-		vec1.x() * vec2.y() - vec1.y() * vec2.x());
-}
-
-// == General Operators =================================================================
-
-vector3 operator+(const vector3& vec1, const vector3 vec2) {
-	return vector3(vec1.x() + vec2.x(), vec1.y() + vec2.y(), vec1.z() + vec2.z());
-}
-
-vector3 operator-(const vector3& vec1, const vector3 vec2) {
-	return vector3(vec1.x() - vec2.x(), vec1.y() - vec2.y(), vec1.z() - vec2.z());
-}
-
-vector3 operator*(const vector3& vec1, const vector3 vec2) {
-	return vector3(vec1.x() * vec2.x(), vec1.y() * vec2.y(), vec1.z() * vec2.z());
-}
-
-vector3 operator/(const vector3& vec1, const vector3 vec2) {
-	return vector3(vec1.x() / vec2.x(), vec1.y() / vec2.y(), vec1.z() / vec2.z());
-}
-
-vector3 operator*(const vector3& vec, float f) {
-	return vector3(vec.x() * f, vec.y() * f, vec.z() * f);
-}
-
-vector3 operator*(float f, const vector3& vec) {
-	return vector3(vec.x() * f, vec.y() * f, vec.z() * f);
-}
-
-vector3 operator/(const vector3& vec, float f) {
-	return vector3(vec.x() / f, vec.y() / f, vec.z() / f);
-}
+extern vector3 operator*(const vector3& vec, float f);
+extern vector3 operator*(float f, const vector3& vec);
+extern vector3 operator/(const vector3& vec, float f);
 
 #endif

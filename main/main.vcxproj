@@ -124,10 +124,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="sources\main.cpp" />
+    <ClCompile Include="sources\RayTracer.cpp" />
+    <ClCompile Include="sources\Sphere.cpp" />
     <ClCompile Include="sources\vector3.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sources\ray.h" />
+    <ClInclude Include="sources\Ray.h" />
+    <ClInclude Include="sources\RayTracer.h" />
+    <ClInclude Include="sources\Sphere.h" />
     <ClInclude Include="sources\vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
