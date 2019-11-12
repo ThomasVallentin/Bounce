@@ -7,7 +7,7 @@ class Ray
 {
 public:
 	Ray() {}
-	Ray(const vector3& o, const vector3& d) { m_origin = o; m_direction = d; }
+	Ray(const vector3& o, const vector3& d) { m_origin = o; m_direction = d.unitVector(); }
 
 	vector3 origin() const { return m_origin; }
 	vector3 direction() const { return m_direction; }

@@ -2,6 +2,9 @@
 #define VECTOR3H
 
 #include <math.h>
+#include <iostream>
+
+using namespace std;
 
 // +====================================================================================+
 // | Vector3 :                                                                          | 
@@ -41,14 +44,14 @@ public:
 	vector3& operator*=(const float f);
 	vector3& operator/=(const float f);
 
-	float squaredLength() {
+	float squaredLength() const {
 		return v[0] * v[0] + v[1] * v[1] + v[2] * v[2]; }
-	float length() {
+	float length() const {
 		return sqrt(this->squaredLength()); }
 	void normalize();
-	vector3 unitVector();
+	vector3 unitVector() const;
 
-private:
+// private:
 	float v[3];
 };
 
@@ -63,5 +66,9 @@ extern vector3 operator/(const vector3& vec1, const vector3 vec2);
 extern vector3 operator*(const vector3& vec, float f);
 extern vector3 operator*(float f, const vector3& vec);
 extern vector3 operator/(const vector3& vec, float f);
+
+extern istream& operator>>(istream& is, vector3& vec);
+extern ostream& operator<<(ostream& os, const vector3& vec);
+
 
 #endif

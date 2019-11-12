@@ -21,7 +21,8 @@ public:
 	int height() { return m_height; }
 	void setHeight(int y) { m_height = y; }
 
-	void addSphere(const Sphere& sph) { m_objectList[m_objectList.size()] = sph; }
+	void addSphere(const Sphere& sph) { m_objectList.push_back(sph); }
+	vector<Sphere> ls() { return m_objectList; }
 	bool trace();
 
 private:

@@ -37,12 +37,23 @@ bool RayTracer::trace()
 			Ray ray(cameraOrigin, cameraLowerLeftCorner + u * cameraHorizontal + v * cameraVertical);
 			
 			vector3 outColor = unitToColor(defaultColor(ray));
-			/*
-			for (int k; k < m_objectlist.size(); k++) {
-				if m_objectList[k].isHit(ray)
+			
+			for (int k = 0; k < m_objectList.size(); k++) {
+				Sphere sph = m_objectList[k];
+				float t = sph.isHit(ray);
+				if (t > 0.0) {
+					// ray hits object in a positive direction
+					vector3 hitPoint = ray.pointAtParameter(t);
+
+					vector3 normal = hitPoint - sph.center();
+					normal.normalize();
+
+					outColor = unitToColor(0.5 * vector3(normal.x() + 1.0, normal.y() + 1.0, normal.z() + 1.0));
+					//outColor = unitToColor(normal + vector3(1.0, 1.0, 1.0));// remapping vector from -1<v<1 to 0<v<1
+					//outColor = sph.color();
+				}
 			}
-			*/
-				   
+
 			outputStream << int(outColor.r()) << " " << int(outColor.g()) << " " << int(outColor.b()) << "\n";
 
 		}

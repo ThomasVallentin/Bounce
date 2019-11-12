@@ -30,6 +30,17 @@ vector3 operator/(const vector3& vec, float f) {
 	return vector3(vec.x() / f, vec.y() / f, vec.z() / f);
 }
 
+istream& operator>>(istream& is, vector3& vec)
+{
+	is >> vec.v[0] >> vec.v[1] >> vec.v[2];
+	return is;
+}
+
+ostream& operator<<(ostream& os, const vector3& vec)
+{
+	os << vec.v[0] << " " << vec.v[1] << " " << vec.v[2];
+	return os;
+}
 
 // == Constructors ======================================================================
 
@@ -107,7 +118,5 @@ void vector3::normalize()
 	v[2] /= len;
 }
 
-vector3 vector3::unitVector()
-{
-	return *this / length();
-}
+vector3 vector3::unitVector() const {
+	return vector3(v[0], v[1], v[2]) / length(); }
