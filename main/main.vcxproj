@@ -123,18 +123,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="sources\main.cpp" />
-    <ClCompile Include="sources\RayTracer.cpp" />
-    <ClCompile Include="sources\Sphere.cpp" />
-    <ClCompile Include="sources\vector3.cpp" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sources\Ray.h" />
-    <ClInclude Include="sources\RayTracer.h" />
-    <ClInclude Include="sources\Sphere.h" />
-    <ClInclude Include="sources\vector3.h" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="exrIO.cpp" />
+    <ClCompile Include="HitableComposite.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="RayTracer.cpp" />
+    <ClCompile Include="Sphere.cpp" />
+    <ClCompile Include="vector3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Hitable.h" />
+    <ClInclude Include="HitableComposite.h" />
+    <ClInclude Include="mathUtils.h" />
+    <ClInclude Include="Ray.h" />
+    <ClInclude Include="RayTracer.h" />
+    <ClInclude Include="Sphere.h" />
+    <ClInclude Include="vector3.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
+    <Import Project="packages\boost.1.71.0.0\build\boost.targets" Condition="Exists('packages\boost.1.71.0.0\build\boost.targets')" />
+    <Import Project="packages\openexr-msvc-x64.2.3.0.8788\build\native\OpenEXR-msvc-x64.targets" Condition="Exists('packages\openexr-msvc-x64.2.3.0.8788\build\native\OpenEXR-msvc-x64.targets')" />
   </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\boost.1.71.0.0\build\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\boost.1.71.0.0\build\boost.targets'))" />
+    <Error Condition="!Exists('packages\openexr-msvc-x64.2.3.0.8788\build\native\OpenEXR-msvc-x64.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\openexr-msvc-x64.2.3.0.8788\build\native\OpenEXR-msvc-x64.targets'))" />
+  </Target>
 </Project>

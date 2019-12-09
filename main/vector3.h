@@ -1,6 +1,5 @@
 #ifndef VECTOR3H
 #define VECTOR3H
-
 #include <math.h>
 #include <iostream>
 
@@ -20,6 +19,7 @@ using namespace std;
 // +====================================================================================+
 
 class vector3 {
+
 public:
 	vector3() { v[0] = 0.0; v[1] = 0.0; v[2] = 0.0;}
 	vector3(float v0, float v1, float v2);
@@ -36,7 +36,7 @@ public:
 	vector3 operator-() { return vector3(-v[0], -v[1], -v[2]); }
 	float operator[](int i) const { return v[i]; }
 	float& operator[](int i) { return v[i]; }
-
+	
 	vector3& operator+=(const vector3 &vec2);
 	vector3& operator-=(const vector3 &vec2);
 	vector3& operator*=(const vector3 &vec2);

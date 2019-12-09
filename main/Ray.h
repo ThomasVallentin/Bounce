@@ -3,8 +3,8 @@
 
 #include "vector3.h"
 
-class Ray
-{
+class Ray {
+
 public:
 	Ray() {}
 	Ray(const vector3& o, const vector3& d) { m_origin = o; m_direction = d.unitVector(); }
@@ -16,6 +16,12 @@ public:
 private:
 	vector3 m_origin;
 	vector3 m_direction;
+};
+
+struct HitData {
+	double t;
+	vector3 position;
+	vector3 normal;
 };
 
 #endif
