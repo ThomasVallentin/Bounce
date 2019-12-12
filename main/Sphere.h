@@ -7,8 +7,9 @@ class Sphere : public Hitable {
 
 public:
 	Sphere() { m_center = vector3(0.0, 0.0, 0.0); m_radius = 1.0; };
-	Sphere(const vector3& pos, float rad) { m_center = pos; m_radius = rad; }
-	Sphere(float x, float y, float z, float rad) { m_center = vector3(x,y,z); m_radius = rad; }
+	Sphere(const vector3& pos, float rad, string n) { m_center = pos; m_radius = rad; name = n; }
+	Sphere(float x, float y, float z, float rad, string n) { m_center = vector3(x, y, z); m_radius = rad; name = n; }
+	
 
 	vector3 center() const { return m_center; }
 	float radius() const { return m_radius; }

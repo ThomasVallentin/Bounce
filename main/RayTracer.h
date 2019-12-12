@@ -11,9 +11,9 @@ class RayTracer {
 
 public:
 	RayTracer() { 
-		m_width = 400; m_height = 200; m_near_clip = 0.001; m_far_clip = 100000; m_samples = 1; 
+		m_width = 400; m_height = 200; m_near_clip = 0.0001; m_far_clip = 100000; m_samples = 100; 
 	}
-	RayTracer(float x, float y, int near_clip=0.001, int far_clip =10000, int sample=100) {
+	RayTracer(float x, float y, int near_clip=0.0001, int far_clip =10000, int sample=100) {
 		m_width = x; m_height = y;  m_near_clip = near_clip; m_far_clip = far_clip; m_samples = sample; 
 	}
 
@@ -37,7 +37,11 @@ public:
 
 	void addHitable( Hitable* h) { m_world.addHitable(h); }
 	HitableComposite ls() { return m_world; }
+	
 	bool trace(const Camera& camera);
+	Ray generatePrimaryRay(const Camera& camera, float u, float v) const;
+	Ray generateBouncingRay(const HitData& hitdata) const;
+	vector3 computeRay(const Ray& ray) const;
 
 private:
 	float m_width;
@@ -52,5 +56,6 @@ private:
 
 	HitableComposite m_world;
 };
+
 
 #endif
