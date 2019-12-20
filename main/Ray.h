@@ -3,6 +3,9 @@
 
 #include "vector3.h"
 
+// juste here to be able to create a pointer without creating a loop between ray and shader headers
+class Shader;
+
 class Ray {
 
 public:
@@ -22,6 +25,7 @@ struct HitData {
 	double t;
 	vector3 position;
 	vector3 normal;
+	Shader* shader_ptr;
 };
 
 #endif

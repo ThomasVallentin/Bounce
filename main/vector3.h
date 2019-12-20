@@ -57,6 +57,7 @@ public:
 
 extern float dot(const vector3& vec1, const vector3& vec2);
 extern vector3 cross(const vector3& vec1, const vector3& vec2);
+extern vector3 reflectVector(const vector3& v, const vector3& n);
 
 extern vector3 operator+(const vector3& vec1, const vector3 vec2);
 extern vector3 operator-(const vector3& vec1, const vector3 vec2);

@@ -2,7 +2,7 @@
 #include <iostream>
 
 #include "RayTracer.h"
-#include "mathUtils.h"
+
 
 vector3 defaultColor(const Ray& ray) {
 	vector3 unit_direction = ray.direction().unitVector();
@@ -40,9 +40,9 @@ bool RayTracer::trace(const Camera& camera)
 				float u = float(x + urand) / m_width;
 				float v = float(y + vrand) / m_height;
 				// cout << u << " " << v << endl;
-				Ray ray = generatePrimaryRay(camera, u, v);
+				Ray ray = generateRay(camera, u, v);
 				
-				outColor += computeRay(ray);
+				outColor += computeRay(ray, 0);
 			}
 			// Dividing the total of light received by all the sampled rays by the amount of samples
 			outColor /= float(m_samples);
@@ -66,40 +66,32 @@ bool RayTracer::trace(const Camera& camera)
 }
 
 
-Ray RayTracer::generatePrimaryRay(const Camera& camera, float u, float v) const
+Ray RayTracer::generateRay(const Camera& camera, float u, float v) const
 {
 	return Ray(camera.position, camera.lower_left_corner + u * camera.horizontal + v * camera.vertical);
 }
 
 
-Ray RayTracer::generateBouncingRay(const HitData& hitdata) const {
-	vector3 point;
-	do {
-		point = 2.0 * vector3(randomFlt(), randomFlt(), randomFlt()) - vector3(1, 1, 1);
-	} while (point.squaredLength() >= 1.0);
-	
-	vector3 target = hitdata.normal + point;
-	
-	Ray ray(hitdata.position, target);
-
-	return Ray(hitdata.position, target);
-}
-
-
-vector3 RayTracer::computeRay(const Ray& ray) const
+vector3 RayTracer::computeRay(const Ray& ray, int depth) const
 {
-	HitData hit;
-	vector3 outColor;
+	HitData hitdata;
+	Ray bouncingRay;
+	vector3 absorbedColor;
 
-	if (m_world.isHit(ray, m_near_clip, m_far_clip, hit))
+	if (m_world.isHit(ray, m_near_clip, m_far_clip, hitdata))
 	{
-		// Recursively sending rays each time the ray hits an object.
-		outColor = 0.5 * computeRay(generateBouncingRay(hit));
-
+		if (depth < m_max_depth && hitdata.shader_ptr->scatter(ray, hitdata, absorbedColor, bouncingRay)) {
+			// Recursively sending rays each time the ray hits an object.
+			return absorbedColor*computeRay(bouncingRay, depth + 1);
+		}
+		else {
+			return vector3(0, 0, 0);
+		}
+		
 	}
 	else {
-		outColor = defaultColor(ray);
+		// hit nothing -> skydome color
+		return defaultColor(ray);
 	}
 
-	return outColor;
 }

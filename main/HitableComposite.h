@@ -1,7 +1,7 @@
 #ifndef HITABLECOMPOSITEH
 #define HITABLECOMPOSITEH
 
-#include "Sphere.h"
+#include "Hitable.h"
 #include <vector>
 
 class HitableComposite : public Hitable {

@@ -4,10 +4,9 @@
 #include <math.h>
 #include <stdlib.h>
 
-float randomFlt(float a = 0, float b = 1) {
-	float random = float(rand()) / float(RAND_MAX);
-	float diff = b - a;
-	return random * diff + a;
-}
+#include "vector3.h"
+
+extern float randomFlt(float a=0, float b=1);
+extern vector3 randPointInUnitSphere();
 
 #endif

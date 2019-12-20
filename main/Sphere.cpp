@@ -22,6 +22,7 @@ bool Sphere::isHit(const Ray& ray, float tmin, float tmax, HitData& hit) const
 			hit.position = ray.pointAtParameter(t);
 			hit.normal = (hit.position - center());
 			hit.normal.normalize();
+			hit.shader_ptr = shader_ptr;
 			return true;
 		}
 
@@ -31,6 +32,7 @@ bool Sphere::isHit(const Ray& ray, float tmin, float tmax, HitData& hit) const
 			hit.t = t;
 			hit.position = ray.pointAtParameter(t);
 			hit.normal = (hit.position - center()) / radius();
+			hit.shader_ptr = shader_ptr;
 			return true;
 		}
 	}
