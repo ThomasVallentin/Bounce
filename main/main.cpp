@@ -16,12 +16,12 @@ int main() {
 	int samples = 100;
 
 	RayTracer tracer(output_width, output_height, near_clip, far_clip, samples);
-	tracer.setOutpath("D:/REPO/Bounce/main/imageOutputs/output.ppm");
+	tracer.setOutpath("D:\\REPOSITORIES\\Bounce\\main\\imageOutputs\\output.ppm");
 
 	// Shaders
-	Shader* groundShd = new Lambert(0.7, 0.6, 0.2);
-	Shader* shinyRedShd = new SurfaceShader(0.7, 0.2, 0.2, 0.15);
-	Shader* roughBlueShd = new SurfaceShader(0.2, 0.2, 0.8, 0.9);
+	Shader* groundShd = new Lambert(0.8, 0.75, 0.1);
+	Shader* shinyRedShd = new SurfaceShader(1, 0.1, 0.1, .15);
+	Shader* roughBlueShd = new SurfaceShader(0.1, 0.1, .9, 0.9);
 
 	// Filling the tracer with the objects
 	tracer.addHitable(new Sphere(vector3(0.0, 0.0, -1.0), 0.5, "Sphere1", shinyRedShd));

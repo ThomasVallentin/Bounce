@@ -35,6 +35,9 @@ public:
 
 	int samples() { return m_samples; };
 	void setSamples(int samples) { m_samples = samples; };
+	
+	int gamma() { return m_gamma; };
+	void setGamma(float gamma) { m_gamma = gamma; };
 
 	void addHitable( Hitable* h) { m_world.addHitable(h); }
 	HitableComposite ls() { return m_world; }
@@ -54,6 +57,8 @@ private:
 
 	int m_samples;
 	int m_max_depth;
+
+	float m_gamma;
 
 	string m_outpath;
 

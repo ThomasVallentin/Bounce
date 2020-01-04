@@ -14,11 +14,18 @@ vector3 unitToColor(const vector3& vec) {
 	return vector3(vec.r() * 255.9, vec.g() * 255.9, vec.b() * 255.9);
 }
 
+vector3 applyGamma(const vector3& color, float gamma) {
+	float factor = 1 / gamma;
+
+	return vector3(pow(color[0], factor), pow(color[1], factor), pow(color[2], factor));
+}
+
 bool RayTracer::trace(const Camera& camera)
 {
 	cout << "Tracing scene composed of " << m_world.list().size() << " hitables..." << endl;
 
 	// opening file stream
+	cout << m_outpath << endl;
 	ofstream outputStream(m_outpath);
 
 	// Write ppm format data
@@ -26,7 +33,7 @@ bool RayTracer::trace(const Camera& camera)
 
 	// Progress bar
 	int progress_bar = 0;
-
+	bool print = true;
 	// TODO: on inverse l'ecriture des pixels pour le ppm, 
 	//       c'est pas propre, il faut trouver une solution
 	for (int y = m_height - 1; y >= 0; y--) {
@@ -46,10 +53,22 @@ bool RayTracer::trace(const Camera& camera)
 			}
 			// Dividing the total of light received by all the sampled rays by the amount of samples
 			outColor /= float(m_samples);
+			
+			if (print == true) {
+				cout << " r : " << outColor.r() << " g : " << outColor.g() << " b : " << outColor.b() << endl;
+			}
+			
+			outColor = vector3(sqrt(outColor[0]), sqrt(outColor[1]), sqrt(outColor[2]));
+
+			if (print == true) {
+				cout << " r : " << outColor.r() << " g : " << outColor.g() << " b : " << outColor.b() << endl;
+			}
+
+			print = false;
 
 			// 0.0 to 1.0 -> 0 to 255
 			outColor = unitToColor(outColor);
-
+			
 			outputStream << int(outColor.r()) << " " << int(outColor.g()) << " " << int(outColor.b()) << "\n";
 	
 		}
