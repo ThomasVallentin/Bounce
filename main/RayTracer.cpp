@@ -80,6 +80,10 @@ vector3 RayTracer::computeRay(const Ray& ray, int depth) const
 
 	if (m_world.isHit(ray, m_near_clip, m_far_clip, hitdata))
 	{
+		if (hitdata.shader_ptr == 0) {
+			hitdata.shader_ptr = m_default_shader;
+		}
+
 		if (depth < m_max_depth && hitdata.shader_ptr->scatter(ray, hitdata, absorbedColor, bouncingRay)) {
 			// Recursively sending rays each time the ray hits an object.
 			return absorbedColor*computeRay(bouncingRay, depth + 1);

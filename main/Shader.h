@@ -24,6 +24,7 @@ private:
 class Lambert: public Shader {
 public:
 	Lambert(const vector3& alb = vector3(.5, .5, .5)) { m_albedo = alb; };
+	Lambert(float albR, float albG, float albB) { m_albedo = vector3(albR, albG, albB); };
 
 	virtual bool scatter(const Ray& ray_in, const HitData& hitdata, vector3& absorbed, Ray& ray_out) const {
 		vector3 direction = hitdata.normal + randPointInUnitSphere();
@@ -44,7 +45,8 @@ private:
 
 class SurfaceShader: public Shader {
 public:
-	SurfaceShader(const vector3& alb = vector3(0.5, 0.5, 0.5), float rough = .2) { m_albedo = alb; m_roughness = rough; }
+	SurfaceShader(const vector3& alb = vector3(.5, .5, .5), float rough = 0.2) { m_albedo = alb; m_roughness = rough; }
+	SurfaceShader(float albR, float albG, float albB, float rough) { m_albedo = vector3(albR, albG, albB); m_roughness = rough;};
 
 	virtual bool scatter(const Ray& ray_in, const HitData& hitdata, vector3& absorbedColor, Ray& ray_out) const {
 		vector3 direction = reflectVector(ray_in.direction(), hitdata.normal) + randPointInUnitSphere() * m_roughness;

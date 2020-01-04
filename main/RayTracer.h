@@ -43,6 +43,8 @@ public:
 	Ray generateRay(const Camera& camera, float u, float v) const;
 	vector3 computeRay(const Ray& ray, int depth) const;
 
+	Shader* m_default_shader = new Lambert();
+
 private:
 	float m_width;
 	float m_height;
