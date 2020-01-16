@@ -2,6 +2,8 @@
 #define VECTOR3H
 #include <math.h>
 #include <iostream>
+#include <sstream> 
+#include <string>
 
 using namespace std;
 

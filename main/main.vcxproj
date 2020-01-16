@@ -130,6 +130,7 @@
     <ClCompile Include="RayTracer.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="mathUtils.cpp" />
+    <ClCompile Include="Ray.cpp" />
     <ClCompile Include="Sphere.cpp" />
     <ClCompile Include="vector3.cpp" />
   </ItemGroup>

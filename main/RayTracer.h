@@ -13,10 +13,10 @@ class RayTracer {
 
 public:
 	RayTracer() { 
-		m_width = 400; m_height = 200; m_near_clip = 0.001; m_far_clip = 100000; m_samples = 100; m_max_depth = 50; }
+		m_width = 400; m_height = 200; m_near_clip = 0.001; m_far_clip = 100000; m_samples = 100; m_max_depth = 50; m_gamma = 2.2; }
 
 	RayTracer(float x, float y, int near_clip = 0.001, int far_clip = 10000, int sample = 100) {
-		m_width = x; m_height = y;  m_near_clip = near_clip; m_far_clip = far_clip; m_samples = sample; m_max_depth = 50; }
+		m_width = x; m_height = y;  m_near_clip = near_clip; m_far_clip = far_clip; m_samples = sample; m_max_depth = 50; m_gamma = 2.2; }
 
 	string outpath() { return m_outpath; }
 	void setOutpath(const string str) { m_outpath = str; }

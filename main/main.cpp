@@ -19,17 +19,20 @@ int main() {
 	tracer.setOutpath("D:\\REPOSITORIES\\Bounce\\main\\imageOutputs\\output.ppm");
 
 	// Shaders
-	Shader* groundShd = new Lambert(0.8, 0.75, 0.1);
-	Shader* shinyRedShd = new SurfaceShader(1, 0.1, 0.1, .15);
-	Shader* roughBlueShd = new SurfaceShader(0.1, 0.1, .9, 0.9);
+	Shader* redShd = new Lambert(1, 0.1, 0.1);
+	Shader* blueShd = new Lambert(0.1, 0.1, .9);
+	Shader* yellowShd = new Lambert(0.5, 0.75, 0.1);
+	Shader* whiteShd = new Lambert(.8, .8, .8);
+
+	Shader* glassShd = new Glass();
 
 	// Filling the tracer with the objects
-	tracer.addHitable(new Sphere(vector3(0.0, 0.0, -1.0), 0.5, "Sphere1", shinyRedShd));
-	tracer.addHitable(new Sphere(vector3(1.0, 0.0, -1.0), 0.5, "Sphere2", roughBlueShd));
-	//tracer.addHitable(new Sphere(vector3(0.75, 0.0, -1.0), 0.5));
+	tracer.addHitable(new Sphere(vector3(0.0, 0.0, -2.0), 0.5, "Sphere1", redShd));
+	tracer.addHitable(new Sphere(vector3(1.0, 0.0, -2.0), 0.5, "Sphere2", blueShd));
+	tracer.addHitable(new Sphere(vector3(-.3, 0.0, -1.2), 0.3, "Sphere3", glassShd));
 
 	// Huge sphere used as pseudo ground
-	tracer.addHitable(new Sphere(vector3(0.0, -100.5, -1.0), 100, "Ground", groundShd));
+	tracer.addHitable(new Sphere(vector3(0.0, -100.5, -1.0), 100, "Ground", yellowShd));
 
 	// Giving a camera to the trace function
 	Camera cam;

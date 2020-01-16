@@ -1,5 +1,7 @@
 #include <fstream>
 #include <iostream>
+#include <math.h>
+#include <vector>
 
 #include "RayTracer.h"
 
@@ -25,7 +27,6 @@ bool RayTracer::trace(const Camera& camera)
 	cout << "Tracing scene composed of " << m_world.list().size() << " hitables..." << endl;
 
 	// opening file stream
-	cout << m_outpath << endl;
 	ofstream outputStream(m_outpath);
 
 	// Write ppm format data
@@ -33,12 +34,11 @@ bool RayTracer::trace(const Camera& camera)
 
 	// Progress bar
 	int progress_bar = 0;
-	bool print = true;
 	// TODO: on inverse l'ecriture des pixels pour le ppm, 
 	//       c'est pas propre, il faut trouver une solution
 	for (int y = m_height - 1; y >= 0; y--) {
 		for (int x = 0; x < m_width; x++) {
-			vector3 outColor(0, 0, 0);
+			vector3 rawColor(0, 0, 0);
 			
 			for (int s = 0; s < m_samples; s++) {
 				// cout << randomFlt() << endl;
@@ -48,28 +48,17 @@ bool RayTracer::trace(const Camera& camera)
 				float v = float(y + vrand) / m_height;
 				// cout << u << " " << v << endl;
 				Ray ray = generateRay(camera, u, v);
-				
-				outColor += computeRay(ray, 0);
+				rawColor += computeRay(ray, 0);
 			}
 			// Dividing the total of light received by all the sampled rays by the amount of samples
-			outColor /= float(m_samples);
+			rawColor /= float(m_samples);
 			
-			if (print == true) {
-				cout << " r : " << outColor.r() << " g : " << outColor.g() << " b : " << outColor.b() << endl;
-			}
-			
-			outColor = vector3(sqrt(outColor[0]), sqrt(outColor[1]), sqrt(outColor[2]));
-
-			if (print == true) {
-				cout << " r : " << outColor.r() << " g : " << outColor.g() << " b : " << outColor.b() << endl;
-			}
-
-			print = false;
+			vector3 gammaColor = applyGamma(rawColor, 2.2);
 
 			// 0.0 to 1.0 -> 0 to 255
-			outColor = unitToColor(outColor);
+			gammaColor = unitToColor(gammaColor);
 			
-			outputStream << int(outColor.r()) << " " << int(outColor.g()) << " " << int(outColor.b()) << "\n";
+			outputStream << int(gammaColor.r()) << " " << int(gammaColor.g()) << " " << int(gammaColor.b()) << "\n";
 	
 		}
 
@@ -94,8 +83,6 @@ Ray RayTracer::generateRay(const Camera& camera, float u, float v) const
 vector3 RayTracer::computeRay(const Ray& ray, int depth) const
 {
 	HitData hitdata;
-	Ray bouncingRay;
-	vector3 absorbedColor;
 
 	if (m_world.isHit(ray, m_near_clip, m_far_clip, hitdata))
 	{
@@ -103,18 +90,24 @@ vector3 RayTracer::computeRay(const Ray& ray, int depth) const
 			hitdata.shader_ptr = m_default_shader;
 		}
 
-		if (depth < m_max_depth && hitdata.shader_ptr->scatter(ray, hitdata, absorbedColor, bouncingRay)) {
-			// Recursively sending rays each time the ray hits an object.
-			return absorbedColor*computeRay(bouncingRay, depth + 1);
+		vector<Ray> outRays;
+		vector<vector3> absorbedColors;
+		vector3 outColor(0, 0, 0);
+		if (depth < m_max_depth && hitdata.shader_ptr->scatter(ray, hitdata, absorbedColors, outRays)) {
+			for (int i = 0; i < outRays.size(); i++) {
+				outColor += absorbedColors[i] * computeRay(outRays[i], depth + 1);
+			}
+			return outColor;
 		}
 		else {
 			return vector3(0, 0, 0);
 		}
-		
+
 	}
 	else {
 		// hit nothing -> skydome color
-		return defaultColor(ray);
+		//return defaultColor(ray);
+		return vector3(.8, .8, 1);
 	}
 
 }
