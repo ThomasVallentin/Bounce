@@ -125,7 +125,9 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="exrIO.cpp" />
+    <ClCompile Include="FileAdapter.cpp" />
     <ClCompile Include="HitableComposite.cpp" />
+    <ClCompile Include="Iterators.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RayTracer.cpp" />
     <ClCompile Include="Shader.cpp" />
@@ -136,8 +138,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="FileAdapter.h" />
     <ClInclude Include="Hitable.h" />
     <ClInclude Include="HitableComposite.h" />
+    <ClInclude Include="Iterators.h" />
     <ClInclude Include="mathUtils.h" />
     <ClInclude Include="Ray.h" />
     <ClInclude Include="RayTracer.h" />
