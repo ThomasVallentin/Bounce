@@ -10,21 +10,25 @@ using namespace std;
 
 int main() {
 	PixelArray pixels(5,5);
-	PixelIterator iter(pixels, 5);
+	PixelIterator iter(pixels);
 	int h, w, s;
 	int i = 0;
-    cout << pixels.height() << pixels.width() << iter.m_samples << endl;
+	float size = pixels.width() * pixels.height();
+    cout << pixels.height() << pixels.width() << endl;
+	
 	for (; !iter.isDone(); iter.next()) {
-
-		h = iter.m_height;
-		w = iter.m_width;
-		s = iter.m_sample;
-
-		cout << i << " " << h << " " << w << " " << s << endl;
-		i++;
+		//cout << i << " " << iter.width() << " " << iter.height() << endl;
+		vector3 pixel = iter.get();
+		pixel[0] = pixel[1] = pixel[2] = (i / size * 255.9);
 	}
+
+
+	cout << int(r()) << " " << int(gammaColor.g()) << " " << int(gammaColor.b()) << "\n";
+
+	//outputStream << int(gammaColor.r()) << " " << int(gammaColor.g()) << " " << int(gammaColor.b()) << "\n";
 	return 0;
 }
+
 //int main() {
 //	cout << "Hello World, Bounce render !" << endl;
 //	
@@ -35,8 +39,8 @@ int main() {
 //	int samples = 100;
 //
 //	RayTracer tracer(output_width, output_height, near_clip, far_clip, samples);
-//	tracer.setOutpath("D:\\REPO\\Bounce\\main\\imageOutputs\\output.ppm");
-//	//tracer.setOutpath("D:\\REPOSITORIES\\Bounce\\main\\imageOutputs\\output.ppm");
+//	//tracer.setOutpath("D:\\REPO\\Bounce\\main\\imageOutputs\\output.ppm");
+//	tracer.setOutpath("D:\\REPOSITORIES\\Bounce\\main\\imageOutputs\\output.ppm");
 //
 //	// Shaders
 //	Shader* redShd = new Lambert(1, 0.1, 0.1);

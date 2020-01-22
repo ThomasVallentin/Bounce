@@ -2,10 +2,24 @@
 #define ITERATORSH
 
 #include "Camera.h"
+#include "mathUtils.h"
 #include <vector>
 
 using namespace std;
 
+// == ABSTRACT ITERATOR ===========================================================================
+
+class AbstractIterator {
+public:
+	virtual void const begin() = 0;
+	virtual void const next() = 0;
+	virtual bool const isDone() { return m_isDone; };
+
+protected:
+	bool m_isDone;
+};
+
+// == PIXEL ARRAY =================================================================================
 
 class PixelArray
 {
@@ -23,25 +37,62 @@ private:
 	vector<vector<vector3>> m_pixels;
 };
 
-class PixelIterator
+// == PIXEL ITERATOR ==============================================================================
+
+class PixelIterator : public AbstractIterator
 {
 public:
-	PixelIterator(PixelArray& pixels, int samples) { m_pixels = pixels; m_width = 0, m_height = 0; m_samples = samples; };
-	void reset() { m_i = 0, m_width = 0, m_height = 0; m_sample = 0; };
-	void next();
-	vector3& getCurrent() { return m_pixels.get(m_width, m_height); }
-	bool isDone() { return (m_width >= m_pixels.width() - 1) && (m_height >= m_pixels.height() - 1) && (m_sample >= m_samples - 1); };
+	PixelIterator() { m_width = 0, m_height = 0; m_isDone = false; }
+	PixelIterator(PixelArray& pixels) { m_pixels = pixels; m_width = 0, m_height = 0; };
+	virtual void const begin() { m_width = 0, m_height = 0;};
+	virtual void const next();
+	virtual bool const isDone() { return m_isDone; }
 
+	vector3& const get() { return m_pixels.get(m_width, m_height); }
+	int const height() { return m_height; }
+	int const width() { return m_width; }
 
+protected:
 	PixelArray m_pixels;
-	int m_samples;
 
-	int m_i;
 	int m_width;
 	int m_height;
-	int m_sample;
+	bool m_isDone;
 };
 
+// == PIXEL SAMPLER ===============================================================================
+
+class PixelSampler: public PixelIterator
+{
+public:
+	PixelSampler() : PixelIterator(), m_sample(0), m_samples(0) {}
+	PixelSampler(PixelArray& pixels, int samples) : PixelIterator(pixels), m_sample(0), m_samples(samples) {}
+	virtual void const begin() { m_width = 0, m_height = 0; m_sample = 0; }
+	virtual void const next();
+
+	int const samples() { return m_samples; }
+	void const setSamples(int samples) { m_samples = samples; }
+
+	int const sample() { return m_sample; }
+	float const u() { return float(m_width + randomFlt()) / m_pixels.width(); }
+	float const v() { return float(m_height + randomFlt()) / m_pixels.height(); }
+
+protected:
+	int m_samples;
+	int m_sample;
+
+};
+
+// == PROGRESSIVE PIXEL SAMPLER ===================================================================
+
+class ProgressivePixelSampler : public PixelSampler
+{
+public:
+	ProgressivePixelSampler() : PixelSampler() {}
+	ProgressivePixelSampler(PixelArray& pixels, int samples) : PixelSampler(pixels, samples) {}
+	virtual void const next();
+
+};
 
 
 #endif ITERATORSH
