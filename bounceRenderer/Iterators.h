@@ -66,19 +66,17 @@ class PixelSampler: public PixelIterator
 {
 public:
 	PixelSampler() : PixelIterator(), m_sample(0), m_samples(0) {}
-	PixelSampler(PixelArray& pixels, int samples) : PixelIterator(pixels), m_sample(0), m_samples(samples) {}
+	PixelSampler(PixelArray& pixels, const int samples) : PixelIterator(pixels), m_sample(0), m_samples(samples) {}
 	virtual void const begin() { m_width = 0, m_height = 0; m_sample = 0; }
 	virtual void const next();
 
 	int const samples() { return m_samples; }
-	void const setSamples(int samples) { m_samples = samples; }
-
 	int const sample() { return m_sample; }
 	float const u() { return float(m_width + randomFlt()) / m_pixels.width(); }
 	float const v() { return float(m_height + randomFlt()) / m_pixels.height(); }
 
 protected:
-	int m_samples;
+	const int m_samples;
 	int m_sample;
 
 };
@@ -89,7 +87,7 @@ class ProgressivePixelSampler : public PixelSampler
 {
 public:
 	ProgressivePixelSampler() : PixelSampler() {}
-	ProgressivePixelSampler(PixelArray& pixels, int samples) : PixelSampler(pixels, samples) {}
+	ProgressivePixelSampler(PixelArray& pixels, const int samples) : PixelSampler(pixels, samples) {}
 	virtual void const next();
 
 };

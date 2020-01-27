@@ -45,10 +45,10 @@
     <ClCompile Include="Ray.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="FileAdapter.cpp">
+    <ClCompile Include="Iterators.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Iterators.cpp">
+    <ClCompile Include="FileAdapters.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -80,10 +80,10 @@
     <ClInclude Include="mathUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="FileAdapter.h">
+    <ClInclude Include="Iterators.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Iterators.h">
+    <ClInclude Include="FileAdapters.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
