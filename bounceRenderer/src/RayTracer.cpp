@@ -4,7 +4,6 @@
 #include <vector>
 
 #include "RayTracer.h"
-#include "Iterators.h"
 
 
 vector3 defaultColor(const Ray& ray) {

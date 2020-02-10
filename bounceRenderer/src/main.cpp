@@ -4,7 +4,7 @@
 
 #include "RayTracer.h"
 #include "Sphere.h"
-#include "Iterators.h"
+#include "Ray.h"
 
 using namespace std;
 
@@ -40,7 +40,7 @@ int main() {
 
 	RayTracer tracer(output_width, output_height, near_clip, far_clip, samples);
 	//tracer.setOutpath("D:\\REPO\\Bounce\\main\\imageOutputs\\output.ppm");
-	tracer.setOutpath("D:\\REPOSITORIES\\Bounce\\main\\imageOutputs\\output.ppm");
+	tracer.setOutpath(R"(D:\REPOSITORIES\Bounce\tests\output.ppm)");
 
 	// Shaders
 	Shader* redShd = new Lambert(1, 0.1, 0.1);

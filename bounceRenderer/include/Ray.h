@@ -4,7 +4,7 @@
 #include "vector3.h"
 #include <iostream>
 
-// juste here to be able to create a pointer without creating a loop between ray and shader headers
+// just here to be able to create a pointer without creating a loop between ray and shader headers
 class Shader;
 
 class Ray {
