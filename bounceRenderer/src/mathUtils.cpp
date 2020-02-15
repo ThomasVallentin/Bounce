@@ -1,9 +1,10 @@
 #include "mathUtils.h"
+#include <random>
 
 float randomFlt(float a, float b) {
-	float random = float(rand()) / float(RAND_MAX);
+	float rnd = float(random()) / float(RAND_MAX);
 	float diff = b - a;
-	return random * diff + a;
+	return rnd * diff + a;
 }
 
 vector3 randPointInUnitSphere() {

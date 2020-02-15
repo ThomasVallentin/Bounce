@@ -2,19 +2,19 @@
 
 // == General Operators =================================================================
 
-vector3 operator+(const vector3& vec1, const vector3 vec2) {
+vector3 operator+(const vector3& vec1, const vector3& vec2) {
 	return vector3(vec1.x() + vec2.x(), vec1.y() + vec2.y(), vec1.z() + vec2.z());
 }
 
-vector3 operator-(const vector3& vec1, const vector3 vec2) {
+vector3 operator-(const vector3& vec1, const vector3& vec2) {
 	return vector3(vec1.x() - vec2.x(), vec1.y() - vec2.y(), vec1.z() - vec2.z());
 }
 
-vector3 operator*(const vector3& vec1, const vector3 vec2) {
+vector3 operator*(const vector3& vec1, const vector3& vec2) {
 	return vector3(vec1.x() * vec2.x(), vec1.y() * vec2.y(), vec1.z() * vec2.z());
 }
 
-vector3 operator/(const vector3& vec1, const vector3 vec2) {
+vector3 operator/(const vector3& vec1, const vector3& vec2) {
 	return vector3(vec1.x() / vec2.x(), vec1.y() / vec2.y(), vec1.z() / vec2.z());
 }
 
@@ -30,13 +30,13 @@ vector3 operator/(const vector3& vec, float f) {
 	return vector3(vec.x() / f, vec.y() / f, vec.z() / f);
 }
 
-istream& operator>>(istream& is, vector3& vec)
+std::istream& operator>>(std::istream& is, vector3& vec)
 {
 	is >> vec.v[0] >> vec.v[1] >> vec.v[2];
 	return is;
 }
 
-ostream& operator<<(ostream& os, const vector3& vec)
+std::ostream& operator<<(std::ostream& os, const vector3& vec)
 {
 	os << vec.v[0] << " " << vec.v[1] << " " << vec.v[2];
 	return os;

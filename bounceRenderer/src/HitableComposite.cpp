@@ -6,7 +6,7 @@ bool HitableComposite::isHit(const Ray& ray, float tmin, float tmax, HitData& da
 	bool hit_anything = false;
 	HitData temp_data;
 	
-	// cout << "tracing pixel with " << m_hitableList.size() << endl;
+	// std::cout << "tracing pixel with " << m_hitableList.size() << std::endl;
 	for (int i = 0; i < m_hitableList.size(); i++) {
 		// cout << m_hitableList[i] << endl;
 		if (m_hitableList[i]->isHit(ray, tmin, closest_so_far, temp_data)) {

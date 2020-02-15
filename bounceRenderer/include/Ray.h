@@ -10,7 +10,7 @@ class Shader;
 class Ray {
 
 public:
-	Ray() {}
+	Ray() = default;
 	Ray(const vector3& o, const vector3& d) { m_origin = o; m_direction = d.unitVector(); }
 
 	vector3 origin() const { return m_origin; }
@@ -22,7 +22,7 @@ private:
 	vector3 m_direction;
 };
 
-extern ostream& operator<<(ostream& os, const Ray& r);
+extern std::ostream& operator<<(std::ostream& os, const Ray& r);
 
 struct HitData {
 	double t;

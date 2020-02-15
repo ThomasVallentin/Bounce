@@ -5,8 +5,6 @@
 //#include "mathUtils.h"
 //#include <vector>
 //
-//using namespace std;
-//
 //// == ABSTRACT ITERATOR ===========================================================================
 //
 //class AbstractIterator {
