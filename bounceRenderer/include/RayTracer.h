@@ -1,6 +1,7 @@
 #ifndef RAYTRACERH
 #define RAYTRACERH
 #include <vector>
+#include <cstdint>
 
 #include "HitableComposite.h"
 #include "Sphere.h"
@@ -36,21 +37,24 @@ public:
 	int samples() { return m_samples; };
 	void setSamples(int samples) { m_samples = samples; };
 	
-	int gamma() { return m_gamma; };
+	float gamma() { return m_gamma; };
 	void setGamma(float gamma) { m_gamma = gamma; };
 
 	void addHitable( Hitable* h) { m_world.addHitable(h); }
 	HitableComposite ls() { return m_world; }
-	
+
+	bool initialize();
 	bool trace(const Camera& camera);
 	Ray generateRay(const Camera& camera, float u, float v) const;
 	vector3 computeRay(const Ray& ray, int depth) const;
 
 	Shader* m_default_shader = new Lambert();
 
+	vector<uint8_t> m_result;
+
 private:
-	float m_width;
-	float m_height;
+	int m_width;
+	int m_height;
 
 	int m_near_clip;
 	int m_far_clip;

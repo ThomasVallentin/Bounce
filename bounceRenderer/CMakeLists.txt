@@ -13,5 +13,9 @@ file(GLOB_RECURSE SOURCES_FILES ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp)
 # Add include directory
 include_directories(${CMAKE_CURRENT_SOURCE_DIR}/include)
 
-# Creating app
-add_executable(bounceRenderer ${SOURCES_FILES})
+# Creating .exe
+#add_executable(bounceRenderer main.cpp ${SOURCES_FILES})
+
+# LIB
+set(LIBRARY_OUTPUT_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+add_library(bounceRenderer ${SOURCES_FILES})

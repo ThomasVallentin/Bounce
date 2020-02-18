@@ -22,6 +22,17 @@ vector3 applyGamma(const vector3& color, float gamma) {
 	return vector3(pow(color[0], factor), pow(color[1], factor), pow(color[2], factor));
 }
 
+bool RayTracer::initialize()
+{
+    cout << "Initializing RayTracer..." << endl;
+    int pixelsFullLength = m_width * m_height * 3;
+    m_result.resize(pixelsFullLength);
+    for (int i=0; i < pixelsFullLength; i++)
+    {
+        m_result[i] = 0;
+    }
+}
+
 bool RayTracer::trace(const Camera& camera)
 {
 	cout << "Tracing scene composed of " << m_world.list().size() << " hitables..." << endl;
@@ -29,17 +40,13 @@ bool RayTracer::trace(const Camera& camera)
 	// opening file stream
 	ofstream outputStream(m_outpath);
 
-	// Write ppm format data
-	outputStream << "P3\n" << m_width << " " << m_height << "\n255\n";
-
 	// Progress bar
 	int progress_bar = 0;
-	// TODO: on inverse l'ecriture des pixels pour le ppm, 
-	//       c'est pas propre, il faut trouver une solution
-	for (int y = m_height - 1; y >= 0; y--) {
+
+	for (int y = 0; y < m_height; y++) {
 		for (int x = 0; x < m_width; x++) {
 			vector3 rawColor(0, 0, 0);
-			
+
 			for (int s = 0; s < m_samples; s++) {
 				// cout << randomFlt() << endl;
 				float urand = randomFlt();
@@ -58,17 +65,18 @@ bool RayTracer::trace(const Camera& camera)
 			// 0.0 to 1.0 -> 0 to 255
 			gammaColor = unitToColor(gammaColor);
 			
-			outputStream << int(gammaColor.r()) << " " << int(gammaColor.g()) << " " << int(gammaColor.b()) << "\n";
-	
+            m_result[(y*m_width+ x) * 3] = (uint8_t(gammaColor.r()));
+            m_result[(y*m_width+ x) * 3 + 1] = (uint8_t(gammaColor.g()));
+            m_result[(y*m_width+ x) * 3 + 2] = (uint8_t(gammaColor.b()));
 		}
 
-		if (int((1 - y / float(m_height)) *100) > progress_bar) {
+		if (int((y / float(m_height)) *100) > progress_bar) {
 			cout << "Rendering " << progress_bar << "%..." << endl;
 			progress_bar += 5;
 		}
 	}
 
-	outputStream.close();
+    cout << "Done !" << endl;
 
 	return true;
 }
@@ -76,7 +84,7 @@ bool RayTracer::trace(const Camera& camera)
 
 Ray RayTracer::generateRay(const Camera& camera, float u, float v) const
 {
-	return Ray(camera.position, camera.lower_left_corner + u * camera.horizontal + v * camera.vertical);
+	return Ray(camera.position, camera.top_left_corner + u * camera.horizontal - v * camera.vertical);
 }
 
 
