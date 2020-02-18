@@ -64,10 +64,6 @@ bool RayTracer::trace(const Camera& camera)
 
                 // Adding the new sample to the existing render
                 renderedColor = computeRay(ray, 0);
-
-                // TODO: Gamma should not be applied here,
-                //  but in the render view and in the write to file part.
-                renderedColor = applyGamma(renderedColor, m_gamma);
                 // std::cout << "    " << renderedColor << std::endl;
 
                 storedColor = (storedColor * float(s) + renderedColor) / float(s + 1);

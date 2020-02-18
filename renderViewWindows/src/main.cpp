@@ -22,8 +22,8 @@ global_variable int bitmapHeight;
 global_variable int bytesPerPixel = 4;
 
 // Render data
-global_variable int imageWidth = 800;
-global_variable int imageHeight = 400;
+global_variable int imageWidth = 1200;
+global_variable int imageHeight = 600;
 
 void fillScene()
 {
@@ -50,6 +50,7 @@ internal void getTracedColor(int x, int y, uint8_t (&color)[3]){
         vColor[1] = tracer.m_result.at((y*imageWidth + x) * 3 + 1);
         vColor[2] = tracer.m_result.at((y*imageWidth + x) * 3 + 2);
 
+        vColor = applyGamma(vColor, tracer.gamma());
         vColor = unitToColor(vColor);
     }
     color[0] = vColor[0];
