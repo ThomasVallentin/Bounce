@@ -41,21 +41,20 @@ void fillScene()
     tracer.addHitable(new Sphere(vector3(0.0, -100.5, -1.0), 100, "Ground", whiteLambert));
 }
 
-internal bool extractColor(int x, int y, uint8_t (&color)[3]){
+internal void getTracedColor(int x, int y, uint8_t (&color)[3]){
+    vector3 vColor(0,0,0);
+
     if (x < imageWidth && y < imageHeight)
     {
-        color[0] = tracer.m_result.at((y*imageWidth + x) * 3);
-        color[1] = tracer.m_result.at((y*imageWidth + x) * 3 + 1);
-        color[2] = tracer.m_result.at((y*imageWidth + x) * 3 + 2);
-        return(true);
+        vColor[0] = tracer.m_result.at((y*imageWidth + x) * 3);
+        vColor[1] = tracer.m_result.at((y*imageWidth + x) * 3 + 1);
+        vColor[2] = tracer.m_result.at((y*imageWidth + x) * 3 + 2);
+
+        vColor = unitToColor(vColor);
     }
-    else
-    {
-        color[0] = 0;
-        color[1] = 0;
-        color[2] = 0;
-        return(false);
-    }
+    color[0] = vColor[0];
+    color[1] = vColor[1];
+    color[2] = vColor[2];
 }
 
 internal void fillPixel(uint32_t *pixel, uint8_t (&color)[3])
@@ -73,7 +72,7 @@ internal void render(){
         uint32_t *pixel = (uint32_t *)row;
         for (int x = 0; x < bitmapWidth; x++)
         {
-            extractColor(x, y, color);
+            getTracedColor(x, y, color);
             fillPixel(pixel, color);
             pixel++;
         }
@@ -133,6 +132,7 @@ LRESULT CALLBACK MainWindowCallback(HWND   window,
 
             int width = clientRect.right - clientRect.left;
             int height = clientRect.bottom -clientRect.top;
+
             // Creating and resizing a bitmap buffer
             resizeDIBSection(width, height);
             render();
@@ -175,10 +175,8 @@ LRESULT CALLBACK MainWindowCallback(HWND   window,
             EndPaint(window, &painter);
         } break;
 
-
         default:
         {
-            // std::cout << "Default" << std::endl;
             result = DefWindowProc(window, message, wParam, lParam);
         } break;
 

@@ -50,7 +50,7 @@ public:
 
 	Shader* m_default_shader = new Lambert();
 
-	vector<uint8_t> m_result;
+	vector<float> m_result;
 
 private:
 	int m_width;
@@ -69,6 +69,7 @@ private:
 	HitableComposite m_world;
 };
 
-
+extern vector3 unitToColor(const vector3& vec);
+extern vector3 applyGamma(const vector3& color, float gamma);
 
 #endif
