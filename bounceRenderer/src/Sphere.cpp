@@ -2,7 +2,7 @@
 
 bool Sphere::isHit(const Ray& ray, float tmin, float tmax, HitData& hit) const
 {
-	// cout << ray.origin() << " " << ray.direction() << endl;
+	// std::cout << ray.origin() << " " << ray.direction() << std::endl;
 	vector3 centerToOrigin = ray.origin() - m_center;
 	float a = dot(ray.direction(), ray.direction()); // optim : =1 if direction is normalized 
 	float b = 2 * dot(centerToOrigin, ray.direction());

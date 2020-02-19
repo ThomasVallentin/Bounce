@@ -4,8 +4,6 @@
 //#include <string>
 //#include "Iterators.h"
 //
-//using namespace std;
-//
 //class AbstractFileAdapter
 //{
 //public:

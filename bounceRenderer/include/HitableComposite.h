@@ -7,16 +7,16 @@
 class HitableComposite : public Hitable {
 
 public:
-	HitableComposite() {}
-	HitableComposite(vector<Hitable*> l, string n) { m_hitableList = l; name = n; }
+	HitableComposite() = default;
+	HitableComposite(std::vector<Hitable*> l, std::string n) { m_hitableList = l; name = n; }
 
-	const vector<Hitable*> list() { return m_hitableList; };
+	const std::vector<Hitable*> list() { return m_hitableList; };
 	void addHitable(Hitable* h) { m_hitableList.push_back(h); }
 
-	virtual bool isHit(const Ray& ray, float tmin, float tmax, HitData& data) const;
+	bool isHit(const Ray& ray, float tmin, float tmax, HitData& data) const override ;
 
 private:
-	vector<Hitable*> m_hitableList;
+    std::vector<Hitable*> m_hitableList;
 };
 
 #endif

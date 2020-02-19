@@ -5,8 +5,6 @@
 #include <sstream> 
 #include <string>
 
-using namespace std;
-
 // +====================================================================================+
 // | Vector3 :                                                                          | 
 // +====================================================================================+
@@ -43,8 +41,8 @@ public:
 	vector3& operator-=(const vector3 &vec2);
 	vector3& operator*=(const vector3 &vec2);
 	vector3& operator/=(const vector3 &vec2);
-	vector3& operator*=(const float f);
-	vector3& operator/=(const float f);
+	vector3& operator*=(float f);
+	vector3& operator/=(float f);
 
 	float squaredLength() const {
 		return v[0] * v[0] + v[1] * v[1] + v[2] * v[2]; }
@@ -54,24 +52,24 @@ public:
 	vector3 unitVector() const;
 
 // private:
-	float v[3];
+	float v[3]{};
 };
 
 extern float dot(const vector3& vec1, const vector3& vec2);
 extern vector3 cross(const vector3& vec1, const vector3& vec2);
 extern vector3 reflectVector(const vector3& v, const vector3& n);
 
-extern vector3 operator+(const vector3& vec1, const vector3 vec2);
-extern vector3 operator-(const vector3& vec1, const vector3 vec2);
-extern vector3 operator*(const vector3& vec1, const vector3 vec2);
-extern vector3 operator/(const vector3& vec1, const vector3 vec2);
+extern vector3 operator+(const vector3& vec1, const vector3& vec2);
+extern vector3 operator-(const vector3& vec1, const vector3& vec2);
+extern vector3 operator*(const vector3& vec1, const vector3& vec2);
+extern vector3 operator/(const vector3& vec1, const vector3& vec2);
 
 extern vector3 operator*(const vector3& vec, float f);
 extern vector3 operator*(float f, const vector3& vec);
 extern vector3 operator/(const vector3& vec, float f);
 
-extern istream& operator>>(istream& is, vector3& vec);
-extern ostream& operator<<(ostream& os, const vector3& vec);
+extern std::istream& operator>>(std::istream& is, vector3& vec);
+extern std::ostream& operator<<(std::ostream& os, const vector3& vec);
 
 
 #endif

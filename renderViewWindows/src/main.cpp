@@ -27,7 +27,7 @@ global_variable int imageHeight = 600;
 
 void fillScene()
 {
-    Shader* whiteLambert = new Lambert(.8, .8, .8);
+    Shader* floorShd = new Lambert(.8, .8, .8);
     Shader* redLambert = new Lambert(.8, .15, .05);
     Shader* blueLambert = new Lambert(.1, .1, .9);
     Shader* greenMetal = new Metal(.2, .9, .2, .3);
@@ -38,7 +38,7 @@ void fillScene()
     tracer.addHitable(new Sphere(vector3(-.6, 0.0, -1.2), 0.3, "Sphere3", greenMetal));
 
     // Huge sphere used as pseudo ground
-    tracer.addHitable(new Sphere(vector3(0.0, -100.5, -1.0), 100, "Ground", whiteLambert));
+    tracer.addHitable(new Sphere(vector3(0.0, -100.5, -1.0), 100, "Ground", floorShd));
 }
 
 internal void getTracedColor(int x, int y, uint8_t (&color)[3]){
@@ -46,9 +46,9 @@ internal void getTracedColor(int x, int y, uint8_t (&color)[3]){
 
     if (x < imageWidth && y < imageHeight)
     {
-        vColor[0] = tracer.m_result.at((y*imageWidth + x) * 3);
-        vColor[1] = tracer.m_result.at((y*imageWidth + x) * 3 + 1);
-        vColor[2] = tracer.m_result.at((y*imageWidth + x) * 3 + 2);
+        vColor[0] = tracer.result().at((y*imageWidth + x) * 3);
+        vColor[1] = tracer.result().at((y*imageWidth + x) * 3 + 1);
+        vColor[2] = tracer.result().at((y*imageWidth + x) * 3 + 2);
 
         vColor = applyGamma(vColor, tracer.gamma());
         vColor = unitToColor(vColor);
