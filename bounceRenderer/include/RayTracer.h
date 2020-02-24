@@ -39,12 +39,15 @@ public:
 
 	void addHitable( Hitable* h) { m_world.addHitable(h); }
 	HitableComposite ls() { return m_world; }
-	
+
+	bool initialize();
 	bool trace(const Camera& camera);
 	Ray generateRay(const Camera& camera, float u, float v) const;
 	vector3 computeRay(const Ray& ray, int depth) const;
 
 	Shader* m_default_shader = new Lambert();
+
+    std::vector<float>& result() { return m_result; };
 
 private:
 	int m_width;
@@ -59,10 +62,12 @@ private:
 	float m_gamma;
 
     std::string m_outpath;
+    std::vector<float> m_result;
 
-	HitableComposite m_world;
+    HitableComposite m_world;
 };
 
-
+extern vector3 unitToColor(const vector3& vec);
+extern vector3 applyGamma(const vector3& color, float gamma);
 
 #endif

@@ -22,53 +22,72 @@ vector3 applyGamma(const vector3& color, float gamma) {
 	return vector3(pow(color[0], factor), pow(color[1], factor), pow(color[2], factor));
 }
 
+bool RayTracer::initialize()
+{
+    std::cout << "Initializing RayTracer..." << std::endl;
+
+    int pixelsFullLength = m_width * m_height * 3;
+
+    m_result.resize(pixelsFullLength);
+    for (int i=0; i < pixelsFullLength; i++)
+    {
+        m_result[i] = 0;
+    }
+}
+
 bool RayTracer::trace(const Camera& camera)
 {
     std::cout << "Tracing scene composed of " << m_world.list().size() << " hitables..." << std::endl;
-
-	// opening file stream
-    std::ofstream outputStream(m_outpath);
-
-	// Write ppm format data
-	outputStream << "P3\n" << m_width << " " << m_height << "\n255\n";
+//
+//	// opening file stream
+//    std::ofstream outputStream(m_outpath);
+//
+//	// Write ppm format data
+//	outputStream << "P3\n" << m_width << " " << m_height << "\n255\n";
 
 	// Progress bar
-	int progress_bar = 0;
-	// TODO: on inverse l'ecriture des pixels pour le ppm, 
-	//       c'est pas propre, il faut trouver une solution
-	for (int y = m_height - 1; y >= 0; y--) {
-		for (int x = 0; x < m_width; x++) {
-			vector3 rawColor(0, 0, 0);
-			
-			for (int s = 0; s < m_samples; s++) {
-				// std::cout << randomFlt() << std::endl;
-				float urand = randomFlt();
-				float vrand = randomFlt();
-				float u = float(x + urand) / m_width;
-				float v = float(y + vrand) / m_height;
-				// std::cout << u << " " << v << std::endl;
-				Ray ray = generateRay(camera, u, v);
-				rawColor += computeRay(ray, 0);
-			}
-			// Dividing the total of light received by all the sampled rays by the amount of samples
-			rawColor /= float(m_samples);
-			
-			vector3 gammaColor = applyGamma(rawColor, 2.2);
+	int progress = 0;
 
-			// 0.0 to 1.0 -> 0 to 255
-			gammaColor = unitToColor(gammaColor);
-			
-			outputStream << int(gammaColor.r()) << " " << int(gammaColor.g()) << " " << int(gammaColor.b()) << "\n";
-	
-		}
+    int colorIndex;
+    vector3 storedColor, renderedColor;
+    for (int s = 0; s < m_samples; s++)
+    {
+        for (int y = 0; y < m_height; y++)
+        {
+            for (int x = 0; x < m_width; x++)
+            {
+                colorIndex = (y * m_width + x) * 3;
+                storedColor[0] = m_result[colorIndex];
+                storedColor[1] = m_result[colorIndex + 1];
+                storedColor[2] = m_result[colorIndex + 2];
 
-		if (int((1 - y / float(m_height)) *100) > progress_bar) {
-            std::cout << "Rendering " << progress_bar << "%..." << std::endl;
-			progress_bar += 5;
-		}
-	}
+                float urand = randomFlt();
+                float vrand = randomFlt();
+                float u = float(x + urand) / m_width;
+                float v = float(y + vrand) / m_height;
 
-	outputStream.close();
+                Ray ray = generateRay(camera, u, v);
+
+                // Adding the new sample to the existing render
+                renderedColor = computeRay(ray, 0);
+                // std::cout << "    " << renderedColor << std::endl;
+
+                storedColor = (storedColor * float(s) + renderedColor) / float(s + 1);
+                //  std::cout << " after: " << storedColor << std::endl;
+
+                m_result[colorIndex] = storedColor.r();
+                m_result[colorIndex + 1] = storedColor.g();
+                m_result[colorIndex + 2] = storedColor.b();
+
+                if (int((s / float(m_samples)) * 100) > progress) {
+                    std::cout << "Rendering " << progress << "%..." << std::endl;
+                    progress += 5;
+                }
+            }
+        }
+    }
+
+    std::cout << "Done !" << std::endl;
 
 	return true;
 }
@@ -76,7 +95,7 @@ bool RayTracer::trace(const Camera& camera)
 
 Ray RayTracer::generateRay(const Camera& camera, float u, float v) const
 {
-	return Ray(camera.position, camera.lower_left_corner + u * camera.horizontal + v * camera.vertical);
+	return Ray(camera.position, camera.top_left_corner + u * camera.horizontal - v * camera.vertical);
 }
 
 
