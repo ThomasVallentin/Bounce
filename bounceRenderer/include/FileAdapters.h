@@ -1,30 +1,38 @@
-//#ifndef FILEADAPTERH
-//#define FILEADAPTERH
-//
-//#include <string>
-//#include "Iterators.h"
-//
-//class AbstractFileAdapter
-//{
-//public:
-//	AbstractFileAdapter(const PixelArray& pixels) : m_pixels(pixels) {}
-//	virtual bool write(const string path) const = 0;
-//
-//	const string extension() { return m_extension; }
-//
+#ifndef FILEADAPTERH
+#define FILEADAPTERH
+
+#include <vector>
+#include <string>
+#include <iostream>
+#include <fstream>
+#include "Iterators.h"
+#include "vector3.h"
+
+class RayTracer;
+
+class AbstractFileAdapter
+{
+public:
+	explicit AbstractFileAdapter() {}
+	virtual bool write(const std::string& path,
+                       const unsigned int& width,
+                       const unsigned int& height,
+                       std::vector<float>& pixels) const = 0;
+
 //protected:
-//	const PixelArray m_pixels;
-//	string m_extension;
-//};
-//
-//class PPMAdapter : public AbstractFileAdapter
-//{
-//public:
-//	PPMAdapter(const PixelArray& pixels) : AbstractFileAdapter(pixels), m_extension(".ppm") {}
-//	virtual bool write(const string path);
-//
-//protected:
-//	string m_extension;
-//};
-//
-//#endif FILEADAPTERH
+//    RayTracer* m_tracer{};
+};
+
+
+class PPMAdapter : public AbstractFileAdapter
+{
+public:
+    explicit PPMAdapter() : AbstractFileAdapter() {}
+    bool write(const std::string& path,
+               const unsigned int& width,
+               const unsigned int& height,
+               std::vector<float>& pixels) const override;
+
+};
+
+#endif // FILEADAPTERH

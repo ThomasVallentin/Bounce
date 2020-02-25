@@ -1,7 +1,12 @@
 #ifndef RAYTRACERH
 #define RAYTRACERH
-#include <vector>
 
+#include <vector>
+#include <iostream>
+#include <cmath>
+#include <chrono>
+
+#include "FileAdapters.h"
 #include "HitableComposite.h"
 #include "Sphere.h"
 #include "Camera.h"
@@ -47,7 +52,7 @@ public:
 
 	Shader* m_default_shader = new Lambert();
 
-    std::vector<float>& result() { return m_result; };
+    std::vector<float>& pixels() { return m_pixels; };
 
 private:
 	int m_width;
@@ -62,7 +67,7 @@ private:
 	float m_gamma;
 
     std::string m_outpath;
-    std::vector<float> m_result;
+    std::vector<float> m_pixels;
 
     HitableComposite m_world;
 };

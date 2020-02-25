@@ -1,5 +1,4 @@
 #include <iostream>
-#include <ctime>
 
 #include "RayTracer.h"
 #include "Sphere.h"
@@ -8,16 +7,14 @@
 int main() {
     std::cout << "Hello World, Bounce render !" << std::endl;
 
-    int output_width = 800;
-    int output_height = 400;
+    int output_width = 1200;
+    int output_height = 600;
     float near_clip = 0.001;
     float far_clip = 100000;
     int samples = 100;
 
     RayTracer tracer(output_width, output_height, near_clip, far_clip, samples);
-    tracer.setOutpath(R"(D:\REPOSITORIES\Bounce\tests\output.ppm)");
-
-    tracer.initialize();
+    tracer.setOutpath(R"(D:\REPOSITORIES\Bounce\bounceRenderer\output\output.ppm)");
 
     // Shaders
     std::vector<Shader*> shaders;
@@ -31,11 +28,6 @@ int main() {
     Shader* groundShd = new Lambert(0.5, 0.75, 0.1);
     Shader* glassShd = new Glass();
 
-
-    // Filling the tracer with the objects
-    //	tracer.addHitable(new Sphere(vector3(0.0, 0.0, -2.0), 0.5, "Sphere1", redShd));
-    //	tracer.addHitable(new Sphere(vector3(1.0, 0.0, -2.0), 0.5, "Sphere2", shinyBlueShd));
-    //	tracer.addHitable(new Sphere(vector3(-.3, 0.0, -1.2), 0.3, "Sphere3", glassShd));
     vector3 pos;
     float size;
     Sphere* sph;
@@ -51,5 +43,8 @@ int main() {
 
     // Giving a camera to the trace function
     Camera cam;
+    tracer.initialize();
     tracer.trace(cam);
+
+    return (EXIT_SUCCESS);
 }
