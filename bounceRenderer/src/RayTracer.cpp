@@ -90,9 +90,8 @@ bool RayTracer::trace(const Camera& camera)
 
     std::cout << "Done !" << std::endl;
 
-    RayTracer* tracer;
     PPMAdapter adapter;
-    adapter.write(m_outpath, m_width, m_height, m_pixels);
+    adapter.write(*this);
 
 	return true;
 }

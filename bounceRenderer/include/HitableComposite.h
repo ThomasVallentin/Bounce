@@ -2,6 +2,7 @@
 #define HITABLECOMPOSITEH
 
 #include "Hitable.h"
+
 #include <vector>
 
 class HitableComposite : public Hitable {

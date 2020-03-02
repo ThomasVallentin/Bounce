@@ -1,8 +1,8 @@
-#include <iostream>
-
 #include "RayTracer.h"
 #include "Sphere.h"
 #include "Ray.h"
+
+#include <iostream>
 
 int main() {
     std::cout << "Hello World, Bounce render !" << std::endl;

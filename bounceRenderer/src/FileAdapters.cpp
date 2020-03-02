@@ -1,25 +1,20 @@
 #include "FileAdapters.h"
 
-vector3 unitToColor(const vector3& vec);
-vector3 applyGamma(const vector3& color, float gamma);
 
-bool PPMAdapter::write(const std::string& path,
-                       const unsigned int& width,
-                       const unsigned int& height,
-                       std::vector<float>& pixels) const
+bool PPMAdapter::write(RayTracer& tracer) const
     {
 
     // opening file stream
-    std::ofstream outputStream(path);
+    std::ofstream outputStream(tracer.outpath());
 
     // Write ppm format data
-    outputStream << "P3\n" << width << " " << height << "\n255\n";
+    outputStream << "P3\n" << tracer.width() << " " << tracer.height() << "\n255\n";
 
-    for (int y = 0 ; y < height ; y++)
+    for (int y = 0 ; y < tracer.height() ; y++)
     {
-        for (int x = 0; x < width; x++) {
-            unsigned int pixelIndex = (y*width + x)*3;
-            vector3 color(pixels[pixelIndex], pixels[pixelIndex + 1], pixels[pixelIndex + 2]);
+        for (int x = 0; x < tracer.width(); x++) {
+            unsigned int pixelIndex = (y*tracer.width() + x)*3;
+            vector3 color(tracer.pixels()[pixelIndex], tracer.pixels()[pixelIndex + 1], tracer.pixels()[pixelIndex + 2]);
             color = applyGamma(color, 2.2);
 
             // 0.0 to 1.0 -> 0 to 255

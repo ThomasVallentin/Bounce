@@ -1,16 +1,16 @@
 #ifndef RAYTRACERH
 #define RAYTRACERH
 
-#include <vector>
-#include <iostream>
-#include <cmath>
-#include <chrono>
-
 #include "FileAdapters.h"
 #include "HitableComposite.h"
 #include "Sphere.h"
 #include "Camera.h"
 #include "mathUtils.h"
+
+#include <vector>
+#include <iostream>
+#include <cmath>
+#include <chrono>
 
 class RayTracer {
 

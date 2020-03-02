@@ -1,4 +1,5 @@
 #include "mathUtils.h"
+
 #include <random>
 
 float randomFlt(float a, float b) {
