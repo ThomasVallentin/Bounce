@@ -59,7 +59,7 @@ public:
 	Metal(float albR, float albG, float albB, float rough) { m_albedo = vector3(albR, albG, albB); m_roughness = rough; };
 
 	bool scatter(const Ray& inRay, const HitData& hitdata, std::vector<vector3>& outAbsorbtion, std::vector<Ray>& outRays) const override {
-		vector3 direction = reflectVector(inRay.direction(), hitdata.normal) + randPointInUnitSphere() * m_roughness;
+		vector3 direction = reflectVector(inRay.direction, hitdata.normal) + randPointInUnitSphere() * m_roughness;
 
 		outRays.push_back(Ray(hitdata.position, direction));
 		outAbsorbtion.push_back(m_albedo);
@@ -137,22 +137,22 @@ public:
 
 	bool scatter(const Ray& inRay, const HitData& hitdata, std::vector<vector3>& outAbsorbtion, std::vector<Ray>& outRays) const override {
 		
-		float reflectRatio = fresnel(inRay.direction(), hitdata.normal, m_ior);
-		bool outside = dot(inRay.direction(), hitdata.normal) < 0;
+		float reflectRatio = fresnel(inRay.direction, hitdata.normal, m_ior);
+		bool outside = dot(inRay.direction, hitdata.normal) < 0;
 
 		const vector3 bias = 0.000001f * hitdata.normal;
 
 		bool isRefracting = false;
 		if (reflectRatio < 1) {  // if we're not in a total internal reflection
 			vector3 refracted;
-			isRefracting = refract(inRay.direction(), hitdata.normal, m_ior, refracted);
+			isRefracting = refract(inRay.direction, hitdata.normal, m_ior, refracted);
 			vector3 refractOrigin = outside ? hitdata.position - bias : hitdata.position + bias;
 
 			outRays.push_back(Ray(refractOrigin, refracted));
 			outAbsorbtion.push_back(m_refractColor * (1 - reflectRatio));
 		}
 
-		vector3 reflected = reflectVector(inRay.direction(), hitdata.normal);
+		vector3 reflected = reflectVector(inRay.direction, hitdata.normal);
 		vector3 reflectOrigin = outside ? hitdata.position + bias : hitdata.position - bias;
 
 		//outRays.push_back(Ray(reflectOrigin, reflected));
@@ -179,7 +179,7 @@ public:
 	SurfaceShader(float albR, float albG, float albB, float rough) { m_albedo = vector3(albR, albG, albB); m_roughness = rough;};
 
 	bool scatter(const Ray& inRay, const HitData& hitdata, std::vector<vector3>& outAbsorbtion, std::vector<Ray>& outRays) const override {
-		vector3 direction = reflectVector(inRay.direction(), hitdata.normal) + randPointInUnitSphere() * m_roughness;
+		vector3 direction = reflectVector(inRay.direction, hitdata.normal) + randPointInUnitSphere() * m_roughness;
 
 		outRays.push_back(Ray(hitdata.position, direction));
 		outAbsorbtion.push_back(m_albedo);

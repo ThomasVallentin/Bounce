@@ -27,18 +27,29 @@ global_variable int imageHeight = 600;
 
 void fillScene()
 {
-    Shader* floorShd = new Lambert(.8, .8, .8);
-    Shader* redLambert = new Lambert(.8, .15, .05);
-    Shader* blueLambert = new Lambert(.1, .1, .9);
-    Shader* greenMetal = new Metal(.2, .9, .2, .3);
+    std::vector<Shader*> shaders;
+    for (unsigned char i=0; i < 25; i++) {
+        shaders.push_back(new Lambert(randomFlt(), randomFlt(), randomFlt()));
+        shaders.push_back(new Metal(randomFlt(), randomFlt(), randomFlt(), randomFlt()));
+        shaders.push_back(new Metal(randomFlt(), randomFlt(), randomFlt(), randomFlt()));
+        shaders.push_back(new Metal(randomFlt(), randomFlt(), randomFlt(), randomFlt()));
+    }
 
-    // Filling the tracer with the objects
-    tracer.addHitable(new Sphere(vector3(0.0, 0.0, -2.0), 0.5, "Sphere1", redLambert));
-    tracer.addHitable(new Sphere(vector3(1.0, 0.0, -2.0), 0.5, "Sphere2", blueLambert));
-    tracer.addHitable(new Sphere(vector3(-.6, 0.0, -1.2), 0.3, "Sphere3", greenMetal));
+    Shader* groundShd = new Lambert(0.5, 0.75, 0.1);
+    Shader* glassShd = new Glass();
+
+    vector3 pos;
+    float size;
+    Sphere* sph;
+    for (unsigned char i=0; i < 25; i++){
+        size = randomFlt(0, 0.2);
+        pos = vector3(randomFlt(-1, 1)*10, size/2-0.25f, -(randomFlt() * 20 + 1));
+        sph = new Sphere(pos, randomFlt(), "Sphere", shaders[rand() % shaders.size()]);
+        tracer.addHitable(sph);
+    }
 
     // Huge sphere used as pseudo ground
-    tracer.addHitable(new Sphere(vector3(0.0, -100.5, -1.0), 100, "Ground", floorShd));
+    tracer.addHitable(new Sphere(vector3(0.0, -1000.5, -1.0), 1000, "Ground", groundShd));
 }
 
 internal void getTracedColor(int x, int y, uint8_t (&color)[3]){
@@ -46,9 +57,9 @@ internal void getTracedColor(int x, int y, uint8_t (&color)[3]){
 
     if (x < imageWidth && y < imageHeight)
     {
-        vColor[0] = tracer.result().at((y*imageWidth + x) * 3);
-        vColor[1] = tracer.result().at((y*imageWidth + x) * 3 + 1);
-        vColor[2] = tracer.result().at((y*imageWidth + x) * 3 + 2);
+        vColor[0] = tracer.pixels().at((y*imageWidth + x) * 3);
+        vColor[1] = tracer.pixels().at((y*imageWidth + x) * 3 + 1);
+        vColor[2] = tracer.pixels().at((y*imageWidth + x) * 3 + 2);
 
         vColor = applyGamma(vColor, tracer.gamma());
         vColor = unitToColor(vColor);

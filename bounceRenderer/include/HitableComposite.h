@@ -9,14 +9,14 @@ class HitableComposite : public Hitable {
 
 public:
 	HitableComposite() = default;
-	HitableComposite(std::vector<Hitable*> l, std::string n) { m_hitableList = l; name = n; }
+	explicit HitableComposite(std::vector<Hitable*> l) { m_hitableList = l; }
 
-	const std::vector<Hitable*> list() { return m_hitableList; };
+	std::vector<Hitable*> list() { return m_hitableList; };
 	void addHitable(Hitable* h) { m_hitableList.push_back(h); }
 
-	bool isHit(const Ray& ray, float tmin, float tmax, HitData& data) const override ;
+	bool intersect(const Ray& ray, float tmin, float tmax, HitData& data) const override ;
 
-private:
+protected:
     std::vector<Hitable*> m_hitableList;
 };
 

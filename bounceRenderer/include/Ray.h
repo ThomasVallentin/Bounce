@@ -11,15 +11,12 @@ class Ray {
 
 public:
 	Ray() = default;
-	Ray(const vector3& o, const vector3& d) { m_origin = o; m_direction = d.unitVector(); }
+	Ray(const vector3& o, const vector3& d) { origin = o; direction = d.unitVector(); }
 
-	vector3 origin() const { return m_origin; }
-	vector3 direction() const { return m_direction; }
-	vector3 pointAtParameter(float t) const { return m_origin + t * m_direction; }
+	vector3 pointAtParameter(float t) const { return origin + t * direction; }
 
-private:
-	vector3 m_origin;
-	vector3 m_direction;
+    vector3 origin;
+    vector3 direction;
 };
 
 extern std::ostream& operator<<(std::ostream& os, const Ray& r);

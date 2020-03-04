@@ -107,7 +107,7 @@ vector3 RayTracer::computeRay(const Ray& ray, int depth) const
 {
 	HitData hitdata;
 
-	if (m_world.isHit(ray, m_near_clip, m_far_clip, hitdata))
+	if (m_world.intersect(ray, m_near_clip, m_far_clip, hitdata))
 	{
 		if (hitdata.shader_ptr == 0) {
 			hitdata.shader_ptr = m_default_shader;

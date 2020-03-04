@@ -6,22 +6,19 @@
 class Sphere : public Hitable {
 
 public:
-	Sphere(const vector3& pos, float rad, std::string n, Shader* shader = nullptr) {
+	Sphere(const vector3& pos, float rad, Shader* shader = nullptr) {
 	    m_center = pos;
         m_radius = rad;
-        name = n;
         shader_ptr = shader; }
 
-	Sphere(float x, float y, float z, float rad, std::string n, Shader* shader = nullptr) {
+	Sphere(float x, float y, float z, float rad, Shader* shader = nullptr) {
 	    m_center = vector3(x, y, z);
         m_radius = rad;
-        name = n;
         shader_ptr = shader; }
-
 
     vector3 center() const { return m_center; }
 	float radius() const { return m_radius; }
-	bool isHit(const Ray& ray, float tmin, float tmax, HitData& hit) const override;
+	bool intersect(const Ray& ray, float tmin, float tmax, HitData& hit) const override;
 
 	//vector3 color() { return m_color;  }
 	//void setColor(const vector3& col) { m_color = vector3(col); };
