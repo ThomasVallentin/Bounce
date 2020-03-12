@@ -1,16 +1,5 @@
-#include <fstream>
-#include <iostream>
-#include <cmath>
-#include <vector>
-
 #include "RayTracer.h"
 
-
-vector3 defaultColor(const Ray& ray) {
-	vector3 unit_direction = ray.direction().unitVector();
-	float t = 0.5f * (unit_direction.y() + 1.0);
-	return (1.0f - t) * vector3(1.0, 1.0, 1.0) + t * vector3(0.5, 0.7, 1.0);
-}
 
 vector3 unitToColor(const vector3& vec) {
 	return vector3(vec.r() * 255.9f, vec.g() * 255.9f, vec.b() * 255.9f);
@@ -22,31 +11,39 @@ vector3 applyGamma(const vector3& color, float gamma) {
 	return vector3(pow(color[0], factor), pow(color[1], factor), pow(color[2], factor));
 }
 
+void printTimeInfo(const std::chrono::time_point<std::chrono::high_resolution_clock>& startTime, float percentage)
+{
+    std::chrono::time_point<std::chrono::high_resolution_clock> currTime = std::chrono::high_resolution_clock::now();
+
+    std::chrono::duration duration = currTime - startTime;
+    double elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(duration).count()/1000.0;
+    double remainingTime =  std::chrono::duration_cast<std::chrono::milliseconds>(duration / percentage * (100 - percentage)).count()/1000.0;
+    std::cout << "Elapsed time : " << elapsedTime << "s | Time remaining : " << remainingTime << "s" << std::endl;
+}
+
+
 bool RayTracer::initialize()
 {
     std::cout << "Initializing RayTracer..." << std::endl;
 
     int pixelsFullLength = m_width * m_height * 3;
 
-    m_result.resize(pixelsFullLength);
+    m_pixels.resize(pixelsFullLength);
     for (int i=0; i < pixelsFullLength; i++)
     {
-        m_result[i] = 0;
+        m_pixels[i] = 0;
     }
 }
 
 bool RayTracer::trace(const Camera& camera)
 {
     std::cout << "Tracing scene composed of " << m_world.list().size() << " hitables..." << std::endl;
-//
-//	// opening file stream
-//    std::ofstream outputStream(m_outpath);
-//
-//	// Write ppm format data
-//	outputStream << "P3\n" << m_width << " " << m_height << "\n255\n";
 
 	// Progress bar
-	int progress = 0;
+	float progress(0);
+
+	// Init timer variables
+    std::chrono::time_point<std::chrono::high_resolution_clock> startTime = std::chrono::high_resolution_clock::now();
 
     int colorIndex;
     vector3 storedColor, renderedColor;
@@ -57,9 +54,9 @@ bool RayTracer::trace(const Camera& camera)
             for (int x = 0; x < m_width; x++)
             {
                 colorIndex = (y * m_width + x) * 3;
-                storedColor[0] = m_result[colorIndex];
-                storedColor[1] = m_result[colorIndex + 1];
-                storedColor[2] = m_result[colorIndex + 2];
+                storedColor[0] = m_pixels[colorIndex];
+                storedColor[1] = m_pixels[colorIndex + 1];
+                storedColor[2] = m_pixels[colorIndex + 2];
 
                 float urand = randomFlt();
                 float vrand = randomFlt();
@@ -75,19 +72,22 @@ bool RayTracer::trace(const Camera& camera)
                 storedColor = (storedColor * float(s) + renderedColor) / float(s + 1);
                 //  std::cout << " after: " << storedColor << std::endl;
 
-                m_result[colorIndex] = storedColor.r();
-                m_result[colorIndex + 1] = storedColor.g();
-                m_result[colorIndex + 2] = storedColor.b();
-
-                if (int((s / float(m_samples)) * 100) > progress) {
-                    std::cout << "Rendering " << progress << "%..." << std::endl;
-                    progress += 5;
-                }
+                m_pixels[colorIndex] = storedColor.r();
+                m_pixels[colorIndex + 1] = storedColor.g();
+                m_pixels[colorIndex + 2] = storedColor.b();
             }
         }
+        progress = float(s+1) / float(m_samples) * 100;
+        std::cout << "Rendering " << std::setprecision(4) << progress << "%... ";
+
+        // Print timer
+        printTimeInfo(startTime, progress);
     }
 
     std::cout << "Done !" << std::endl;
+
+    PPMAdapter adapter;
+    adapter.write(*this);
 
 	return true;
 }
@@ -103,7 +103,7 @@ vector3 RayTracer::computeRay(const Ray& ray, int depth) const
 {
 	HitData hitdata;
 
-	if (m_world.isHit(ray, m_near_clip, m_far_clip, hitdata))
+	if (m_world.intersect(ray, m_near_clip, m_far_clip, hitdata))
 	{
 		if (hitdata.shader_ptr == 0) {
 			hitdata.shader_ptr = m_default_shader;
@@ -125,7 +125,6 @@ vector3 RayTracer::computeRay(const Ray& ray, int depth) const
 	}
 	else {
 		// hit nothing -> skydome color
-		// return defaultColor(ray);
 		return vector3(.8, .8, 1);
 	}
 

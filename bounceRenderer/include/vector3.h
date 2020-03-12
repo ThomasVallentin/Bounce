@@ -1,6 +1,7 @@
 #ifndef VECTOR3H
 #define VECTOR3H
-#include <math.h>
+
+#include <cmath>
 #include <iostream>
 #include <sstream> 
 #include <string>

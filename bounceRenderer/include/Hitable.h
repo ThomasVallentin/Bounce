@@ -6,9 +6,9 @@
 class Hitable {
 
 public:
-	virtual bool isHit(const Ray& ray, float tmin, float tmax, HitData& data) const = 0;
+    Hitable() : shader_ptr(nullptr) {}
+	virtual bool intersect(const Ray& ray, float tmin, float tmax, HitData& data) const = 0;
 	// The "= 0" at the end means that the function is purely virtual
-    std::string name;
 	Shader* shader_ptr;
 };
 

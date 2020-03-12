@@ -1,54 +1,62 @@
+#include "RayTracer.h"
+#include "TriangleMesh.hpp"
+#include "FileLoaders.hpp"
+
 #include <windows.h>
 #include <cstdint>
-#include "RayTracer.h"
-
 #include <iostream>
 #include <thread>
 
-#define internal static
-#define local_persistent static
-#define global_variable static
 
-global_variable RayTracer tracer;
+static RayTracer tracer;
 
 // Window variables
-global_variable bool running = false;
+static bool running = false;
 
 // Bitmap buffer data
-global_variable BITMAPINFO bitmapInfo;
-global_variable void *bitmapMemory;
-global_variable int bitmapWidth;
-global_variable int bitmapHeight;
-global_variable int bytesPerPixel = 4;
+static BITMAPINFO bitmapInfo;
+static void *bitmapMemory;
+static int bitmapWidth;
+static int bitmapHeight;
+static int bytesPerPixel = 4;
 
 // Render data
-global_variable int imageWidth = 1200;
-global_variable int imageHeight = 600;
+static int imageWidth = 1200;
+static int imageHeight = 600;
 
 void fillScene()
 {
-    Shader* floorShd = new Lambert(.8, .8, .8);
-    Shader* redLambert = new Lambert(.8, .15, .05);
-    Shader* blueLambert = new Lambert(.1, .1, .9);
-    Shader* greenMetal = new Metal(.2, .9, .2, .3);
+    Shader* groundShd = new Lambert(.66, .66, .66);
+    Shader* redLambert = new Lambert(0.9, 0.1, 0.1);
 
-    // Filling the tracer with the objects
-    tracer.addHitable(new Sphere(vector3(0.0, 0.0, -2.0), 0.5, "Sphere1", redLambert));
-    tracer.addHitable(new Sphere(vector3(1.0, 0.0, -2.0), 0.5, "Sphere2", blueLambert));
-    tracer.addHitable(new Sphere(vector3(-.6, 0.0, -1.2), 0.3, "Sphere3", greenMetal));
+    // Creating the ground
+    const int groundNbTriangles = 2;
+    const int groundNbVertices = 4;
+    vector3 groundPoints[4] = {{-100.0, 0.0, -100.0},
+                               {-100.0, 0.5, 100.0},
+                               {100.0, 0.0, 100.0},
+                               {100.0, 0.5, -100.0}};
+    const int groundVertexIndices[groundNbTriangles * 3] = {0, 1, 2, 0, 2, 3};
+    tracer.addHitable(new TriangleMesh(groundNbTriangles, groundNbVertices, groundVertexIndices, groundPoints, redLambert));
 
-    // Huge sphere used as pseudo ground
-    tracer.addHitable(new Sphere(vector3(0.0, -100.5, -1.0), 100, "Ground", floorShd));
+    OBJLoader loader = OBJLoader();
+    std::string objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\fawn.obj)";
+    loader.load(objPath, false);
+
+    for (Hitable *hit : loader.hitables)
+    {
+        tracer.addHitable(hit);
+    }
 }
 
-internal void getTracedColor(int x, int y, uint8_t (&color)[3]){
+static void getTracedColor(int x, int y, uint8_t (&color)[3]){
     vector3 vColor(0,0,0);
 
     if (x < imageWidth && y < imageHeight)
     {
-        vColor[0] = tracer.result().at((y*imageWidth + x) * 3);
-        vColor[1] = tracer.result().at((y*imageWidth + x) * 3 + 1);
-        vColor[2] = tracer.result().at((y*imageWidth + x) * 3 + 2);
+        vColor[0] = tracer.pixels().at((y*imageWidth + x) * 3);
+        vColor[1] = tracer.pixels().at((y*imageWidth + x) * 3 + 1);
+        vColor[2] = tracer.pixels().at((y*imageWidth + x) * 3 + 2);
 
         vColor = applyGamma(vColor, tracer.gamma());
         vColor = unitToColor(vColor);
@@ -58,12 +66,12 @@ internal void getTracedColor(int x, int y, uint8_t (&color)[3]){
     color[2] = vColor[2];
 }
 
-internal void fillPixel(uint32_t *pixel, uint8_t (&color)[3])
+static void fillPixel(uint32_t *pixel, uint8_t (&color)[3])
 {
     *pixel = (color[0] << 16 | color[1] << 8 | color[2]);
 }
 
-internal void render(){
+static void render(){
     // Writes data to the bitmapMemory
     uint8_t color[3] = {0, 0, 0};
     int pitch = bitmapWidth * bytesPerPixel;
@@ -81,7 +89,7 @@ internal void render(){
     }
 }
 
-internal void resizeDIBSection(int width, int height){
+static void resizeDIBSection(int width, int height){
     if (bitmapMemory)
     {
         VirtualFree(bitmapMemory, 0, MEM_RELEASE); // freeing the memory if it is already allocated
@@ -199,9 +207,10 @@ INT CALLBACK WinMain(HINSTANCE instance,
     // Render engine initialization
     tracer.setWidth(imageWidth);
     tracer.setHeight(imageHeight);
-    tracer.initialize();
 
     fillScene();
+
+    tracer.initialize();
 
     // Starting thread using render
     Camera cam;
