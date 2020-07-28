@@ -9,7 +9,7 @@
 // Compiler estimate that N-1 can be less than 0 if N == 0 and its not possible which prevent the code to build.
 // We just declare it to make a possible case where this goes fine.
 template <std::size_t N>
-void makeComatrix(float (&mat)[N][N], const int i, const int j, float (&com)[0][0]) {}
+void makeComatrix(float (&mat)[N][N], const int i, const int j, float (&com)[0][0]);
 
 template <std::size_t N>
 void makeComatrix(float (&mat)[N][N], const int i, const int j, float (&com)[N-1][N-1])
@@ -40,12 +40,12 @@ void makeComatrix(float (&mat)[N][N], const int i, const int j, float (&com)[N-1
 // This method is just here to avoid compiling errors caused by templates.
 // Compiler estimate that N-1 can be less than 0 if N == 0 and its not possible which prevent the code to build.
 // We just declare this to make a possible case where this goes fine.
-float matrixDeterminant(float (&mat)[0][0]) {}
+float matrixDeterminant(float (&mat)[0][0]);
 
 template <std::size_t N>
 float matrixDeterminant(float (&mat)[N][N])
 {
-    // Determinant is gotter summing recursively the determinants of each on of its first row's coMatrices.
+    // Determinant is obtained by summing recursively the determinants of each one of its first row's coMatrices.
     if (N <= 1)
         return mat[0][0];
 
@@ -209,4 +209,21 @@ bool Matrix4::operator==(const Matrix4 &other) {
                 return false;
 
     return true;
+}
+
+
+vector3 operator*(const vector3& vec, const Matrix4& mat)
+{
+    return vector3(mat.m[0][0] * vec.x() + mat.m[1][0] * vec.y() + mat.m[2][0] * vec.z() + mat.m[3][0] * 1,
+                   mat.m[0][1] * vec.x() + mat.m[1][1] * vec.y() + mat.m[2][1] * vec.z() + mat.m[3][1] * 1,
+                   mat.m[0][2] * vec.x() + mat.m[1][2] * vec.y() + mat.m[2][2] * vec.z() + mat.m[3][2] * 1);
+}
+
+vector3 &vector3::operator*=(const Matrix4 &mat) {
+    float temp[3]{mat.m[0][0] * v[0] + mat.m[1][0] * v[1] + mat.m[2][0] * v[2] + mat.m[3][0] * 1,
+                  mat.m[0][1] * v[0] + mat.m[1][1] * v[1] + mat.m[2][1] * v[2] + mat.m[3][1] * 1,
+                  mat.m[0][2] * v[0] + mat.m[1][2] * v[1] + mat.m[2][2] * v[2] + mat.m[3][2] * 1};
+    v[0] = temp[0];
+    v[1] = temp[1];
+    v[2] = temp[2];
 }

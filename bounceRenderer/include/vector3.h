@@ -18,6 +18,9 @@
 // |    - vector3                                                                       |
 // |                                                                                    |
 // +====================================================================================+
+class Matrix4;
+class Transform;
+
 
 class vector3 {
 
@@ -44,6 +47,8 @@ public:
 	vector3& operator/=(const vector3 &vec2);
 	vector3& operator*=(float f);
 	vector3& operator/=(float f);
+    vector3& operator*=(const Matrix4& mat);
+    vector3& operator*=(const Transform& trans);
 
 	float squaredLength() const {
 		return v[0] * v[0] + v[1] * v[1] + v[2] * v[2]; }
@@ -68,6 +73,9 @@ extern vector3 operator/(const vector3& vec1, const vector3& vec2);
 extern vector3 operator*(const vector3& vec, float f);
 extern vector3 operator*(float f, const vector3& vec);
 extern vector3 operator/(const vector3& vec, float f);
+
+extern vector3 operator*(const vector3& vec, const Matrix4& mat);
+extern vector3 operator*(const vector3& vec, const Transform& trans);
 
 extern std::istream& operator>>(std::istream& is, vector3& vec);
 extern std::ostream& operator<<(std::ostream& os, const vector3& vec);

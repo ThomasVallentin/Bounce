@@ -121,6 +121,7 @@ void vector3::normalize()
 vector3 vector3::unitVector() const {
 	return vector3(v[0], v[1], v[2]) / length(); }
 
+
 vector3 reflectVector(const vector3& v, const vector3& n) {
 	return v - 2 * dot(v, n) * n;
 }

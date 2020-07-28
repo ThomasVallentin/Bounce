@@ -6,6 +6,8 @@
 #ifndef BOUNCERENDERER_MATRIX_HPP
 #define BOUNCERENDERER_MATRIX_HPP
 
+#include "vector3.h"
+
 #include <cmath>
 #include <iostream>
 
