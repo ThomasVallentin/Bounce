@@ -18,7 +18,7 @@ bool getFileExtension(const std::string &path, std::string &extension)
 }
 
 bool FileLoader::load(std::string &path, bool force) {
-    hitables.clear();
+    shapes.clear();
     lights.clear();
     cameras.clear();
 
@@ -49,6 +49,7 @@ void splitString(const std::string &str, const char token, std::vector<std::stri
 }
 
 bool OBJLoader::load(std::string &path, bool force) {
+    std::cout << "Loading \"" << path << "\"... ";
     if (!FileLoader::load(path, force))
     {
         return false;
@@ -62,7 +63,7 @@ bool OBJLoader::load(std::string &path, bool force) {
         return false;
     }
 
-    int nbTriangles, nbVertices = 0;
+    int nbTriangles(0), nbVertices(0);
     std::vector<int> vertexIndices;
     std::vector<vector3> positions;
 
@@ -89,7 +90,6 @@ bool OBJLoader::load(std::string &path, bool force) {
             for(int i=0; i < splitted.size() ; i++)
             {
                 pos[i] = std::stof(splitted[i]);
-                std::cout << splitted[i] << std::endl;
             }
 
             positions.push_back(pos);
@@ -106,7 +106,7 @@ bool OBJLoader::load(std::string &path, bool force) {
             // TODO: Handle other types of faces than triangles
             std::vector<std::string> splitted;
             splitString(content, ' ', splitted);
-            for(std::string part : splitted)
+            for(std::string &part : splitted)
             {
                 std::vector<std::string> subsplitted;
                 splitString(part, '/', subsplitted);
@@ -123,7 +123,10 @@ bool OBJLoader::load(std::string &path, bool force) {
                             break;
 
                         case 2:  // VERTEX NORMAL INDEX
-                            // Handle Vertex normal reading
+                            // TODO: Handle Vertex normal reading
+                            break;
+
+                        default:
                             break;
                     }
                 }
@@ -132,12 +135,17 @@ bool OBJLoader::load(std::string &path, bool force) {
 
             nbTriangles++;
         }
-        else
-        {
-            std::cout << currentLine << std::endl;
-        }
 
     }
-    hitables.push_back(new TriangleMesh(nbTriangles, nbVertices, vertexIndices.data(), positions.data()));
-    std::cout << "Loaded !!" << std::endl;
+    const TriangleMeshData *meshData = new TriangleMeshData(nbTriangles,
+                                                            nbVertices,
+                                                            vertexIndices.data(),
+                                                            positions.data());
+
+    for (int i=0 ; i < nbTriangles ; i++)
+    {
+        shapes.push_back(new Triangle(&IdentityTransform, &IdentityTransform, meshData, i, nullptr));
+    }
+
+    std::cout << "Loaded !" << std::endl;
 }

@@ -12,8 +12,8 @@ class FileLoader
 public:
     FileLoader() = default;
     virtual bool load(std::string &path, bool force);
-    std::vector<Hitable*> hitables;
-    std::vector<Hitable*> lights;
+    std::vector<Shape*> shapes;
+    std::vector<Shape*> lights;
     std::vector<Camera*> cameras;
 
 protected:
