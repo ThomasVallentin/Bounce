@@ -1,8 +1,7 @@
 #ifndef TRIANGLEMESH_HPP
 #define TRIANGLEMESH_HPP
 
-#include "HitableComposite.h"
-#include "Triangle.hpp"
+#include "Shape.hpp"
 
 #include <vector>
 #include <memory>
@@ -16,13 +15,19 @@ struct TriangleMeshData
     std::unique_ptr<vector3[]> points;
 };
 
-class TriangleMesh : public HitableComposite
+
+class Triangle : public Shape
 {
 public:
-    TriangleMesh(int nTriangles, int nVertices, const int *vtxIndices, const vector3 *pnts, Shader* shader = nullptr);
+    Triangle(const Transform *objectToWorld, const Transform *worldToObject,
+             const TriangleMeshData *mesh, int triangleNb,
+             Shader *shader);
+    bool intersect(const Ray& ray, float tmin, float tmax, HitData& hit) const override;
 
-private:
-    const TriangleMeshData *data;
+protected:
+    const TriangleMeshData *mesh; // Pointer to the struct that holds the points
+    const int *vertices;  // Pointer to the first vertexIndex of the triangle
 };
+
 
 #endif //TRIANGLEMESH_HPP
