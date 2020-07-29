@@ -21,6 +21,8 @@ vector3& vector3::operator*=(const Transform &trans)
     v[0] = temp[0];
     v[1] = temp[1];
     v[2] = temp[2];
+
+    return *this;
 }
 
 Transform Transform::getInversed() const {

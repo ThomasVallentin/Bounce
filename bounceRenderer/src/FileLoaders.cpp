@@ -53,7 +53,7 @@ bool OBJLoader::load(std::string &path, bool force) {
     if (!FileLoader::load(path, force))
     {
         return false;
-    };
+    }
 
     std::ifstream file(path);
 
@@ -150,4 +150,6 @@ bool OBJLoader::load(std::string &path, bool force) {
     }
 
     std::cout << "Loaded !" << std::endl;
+
+    return true;
 }

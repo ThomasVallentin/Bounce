@@ -3,7 +3,7 @@
 #include <random>
 
 float randomFlt(float a, float b) {
-	float rnd = float(random()) / float(RAND_MAX);
+	float rnd = float(rand()) / float(RAND_MAX);
 	float diff = b - a;
 	return rnd * diff + a;
 }

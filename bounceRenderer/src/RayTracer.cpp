@@ -36,6 +36,7 @@ bool RayTracer::initialize()
     // TODO(c++ course): insert may be a better way than looping:
     // m_pixels.clear();
     // m_pixels.insert(m_pixels.begin(), pixelsFullLength, 0);
+    return true;
 }
 
 bool RayTracer::trace(const Camera& camera)
