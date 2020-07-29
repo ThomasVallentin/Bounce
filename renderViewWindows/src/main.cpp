@@ -21,31 +21,35 @@ static int bitmapHeight;
 static int bytesPerPixel = 4;
 
 // Render data
-static int imageWidth = 1200;
-static int imageHeight = 600;
+static int imageWidth = 400;
+static int imageHeight = 200;
 
-void fillScene()
-{
-    Shader* groundShd = new Lambert(.66, .66, .66);
-    Shader* redLambert = new Lambert(0.9, 0.1, 0.1);
+void fillScene() {
+    Shader *whiteLambert = new Lambert(.8, .8, .8);
+    Shader *redLambert = new Lambert(0.9, 0.1, 0.1);
 
-    // Creating the ground
-    const int groundNbTriangles = 2;
-    const int groundNbVertices = 4;
-    vector3 groundPoints[4] = {{-100.0, 0.0, -100.0},
-                               {-100.0, 0.5, 100.0},
-                               {100.0, 0.0, 100.0},
-                               {100.0, 0.5, -100.0}};
-    const int groundVertexIndices[groundNbTriangles * 3] = {0, 1, 2, 0, 2, 3};
-    tracer.addHitable(new TriangleMesh(groundNbTriangles, groundNbVertices, groundVertexIndices, groundPoints, redLambert));
-
+    // Loading the ground
     OBJLoader loader = OBJLoader();
-    std::string objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\fawn.obj)";
+    std::string objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\ground.obj)";
     loader.load(objPath, false);
 
-    for (Hitable *hit : loader.hitables)
-    {
-        tracer.addHitable(hit);
+    for (HitableComposite *hitc : loader.hitables) {
+        for (Hitable *hit : hitc->list())
+            hit->shader_ptr = redLambert;
+
+        tracer.addHitable(hitc);
+    }
+
+    // Loading the test geometry
+    objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\fawn.obj)";
+    loader.load(objPath, false);
+
+    for (HitableComposite *hitc : loader.hitables) {
+        for (Hitable *hit : hitc->list())
+        {
+            hit->shader_ptr = whiteLambert;
+        }
+        tracer.addHitable(hitc);
     }
 }
 
