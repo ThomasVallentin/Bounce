@@ -14,16 +14,15 @@ class Transform
 {
 public:
     Transform() = default;
-    Transform(const Transform &other) : objectToWorld(other.objectToWorld), worldToObject(other.worldToObject) {}
-    explicit Transform(const Matrix4 &mat) : objectToWorld(mat), worldToObject(mat.getInversed()) {}
-    explicit Transform(const Matrix4 &mat, const Matrix4 &inv) : objectToWorld(mat), worldToObject(inv) {}
+    Transform(const Transform &other) : matrix(other.matrix), inverseMatrix(other.inverseMatrix) {}
+    explicit Transform(const Matrix4 &mat, const Matrix4 &inv) : matrix(mat), inverseMatrix(inv) {}
 
     Transform getInversed() const;
 
-    Matrix4 objectToWorld, worldToObject;
+    Matrix4 matrix, inverseMatrix;
 };
 
 
-static const Transform IdentityTransform(IdentityMatrix);
+static const Transform IdentityTransform(IdentityMatrix, IdentityMatrix.getInversed());
 
 #endif //BOUNCERENDERER_TRANSFORM_HPP

@@ -7,12 +7,14 @@
 #include <memory>
 
 
-struct TriangleMeshData
-{
-    TriangleMeshData(int nTriangles, int nVertices, const int *vtxIndices, const vector3 *pnts);
+struct TriangleMeshData {
+    TriangleMeshData(const Transform &objectToWorld,
+                     int nTriangles, int nVertices,
+                     const int *vtxIndices, const vector3 *pnts);
+
     const int nbTriangles, nbVertices;
     std::vector<int> vertexIndices;
-    std::unique_ptr<vector3[]> points;
+    vector3* points;
 };
 
 

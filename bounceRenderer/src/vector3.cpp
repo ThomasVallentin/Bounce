@@ -44,7 +44,7 @@ std::ostream& operator<<(std::ostream& os, const vector3& vec)
 
 // == Constructors ======================================================================
 
-vector3::vector3(float v0, float v1, float v2) { v[0]=v0; v[1]=v1; v[2]=v2; }
+vector3::vector3(const float &v0, const float &v1, const float &v2) { v[0]=v0; v[1]=v1; v[2]=v2; }
 
 vector3::vector3(const vector3& vec) { v[0]=vec.v[0] ; v[1]=vec.v[1] ; v[2]=vec.v[2]; }
 

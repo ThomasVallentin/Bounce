@@ -12,7 +12,7 @@ bool Sphere::intersect(const Ray& ray, float tmin, float tmax, HitData& hit) con
 	float discr = b * b - 4 * a * c;
 	if (discr > 0) {
 
-		// possible loss of precision here due to the float precision
+		// Warning: possible loss of precision here due to the float precision
 		// -> go check scratchapixel -> ray sphere intersection
 
 		float t = float(-b - sqrt(discr)) / (2.0 * a);
@@ -22,7 +22,7 @@ bool Sphere::intersect(const Ray& ray, float tmin, float tmax, HitData& hit) con
 			hit.position = ray.pointAtParameter(t);
 			hit.normal = (hit.position - center());
 			hit.normal.normalize();
-			hit.shader_ptr = shader_ptr;
+			hit.shader_ptr = shader;
 			return true;
 		}
 
@@ -32,7 +32,7 @@ bool Sphere::intersect(const Ray& ray, float tmin, float tmax, HitData& hit) con
 			hit.t = t;
 			hit.position = ray.pointAtParameter(t);
 			hit.normal = (hit.position - center()) / radius();
-			hit.shader_ptr = shader_ptr;
+			hit.shader_ptr = shader;
 			return true;
 		}
 	}

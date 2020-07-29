@@ -2,7 +2,7 @@
 #define RAYTRACERH
 
 #include "FileAdapters.h"
-#include "HitableComposite.h"
+#include "Shape.hpp"
 #include "Sphere.h"
 #include "Camera.h"
 #include "mathUtils.h"
@@ -43,8 +43,8 @@ public:
     float gamma() { return m_gamma; };
 	void setGamma(float gamma) { m_gamma = gamma; };
 
-	void addHitable( Hitable* h) { m_world.addHitable(h); }
-	HitableComposite ls() { return m_world; }
+	void addShape( Shape* h) { m_world.addShape(h); }
+	ShapeList ls() { return m_world; }
 
 	bool initialize();
 	bool trace(const Camera& camera);
@@ -70,7 +70,7 @@ private:
     std::string m_outpath;
     std::vector<float> m_pixels;
 
-    HitableComposite m_world;
+    ShapeList m_world;
 };
 
 extern vector3 unitToColor(const vector3& vec);

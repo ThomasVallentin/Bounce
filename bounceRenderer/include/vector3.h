@@ -26,7 +26,7 @@ class vector3 {
 
 public:
 	vector3() { v[0] = 0.0; v[1] = 0.0; v[2] = 0.0;}
-	vector3(float v0, float v1, float v2);
+	vector3(const float &v0, const float &v1, const float &v2);
 	vector3(const vector3& vec);
 
 	float x() const { return v[0]; }

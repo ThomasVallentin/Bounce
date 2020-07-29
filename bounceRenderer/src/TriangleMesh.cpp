@@ -3,20 +3,20 @@
 // ===================================================================================
 // TRIANGLE MESH
 // ===================================================================================
-TriangleMeshData::TriangleMeshData(int nTriangles,
-                           int nVertices,
-                           const int *vtxIndices,
-                           const vector3 *pnts) :
+TriangleMeshData::TriangleMeshData(const Transform &objectToWorld,
+                                   int nTriangles, int nVertices,
+                                   const int *vtxIndices, const vector3 *pnts) :
         nbTriangles(nTriangles), nbVertices(nVertices),
         vertexIndices(vtxIndices, vtxIndices + 3 * nTriangles)
 {
     // Creates a vector3 array based on nbVertices
-    points = std::make_unique<vector3[]>(nVertices);
+    points = new vector3[nVertices];
 
     // Copying the points of pnts to points
     for (int i = 0; i < nVertices; i++)
     {
-        points[i] = vector3(pnts[i]);
+        // Bake the transform to the objectSpaced points to make them worldSpaced
+        points[i] = pnts[i] * objectToWorld;
     }
 }
 

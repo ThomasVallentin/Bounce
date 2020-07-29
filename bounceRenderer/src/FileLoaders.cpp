@@ -137,7 +137,9 @@ bool OBJLoader::load(std::string &path, bool force) {
         }
 
     }
-    const TriangleMeshData *meshData = new TriangleMeshData(nbTriangles,
+
+    const TriangleMeshData *meshData = new TriangleMeshData(IdentityTransform,
+                                                            nbTriangles,
                                                             nbVertices,
                                                             vertexIndices.data(),
                                                             positions.data());

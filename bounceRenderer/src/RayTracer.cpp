@@ -33,11 +33,14 @@ bool RayTracer::initialize()
     {
         m_pixels[i] = 0;
     }
+    // TODO(c++ course): insert may be a better way than looping:
+    // m_pixels.clear();
+    // m_pixels.insert(m_pixels.begin(), pixelsFullLength, 0);
 }
 
 bool RayTracer::trace(const Camera& camera)
 {
-    std::cout << "Tracing scene composed of " << m_world.list().size() << " hitables..." << std::endl;
+    std::cout << "Tracing scene composed of " << m_world.list().size() << " shapes..." << std::endl;
 
 	// Progress bar
 	float progress(0);
