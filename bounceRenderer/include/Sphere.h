@@ -6,7 +6,7 @@
 class Sphere : public Shape {
 
 public:
-	Sphere(const Transform *objectToWorld, const Transform *worldToObject, const vector3& pos, float rad, Shader* shader)
+	Sphere(const Transform *objectToWorld, const Transform *worldToObject, float rad, Shader* shader)
 	    : Shape(objectToWorld, worldToObject, shader), m_radius(rad), m_center(objectToWorld->matrix.m[3][0],
                                                                                objectToWorld->matrix.m[3][1],
                                                                                objectToWorld->matrix.m[3][2]) {}
