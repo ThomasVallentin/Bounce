@@ -75,5 +75,6 @@ private:
 
 extern vector3 unitToColor(const vector3& vec);
 extern vector3 applyGamma(const vector3& color, float gamma);
+extern float applyGamma(const float color, float gamma);
 
 #endif

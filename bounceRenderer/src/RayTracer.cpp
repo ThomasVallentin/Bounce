@@ -8,7 +8,13 @@ vector3 unitToColor(const vector3& vec) {
 vector3 applyGamma(const vector3& color, float gamma) {
 	float factor = 1 / gamma;
 
-	return vector3(pow(color[0], factor), pow(color[1], factor), pow(color[2], factor));
+	return vector3(powf(color[0], factor), powf(color[1], factor), powf(color[2], factor));
+}
+
+float applyGamma(const float color, float gamma) {
+	float factor = 1 / gamma;
+
+	return powf(color, factor);
 }
 
 void printTimeInfo(const std::chrono::time_point<std::chrono::high_resolution_clock>& startTime, float percentage)
@@ -18,7 +24,7 @@ void printTimeInfo(const std::chrono::time_point<std::chrono::high_resolution_cl
     std::chrono::duration duration = currTime - startTime;
     double elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(duration).count()/1000.0;
     double remainingTime =  std::chrono::duration_cast<std::chrono::milliseconds>(duration / percentage * (100 - percentage)).count()/1000.0;
-    std::cout << "Elapsed time : " << elapsedTime << "s | Time remaining : " << remainingTime << "s" << std::endl;
+    std::cout << "Elapsed time : " << elapsedTime << "s | Remaining time : " << remainingTime << "s" << std::endl;
 }
 
 
