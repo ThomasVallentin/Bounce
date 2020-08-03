@@ -145,8 +145,24 @@ bool inverseMatrix(float **mat, float **inv, const int N)
 };
 
 
-Matrix4::Matrix4(float **mat)
+float **multMatrix(float **mat, float **other, const int size)
 {
+    float **mult = createMatrix(size);
+
+    float tmp;
+    for (int i = 0; i < size; i++)
+        for (int j = 0; j < size; j++) {
+            tmp = 0;
+            for (int n = 0; n < size; n++) {
+                tmp += mat[i][n] * other[n][j];
+            }
+            mult[i][j] = tmp;
+        }
+
+    return mult;
+}
+
+Matrix4::Matrix4(float **mat) {
     m = createMatrix(4);
     set(mat);
 }
@@ -240,6 +256,23 @@ Matrix4::Matrix4(const float (&mat)[4][4]) {
     for (int i=0 ; i < 4 ; i++)
         for (int j=0 ; j < 4 ; j++)
             m[i][j] = mat[i][j];
+}
+
+Matrix4 operator*(const Matrix4 &mat, const Matrix4 &other) {
+    Matrix4 res;
+    res.m = multMatrix(mat.m, other.m, 4);
+    return res;
+}
+
+Matrix4 &Matrix4::operator*=(const Matrix4 &other) {
+    float **tmp = multMatrix(m, other.m, 4);
+    deleteMatrix(m, 4);
+    m = tmp;
+    return *this;
+}
+
+Matrix4::~Matrix4() {
+    deleteMatrix(m, 4);
 }
 
 

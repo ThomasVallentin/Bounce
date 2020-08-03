@@ -2,6 +2,14 @@
 
 #include <random>
 
+float degToRad(const float deg) {
+    return PI / 180.0f  * deg;
+}
+
+float radToDeg(const float rad) {
+    return rad * 180.0f / PI;
+}
+
 float randomFlt(float a, float b) {
 	float rnd = float(rand()) / float(RAND_MAX);
 	float diff = b - a;

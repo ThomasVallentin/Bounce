@@ -38,8 +38,7 @@ public:
             float m20, float m21, float m22, float m23,
             float m30, float m31, float m32, float m33);
     Matrix4(const Matrix4& other);
-
-
+    ~Matrix4();
     void set(float **mat);
     void set(float m00, float m01, float m02, float m03,
              float m10, float m11, float m12, float m13,
@@ -54,6 +53,8 @@ public:
     float determinant();
     bool isIdentity();
 
+    Matrix4 &operator*=(const Matrix4 &other);
+
     float **m;
     bool operator==(const Matrix4 &other);
 };
@@ -63,5 +64,6 @@ const static Matrix4 IdentityMatrix(1,0,0,0,
                                     0,0,1,0,
                                     0,0,0,1);
 
+extern Matrix4 operator*(const Matrix4 &mat, const Matrix4 &other);
 
 #endif //BOUNCERENDERER_MATRIX_HPP
