@@ -74,3 +74,12 @@ void Transform::rotate(const Axis axis, float rad) {
         inverseMatrix = matrix.getInversed();
     }
 }
+
+void Transform::scale(const float x, const float y, const float z) {
+    Matrix4 tmp(x, 0, 0, 0,
+                0, y, 0, 0,
+                0, 0, z, 0,
+                0, 0, 0, 1);
+    matrix *= tmp;
+    inverseMatrix = matrix.getInversed();
+}

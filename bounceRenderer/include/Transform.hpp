@@ -26,6 +26,7 @@ public:
     void translate(const float x, const float y, const float z) const;
     void translate(const vector3 &t) const;
     void rotate(const Axis axis, float rotation);
+    void scale(const float x, const float y, const float z);
 
     static Transform *Identity() { return new Transform(IdentityMatrix, IdentityMatrix.getInversed()); }
 
