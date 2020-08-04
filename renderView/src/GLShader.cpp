@@ -3,9 +3,9 @@
 // Copyright (c) 2020. All rights reserved.
 //
 
-#include "Shader.hpp"
+#include "GLShader.hpp"
 
-Shader::Shader(const char *vertexShaderPath, const char *fragmentShaderPath) {
+GLShader::GLShader(const char *vertexShaderPath, const char *fragmentShaderPath) {
 
     // ==  Reading shader code  ===============================================
 
@@ -33,7 +33,7 @@ Shader::Shader(const char *vertexShaderPath, const char *fragmentShaderPath) {
         fragmentCodeString = fragmentStream.str();
     }
     catch (std::ifstream::failure &e) {
-        std::cerr << "Shader : Error reading file..." << std::endl;
+        std::cerr << "GLShader : Error reading file..." << std::endl;
     }
 
     const char *vertexCode = vertexCodeString.c_str();
@@ -90,7 +90,7 @@ Shader::Shader(const char *vertexShaderPath, const char *fragmentShaderPath) {
     glDeleteShader(fragmentShader);
 }
 
-void Shader::use()
+void GLShader::use()
 {
     glUseProgram(programID);
 }

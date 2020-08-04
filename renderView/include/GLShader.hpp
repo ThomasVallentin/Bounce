@@ -3,8 +3,8 @@
 // Copyright (c) 2020. All rights reserved.
 //
 
-#ifndef BOUNCERENDERER_SHADER_HPP
-#define BOUNCERENDERER_SHADER_HPP
+#ifndef BOUNCERENDERER_GLSHADER_HPP
+#define BOUNCERENDERER_GLSHADER_HPP
 
 #include <GL/glew.h>
 
@@ -13,13 +13,13 @@
 #include <sstream>
 #include <string>
 
-class Shader {
+class GLShader {
 public:
-    Shader(const char *vertexShaderPath, const char *fragmentShaderPath);
+    GLShader(const char *vertexShaderPath, const char *fragmentShaderPath);
     void use();
 
     GLuint programID;
 };
 
 
-#endif //BOUNCERENDERER_SHADER_HPP
+#endif //BOUNCERENDERER_GLSHADER_HPP
