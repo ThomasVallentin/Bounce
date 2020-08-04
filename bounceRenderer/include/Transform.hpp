@@ -22,9 +22,9 @@ public:
     Transform(const Transform &other) : matrix(other.matrix), inverseMatrix(other.inverseMatrix) {}
     explicit Transform(const Matrix4 &mat, const Matrix4 &inv) : matrix(mat), inverseMatrix(inv) {}
 
-    Transform getInversed() const;
-    void translate(const float x, const float y, const float z) const;
-    void translate(const vector3 &t) const;
+    Transform getInversed();
+    void translate(const float x, const float y, const float z);
+    void translate(const vector3 &t);
     void rotate(const Axis axis, float rotation);
     void scale(const float x, const float y, const float z);
 

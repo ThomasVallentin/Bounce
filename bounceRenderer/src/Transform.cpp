@@ -25,11 +25,11 @@ vector3& vector3::operator*=(const Transform &trans)
     return *this;
 }
 
-Transform Transform::getInversed() const {
+Transform Transform::getInversed() {
     return Transform(inverseMatrix, matrix);
 }
 
-void Transform::translate(const vector3 &t) const {
+void Transform::translate(const vector3 &t) {
     matrix.m[3][0] += t.x();
     matrix.m[3][1] += t.y();
     matrix.m[3][2] += t.z();
@@ -38,7 +38,7 @@ void Transform::translate(const vector3 &t) const {
     inverseMatrix.m[3][2] -= t.z();
 }
 
-void Transform::translate(const float x, const float y, const float z) const {
+void Transform::translate(const float x, const float y, const float z) {
     matrix.m[3][0] += x;
     matrix.m[3][1] += y;
     matrix.m[3][2] += z;
