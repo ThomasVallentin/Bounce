@@ -41,10 +41,10 @@ void Transform::translate(const vector3 &t) const {
 void Transform::translate(const float x, const float y, const float z) const {
     matrix.m[3][0] += x;
     matrix.m[3][1] += y;
-    matrix.m[3][2] += y;
+    matrix.m[3][2] += z;
     inverseMatrix.m[3][0] -= x;
     inverseMatrix.m[3][1] -= y;
-    inverseMatrix.m[3][2] -= y;
+    inverseMatrix.m[3][2] -= z;
 }
 
 void Transform::rotate(const Axis axis, float rad) {

@@ -6,10 +6,10 @@
 class Sphere : public Shape {
 
 public:
-	Sphere(const Transform *objectToWorld, const Transform *worldToObject, float rad, Shader* shader)
-	    : Shape(objectToWorld, worldToObject, shader), m_radius(rad), m_center(objectToWorld->matrix.m[3][0],
-                                                                               objectToWorld->matrix.m[3][1],
-                                                                               objectToWorld->matrix.m[3][2]) {}
+	Sphere(const Transform *objectToWorld, float rad, Shader* shader)
+            : Shape(objectToWorld, shader), m_radius(rad), m_center(objectToWorld->matrix.m[3][0],
+                                                                    objectToWorld->matrix.m[3][1],
+                                                                    objectToWorld->matrix.m[3][2]) {}
 
     vector3 center() const { return m_center; }
     float radius() const { return m_radius; }

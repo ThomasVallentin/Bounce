@@ -21,9 +21,7 @@ struct TriangleMeshData {
 class Triangle : public Shape
 {
 public:
-    Triangle(const Transform *objectToWorld, const Transform *worldToObject,
-             const TriangleMeshData *mesh, int triangleNb,
-             Shader *shader);
+    Triangle(const Transform *objectToWorld, const TriangleMeshData *mesh, int triangleNb, Shader *shader);
     bool intersect(const Ray& ray, float tmin, float tmax, HitData& hit) const override;
 
 protected:
