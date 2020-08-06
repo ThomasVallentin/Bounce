@@ -9,6 +9,11 @@
 #include "Matrix.hpp"
 #include "vector3.h"
 
+enum Axis{
+    x,
+    y,
+    z
+};
 
 class Transform
 {
@@ -17,12 +22,19 @@ public:
     Transform(const Transform &other) : matrix(other.matrix), inverseMatrix(other.inverseMatrix) {}
     explicit Transform(const Matrix4 &mat, const Matrix4 &inv) : matrix(mat), inverseMatrix(inv) {}
 
-    Transform getInversed() const;
+    Transform getInversed();
+    void translate(const float x, const float y, const float z);
+    void translate(const vector3 &t);
+    void rotate(const Axis axis, float rotation);
+    void scale(const float x, const float y, const float z);
 
+    vector3 translateVector(const vector3 &pos) const;
+
+    static Transform *Identity() { return new Transform(IdentityMatrix, IdentityMatrix.getInversed()); }
+    static Transform *LookAt(const vector3 &from, const vector3 &to, bool reversed=false);
+    static Transform *LookAt(Transform *from, Transform *to, bool reversed=false);
     Matrix4 matrix, inverseMatrix;
 };
 
-
-static const Transform IdentityTransform(IdentityMatrix, IdentityMatrix.getInversed());
 
 #endif //BOUNCERENDERER_TRANSFORM_HPP

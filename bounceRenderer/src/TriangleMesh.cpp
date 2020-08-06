@@ -16,17 +16,15 @@ TriangleMeshData::TriangleMeshData(const Transform &objectToWorld,
     for (int i = 0; i < nVertices; i++)
     {
         // Bake the transform to the objectSpaced points to make them worldSpaced
-        points[i] = pnts[i] * objectToWorld;
+        points[i] = objectToWorld.translateVector(pnts[i] * objectToWorld);
     }
 }
 
 // ===================================================================================
 // TRIANGLE
 // ===================================================================================
-Triangle::Triangle(const Transform *objectToWorld, const Transform *worldToObject,
-                   const TriangleMeshData *mesh, int triangleNb,
-                   Shader *shader)
-    : Shape(objectToWorld, worldToObject, shader), mesh(mesh)
+Triangle::Triangle(const Transform *objectToWorld, const TriangleMeshData *mesh, int triangleNb, Shader *shader)
+    : Shape(objectToWorld, shader), mesh(mesh)
 {
     vertices = &mesh->vertexIndices[3 * triangleNb];
 }
@@ -76,7 +74,7 @@ bool Triangle::intersect(const Ray &ray, float tmin, float tmax, HitData &hit) c
 
         hit.t = t;
         hit.position = ray.pointAtParameter(t);
-        hit.normal = N;
+        hit.normal = N.unitVector();
 
         hit.shader_ptr = shader;
         return true;

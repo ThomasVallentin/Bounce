@@ -8,7 +8,13 @@ vector3 unitToColor(const vector3& vec) {
 vector3 applyGamma(const vector3& color, float gamma) {
 	float factor = 1 / gamma;
 
-	return vector3(pow(color[0], factor), pow(color[1], factor), pow(color[2], factor));
+	return vector3(powf(color[0], factor), powf(color[1], factor), powf(color[2], factor));
+}
+
+float applyGamma(const float color, float gamma) {
+	float factor = 1 / gamma;
+
+	return powf(color, factor);
 }
 
 void printTimeInfo(const std::chrono::time_point<std::chrono::high_resolution_clock>& startTime, float percentage)
@@ -18,7 +24,7 @@ void printTimeInfo(const std::chrono::time_point<std::chrono::high_resolution_cl
     std::chrono::duration duration = currTime - startTime;
     double elapsedTime = std::chrono::duration_cast<std::chrono::milliseconds>(duration).count()/1000.0;
     double remainingTime =  std::chrono::duration_cast<std::chrono::milliseconds>(duration / percentage * (100 - percentage)).count()/1000.0;
-    std::cout << "Elapsed time : " << elapsedTime << "s | Time remaining : " << remainingTime << "s" << std::endl;
+    std::cout << "Elapsed time : " << elapsedTime << "s | Remaining time : " << remainingTime << "s" << std::endl;
 }
 
 
@@ -26,7 +32,7 @@ bool RayTracer::initialize()
 {
     std::cout << "Initializing RayTracer..." << std::endl;
 
-    int pixelsFullLength = m_width * m_height * 3;
+    unsigned int pixelsFullLength = m_camera.width() * m_camera.height() * 3;
 
     m_pixels.resize(pixelsFullLength);
     for (int i=0; i < pixelsFullLength; i++)
@@ -36,9 +42,10 @@ bool RayTracer::initialize()
     // TODO(c++ course): insert may be a better way than looping:
     // m_pixels.clear();
     // m_pixels.insert(m_pixels.begin(), pixelsFullLength, 0);
+    return true;
 }
 
-bool RayTracer::trace(const Camera& camera)
+bool RayTracer::trace()
 {
     std::cout << "Tracing scene composed of " << m_world.list().size() << " shapes..." << std::endl;
 
@@ -48,25 +55,26 @@ bool RayTracer::trace(const Camera& camera)
 	// Init timer variables
     std::chrono::time_point<std::chrono::high_resolution_clock> startTime = std::chrono::high_resolution_clock::now();
 
-    int colorIndex;
+    unsigned int colorIndex;
     vector3 storedColor, renderedColor;
+    Ray ray;
     for (int s = 0; s < m_samples; s++)
     {
-        for (int y = 0; y < m_height; y++)
+        for (unsigned int y = 0; y < m_camera.height(); y++)
         {
-            for (int x = 0; x < m_width; x++)
+            for (unsigned int x = 0; x < m_camera.width(); x++)
             {
-                colorIndex = (y * m_width + x) * 3;
+                colorIndex = (y * m_camera.width() + x) * 3;
                 storedColor[0] = m_pixels[colorIndex];
                 storedColor[1] = m_pixels[colorIndex + 1];
                 storedColor[2] = m_pixels[colorIndex + 2];
 
                 float urand = randomFlt();
                 float vrand = randomFlt();
-                float u = float(x + urand) / m_width;
-                float v = float(y + vrand) / m_height;
+                float u = (float(x) + urand) / float(m_camera.width());
+                float v = (float(y) + vrand) / float(m_camera.height());
 
-                Ray ray = generateRay(camera, u, v);
+                m_camera.generateRay(u, v, ray);
 
                 // Adding the new sample to the existing render
                 renderedColor = computeRay(ray, 0);
@@ -96,19 +104,13 @@ bool RayTracer::trace(const Camera& camera)
 }
 
 
-Ray RayTracer::generateRay(const Camera& camera, float u, float v) const
-{
-	return Ray(camera.position, camera.top_left_corner + u * camera.horizontal - v * camera.vertical);
-}
-
-
 vector3 RayTracer::computeRay(const Ray& ray, int depth) const
 {
 	HitData hitdata;
 
 	if (m_world.intersect(ray, m_near_clip, m_far_clip, hitdata))
 	{
-		if (hitdata.shader_ptr == 0) {
+		if (hitdata.shader_ptr == nullptr) {
 			hitdata.shader_ptr = m_default_shader;
 		}
 

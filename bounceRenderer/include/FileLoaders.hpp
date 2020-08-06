@@ -2,7 +2,7 @@
 #define BOUNCERENDERER_FILELOADERS_HPP
 
 #include "TriangleMesh.hpp"
-#include "Camera.h"
+#include "Camera.hpp"
 
 #include <map>
 #include <fstream>
@@ -23,8 +23,16 @@ protected:
 class OBJLoader: public FileLoader
 {
 public:
-    OBJLoader() : FileLoader() { extension = "obj"; };
+    OBJLoader() : FileLoader() { extension = "obj"; t = Transform::Identity(); };
+    OBJLoader(const Transform *trans) : FileLoader() { extension = "obj"; t = trans; };
+
     bool load(std::string &path, bool force) override;
+
+    void setTransform(const Transform *trans) { t = trans; }
+    const Transform *transform() { return t; }
+
+private:
+    const Transform *t;
 };
 
 

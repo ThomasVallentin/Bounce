@@ -53,7 +53,7 @@ bool OBJLoader::load(std::string &path, bool force) {
     if (!FileLoader::load(path, force))
     {
         return false;
-    };
+    }
 
     std::ifstream file(path);
 
@@ -138,7 +138,7 @@ bool OBJLoader::load(std::string &path, bool force) {
 
     }
 
-    const TriangleMeshData *meshData = new TriangleMeshData(IdentityTransform,
+    const TriangleMeshData *meshData = new TriangleMeshData(*t,
                                                             nbTriangles,
                                                             nbVertices,
                                                             vertexIndices.data(),
@@ -146,8 +146,10 @@ bool OBJLoader::load(std::string &path, bool force) {
 
     for (int i=0 ; i < nbTriangles ; i++)
     {
-        shapes.push_back(new Triangle(&IdentityTransform, &IdentityTransform, meshData, i, nullptr));
+        shapes.push_back(new Triangle(t, meshData, i, nullptr));
     }
 
     std::cout << "Loaded !" << std::endl;
+
+    return true;
 }
