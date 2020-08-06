@@ -113,3 +113,7 @@ Transform *Transform::LookAt(Transform *from, Transform *to, bool reversed) {
                   vector3(to->matrix.m[3][0], to->matrix.m[3][1], to->matrix.m[3][2]),
                   reversed);
 }
+
+vector3 Transform::translateVector(const vector3 &pos) const {
+    return pos + vector3( matrix.m[3][0], matrix.m[3][1], matrix.m[3][2]);
+}

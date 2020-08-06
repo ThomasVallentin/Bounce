@@ -28,6 +28,8 @@ public:
     void rotate(const Axis axis, float rotation);
     void scale(const float x, const float y, const float z);
 
+    vector3 translateVector(const vector3 &pos) const;
+
     static Transform *Identity() { return new Transform(IdentityMatrix, IdentityMatrix.getInversed()); }
     static Transform *LookAt(const vector3 &from, const vector3 &to, bool reversed=false);
     static Transform *LookAt(Transform *from, Transform *to, bool reversed=false);

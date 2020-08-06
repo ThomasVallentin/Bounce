@@ -16,7 +16,7 @@ TriangleMeshData::TriangleMeshData(const Transform &objectToWorld,
     for (int i = 0; i < nVertices; i++)
     {
         // Bake the transform to the objectSpaced points to make them worldSpaced
-        points[i] = pnts[i] * objectToWorld;
+        points[i] = objectToWorld.translateVector(pnts[i] * objectToWorld);
     }
 }
 
