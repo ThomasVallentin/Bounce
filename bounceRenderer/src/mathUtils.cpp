@@ -19,7 +19,7 @@ float randomFlt(float a, float b) {
 vector3 randPointInUnitCircle() {
     vector3 point;
     do {
-        point = 2.0 * vector3(randomFlt(), randomFlt(), 0.0f);
+        point = 2.0 * vector3(randomFlt(), randomFlt(), 0.0f)  - vector3(1, 1, 0);
     } while (point.squaredLength() >= 1.0);
 
     return point;

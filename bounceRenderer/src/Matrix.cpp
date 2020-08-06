@@ -278,15 +278,15 @@ Matrix4::~Matrix4() {
 
 vector3 operator*(const vector3& vec, const Matrix4& mat)
 {
-    return vector3(mat.m[0][0] * vec.x() + mat.m[1][0] * vec.y() + mat.m[2][0] * vec.z() + mat.m[3][0] * 1,
-                   mat.m[0][1] * vec.x() + mat.m[1][1] * vec.y() + mat.m[2][1] * vec.z() + mat.m[3][1] * 1,
-                   mat.m[0][2] * vec.x() + mat.m[1][2] * vec.y() + mat.m[2][2] * vec.z() + mat.m[3][2] * 1);
+    return vector3(mat.m[0][0] * vec.x() + mat.m[1][0] * vec.y() + mat.m[2][0] * vec.z(),
+                   mat.m[0][1] * vec.x() + mat.m[1][1] * vec.y() + mat.m[2][1] * vec.z(),
+                   mat.m[0][2] * vec.x() + mat.m[1][2] * vec.y() + mat.m[2][2] * vec.z());
 }
 
 vector3 &vector3::operator*=(const Matrix4 &mat) {
-    float temp[3]{mat.m[0][0] * v[0] + mat.m[1][0] * v[1] + mat.m[2][0] * v[2] + mat.m[3][0] * 1,
-                  mat.m[0][1] * v[0] + mat.m[1][1] * v[1] + mat.m[2][1] * v[2] + mat.m[3][1] * 1,
-                  mat.m[0][2] * v[0] + mat.m[1][2] * v[1] + mat.m[2][2] * v[2] + mat.m[3][2] * 1};
+    float temp[3]{mat.m[0][0] * v[0] + mat.m[1][0] * v[1] + mat.m[2][0] * v[2],
+                  mat.m[0][1] * v[0] + mat.m[1][1] * v[1] + mat.m[2][1] * v[2],
+                  mat.m[0][2] * v[0] + mat.m[1][2] * v[1] + mat.m[2][2] * v[2]};
     v[0] = temp[0];
     v[1] = temp[1];
     v[2] = temp[2];

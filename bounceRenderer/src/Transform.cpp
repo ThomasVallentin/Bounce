@@ -8,16 +8,16 @@
 
 vector3 operator*(const vector3& vec, const Transform& trans)
 {
-   return vector3(trans.matrix.m[0][0] * vec.x() + trans.matrix.m[1][0] * vec.y() + trans.matrix.m[2][0] * vec.z() + trans.matrix.m[3][0] * 1,
-                  trans.matrix.m[0][1] * vec.x() + trans.matrix.m[1][1] * vec.y() + trans.matrix.m[2][1] * vec.z() + trans.matrix.m[3][1] * 1,
-                  trans.matrix.m[0][2] * vec.x() + trans.matrix.m[1][2] * vec.y() + trans.matrix.m[2][2] * vec.z() + trans.matrix.m[3][2] * 1);
+   return vector3(trans.matrix.m[0][0] * vec.x() + trans.matrix.m[1][0] * vec.y() + trans.matrix.m[2][0] * vec.z(),
+                  trans.matrix.m[0][1] * vec.x() + trans.matrix.m[1][1] * vec.y() + trans.matrix.m[2][1] * vec.z(),
+                  trans.matrix.m[0][2] * vec.x() + trans.matrix.m[1][2] * vec.y() + trans.matrix.m[2][2] * vec.z());
 }
 
 vector3& vector3::operator*=(const Transform &trans)
 {
-    float temp[3]{trans.matrix.m[0][0] * v[0] + trans.matrix.m[1][0] * v[1] + trans.matrix.m[2][0] * v[2] + trans.matrix.m[3][0] * 1,
-                  trans.matrix.m[0][1] * v[0] + trans.matrix.m[1][1] * v[1] + trans.matrix.m[2][1] * v[2] + trans.matrix.m[3][1] * 1,
-                  trans.matrix.m[0][2] * v[0] + trans.matrix.m[1][2] * v[1] + trans.matrix.m[2][2] * v[2] + trans.matrix.m[3][2] * 1};
+    float temp[3]{trans.matrix.m[0][0] * v[0] + trans.matrix.m[1][0] * v[1] + trans.matrix.m[2][0] * v[2],
+                  trans.matrix.m[0][1] * v[0] + trans.matrix.m[1][1] * v[1] + trans.matrix.m[2][1] * v[2],
+                  trans.matrix.m[0][2] * v[0] + trans.matrix.m[1][2] * v[1] + trans.matrix.m[2][2] * v[2]};
     v[0] = temp[0];
     v[1] = temp[1];
     v[2] = temp[2];
@@ -82,4 +82,34 @@ void Transform::scale(const float x, const float y, const float z) {
                 0, 0, 0, 1);
     matrix *= tmp;
     inverseMatrix = matrix.getInversed();
+}
+
+Transform *Transform::LookAt(const vector3 &from, const vector3 &to, bool reversed) {
+    vector3 front;
+    if (reversed)
+        front = vector3(from - to);
+    else
+        front = vector3(to - from);
+
+    front = front.unitVector();
+
+    vector3 side(cross(vector3(0, 1, 0), front));
+    side.normalize();
+
+    vector3 up(cross(front, side));
+    up.normalize();
+
+    Matrix4 mat(side.x(), side.y(), side.z(), 0,
+                up.x(), up.y(), up.z(), 0,
+                front.x(), front.y(), front.z(), 0,
+                from.x(), from.y(), from.z(), 1);
+
+    static Transform trans(mat, mat.getInversed());
+    return &trans;
+}
+
+Transform *Transform::LookAt(Transform *from, Transform *to, bool reversed) {
+    return LookAt(vector3(from->matrix.m[3][0], from->matrix.m[3][1], from->matrix.m[3][2]),
+                  vector3(to->matrix.m[3][0], to->matrix.m[3][1], to->matrix.m[3][2]),
+                  reversed);
 }

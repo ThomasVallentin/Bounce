@@ -29,7 +29,8 @@ public:
     void scale(const float x, const float y, const float z);
 
     static Transform *Identity() { return new Transform(IdentityMatrix, IdentityMatrix.getInversed()); }
-
+    static Transform *LookAt(const vector3 &from, const vector3 &to, bool reversed=false);
+    static Transform *LookAt(Transform *from, Transform *to, bool reversed=false);
     Matrix4 matrix, inverseMatrix;
 };
 
