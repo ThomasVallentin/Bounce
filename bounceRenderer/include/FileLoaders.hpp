@@ -2,7 +2,7 @@
 #define BOUNCERENDERER_FILELOADERS_HPP
 
 #include "TriangleMesh.hpp"
-#include "Camera.h"
+#include "Camera.hpp"
 
 #include <map>
 #include <fstream>

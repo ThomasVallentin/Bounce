@@ -16,6 +16,15 @@ float randomFlt(float a, float b) {
 	return rnd * diff + a;
 }
 
+vector3 randPointInUnitCircle() {
+    vector3 point;
+    do {
+        point = 2.0 * vector3(randomFlt(), randomFlt(), 0.0f);
+    } while (point.squaredLength() >= 1.0);
+
+    return point;
+}
+
 vector3 randPointInUnitSphere() {
 	vector3 point;
 	do {
