@@ -33,6 +33,7 @@ public:
 	void setResolution(unsigned int w, unsigned int h) {
 	    renderWidth = w;
 	    renderHeight = h;
+	    renderAspectRatio = float(w) / float(h);
         updateProjectionPlane();
 	}
 

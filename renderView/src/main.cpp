@@ -17,8 +17,8 @@
 void windowSizeChanged(GLFWwindow *window, int winWidth, int winHeight);
 //void onScroll(GLFWwindow *window, double winWidth, double winHeight);
 
-static RayTracer tracer;
-void traceRender(Camera *cam);
+static RayTracer tracer(0.001, 10000, 100);
+void traceRender();
 void initializeTracer(RayTracer &raytracer);
 void fillScene();
 
@@ -26,7 +26,7 @@ void extractTracedImage(float *data);
 void updateTextureFromRender(GLuint texture, float *data);
 
 static int initialWidth(1200), initialHeight(600);
-static int renderWidth(1280), renderHeight(720);
+static int renderWidth(500), renderHeight(500);
 static int samples(100);
 
 const int renderPixelCount(renderWidth * renderHeight * 3);
@@ -147,8 +147,7 @@ int main()
     initializeTracer(tracer);
 
     // Starting thread using render
-    Camera cam;
-    std::thread renderThread(traceRender, &cam);
+    std::thread renderThread(traceRender);
 
     // Main window loop
     do {
@@ -205,24 +204,23 @@ void extractTracedImage(float *data)
 {
     for (int i=0 ; i < renderHeight; i++)
         for (int j=0 ; j < renderWidth * 3; j++)
+
             data[(renderHeight - 1 - i) * renderWidth * 3 + j] = applyGamma(tracer.pixels()[i*renderWidth * 3 + j], tracer.gamma());
 }
 
-void traceRender(Camera *cam)
+void traceRender()
 {
-    tracer.trace(*cam);
+    tracer.trace();
 }
 
 void initializeTracer(RayTracer &raytracer)
 {
     raytracer.setSamples(samples);
-    raytracer.setWidth(renderWidth);
-    raytracer.setHeight(renderHeight);
     raytracer.initialize();
 }
 
 void fillScene() {
-    Shader *mirrorShader = new SurfaceShader(.8, .8, .8, .1);
+    Shader *mirrorShader = new SurfaceShader(.1, .1, .1, .1);
     Shader *greyLambert = new Lambert(.3, .3, .3);
     Shader *redLambert = new Lambert(0.8, 0.05, 0.05);
     Shader *greenLambert = new Lambert(0.1, 0.9, 0.1);
@@ -230,6 +228,7 @@ void fillScene() {
 
     // Loading the ground
     Transform *transform = Transform::Identity();
+    transform->scale(2, 2, 2);
     transform->translate(0, 0.04, 0);
     OBJLoader loader = OBJLoader(transform);
     std::string objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\ground.obj)";
@@ -237,33 +236,45 @@ void fillScene() {
 
     for (Shape *shape : loader.shapes)
     {
-        shape->shader = greyLambert;
+        shape->shader = mirrorShader;
         tracer.addShape(shape);
     }
 
-    // Loading the test geometry
+
 //    transform = Transform::Identity();
-//    objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\fawn.obj)";
-//    loader.setTransform(transform);
-//    loader.load(objPath, false);
-//
-//    for (Shape *shape : loader.shapes) {
-//        shape->shader = redLambert;
-//        tracer.addShape(shape);
-//    }
+//    transform->translate(0, 1, -7);
+//    Shape *sphere1 = new Sphere(transform, 1, redLambert);
+//    tracer.addShape(sphere1);
 
     transform = Transform::Identity();
-    transform->translate(0, 1, -7);
-    Shape *sphere1 = new Sphere(transform, 1, redLambert);
-    tracer.addShape(sphere1);
-//
-//    transform = Transform::Identity();
-//    transform->translate(2, 1, -7);
-//    Shape *sphere2 = new Sphere(transform, 1, greenLambert);
-//    tracer.addShape(sphere2);
-//
-//    transform = Transform::Identity();
-//    transform->translate(-2, 1, -7);
-//    Shape *sphere3 = new Sphere(transform, 1, blueLambert);
-//    tracer.addShape(sphere3);
+    transform->translate(0, 0.01, -7);
+    objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\fawn.obj)";
+    loader.setTransform(transform);
+    loader.load(objPath, false);
+
+    for (Shape *shape : loader.shapes) {
+        shape->shader = redLambert;
+        tracer.addShape(shape);
+    }
+
+    transform = Transform::Identity();
+    transform->translate(1, 1, -12);
+    Shape *sphere2 = new Sphere(transform, 1, greenLambert);
+    tracer.addShape(sphere2);
+
+    transform = Transform::Identity();
+    transform->translate(-1, 1, -2);
+    Shape *sphere3 = new Sphere(transform, 1, blueLambert);
+    tracer.addShape(sphere3);
+
+    // Camera
+    vector3 from(0, 1.5, 11), to(0, 1.5, -7);
+    transform = Transform::LookAt(from, to, true);
+
+    Camera cam(transform, 45, FilmGate::Film35mm);
+    cam.focusDistance = (to - from).length();
+    cam.apertureRadius = 0.5f;
+    cam.setResolution(renderWidth, renderHeight);
+
+    tracer.setCamera(cam);
 }
