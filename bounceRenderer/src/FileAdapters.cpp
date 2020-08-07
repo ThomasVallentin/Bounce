@@ -16,7 +16,7 @@ bool PPMAdapter::write(RayTracer& tracer) const
     {
         for (int x = 0; x < width; x++) {
             unsigned int pixelIndex = (y * width + x) * 3;
-            vector3 color(tracer.pixels()[pixelIndex], tracer.pixels()[pixelIndex + 1], tracer.pixels()[pixelIndex + 2]);
+            Vector3 color(tracer.pixels()[pixelIndex], tracer.pixels()[pixelIndex + 1], tracer.pixels()[pixelIndex + 2]);
             color = applyGamma(color, 2.2);
 
             // 0.0 to 1.0 -> 0 to 255

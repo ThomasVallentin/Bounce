@@ -75,7 +75,7 @@ protected:
 
     // Virtual projection plane at focus distance to which the rays will be send
 	float projectionPlaneWidth{}, projectionPlaneHeight{};
-    vector3 projectionPlaneTopLeftCorner;
+    Vector3 projectionPlaneTopLeftCorner;
 
 
     float nearClip, farClip;

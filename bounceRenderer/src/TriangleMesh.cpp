@@ -5,12 +5,12 @@
 // ===================================================================================
 TriangleMeshData::TriangleMeshData(const Transform &objectToWorld,
                                    int nTriangles, int nVertices,
-                                   const int *vtxIndices, const vector3 *pnts) :
+                                   const int *vtxIndices, const Vector3 *pnts) :
         nbTriangles(nTriangles), nbVertices(nVertices),
         vertexIndices(vtxIndices, vtxIndices + 3 * nTriangles)
 {
-    // Creates a vector3 array based on nbVertices
-    points = new vector3[nVertices];
+    // Creates a Vector3 array based on nbVertices
+    points = new Vector3[nVertices];
 
     // Copying the points of pnts to points
     for (int i = 0; i < nVertices; i++)
@@ -32,13 +32,13 @@ Triangle::Triangle(const Transform *objectToWorld, const TriangleMeshData *mesh,
 
 bool Triangle::intersect(const Ray &ray, float tmin, float tmax, HitData &hit) const {
     // Getting the point data
-    const vector3 &p0 = mesh->points[vertices[0]];
-    const vector3 &p1 = mesh->points[vertices[1]];
-    const vector3 &p2 = mesh->points[vertices[2]];
+    const Vector3 &p0 = mesh->points[vertices[0]];
+    const Vector3 &p1 = mesh->points[vertices[1]];
+    const Vector3 &p2 = mesh->points[vertices[2]];
 
-    vector3 p0p1 = p1 - p0;
-    vector3 p0p2 = p2 - p0;
-    vector3 perpendicularVector = cross(ray.direction, p0p2);
+    Vector3 p0p1 = p1 - p0;
+    Vector3 p0p2 = p2 - p0;
+    Vector3 perpendicularVector = cross(ray.direction, p0p2);
     float determinant = dot(p0p1, perpendicularVector);
 
     // Testing if the determinant is very close to 0. If so, we skip rendering the triangle
@@ -50,7 +50,7 @@ bool Triangle::intersect(const Ray &ray, float tmin, float tmax, HitData &hit) c
 
     // Computing and testing barycentric coordinates :
     // Computing u
-    vector3 tVec = ray.origin - p0;
+    Vector3 tVec = ray.origin - p0;
     float u = dot(tVec, perpendicularVector) * invertDeterminant;
     // Barycentric rule -> u + v + w = 1 for any point in the triangle
     // so if not u < 0 or u > 1, then the hit point is outside the triangle
@@ -58,7 +58,7 @@ bool Triangle::intersect(const Ray &ray, float tmin, float tmax, HitData &hit) c
         return false;
 
     // Computing v
-    vector3 qVec = cross(tVec, p0p1);
+    Vector3 qVec = cross(tVec, p0p1);
     float v = dot(ray.direction, qVec) * invertDeterminant;
     // Barycentric rule -> u + v + w = 1 for any point in the triangle
     // so if not u < 0 or w(1 - u - v) > 1, then the hit point is outside the triangle
@@ -68,7 +68,7 @@ bool Triangle::intersect(const Ray &ray, float tmin, float tmax, HitData &hit) c
     float t = dot(p0p2, qVec) * invertDeterminant;
     if (tmin < t && t < tmax) {
         // TODO: Create a proper normal implementation
-        vector3 N = cross(p0p1.unitVector(), p0p2.unitVector());
+        Vector3 N = cross(p0p1.unitVector(), p0p2.unitVector());
         if (dot(ray.direction, N) > 0)
             N *= -1;
 

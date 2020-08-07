@@ -36,7 +36,7 @@ public:
 
 	bool initialize();
 	bool trace();
-	vector3 computeRay(const Ray& ray, int depth) const;
+	Vector3 computeRay(const Ray& ray, int depth) const;
 
 	Shader* m_default_shader = new Lambert();
 
@@ -59,8 +59,8 @@ private:
     ShapeList m_world;
 };
 
-extern vector3 unitToColor(const vector3& vec);
-extern vector3 applyGamma(const vector3& color, float gamma);
+extern Vector3 unitToColor(const Vector3& vec);
+extern Vector3 applyGamma(const Vector3& color, float gamma);
 extern float applyGamma(const float color, float gamma);
 
 #endif

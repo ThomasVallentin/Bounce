@@ -40,11 +40,11 @@ void Camera::updateProjectionPlane() {
 
     projectionPlaneWidth = float(renderWidth) / ratio / focalLength * fmaxf(0.001, focusDistance);
     projectionPlaneHeight = projectionPlaneWidth / renderAspectRatio;
-    projectionPlaneTopLeftCorner = vector3(-projectionPlaneWidth / 2.0f, projectionPlaneHeight / 2.0f, -focusDistance);
+    projectionPlaneTopLeftCorner = Vector3(-projectionPlaneWidth / 2.0f, projectionPlaneHeight / 2.0f, -focusDistance);
 }
 
 void Camera::generateRay(float u, float v, Ray &ray) const {
-    ray.origin = vector3(0, 0, 0);
+    ray.origin = Vector3(0, 0, 0);
     if (apertureRadius > 0.0001)  // Aperture is too little, considering it 0 to avoid useless calculations
         ray.origin += randPointInUnitCircle() * apertureRadius;
 

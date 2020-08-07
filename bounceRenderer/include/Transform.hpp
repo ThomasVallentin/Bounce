@@ -7,7 +7,7 @@
 #define BOUNCERENDERER_TRANSFORM_HPP
 
 #include "Matrix.hpp"
-#include "vector3.h"
+#include "Vector3.hpp"
 
 enum Axis{
     x,
@@ -24,14 +24,14 @@ public:
 
     Transform getInversed();
     void translate(const float x, const float y, const float z);
-    void translate(const vector3 &t);
+    void translate(const Vector3 &t);
     void rotate(const Axis axis, float rotation);
     void scale(const float x, const float y, const float z);
 
-    vector3 translateVector(const vector3 &pos) const;
+    Vector3 translateVector(const Vector3 &pos) const;
 
     static Transform *Identity() { return new Transform(IdentityMatrix, IdentityMatrix.getInversed()); }
-    static Transform *LookAt(const vector3 &from, const vector3 &to, bool reversed=false);
+    static Transform *LookAt(const Vector3 &from, const Vector3 &to, bool reversed=false);
     static Transform *LookAt(Transform *from, Transform *to, bool reversed=false);
     Matrix4 matrix, inverseMatrix;
 };

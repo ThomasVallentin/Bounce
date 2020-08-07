@@ -3,7 +3,7 @@
 bool Sphere::intersect(const Ray& ray, float tmin, float tmax, HitData& hit) const
 {
 	// std::cout << ray.origin << " " << ray.direction << std::endl;
-	vector3 centerToOrigin = ray.origin - m_center;
+	Vector3 centerToOrigin = ray.origin - m_center;
 	float a = dot(ray.direction, ray.direction); // optim : =1 if direction is normalized
 	float b = 2 * dot(centerToOrigin, ray.direction);
 	float c = dot(centerToOrigin, centerToOrigin) - m_radius * m_radius;

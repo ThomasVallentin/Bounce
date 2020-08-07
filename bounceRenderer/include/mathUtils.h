@@ -3,7 +3,7 @@
 
 #define PI 3.14159265f
 
-#include "vector3.h"
+#include "Vector3.hpp"
 #include <cmath>
 #include <cstdlib>
 
@@ -11,7 +11,7 @@ extern float degToRad(const float deg);
 extern float radToDeg(const float rad);
 
 extern float randomFlt(float a=0, float b=1);
-extern vector3 randPointInUnitCircle();
-extern vector3 randPointInUnitSphere();
+extern Vector3 randPointInUnitCircle();
+extern Vector3 randPointInUnitSphere();
 
 #endif

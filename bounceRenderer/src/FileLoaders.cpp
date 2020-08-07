@@ -65,7 +65,7 @@ bool OBJLoader::load(std::string &path, bool force) {
 
     int nbTriangles(0), nbVertices(0);
     std::vector<int> vertexIndices;
-    std::vector<vector3> positions;
+    std::vector<Vector3> positions;
 
     std::string currentLine;
     std::string token, content;
@@ -83,7 +83,7 @@ bool OBJLoader::load(std::string &path, bool force) {
         if (token == "v")
         {
             // VERTEX POSITION
-            vector3 pos;
+            Vector3 pos;
             std::vector<std::string> splitted;
             splitString(content, ' ', splitted);
 
