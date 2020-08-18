@@ -6,82 +6,82 @@
 #include "Color.hpp"
 
 Color &Color::operator+=(const Color &col) {
-    c[0] += col[0] ; c[1] += col[1] ; c[2] += col[2] ; c[3] += col[3] ;
+    r += col.r ; g += col.g ; b += col.b ; a += col.a ;
     return *this;
 }
 
 Color &Color::operator-=(const Color &col) {
-    c[0] -= col[0] ; c[1] -= col[1] ; c[2] -= col[2] ; c[3] -= col[3] ;
+    r -= col.r ; g -= col.g ; b -= col.b ; a -= col.a ;
     return *this;
 }
 
 Color &Color::operator*=(const Color &col) {
-    c[0] *= col[0] ; c[1] *= col[1] ; c[2] *= col[2] ; c[3] *= col[3] ;
+    r *= col.r ; g *= col.g ; b *= col.b ; a *= col.a ;
     return *this;
 }
 
 Color &Color::operator/=(const Color &col) {
-    c[0] /= col[0] ; c[1] /= col[1] ; c[2] /= col[2] ; c[3] /= col[3] ;
+    r /= col.r ; g /= col.g ; b /= col.b ; a /= col.a ;
     return *this;
 }
 
 Color &Color::operator*=(float f) {
-    c[0] *= f ; c[1] *= f ; c[2] *= f ; c[3] *= f ;
+    r *= f ; g *= f ; b *= f ; a *= f ;
     return *this;
 }
 
 Color &Color::operator/=(float f) {
-    c[0] /= f ; c[1] /= f ; c[2] /= f ; c[3] /= f;
+    r /= f ; g /= f ; b /= f ; a /= f;
     return *this;
 }
 
 Color Color::operator+(const Color &col) const {
-    return Color(r() + col[0],
-                 g() + col[1],
-                 b() + col[2],
-                 a() + col[3]);
+    return Color(r + col.r,
+                 g + col.g,
+                 b + col.b,
+                 a + col.a);
 }
 
 Color Color::operator-(const Color &col) const {
-    return Color(r() - col[0],
-                 g() - col[1],
-                 b() - col[2],
-                 a() - col[3]);}
+    return Color(r - col.r,
+                 g - col.g,
+                 b - col.b,
+                 a - col.a);}
 
 Color Color::operator*(const Color &col) const {
-    return Color(r() * col[0],
-                 g() * col[1],
-                 b() * col[2],
-                 a() * col[3]);
+    return Color(r * col.r,
+                 g * col.g,
+                 b * col.b,
+                 a * col.a);
 }
 
 Color Color::operator/(const Color &col) const {
-    return Color(r() / col[0],
-                 g() / col[1],
-                 b() / col[2],
-                 a() / col[3]);
+    return Color(r / col.r,
+                 g / col.g,
+                 b / col.b,
+                 a / col.a);
 }
 
 Color Color::operator*(float f) const {
-    return Color(r() * f,
-                 g() * f,
-                 b() * f,
-                 a() * f);
+    return Color(r * f,
+                 g * f,
+                 b * f,
+                 a * f);
 }
 
 Color Color::operator/(float f) const {
-    return Color(r() / f,
-                 g() / f,
-                 b() / f,
-                 a() / f);
+    return Color(r / f,
+                 g / f,
+                 b / f,
+                 a / f);
 }
 
 std::istream &operator>>(std::istream &is, Color &col) {
-    is >> col[0] >> col[1] >> col[2];
+    is >> col.r >> col.g >> col.b >> col.a;
     return is;
 }
 
 std::ostream &operator<<(std::ostream &os, const Color &col) {
-    os << "Point3(" << col[0] << ", " << col[1] << ", " << col[2] << ")";
+    os << "Point3(" << col.r << ", " << col.g << ", " << col.b << ", " << col.a << ")";
     return os;
 }

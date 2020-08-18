@@ -13,20 +13,14 @@ class Point3;
 class Vector3 {
 
 public:
-	Vector3() { v[0] = 0.0f; v[1] = 0.0f; v[2] = 0.0f;}
+	Vector3() { x = y = z = 0.0f;}
 	Vector3(const float &v0, const float &v1, const float &v2);
-	Vector3(const Vector3& vec)  { v[0]=vec.v[0] ; v[1]=vec.v[1] ; v[2]=vec.v[2]; }
-    Vector3(const Point3 &point);
-
-	float x() const { return v[0]; }
-	float y() const { return v[1]; }
-	float z() const { return v[2]; }
+	Vector3(const Vector3& vec)  { x=vec.x ; y=vec.y ; z=vec.z; }
+    Vector3(const Point3 &pt);
 
 	Vector3 operator+() { return *this; }
-	Vector3 operator-() { return Vector3(-v[0], -v[1], -v[2]); }
-	float operator[](int i) const { return v[i]; }
-	float& operator[](int i) { return v[i]; }
-	
+	Vector3 operator-() { return Vector3(-x, -y, -z); }
+
 	Vector3& operator+=(const Vector3 &vec2);
 	Vector3& operator-=(const Vector3 &vec2);
 	Vector3& operator*=(const Vector3 &vec2);
@@ -46,13 +40,12 @@ public:
     Vector3 operator*(const Matrix4& mat)  const;
     Vector3 operator*(const Transform& trans)  const;
 
-	float squaredLength() const { return v[0] * v[0] + v[1] * v[1] + v[2] * v[2]; }
-	float length() const { return sqrtf(this->squaredLength()); }
+	float squaredLength() const { return x * x + y * y + z * z; }
+	float length() const { return sqrtf( squaredLength() ); }
 	void normalize();
 	Vector3 normalized() const;
 
-private:
-	float v[3] = {};
+	float x, y, z;
 };
 
 extern float dot(const Vector3& vec1, const Vector3& vec2);

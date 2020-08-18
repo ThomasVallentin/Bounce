@@ -6,97 +6,88 @@
 #include "Point3.hpp"
 
 
-Vector3::Vector3(const Point3 &point) {
-    v[0] = point[0]; v[1] = point[1]; v[2] = point[2];
+Vector3::Vector3(const Point3 &pt) {
+    x = pt.x ; y = pt.y ; z = pt.z;
 }
 
-
-Point3& Point3::operator+=(const Vector3& vec2)
-{
-    p[0] += vec2[0];
-    p[1] += vec2[1];
-    p[2] += vec2[2];
+Point3 &Point3::operator+=(const Point3 &pt) {
+    x += pt.x;
+    y += pt.y;
+    z += pt.z;
     return *this;
 }
 
-Point3& Point3::operator-=(const Vector3& vec2)
+Point3& Point3::operator+=(const Vector3& vec)
 {
-    p[0] -= vec2[0];
-    p[1] -= vec2[1];
-    p[2] -= vec2[2];
+    x += vec.x;
+    y += vec.y;
+    z += vec.z;
     return *this;
 }
 
-Point3& Point3::operator*=(const Vector3& vec2)
-{
-    p[0] *= vec2[0];
-    p[1] *= vec2[1];
-    p[2] *= vec2[2];
+Point3 &Point3::operator-=(const Point3 &pt) {
+    x -= pt.x;
+    y -= pt.y;
+    z -= pt.z;
     return *this;
 }
 
-Point3& Point3::operator/=(const Vector3& vec2)
+Point3& Point3::operator-=(const Vector3& vec)
 {
-    p[0] /= vec2[0];
-    p[1] /= vec2[1];
-    p[2] /= vec2[2];
+    x -= vec.x;
+    y -= vec.y;
+    z -= vec.z;
     return *this;
 }
 
 Point3& Point3::operator*=(const float f)
 {
-    p[0] *= f;
-    p[1] *= f;
-    p[2] *= f;
+    x *= f;
+    y *= f;
+    z *= f;
     return *this;
 }
 
 Point3& Point3::operator/=(const float f)
 {
-    p[0] /= f;
-    p[1] /= f;
-    p[2] /= f;
+    x /= f;
+    y /= f;
+    z /= f;
     return *this;
 }
 
-Point3 Point3::vectorTo(const Point3 &point) {
-    return Point3(point[0] - p[0],
-                  point[0] - p[1],
-                  point[0] - p[2]);
-}
-
 Point3 Point3::operator+(const Point3 &pt) const {
-    return Point3(p[0] + pt[0], p[1] + pt[1], p[2] + pt[2]);
+    return Point3(x + pt.x, y + pt.y, z + pt.z);
 }
 
 Point3 Point3::operator+(const Vector3 &vec) const {
-    return Point3(p[0] + vec[0], p[1] + vec[1], p[2] + vec[2]);
+    return Point3(x + vec.x, y + vec.y, z + vec.z);
 }
 
-Point3 Point3::operator-(const Point3 &pt) const {
-    return Point3(p[0] - pt[0], p[1] - pt[1], p[2] - pt[2]);
+Vector3 Point3::operator-(const Point3 &pt) const {
+    return Point3(x - pt.x, y - pt.y, z - pt.z);
 }
 
 Point3 Point3::operator-(const Vector3 &vec) const {
-    return Point3(p[0] - vec[0], p[1] - vec[1], p[2] - vec[2]);
+    return Point3(x - vec.x, y - vec.y, z - vec.z);
 }
 
 Point3 Point3::operator*(float f) const {
-    return Point3(p[0] * f, p[1] * f, p[2] * f);
+    return Point3(x * f, y * f, z * f);
 }
 
 Point3 Point3::operator/(float f) const {
-    return Point3(p[0] / f, p[1] / f, p[2] / f);
+    return Point3(x / f, y / f, z / f);
 }
 
 std::istream& operator>>(std::istream& is, Point3& pt)
 {
-    is >> pt[0] >> pt[1] >> pt[2];
+    is >> pt.x >> pt.y >> pt.z;
     return is;
 }
 
 std::ostream& operator<<(std::ostream& os, const Point3& pt)
 {
-    os << "Point3(" << pt[0] << ", " << pt[1] << ", " << pt[2] << ")";
+    os << "Point3(" << pt.x << ", " << pt.y << ", " << pt.z << ")";
     return os;
 }
