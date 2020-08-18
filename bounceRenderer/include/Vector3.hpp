@@ -36,6 +36,16 @@ public:
     Vector3& operator*=(const Matrix4& mat);
     Vector3& operator*=(const Transform& trans);
 
+    Vector3 operator+(const Vector3& vec2) const;
+    Vector3 operator-(const Vector3& vec2) const;
+
+    Vector3 operator*(const Vector3& vec2)  const;
+    Vector3 operator*(float f)  const;
+    Vector3 operator/(const Vector3& vec2)  const;
+    Vector3 operator/(float f)  const;
+    Vector3 operator*(const Matrix4& mat)  const;
+    Vector3 operator*(const Transform& trans)  const;
+
 	float squaredLength() const { return v[0] * v[0] + v[1] * v[1] + v[2] * v[2]; }
 	float length() const { return sqrtf(this->squaredLength()); }
 	void normalize();
@@ -48,18 +58,6 @@ private:
 extern float dot(const Vector3& vec1, const Vector3& vec2);
 extern Vector3 cross(const Vector3& vec1, const Vector3& vec2);
 extern Vector3 reflectVector(const Vector3& v, const Vector3& n);
-
-extern Vector3 operator+(const Vector3& vec1, const Vector3& vec2);
-extern Vector3 operator-(const Vector3& vec1, const Vector3& vec2);
-extern Vector3 operator*(const Vector3& vec1, const Vector3& vec2);
-extern Vector3 operator/(const Vector3& vec1, const Vector3& vec2);
-
-extern Vector3 operator*(const Vector3& vec, float f);
-extern Vector3 operator*(float f, const Vector3& vec);
-extern Vector3 operator/(const Vector3& vec, float f);
-
-extern Vector3 operator*(const Vector3& vec, const Matrix4& mat);
-extern Vector3 operator*(const Vector3& vec, const Transform& trans);
 
 extern std::istream& operator>>(std::istream& is, Vector3& vec);
 extern std::ostream& operator<<(std::ostream& os, const Vector3& vec);

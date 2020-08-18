@@ -277,11 +277,11 @@ Matrix4::~Matrix4() {
 }
 
 
-Vector3 operator*(const Vector3& vec, const Matrix4& mat)
+Vector3 Vector3::operator*(const Matrix4& mat) const
 {
-    return Vector3(mat.m[0][0] * vec.x() + mat.m[1][0] * vec.y() + mat.m[2][0] * vec.z(),
-                   mat.m[0][1] * vec.x() + mat.m[1][1] * vec.y() + mat.m[2][1] * vec.z(),
-                   mat.m[0][2] * vec.x() + mat.m[1][2] * vec.y() + mat.m[2][2] * vec.z());
+    return Vector3(mat.m[0][0] * x() + mat.m[1][0] * y() + mat.m[2][0] * z(),
+                   mat.m[0][1] * x() + mat.m[1][1] * y() + mat.m[2][1] * z(),
+                   mat.m[0][2] * x() + mat.m[1][2] * y() + mat.m[2][2] * z());
 }
 
 Vector3 &Vector3::operator*=(const Matrix4 &mat) {
@@ -296,11 +296,11 @@ Vector3 &Vector3::operator*=(const Matrix4 &mat) {
 }
 
 
-Point3 operator*(const Point3& pt, const Matrix4& mat)
+Point3 Point3::operator*(const Matrix4& mat) const
 {
-    return Point3(mat.m[0][0] * pt.x() + mat.m[1][0] * pt.y() + mat.m[2][0] * pt.z() + mat.m[3][0],
-                  mat.m[0][1] * pt.x() + mat.m[1][1] * pt.y() + mat.m[2][1] * pt.z() + mat.m[3][1],
-                  mat.m[0][2] * pt.x() + mat.m[1][2] * pt.y() + mat.m[2][2] * pt.z() + mat.m[3][2]);
+    return Point3(mat.m[0][0] * x() + mat.m[1][0] * y() + mat.m[2][0] * z() + mat.m[3][0],
+                  mat.m[0][1] * x() + mat.m[1][1] * y() + mat.m[2][1] * z() + mat.m[3][1],
+                  mat.m[0][2] * x() + mat.m[1][2] * y() + mat.m[2][2] * z() + mat.m[3][2]);
 }
 
 Point3 &Point3::operator*=(const Matrix4 &mat) {

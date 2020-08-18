@@ -33,24 +33,23 @@ public:
     Point3& operator*=(const Matrix4& mat);
     Point3& operator*=(const Transform& trans);
 
+    Point3 operator+(const Point3& p2) const;
+    Point3 operator+(const Vector3& vec) const;
+    Point3 operator-(const Point3& p2) const;
+    Point3 operator-(const Vector3& vec) const;
+
+    Point3 operator*(float f) const;
+    Point3 operator*(const Matrix4& mat) const;
+    Point3 operator*(const Transform& trans) const;
+    Point3 operator/(float f) const;
+
     Point3 vectorTo(const Point3 &point);
 private:
     float p[3] = {};
 };
 
-extern Point3 operator+(const Point3& p1, const Point3& p2);
-extern Point3 operator-(const Point3& p1, const Point3& p2);
-extern Point3 operator*(const Point3& p1, const Point3& p2);
-extern Point3 operator/(const Point3& p1, const Point3& p2);
-
-extern Point3 operator*(const Point3& pt, float f);
-extern Point3 operator*(float f, const Point3& point);
-extern Point3 operator/(const Point3& point, float f);
-
-extern Point3 operator*(const Point3& pt, const Matrix4& mat);
-extern Point3 operator*(const Point3& pt, const Transform& trans);
-
 extern std::istream& operator>>(std::istream& is, Point3& pt);
 extern std::ostream& operator<<(std::ostream& os, const Point3& pt);
+
 
 #endif //BOUNCE_POINT3_HPP

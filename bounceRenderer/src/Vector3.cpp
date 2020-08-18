@@ -2,32 +2,28 @@
 
 // == General Operators =================================================================
 
-Vector3 operator+(const Vector3& vec1, const Vector3& vec2) {
-	return Vector3(vec1.x() + vec2.x(), vec1.y() + vec2.y(), vec1.z() + vec2.z());
+Vector3 Vector3::operator+(const Vector3& vec) const {
+	return Vector3(x() + vec.x(), y() + vec.y(), z() + vec.z());
 }
 
-Vector3 operator-(const Vector3& vec1, const Vector3& vec2) {
-	return Vector3(vec1.x() - vec2.x(), vec1.y() - vec2.y(), vec1.z() - vec2.z());
+Vector3 Vector3::operator-(const Vector3& vec) const {
+	return Vector3(x() - vec.x(), y() - vec.y(), z() - vec.z());
 }
 
-Vector3 operator*(const Vector3& vec1, const Vector3& vec2) {
-	return Vector3(vec1.x() * vec2.x(), vec1.y() * vec2.y(), vec1.z() * vec2.z());
+Vector3 Vector3::operator*(const Vector3& vec) const {
+	return Vector3(x() * vec.x(), y() * vec.y(), z() * vec.z());
 }
 
-Vector3 operator/(const Vector3& vec1, const Vector3& vec2) {
-	return Vector3(vec1.x() / vec2.x(), vec1.y() / vec2.y(), vec1.z() / vec2.z());
+Vector3 Vector3::operator/(const Vector3& vec) const {
+	return Vector3(x() / vec.x(), y() / vec.y(), z() / vec.z());
 }
 
-Vector3 operator*(const Vector3& vec, float f) {
-	return Vector3(vec.x() * f, vec.y() * f, vec.z() * f);
+Vector3 Vector3::operator*(float f) const {
+	return Vector3(x() * f, y() * f, z() * f);
 }
 
-Vector3 operator*(float f, const Vector3& vec) {
-	return Vector3(vec.x() * f, vec.y() * f, vec.z() * f);
-}
-
-Vector3 operator/(const Vector3& vec, float f) {
-	return Vector3(vec.x() / f, vec.y() / f, vec.z() / f);
+Vector3 Vector3::operator/(float f) const {
+	return Vector3(x() / f, y() / f, z() / f);
 }
 
 std::istream& operator>>(std::istream& is, Vector3& vec)

@@ -102,11 +102,11 @@ Vector3 Transform::translateVector(const Vector3 &pos) const {
 
 
 
-Vector3 operator*(const Vector3& vec, const Transform& trans)
+Vector3 Vector3::operator*(const Transform& trans) const
 {
-    return Vector3(trans.matrix.m[0][0] * vec.x() + trans.matrix.m[1][0] * vec.y() + trans.matrix.m[2][0] * vec.z(),
-                   trans.matrix.m[0][1] * vec.x() + trans.matrix.m[1][1] * vec.y() + trans.matrix.m[2][1] * vec.z(),
-                   trans.matrix.m[0][2] * vec.x() + trans.matrix.m[1][2] * vec.y() + trans.matrix.m[2][2] * vec.z());
+    return Vector3(trans.matrix.m[0][0] * x() + trans.matrix.m[1][0] * y() + trans.matrix.m[2][0] * z(),
+                   trans.matrix.m[0][1] * x() + trans.matrix.m[1][1] * y() + trans.matrix.m[2][1] * z(),
+                   trans.matrix.m[0][2] * x() + trans.matrix.m[1][2] * y() + trans.matrix.m[2][2] * z());
 }
 
 Vector3& Vector3::operator*=(const Transform &trans)
@@ -122,11 +122,11 @@ Vector3& Vector3::operator*=(const Transform &trans)
 }
 
 
-Point3 operator*(const Point3& pt, const Transform& trans)
+Point3 Point3::operator*(const Transform& trans) const
 {
-    return Point3(trans.matrix.m[0][0] * pt.x() + trans.matrix.m[1][0] * pt.y() + trans.matrix.m[2][0] * pt.z(),
-                  trans.matrix.m[0][1] * pt.x() + trans.matrix.m[1][1] * pt.y() + trans.matrix.m[2][1] * pt.z(),
-                  trans.matrix.m[0][2] * pt.x() + trans.matrix.m[1][2] * pt.y() + trans.matrix.m[2][2] * pt.z());
+    return Point3(trans.matrix.m[0][0] * x() + trans.matrix.m[1][0] * y() + trans.matrix.m[2][0] * z(),
+                  trans.matrix.m[0][1] * x() + trans.matrix.m[1][1] * y() + trans.matrix.m[2][1] * z(),
+                  trans.matrix.m[0][2] * x() + trans.matrix.m[1][2] * y() + trans.matrix.m[2][2] * z());
 }
 
 

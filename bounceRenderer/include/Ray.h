@@ -2,6 +2,7 @@
 #define RAYH
 
 #include "Vector3.hpp"
+#include "Point3.hpp"
 #include <iostream>
 
 // just here to be able to create a pointer without creating a loop between ray and shader headers
@@ -13,9 +14,9 @@ public:
 	Ray() = default;
 	Ray(const Vector3& o, const Vector3& d) { origin = o; direction = d.normalized(); }
 
-	Vector3 pointAtParameter(float t) const { return origin + t * direction; }
+	Point3 pointAtParameter(float t) const { return origin + direction * t; }
 
-    Vector3 origin;
+    Point3 origin;
     Vector3 direction;
 };
 

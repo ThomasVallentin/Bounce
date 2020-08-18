@@ -65,6 +65,29 @@ Point3 Point3::vectorTo(const Point3 &point) {
                   point[0] - p[2]);
 }
 
+Point3 Point3::operator+(const Point3 &pt) const {
+    return Point3(p[0] + pt[0], p[1] + pt[1], p[2] + pt[2]);
+}
+
+Point3 Point3::operator+(const Vector3 &vec) const {
+    return Point3(p[0] + vec[0], p[1] + vec[1], p[2] + vec[2]);
+}
+
+Point3 Point3::operator-(const Point3 &pt) const {
+    return Point3(p[0] - pt[0], p[1] - pt[1], p[2] - pt[2]);
+}
+
+Point3 Point3::operator-(const Vector3 &vec) const {
+    return Point3(p[0] - vec[0], p[1] - vec[1], p[2] - vec[2]);
+}
+
+Point3 Point3::operator*(float f) const {
+    return Point3(p[0] * f, p[1] * f, p[2] * f);
+}
+
+Point3 Point3::operator/(float f) const {
+    return Point3(p[0] / f, p[1] / f, p[2] / f);
+}
 
 std::istream& operator>>(std::istream& is, Point3& pt)
 {
