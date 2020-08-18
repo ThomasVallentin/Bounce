@@ -45,18 +45,25 @@ public:
     Color& operator*=(float f);
     Color& operator/=(float f);
 
+    Color operator+(const Color& col) const;
+    Color operator-(const Color& col) const;
+    Color operator*(const Color& col) const;
+    Color operator*(float f) const;
+    Color operator/(const Color& col) const;
+    Color operator/(float f) const;
+
 private:
     float c[4]{};
 };
 
-extern Color operator+(const Color& col1, const Color& col2);
-extern Color operator-(const Color& col1, const Color& col2);
-extern Color operator*(const Color& col1, const Color& col2);
-extern Color operator/(const Color& col1, const Color& col2);
+extern
+extern
+extern
+extern
 
-extern Color operator*(const Color& col, float f);
-extern Color operator*(float f, const Color& col);
-extern Color operator/(const Color& col, float f);
+extern
+extern
+extern
 
 extern std::istream& operator>>(std::istream& is, Color& col);
 extern std::ostream& operator<<(std::ostream& os, const Color& col);

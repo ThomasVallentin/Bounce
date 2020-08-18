@@ -35,52 +35,45 @@ Color &Color::operator/=(float f) {
     return *this;
 }
 
-Color operator+(const Color &col1, const Color &col2) {
-    return Color(col1[0] + col2[0],
-                 col1[1] + col2[1],
-                 col1[2] + col2[2],
-                 col1[3] + col2[3]);
+Color Color::operator+(const Color &col) const {
+    return Color(r() + col[0],
+                 g() + col[1],
+                 b() + col[2],
+                 a() + col[3]);
 }
 
-Color operator-(const Color &col1, const Color &col2) {
-    return Color(col1[0] - col2[0],
-                 col1[1] - col2[1],
-                 col1[2] - col2[2],
-                 col1[3] - col2[3]);}
+Color Color::operator-(const Color &col) const {
+    return Color(r() - col[0],
+                 g() - col[1],
+                 b() - col[2],
+                 a() - col[3]);}
 
-Color operator*(const Color &col1, const Color &col2) {
-    return Color(col1[0] * col2[0],
-                 col1[1] * col2[1],
-                 col1[2] * col2[2],
-                 col1[3] * col2[3]);
+Color Color::operator*(const Color &col) const {
+    return Color(r() * col[0],
+                 g() * col[1],
+                 b() * col[2],
+                 a() * col[3]);
 }
 
-Color operator/(const Color &col1, const Color &col2) {
-    return Color(col1[0] / col2[0],
-                 col1[1] / col2[1],
-                 col1[2] / col2[2],
-                 col1[3] / col2[3]);
+Color Color::operator/(const Color &col) const {
+    return Color(r() / col[0],
+                 g() / col[1],
+                 b() / col[2],
+                 a() / col[3]);
 }
 
-Color operator*(const Color &col, float f) {
-    return Color(col[0] * f,
-                 col[1] * f,
-                 col[2] * f,
-                 col[3] * f);
+Color Color::operator*(float f) const {
+    return Color(r() * f,
+                 g() * f,
+                 b() * f,
+                 a() * f);
 }
 
-Color operator*(float f, const Color &col) {
-    return Color(col[0] * f,
-                 col[1] * f,
-                 col[2] * f,
-                 col[3] * f);
-}
-
-Color operator/(const Color &col, float f) {
-    return Color(col[0] / f,
-                 col[1] / f,
-                 col[2] / f,
-                 col[3] / f);
+Color Color::operator/(float f) const {
+    return Color(r() / f,
+                 g() / f,
+                 b() / f,
+                 a() / f);
 }
 
 std::istream &operator>>(std::istream &is, Color &col) {
