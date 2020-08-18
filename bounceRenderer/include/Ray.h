@@ -24,7 +24,7 @@ extern std::ostream& operator<<(std::ostream& os, const Ray& r);
 
 struct HitData {
 	double t;
-	Vector3 position;
+	Point3 position;
 	Vector3 normal;
 	Shader* shader_ptr;
 };

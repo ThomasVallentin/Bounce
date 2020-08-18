@@ -25,7 +25,7 @@ public:
     Transform getInversed();
     void translate(const float x, const float y, const float z);
     void translate(const Vector3 &t);
-    void rotate(const Axis axis, float rotation);
+    void rotate(const Axis &axis, float rotation);
     void scale(const float x, const float y, const float z);
 
     Vector3 translateVector(const Vector3 &pos) const;

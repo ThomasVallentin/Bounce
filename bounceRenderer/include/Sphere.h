@@ -11,12 +11,12 @@ public:
                                                                     objectToWorld->matrix.m[3][1],
                                                                     objectToWorld->matrix.m[3][2]) {}
 
-    Vector3 center() const { return m_center; }
+    Point3 center() const { return m_center; }
     float radius() const { return m_radius; }
 	bool intersect(const Ray& ray, float tmin, float tmax, HitData& hit) const override;
 
 private:
-	Vector3 m_center;
+	Point3 m_center;
 	float m_radius;
 	
 };

@@ -98,7 +98,7 @@ inline bool refract(const Vector3& in, const Vector3& surfaceNormal, float surfa
 	}
 	else {
 		//outVector = iorRatio * in + surfaceNormal * (iorRatio * cosIn - sqrtf(discriminant));
-		outVector = iorRatio * (in + surfaceNormal*cosIn) - surfaceNormal * sqrtf(discriminant);
+		outVector =  (in + surfaceNormal*cosIn) * iorRatio - surfaceNormal * sqrtf(discriminant);
 		return true;
 	}
 }
@@ -141,7 +141,7 @@ public:
 		float reflectRatio = fresnel(inRay.direction, hitdata.normal, m_ior);
 		bool outside = dot(inRay.direction, hitdata.normal) < 0;
 
-		const Vector3 bias = 0.000001f * hitdata.normal;
+		const Vector3 bias = hitdata.normal * 0.000001f;
 
 		bool isRefracting = false;
 		if (reflectRatio < 1) {  // if we're not in a total internal reflection

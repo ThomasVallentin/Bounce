@@ -11,12 +11,12 @@ Transform Transform::getInversed() {
 }
 
 void Transform::translate(const Vector3 &t) {
-    matrix.m[3][0] += t.x();
-    matrix.m[3][1] += t.y();
-    matrix.m[3][2] += t.z();
-    inverseMatrix.m[3][0] -= t.x();
-    inverseMatrix.m[3][1] -= t.y();
-    inverseMatrix.m[3][2] -= t.z();
+    matrix.m[3][0] += t.x;
+    matrix.m[3][1] += t.y;
+    matrix.m[3][2] += t.z;
+    inverseMatrix.m[3][0] -= t.x;
+    inverseMatrix.m[3][1] -= t.y;
+    inverseMatrix.m[3][2] -= t.z;
 }
 
 void Transform::translate(const float x, const float y, const float z) {
@@ -28,7 +28,7 @@ void Transform::translate(const float x, const float y, const float z) {
     inverseMatrix.m[3][2] -= z;
 }
 
-void Transform::rotate(const Axis axis, float rad) {
+void Transform::rotate(const Axis &axis, float rad) {
     if (axis == Axis::x)
     {
         Matrix4 tmp(1, 0, 0, 0,
@@ -80,10 +80,10 @@ Transform *Transform::LookAt(const Vector3 &from, const Vector3 &to, bool revers
     Vector3 up(cross(front, side));
     up.normalize();
 
-    Matrix4 mat(side.x(), side.y(), side.z(), 0,
-                up.x(), up.y(), up.z(), 0,
-                front.x(), front.y(), front.z(), 0,
-                from.x(), from.y(), from.z(), 1);
+    Matrix4 mat(side.x, side.y, side.z, 0,
+                up.x, up.y, up.z, 0,
+                front.x, front.y, front.z, 0,
+                from.x, from.y, from.z, 1);
 
     static Transform trans(mat, mat.getInversed());
     return &trans;
@@ -104,19 +104,19 @@ Vector3 Transform::translateVector(const Vector3 &pos) const {
 
 Vector3 Vector3::operator*(const Transform& trans) const
 {
-    return Vector3(trans.matrix.m[0][0] * x() + trans.matrix.m[1][0] * y() + trans.matrix.m[2][0] * z(),
-                   trans.matrix.m[0][1] * x() + trans.matrix.m[1][1] * y() + trans.matrix.m[2][1] * z(),
-                   trans.matrix.m[0][2] * x() + trans.matrix.m[1][2] * y() + trans.matrix.m[2][2] * z());
+    return Vector3(trans.matrix.m[0][0] * x + trans.matrix.m[1][0] * y+ trans.matrix.m[2][0] * z,
+                   trans.matrix.m[0][1] * x + trans.matrix.m[1][1] * y+ trans.matrix.m[2][1] * z,
+                   trans.matrix.m[0][2] * x + trans.matrix.m[1][2] * y+ trans.matrix.m[2][2] * z);
 }
 
 Vector3& Vector3::operator*=(const Transform &trans)
 {
-    float temp[3]{trans.matrix.m[0][0] * v[0] + trans.matrix.m[1][0] * v[1] + trans.matrix.m[2][0] * v[2],
-                  trans.matrix.m[0][1] * v[0] + trans.matrix.m[1][1] * v[1] + trans.matrix.m[2][1] * v[2],
-                  trans.matrix.m[0][2] * v[0] + trans.matrix.m[1][2] * v[1] + trans.matrix.m[2][2] * v[2]};
-    v[0] = temp[0];
-    v[1] = temp[1];
-    v[2] = temp[2];
+    float temp[3]{trans.matrix.m[0][0] * x + trans.matrix.m[1][0] * y + trans.matrix.m[2][0] * z,
+                  trans.matrix.m[0][1] * x + trans.matrix.m[1][1] * y + trans.matrix.m[2][1] * z,
+                  trans.matrix.m[0][2] * x + trans.matrix.m[1][2] * y + trans.matrix.m[2][2] * z};
+    x = temp[0];
+    y = temp[1];
+    z = temp[2];
 
     return *this;
 }
@@ -124,20 +124,20 @@ Vector3& Vector3::operator*=(const Transform &trans)
 
 Point3 Point3::operator*(const Transform& trans) const
 {
-    return Point3(trans.matrix.m[0][0] * x() + trans.matrix.m[1][0] * y() + trans.matrix.m[2][0] * z(),
-                  trans.matrix.m[0][1] * x() + trans.matrix.m[1][1] * y() + trans.matrix.m[2][1] * z(),
-                  trans.matrix.m[0][2] * x() + trans.matrix.m[1][2] * y() + trans.matrix.m[2][2] * z());
+    return Point3(trans.matrix.m[0][0] * x + trans.matrix.m[1][0] * y + trans.matrix.m[2][0] * z,
+                  trans.matrix.m[0][1] * x + trans.matrix.m[1][1] * y + trans.matrix.m[2][1] * z,
+                  trans.matrix.m[0][2] * x + trans.matrix.m[1][2] * y + trans.matrix.m[2][2] * z);
 }
 
 
 Point3& Point3::operator*=(const Transform &trans)
 {
-    float temp[3]{trans.matrix.m[0][0] * p[0] + trans.matrix.m[1][0] * p[1] + trans.matrix.m[2][0] * p[2] + trans.matrix.m[3][0],
-                  trans.matrix.m[0][1] * p[0] + trans.matrix.m[1][1] * p[1] + trans.matrix.m[2][1] * p[2] + trans.matrix.m[3][0],
-                  trans.matrix.m[0][2] * p[0] + trans.matrix.m[1][2] * p[1] + trans.matrix.m[2][2] * p[2] + trans.matrix.m[3][0]};
-    p[0] = temp[0];
-    p[1] = temp[1];
-    p[2] = temp[2];
+    float temp[3]{trans.matrix.m[0][0] * x + trans.matrix.m[1][0] * y + trans.matrix.m[2][0] * z + trans.matrix.m[3][0],
+                  trans.matrix.m[0][1] * x + trans.matrix.m[1][1] * y + trans.matrix.m[2][1] * z + trans.matrix.m[3][0],
+                  trans.matrix.m[0][2] * x + trans.matrix.m[1][2] * y + trans.matrix.m[2][2] * z + trans.matrix.m[3][0]};
+    x = temp[0];
+    y = temp[1];
+    z = temp[2];
 
     return *this;
 }
