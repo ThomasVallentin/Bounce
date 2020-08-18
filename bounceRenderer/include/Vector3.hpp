@@ -6,35 +6,21 @@
 #include <sstream> 
 #include <string>
 
-// +====================================================================================+
-// | Vector3 :                                                                          | 
-// +====================================================================================+
-// |                                                                                    |
-// |    This is the class responsible for all the math behind the rays and various      |
-// | geometric calculations.                                                            |
-// |                                                                                    |
-// | Signatures:                                                                        |
-// |    - float, float, float                                                           |
-// |    - Vector3                                                                       |
-// |                                                                                    |
-// +====================================================================================+
 class Matrix4;
 class Transform;
-
+class Point3;
 
 class Vector3 {
 
 public:
 	Vector3() { v[0] = 0.0f; v[1] = 0.0f; v[2] = 0.0f;}
 	Vector3(const float &v0, const float &v1, const float &v2);
-	Vector3(const Vector3& vec);
+	Vector3(const Vector3& vec)  { v[0]=vec.v[0] ; v[1]=vec.v[1] ; v[2]=vec.v[2]; }
+    Vector3(const Point3 &point);
 
 	float x() const { return v[0]; }
 	float y() const { return v[1]; }
 	float z() const { return v[2]; }
-	float r() const { return v[0]; }
-	float g() const { return v[1]; }
-	float b() const { return v[2]; }
 
 	Vector3 operator+() { return *this; }
 	Vector3 operator-() { return Vector3(-v[0], -v[1], -v[2]); }
@@ -50,15 +36,13 @@ public:
     Vector3& operator*=(const Matrix4& mat);
     Vector3& operator*=(const Transform& trans);
 
-	float squaredLength() const {
-		return v[0] * v[0] + v[1] * v[1] + v[2] * v[2]; }
-	float length() const {
-		return sqrt(this->squaredLength()); }
+	float squaredLength() const { return v[0] * v[0] + v[1] * v[1] + v[2] * v[2]; }
+	float length() const { return sqrtf(this->squaredLength()); }
 	void normalize();
-	Vector3 unitVector() const;
+	Vector3 normalized() const;
 
-// private:
-	float v[3]{};
+private:
+	float v[3] = {};
 };
 
 extern float dot(const Vector3& vec1, const Vector3& vec2);
@@ -79,6 +63,5 @@ extern Vector3 operator*(const Vector3& vec, const Transform& trans);
 
 extern std::istream& operator>>(std::istream& is, Vector3& vec);
 extern std::ostream& operator<<(std::ostream& os, const Vector3& vec);
-
 
 #endif

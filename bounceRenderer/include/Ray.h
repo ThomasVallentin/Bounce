@@ -11,7 +11,7 @@ class Ray {
 
 public:
 	Ray() = default;
-	Ray(const Vector3& o, const Vector3& d) { origin = o; direction = d.unitVector(); }
+	Ray(const Vector3& o, const Vector3& d) { origin = o; direction = d.normalized(); }
 
 	Vector3 pointAtParameter(float t) const { return origin + t * direction; }
 

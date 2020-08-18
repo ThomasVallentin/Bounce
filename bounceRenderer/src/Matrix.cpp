@@ -5,6 +5,7 @@
 
 #include "Matrix.hpp"
 
+
 float ** createMatrix(const int size)
 {
     float **matrix = new float* [size];
@@ -290,6 +291,25 @@ Vector3 &Vector3::operator*=(const Matrix4 &mat) {
     v[0] = temp[0];
     v[1] = temp[1];
     v[2] = temp[2];
+
+    return *this;
+}
+
+
+Point3 operator*(const Point3& pt, const Matrix4& mat)
+{
+    return Point3(mat.m[0][0] * pt.x() + mat.m[1][0] * pt.y() + mat.m[2][0] * pt.z() + mat.m[3][0],
+                  mat.m[0][1] * pt.x() + mat.m[1][1] * pt.y() + mat.m[2][1] * pt.z() + mat.m[3][1],
+                  mat.m[0][2] * pt.x() + mat.m[1][2] * pt.y() + mat.m[2][2] * pt.z() + mat.m[3][2]);
+}
+
+Point3 &Point3::operator*=(const Matrix4 &mat) {
+    float temp[3]{mat.m[0][0] * p[0] + mat.m[1][0] * p[1] + mat.m[2][0] * p[2],
+                  mat.m[0][1] * p[0] + mat.m[1][1] * p[1] + mat.m[2][1] * p[2],
+                  mat.m[0][2] * p[0] + mat.m[1][2] * p[1] + mat.m[2][2] * p[2]};
+    p[0] = temp[0];
+    p[1] = temp[1];
+    p[2] = temp[2];
 
     return *this;
 }

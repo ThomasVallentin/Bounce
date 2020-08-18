@@ -1,6 +1,7 @@
 #ifndef TRIANGLEMESH_HPP
 #define TRIANGLEMESH_HPP
 
+#include "Point3.hpp"
 #include "Shape.hpp"
 
 #include <vector>

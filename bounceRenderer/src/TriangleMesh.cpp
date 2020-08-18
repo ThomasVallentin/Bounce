@@ -68,13 +68,13 @@ bool Triangle::intersect(const Ray &ray, float tmin, float tmax, HitData &hit) c
     float t = dot(p0p2, qVec) * invertDeterminant;
     if (tmin < t && t < tmax) {
         // TODO: Create a proper normal implementation
-        Vector3 N = cross(p0p1.unitVector(), p0p2.unitVector());
+        Vector3 N = cross(p0p1.normalized(), p0p2.normalized());
         if (dot(ray.direction, N) > 0)
             N *= -1;
 
         hit.t = t;
         hit.position = ray.pointAtParameter(t);
-        hit.normal = N.unitVector();
+        hit.normal = N.normalized();
 
         hit.shader_ptr = shader;
         return true;

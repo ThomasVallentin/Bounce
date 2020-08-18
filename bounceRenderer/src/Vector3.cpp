@@ -32,21 +32,19 @@ Vector3 operator/(const Vector3& vec, float f) {
 
 std::istream& operator>>(std::istream& is, Vector3& vec)
 {
-	is >> vec.v[0] >> vec.v[1] >> vec.v[2];
+	is >> vec[0] >> vec[1] >> vec[2];
 	return is;
 }
 
 std::ostream& operator<<(std::ostream& os, const Vector3& vec)
 {
-	os << vec.v[0] << " " << vec.v[1] << " " << vec.v[2];
+	os << "Vector3(" << vec[0] << ", " << vec[1] << ", " << vec[2] << ")";
 	return os;
 }
 
 // == Constructors ======================================================================
 
 Vector3::Vector3(const float &v0, const float &v1, const float &v2) { v[0]=v0; v[1]=v1; v[2]=v2; }
-
-Vector3::Vector3(const Vector3& vec) { v[0]=vec.v[0] ; v[1]=vec.v[1] ; v[2]=vec.v[2]; }
 
 // == Self Operators ====================================================================
 
@@ -118,8 +116,9 @@ void Vector3::normalize()
 	v[2] /= len;
 }
 
-Vector3 Vector3::unitVector() const {
+Vector3 Vector3::normalized() const {
 	return Vector3(v[0], v[1], v[2]) / length(); }
+
 
 
 Vector3 reflectVector(const Vector3& v, const Vector3& n) {

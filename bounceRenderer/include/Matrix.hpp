@@ -7,9 +7,11 @@
 #define BOUNCERENDERER_MATRIX_HPP
 
 #include "Vector3.hpp"
+#include "Point3.hpp"
 
 #include <cmath>
 #include <iostream>
+
 
 extern float ** createMatrix(const int size);
 extern void deleteMatrix(float **matrix, const int size);
@@ -19,7 +21,6 @@ extern void cofactorMatrix(float **mat, float **cof, const int N);
 extern void transposeMatrix(float **mat, float **trans, const int N);
 extern void adjugateMatrix(float **mat, float **adj, const int N);
 extern bool inverseMatrix(float **mat, float **inv, const int N);
-
 
 
 class Matrix4 {
