@@ -2,6 +2,6 @@
 
 std::ostream& operator<<(std::ostream& os, const Ray& r)
 {
-	os << "Ray(o=" << r.origin << ";d=" << r.direction << ")";
+	os << "Ray(" << r.origin << " ; " << r.direction << ")";
 	return os;
 }

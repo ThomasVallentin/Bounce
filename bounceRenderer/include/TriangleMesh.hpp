@@ -1,6 +1,7 @@
 #ifndef TRIANGLEMESH_HPP
 #define TRIANGLEMESH_HPP
 
+#include "Point3.hpp"
 #include "Shape.hpp"
 
 #include <vector>
@@ -10,11 +11,11 @@
 struct TriangleMeshData {
     TriangleMeshData(const Transform &objectToWorld,
                      int nTriangles, int nVertices,
-                     const int *vtxIndices, const vector3 *pnts);
+                     const int *vtxIndices, const Point3 *pnts);
 
     const int nbTriangles, nbVertices;
     std::vector<int> vertexIndices;
-    vector3* points;
+    Vector3* points;
 };
 
 

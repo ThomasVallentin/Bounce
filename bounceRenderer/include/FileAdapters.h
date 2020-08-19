@@ -3,7 +3,7 @@
 
 #include "RayTracer.h"
 #include "Iterators.h"
-#include "vector3.h"
+#include "Color.hpp"
 
 #include <vector>
 #include <string>

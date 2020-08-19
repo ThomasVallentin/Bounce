@@ -1,9 +1,9 @@
 //#include "Iterators.h"
 //
 //void PixelArray::initialize(const int width, const int height) {
-//	vector<vector<vector3>> newArray;
+//	vector<vector<Vector3>> newArray;
 //	newArray.resize(width);
-//	for (vector<vector3>& line : newArray)
+//	for (vector<Vector3>& line : newArray)
 //	{
 //		line.resize(height);
 //	}

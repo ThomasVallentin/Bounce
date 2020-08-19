@@ -26,13 +26,13 @@
 //	PixelArray(const int width, const int height) { initialize(width, height); }
 //
 //	void initialize(const int width, const int height);
-//	vector3& get(const int width, const int height) { return m_pixels[height][width]; }
-//	void set(const int width, const int height, vector3& value) { m_pixels[height][width] = value; }
+//	Vector3& get(const int width, const int height) { return m_pixels[height][width]; }
+//	void set(const int width, const int height, Vector3& value) { m_pixels[height][width] = value; }
 //	int height() { return m_pixels.size(); }
 //	int width() { return m_pixels[0].size(); }
 //
 //private:
-//	vector<vector<vector3>> m_pixels;
+//	vector<vector<Vector3>> m_pixels;
 //};
 //
 //// == PIXEL ITERATOR ==============================================================================
@@ -46,7 +46,7 @@
 //	virtual void const next();
 //	virtual bool const isDone() { return m_isDone; }
 //
-//	vector3& get() { return m_pixels.get(m_width, m_height); }
+//	Vector3& get() { return m_pixels.get(m_width, m_height); }
 //	int const height() { return m_height; }
 //	int const width() { return m_width; }
 //

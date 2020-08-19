@@ -5,6 +5,7 @@
 
 #include "Matrix.hpp"
 
+
 float ** createMatrix(const int size)
 {
     float **matrix = new float* [size];
@@ -79,13 +80,8 @@ void cofactorMatrix(float **mat, float **cof, const int N)
     int startSign(1), sign;
 
     float **comatrix = createMatrix(N-1);
-//    for (int a=0 ; a < 3 ; a++) {
-//        for (int b=0 ; b < 3 ; b++) {
-//            std::cout << comatrix[a][b] << " ";
-//        }
-//        std::cout << std::endl;
-//    }
 
+    // For each cell of the matrix, compute its comatrix determinant & set it in the same cell of the new matrix
     for (int i=0 ; i < N ; i++)
     {
         sign = startSign;
@@ -276,20 +272,39 @@ Matrix4::~Matrix4() {
 }
 
 
-vector3 operator*(const vector3& vec, const Matrix4& mat)
+Vector3 Vector3::operator*(const Matrix4& mat) const
 {
-    return vector3(mat.m[0][0] * vec.x() + mat.m[1][0] * vec.y() + mat.m[2][0] * vec.z(),
-                   mat.m[0][1] * vec.x() + mat.m[1][1] * vec.y() + mat.m[2][1] * vec.z(),
-                   mat.m[0][2] * vec.x() + mat.m[1][2] * vec.y() + mat.m[2][2] * vec.z());
+    return Vector3(mat.m[0][0] * x + mat.m[1][0] * y + mat.m[2][0] * z,
+                   mat.m[0][1] * x + mat.m[1][1] * y + mat.m[2][1] * z,
+                   mat.m[0][2] * x + mat.m[1][2] * y + mat.m[2][2] * z);
 }
 
-vector3 &vector3::operator*=(const Matrix4 &mat) {
-    float temp[3]{mat.m[0][0] * v[0] + mat.m[1][0] * v[1] + mat.m[2][0] * v[2],
-                  mat.m[0][1] * v[0] + mat.m[1][1] * v[1] + mat.m[2][1] * v[2],
-                  mat.m[0][2] * v[0] + mat.m[1][2] * v[1] + mat.m[2][2] * v[2]};
-    v[0] = temp[0];
-    v[1] = temp[1];
-    v[2] = temp[2];
+Vector3 &Vector3::operator*=(const Matrix4 &mat) {
+    float temp[3]{mat.m[0][0] * x + mat.m[1][0] * y + mat.m[2][0] * z,
+                  mat.m[0][1] * x + mat.m[1][1] * y + mat.m[2][1] * z,
+                  mat.m[0][2] * x + mat.m[1][2] * y + mat.m[2][2] * z};
+    x = temp[0];
+    y = temp[1];
+    z = temp[2];
+
+    return *this;
+}
+
+
+Point3 Point3::operator*(const Matrix4& mat) const
+{
+    return Point3(mat.m[0][0] * x + mat.m[1][0] * y + mat.m[2][0] * z + mat.m[3][0],
+                  mat.m[0][1] * x + mat.m[1][1] * y + mat.m[2][1] * z + mat.m[3][1],
+                  mat.m[0][2] * x + mat.m[1][2] * y + mat.m[2][2] * z + mat.m[3][2]);
+}
+
+Point3 &Point3::operator*=(const Matrix4 &mat) {
+    float temp[3]{mat.m[0][0] * x + mat.m[1][0] * y + mat.m[2][0] * z,
+                  mat.m[0][1] * x + mat.m[1][1] * y + mat.m[2][1] * z,
+                  mat.m[0][2] * x + mat.m[1][2] * y + mat.m[2][2] * z};
+    x = temp[0];
+    y = temp[1];
+    z = temp[2];
 
     return *this;
 }

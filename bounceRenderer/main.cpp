@@ -7,19 +7,19 @@
 int main() {
     std::cout << "Hello, welcome to Bounce Renderer !" << std::endl;
 
-    int output_width = 500;
-    int output_height = 500;
-    float near_clip = 0.001;
-    float far_clip = 100000;
-    int samples = 100;
+    int renderWidth = 500;
+    int renderHeight = 500;
+    float nearClip = 0.001;
+    float farClip = 100000;
+    int samples = 16;
 
-    RayTracer tracer(near_clip, far_clip, samples);
+    RayTracer tracer(nearClip, farClip, samples);
     tracer.setOutpath(R"(D:\REPO\Bounce\bounceRenderer\output\output.ppm)");
 //    tracer.setOutpath(R"(C:\REPOSITORIES\Bounce\bounceRenderer\output\output.ppm)");
 
     Shader *darkMirrorShader = new SurfaceShader(.1, .1, .1, 0);
-    Shader *greyLambert = new Lambert(.3, .3, .3);
-    Shader *redLambert = new Lambert(.9, 0.1, 0.1);
+    Shader *greyLambert = new Lambert(.2, .2, .2);
+    Shader *redLambert = new Lambert(.8, 0.05, 0.05);
     Shader *greenLambert = new Lambert(0.1, 0.9, 0.1);
     Shader *blueLambert = new Lambert(0.1, 0.1, 0.9);
 
@@ -32,23 +32,25 @@ int main() {
     loader.load(objPath, false);
 
     for (Shape *shape : loader.shapes) {
-        shape->shader = darkMirrorShader;
+        shape->shader = greyLambert;
         tracer.addShape(shape);
     }
 
-//    transform = Transform::Identity();
-//    transform->translate(0, 1, -7);
-//    Shape *sphere1 = new Sphere(transform, 1, redLambert);
-//    tracer.addShape(sphere1);
+    transform = Transform::Identity();
+    transform->translate(0, 1, -7);
+    Shape *sphere1 = new Sphere(transform, 1, redLambert);
+    tracer.addShape(sphere1);
 
     transform = Transform::Identity();
-    transform->translate(0, 0.01, -7);
-    objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\fawn.obj)";
+    transform->rotate(Axis::y, degToRad(45));
+    transform->rotate(Axis::x, degToRad(45));
+    transform->translate(0, 3, -7);
+    objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\cube.obj)";
     loader.setTransform(transform);
     loader.load(objPath, false);
 
     for (Shape *shape : loader.shapes) {
-        shape->shader = redLambert;
+        shape->shader = greenLambert;
         tracer.addShape(shape);
     }
 
@@ -63,13 +65,13 @@ int main() {
     tracer.addShape(sphere3);
 
     // Camera
-    vector3 from(0, 1.5, 11), to(0, 1.5, -7);
+    Vector3 from(0, 1.2, 11), to(0, 1.2, -7);
     transform = Transform::LookAt(from, to, true);
 
-    Camera cam(transform, 45, FilmGate::Film35mm);
+    Camera cam(transform, 35, FilmGate::Film35mm);
     cam.focusDistance = (to - from).length();
     cam.apertureRadius = 0.5f;
-    cam.setResolution(output_width, output_height);
+    cam.setResolution(renderWidth, renderHeight);
 
     tracer.setCamera(cam);
 
@@ -84,8 +86,8 @@ int main() {
 
 
 //int main() {
-//    vector3 from(0, 5, 0);
-//    vector3 to(0, 0, 5);
+//    Vector3 from(0, 5, 0);
+//    Vector3 to(0, 0, 5);
 //
 //    Transform *trans = Transform::LookAt(from, to, true);
 //    for (int i=0 ; i < 4 ; i++) {
@@ -176,7 +178,7 @@ int main() {
 //    std::cout << "test" << std::endl;
 //    Transform trans(mat, mat.getInversed());
 //
-//    vector3 vec(1, 5, -4);
+//    Vector3 vec(1, 5, -4);
 //
 //    std::cout << vec << std::endl;
 //    vec*= mat;

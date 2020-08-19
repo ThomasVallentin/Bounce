@@ -40,24 +40,24 @@ void Camera::updateProjectionPlane() {
 
     projectionPlaneWidth = float(renderWidth) / ratio / focalLength * fmaxf(0.001, focusDistance);
     projectionPlaneHeight = projectionPlaneWidth / renderAspectRatio;
-    projectionPlaneTopLeftCorner = vector3(-projectionPlaneWidth / 2.0f, projectionPlaneHeight / 2.0f, -focusDistance);
+    projectionPlaneTopLeftCorner = Vector3(-projectionPlaneWidth / 2.0f, projectionPlaneHeight / 2.0f, -focusDistance);
 }
 
 void Camera::generateRay(float u, float v, Ray &ray) const {
-    ray.origin = vector3(0, 0, 0);
+    ray.origin = Point3(0, 0, 0);
     if (apertureRadius > 0.0001)  // Aperture is too little, considering it 0 to avoid useless calculations
         ray.origin += randPointInUnitCircle() * apertureRadius;
 
 //    std::cout << ray.origin << std::endl;
     ray.direction = projectionPlaneTopLeftCorner;
-    ray.direction.v[0] += u * projectionPlaneWidth;
-    ray.direction.v[1] -= v * projectionPlaneHeight;
+    ray.direction.x += u * projectionPlaneWidth;
+    ray.direction.y -= v * projectionPlaneHeight;
     ray.direction -= ray.origin;
 
     ray.direction.normalize();
     ray.direction *= transform();
 
-    ray.origin.v[0] += transform().matrix.m[3][0];
-    ray.origin.v[1] += transform().matrix.m[3][1];
-    ray.origin.v[2] += transform().matrix.m[3][2];
+    ray.origin.x += transform().matrix.m[3][0];
+    ray.origin.y += transform().matrix.m[3][1];
+    ray.origin.z += transform().matrix.m[3][2];
 }

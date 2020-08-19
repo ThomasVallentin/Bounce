@@ -1,22 +1,5 @@
 #include "RayTracer.h"
 
-
-vector3 unitToColor(const vector3& vec) {
-	return vector3(vec.r() * 255.9f, vec.g() * 255.9f, vec.b() * 255.9f);
-}
-
-vector3 applyGamma(const vector3& color, float gamma) {
-	float factor = 1 / gamma;
-
-	return vector3(powf(color[0], factor), powf(color[1], factor), powf(color[2], factor));
-}
-
-float applyGamma(const float color, float gamma) {
-	float factor = 1 / gamma;
-
-	return powf(color, factor);
-}
-
 void printTimeInfo(const std::chrono::time_point<std::chrono::high_resolution_clock>& startTime, float percentage)
 {
     std::chrono::time_point<std::chrono::high_resolution_clock> currTime = std::chrono::high_resolution_clock::now();
@@ -56,7 +39,7 @@ bool RayTracer::trace()
     std::chrono::time_point<std::chrono::high_resolution_clock> startTime = std::chrono::high_resolution_clock::now();
 
     unsigned int colorIndex;
-    vector3 storedColor, renderedColor;
+    Color storedColor, renderedColor;
     Ray ray;
     for (int s = 0; s < m_samples; s++)
     {
@@ -65,9 +48,9 @@ bool RayTracer::trace()
             for (unsigned int x = 0; x < m_camera.width(); x++)
             {
                 colorIndex = (y * m_camera.width() + x) * 3;
-                storedColor[0] = m_pixels[colorIndex];
-                storedColor[1] = m_pixels[colorIndex + 1];
-                storedColor[2] = m_pixels[colorIndex + 2];
+                storedColor.r = m_pixels[colorIndex];
+                storedColor.g = m_pixels[colorIndex + 1];
+                storedColor.b = m_pixels[colorIndex + 2];
 
                 float urand = randomFlt();
                 float vrand = randomFlt();
@@ -83,9 +66,9 @@ bool RayTracer::trace()
                 storedColor = (storedColor * float(s) + renderedColor) / float(s + 1);
                 //  std::cout << " after: " << storedColor << std::endl;
 
-                m_pixels[colorIndex] = storedColor.r();
-                m_pixels[colorIndex + 1] = storedColor.g();
-                m_pixels[colorIndex + 2] = storedColor.b();
+                m_pixels[colorIndex] = storedColor.r;
+                m_pixels[colorIndex + 1] = storedColor.g;
+                m_pixels[colorIndex + 2] = storedColor.b;
             }
         }
         progress = float(s+1) / float(m_samples) * 100;
@@ -104,7 +87,7 @@ bool RayTracer::trace()
 }
 
 
-vector3 RayTracer::computeRay(const Ray& ray, int depth) const
+Color RayTracer::computeRay(const Ray& ray, int depth) const
 {
 	HitData hitdata;
 
@@ -115,8 +98,8 @@ vector3 RayTracer::computeRay(const Ray& ray, int depth) const
 		}
 
         std::vector<Ray> outRays;
-        std::vector<vector3> absorbedColors;
-		vector3 outColor(0, 0, 0);
+        std::vector<Color> absorbedColors;
+		Color outColor;
 		if (depth < m_max_depth && hitdata.shader_ptr->scatter(ray, hitdata, absorbedColors, outRays)) {
 			for (int i = 0; i < outRays.size(); i++) {
 				outColor += absorbedColors[i] * computeRay(outRays[i], depth + 1);
@@ -124,13 +107,13 @@ vector3 RayTracer::computeRay(const Ray& ray, int depth) const
 			return outColor;
 		}
 		else {
-			return vector3(0, 0, 0);
+			return Color(0.0f, 0.0f, 0.0f);
 		}
 
 	}
 	else {
 		// hit nothing -> skydome color
-		return vector3(.8, .8, 1);
+		return Color(0.8f, 0.8f, 1.0f);
 	}
 
 }
