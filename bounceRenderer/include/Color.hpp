@@ -7,7 +7,7 @@
 #define BOUNCE_COLOR_HPP
 
 #include <iostream>
-
+#include <cmath>
 
 class Color {
 public:
@@ -19,13 +19,13 @@ public:
         a = 1.0f;
     }
     Color(const float &vr, const float &vg, const float &vb) {
-        r=vr ; g=vg ; b=vb ; a=1.0f ;
+        r = vr ; g = vg ; b = vb ; a = 1.0f ;
     }
     Color(const float &vr, const float &vg, const float &vb, const float &va) {
-        r=vr ; g=vg ; b=vb ; a=va ;
+        r = vr ; g = vg ; b = vb ; a = va ;
     }
     Color(const Color& col) {
-        r=col.r ; g=col.g ; b=col.b ; a=col.a; }
+        r = col.r ; g = col.g ; b = col.b ; a = col.a; }
 
     Color operator+() { return *this; }
     Color operator-() { return Color(-r, -g, -b, -a); }
@@ -49,6 +49,10 @@ public:
 
 extern std::istream& operator>>(std::istream& is, Color& col);
 extern std::ostream& operator<<(std::ostream& os, const Color& col);
+
+extern Color colorfToColor8(const Color& col);
+extern Color applyGamma(const Color& color, float gamma);
+extern float applyGamma(const float& color, float gamma);
 
 
 #endif //BOUNCE_COLOR_HPP

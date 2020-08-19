@@ -85,3 +85,22 @@ std::ostream &operator<<(std::ostream &os, const Color &col) {
     os << "Point3(" << col.r << ", " << col.g << ", " << col.b << ", " << col.a << ")";
     return os;
 }
+
+/// == Color utils functions ===========================================================================================
+
+Color colorfToColor8(const Color& color) {
+    return Color(color.r * 255.9f, color.g * 255.9f, color.b* 255.9f);
+}
+
+Color applyGamma(const Color& color, float gamma) {
+    float factor = 1 / gamma;
+
+    return Color(powf(color.r, factor), powf(color.g, factor), powf(color.b, factor));
+}
+
+float applyGamma(const float& color, float gamma) {
+    float factor = 1 / gamma;
+
+    return powf(color, factor);
+}
+

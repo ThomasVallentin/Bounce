@@ -5,7 +5,7 @@
 // ===================================================================================
 TriangleMeshData::TriangleMeshData(const Transform &objectToWorld,
                                    int nTriangles, int nVertices,
-                                   const int *vtxIndices, const Vector3 *pnts) :
+                                   const int *vtxIndices, const Point3 *pnts) :
         nbTriangles(nTriangles), nbVertices(nVertices),
         vertexIndices(vtxIndices, vtxIndices + 3 * nTriangles)
 {
@@ -16,7 +16,7 @@ TriangleMeshData::TriangleMeshData(const Transform &objectToWorld,
     for (int i = 0; i < nVertices; i++)
     {
         // Bake the transform to the objectSpaced points to make them worldSpaced
-        points[i] = objectToWorld.translateVector(pnts[i] * objectToWorld);
+        points[i] = pnts[i] * objectToWorld;
     }
 }
 

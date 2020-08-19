@@ -2,6 +2,7 @@
 #define SHADERH
 
 #include "Ray.h"
+#include "Color.hpp"
 #include "mathUtils.h"
 
 #include <vector>
@@ -17,14 +18,14 @@
 class Shader {
 
 public:
-	Shader(const Vector3& alb = Vector3(0.5, 0.5, 0.5)) { m_albedo = alb; }
+	Shader(const Color& alb = Color(0.5, 0.5, 0.5)) { m_albedo = alb; }
 
-	virtual bool scatter(const Ray& inRay, const HitData& hitdata, std::vector<Vector3>& outAbsorbtion, std::vector<Ray>& outRays) const = 0;
+	virtual bool scatter(const Ray& inRay, const HitData& hitdata, std::vector<Color>& outAbsorbtion, std::vector<Ray>& outRays) const = 0;
 
-	// Vector3 albedo() const { return m_albedo; }
+	// Color albedo() const { return m_albedo; }
 
-private:
-	Vector3 m_albedo;
+protected:
+    Color m_albedo;
 };
 
 
@@ -33,21 +34,18 @@ private:
 
 class Lambert: public Shader {
 public:
-	Lambert(const Vector3& alb = Vector3(.5, .5, .5)) { m_albedo = alb; };
-	Lambert(float albR, float albG, float albB) { m_albedo = Vector3(albR, albG, albB); };
+	Lambert(const Color& alb = Color(.5, .5, .5)) { m_albedo = alb; };
+	Lambert(float albR, float albG, float albB) { m_albedo = Color(albR, albG, albB); };
 
-	bool scatter(const Ray& inRay, const HitData& hitdata, std::vector<Vector3>& outAbsorbtion, std::vector<Ray>& outRays) const override {
+	bool scatter(const Ray& inRay, const HitData& hitdata, std::vector<Color>& outAbsorbtion, std::vector<Ray>& outRays) const override {
 		Vector3 direction(hitdata.normal + randPointInUnitSphere());
-		Vector3 absorbtion(m_albedo);
+        Color absorbtion(m_albedo);
 
 		outRays.push_back(Ray(hitdata.position, direction));
 		outAbsorbtion.push_back(m_albedo);
 
 		return true;
 	}
-
-private:
-	Vector3 m_albedo;
 };
 
 
@@ -56,10 +54,10 @@ private:
 
 class Metal: public Shader {
 public:
-	Metal(const Vector3& alb = Vector3(.5, .5, .5), float rough = 0.2) { m_albedo = alb; m_roughness = rough; }
-	Metal(float albR, float albG, float albB, float rough) { m_albedo = Vector3(albR, albG, albB); m_roughness = rough; };
+	Metal(const Color& alb = Color(.5, .5, .5), float rough = 0.2) { m_albedo = alb; m_roughness = rough; }
+	Metal(float albR, float albG, float albB, float rough) { m_albedo = Color(albR, albG, albB); m_roughness = rough; };
 
-	bool scatter(const Ray& inRay, const HitData& hitdata, std::vector<Vector3>& outAbsorbtion, std::vector<Ray>& outRays) const override {
+	bool scatter(const Ray& inRay, const HitData& hitdata, std::vector<Color>& outAbsorbtion, std::vector<Ray>& outRays) const override {
 		Vector3 direction = reflectVector(inRay.direction, hitdata.normal) + randPointInUnitSphere() * m_roughness;
 
 		outRays.push_back(Ray(hitdata.position, direction));
@@ -67,8 +65,7 @@ public:
 		return (dot(hitdata.normal, direction)) > 0;
 	}
 
-private:
-	Vector3 m_albedo;
+protected:
 	float m_roughness;
 };
 
@@ -134,9 +131,9 @@ inline float fresnel(const Vector3& in, const Vector3& surfaceNormal, float ior)
 
 class Glass: public Shader {
 public:
-	Glass() { m_reflectColor = Vector3(1, 1, 1); m_refractColor = Vector3(1, 1, 1); m_ior = 1.3; };
+	Glass() { m_reflectColor = Color(1, 1, 1); m_refractColor = Color(1, 1, 1); m_ior = 1.3; };
 
-	bool scatter(const Ray& inRay, const HitData& hitdata, std::vector<Vector3>& outAbsorbtion, std::vector<Ray>& outRays) const override {
+	bool scatter(const Ray& inRay, const HitData& hitdata, std::vector<Color>& outAbsorbtion, std::vector<Ray>& outRays) const override {
 		
 		float reflectRatio = fresnel(inRay.direction, hitdata.normal, m_ior);
 		bool outside = dot(inRay.direction, hitdata.normal) < 0;
@@ -162,9 +159,9 @@ public:
 		return isRefracting;
 	}
 
-private:
-	Vector3 m_reflectColor;
-	Vector3 m_refractColor;
+protected:
+    Color m_reflectColor;
+    Color m_refractColor;
 
 	float m_ior;
 
@@ -176,10 +173,10 @@ private:
 
 class SurfaceShader: public Shader {
 public:
-	SurfaceShader(const Vector3& alb = Vector3(.5, .5, .5), float rough = 0.2) { m_albedo = alb; m_roughness = rough; }
-	SurfaceShader(float albR, float albG, float albB, float rough) { m_albedo = Vector3(albR, albG, albB); m_roughness = rough;};
+	SurfaceShader(const Color& alb = Color(.5, .5, .5), float rough = 0.2) { m_albedo = alb; m_roughness = rough; }
+	SurfaceShader(float albR, float albG, float albB, float rough) { m_albedo = Color(albR, albG, albB); m_roughness = rough; };
 
-	bool scatter(const Ray& inRay, const HitData& hitdata, std::vector<Vector3>& outAbsorbtion, std::vector<Ray>& outRays) const override {
+	bool scatter(const Ray& inRay, const HitData& hitdata, std::vector<Color>& outAbsorbtion, std::vector<Ray>& outRays) const override {
 		Vector3 direction = reflectVector(inRay.direction, hitdata.normal) + randPointInUnitSphere() * m_roughness;
 
 		outRays.push_back(Ray(hitdata.position, direction));
@@ -187,8 +184,7 @@ public:
 		return (dot(hitdata.normal, direction)) > 0;
 	}
 
-private:
-	Vector3 m_albedo;
+protected:
 	float m_roughness;
 };
 

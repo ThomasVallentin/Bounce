@@ -121,20 +121,18 @@ Vector3& Vector3::operator*=(const Transform &trans)
     return *this;
 }
 
-
 Point3 Point3::operator*(const Transform& trans) const
 {
-    return Point3(trans.matrix.m[0][0] * x + trans.matrix.m[1][0] * y + trans.matrix.m[2][0] * z,
-                  trans.matrix.m[0][1] * x + trans.matrix.m[1][1] * y + trans.matrix.m[2][1] * z,
-                  trans.matrix.m[0][2] * x + trans.matrix.m[1][2] * y + trans.matrix.m[2][2] * z);
+    return Point3(trans.matrix.m[0][0] * x + trans.matrix.m[1][0] * y + trans.matrix.m[2][0] * z + trans.matrix.m[3][0],
+                  trans.matrix.m[0][1] * x + trans.matrix.m[1][1] * y + trans.matrix.m[2][1] * z + trans.matrix.m[3][1],
+                  trans.matrix.m[0][2] * x + trans.matrix.m[1][2] * y + trans.matrix.m[2][2] * z + trans.matrix.m[3][2]);
 }
-
 
 Point3& Point3::operator*=(const Transform &trans)
 {
     float temp[3]{trans.matrix.m[0][0] * x + trans.matrix.m[1][0] * y + trans.matrix.m[2][0] * z + trans.matrix.m[3][0],
-                  trans.matrix.m[0][1] * x + trans.matrix.m[1][1] * y + trans.matrix.m[2][1] * z + trans.matrix.m[3][0],
-                  trans.matrix.m[0][2] * x + trans.matrix.m[1][2] * y + trans.matrix.m[2][2] * z + trans.matrix.m[3][0]};
+                  trans.matrix.m[0][1] * x + trans.matrix.m[1][1] * y + trans.matrix.m[2][1] * z + trans.matrix.m[3][1],
+                  trans.matrix.m[0][2] * x + trans.matrix.m[1][2] * y + trans.matrix.m[2][2] * z + trans.matrix.m[3][2]};
     x = temp[0];
     y = temp[1];
     z = temp[2];

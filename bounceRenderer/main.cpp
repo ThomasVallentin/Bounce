@@ -11,7 +11,7 @@ int main() {
     int renderHeight = 500;
     float nearClip = 0.001;
     float farClip = 100000;
-    int samples = 2;
+    int samples = 16;
 
     RayTracer tracer(nearClip, farClip, samples);
     tracer.setOutpath(R"(D:\REPO\Bounce\bounceRenderer\output\output.ppm)");
@@ -41,16 +41,18 @@ int main() {
     Shape *sphere1 = new Sphere(transform, 1, redLambert);
     tracer.addShape(sphere1);
 
-//    transform = Transform::Identity();
-//    transform->translate(0, 0.01, -7);
-//    objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\fawn.obj)";
-//    loader.setTransform(transform);
-//    loader.load(objPath, false);
-//
-//    for (Shape *shape : loader.shapes) {
-//        shape->shader = redLambert;
-//        tracer.addShape(shape);
-//    }
+    transform = Transform::Identity();
+    transform->rotate(Axis::y, degToRad(45));
+    transform->rotate(Axis::x, degToRad(45));
+    transform->translate(0, 3, -7);
+    objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\cube.obj)";
+    loader.setTransform(transform);
+    loader.load(objPath, false);
+
+    for (Shape *shape : loader.shapes) {
+        shape->shader = greenLambert;
+        tracer.addShape(shape);
+    }
 
     transform = Transform::Identity();
     transform->translate(1, 1, -12);
@@ -66,7 +68,7 @@ int main() {
     Vector3 from(0, 1.2, 11), to(0, 1.2, -7);
     transform = Transform::LookAt(from, to, true);
 
-    Camera cam(transform, 60, FilmGate::Film35mm);
+    Camera cam(transform, 35, FilmGate::Film35mm);
     cam.focusDistance = (to - from).length();
     cam.apertureRadius = 0.5f;
     cam.setResolution(renderWidth, renderHeight);
