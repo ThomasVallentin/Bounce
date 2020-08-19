@@ -240,7 +240,6 @@ void fillScene() {
         tracer.addShape(shape);
     }
 
-
 //    transform = Transform::Identity();
 //    transform->translate(0, 1, -7);
 //    Shape *sphere1 = new Sphere(transform, 1, redLambert);
@@ -268,7 +267,7 @@ void fillScene() {
     tracer.addShape(sphere3);
 
     // Camera
-    vector3 from(0, 1.5, 11), to(0, 1.5, -7);
+    Vector3 from(0, 1.5, 11), to(0, 1.5, -7);
     transform = Transform::LookAt(from, to, true);
 
     Camera cam(transform, 45, FilmGate::Film35mm);
