@@ -15,17 +15,4 @@ public:
 };
 
 
-class ShapeList {
-
-public:
-    ShapeList() = default;
-
-    std::vector<Shape*> list() { return m_list; };
-    void addShape(Shape* h) { m_list.push_back(h); }
-
-    bool intersect(const Ray& ray, float tmin, float tmax, HitData& data) const;
-
-protected:
-    std::vector<Shape*> m_list;
-};
 #endif

@@ -28,9 +28,21 @@ bool RayTracer::initialize()
     return true;
 }
 
-bool RayTracer::trace()
+void RayTracer::sampleCamera(unsigned int x, unsigned int y, Ray &ray) {
+    // Sampling the camera using a very simple random sampling
+    float urand = randomFlt();
+    float vrand = randomFlt();
+    float u = (float(x) + urand) / float(m_camera.width());
+    float v = (float(y) + vrand) / float(m_camera.height());
+
+    m_camera.generateRay(u, v, ray);
+}
+
+bool RayTracer::trace(Scene* sc)
 {
-    std::cout << "Tracing scene composed of " << m_world.list().size() << " shapes..." << std::endl;
+    scene = sc;
+
+    std::cout << "Tracing scene composed of " << scene->shapes().size() << " shapes..." << std::endl;
 
 	// Progress bar
 	float progress(0);
@@ -47,21 +59,17 @@ bool RayTracer::trace()
         {
             for (unsigned int x = 0; x < m_camera.width(); x++)
             {
-                colorIndex = (y * m_camera.width() + x) * 3;
-                storedColor.r = m_pixels[colorIndex];
-                storedColor.g = m_pixels[colorIndex + 1];
-                storedColor.b = m_pixels[colorIndex + 2];
-
-                float urand = randomFlt();
-                float vrand = randomFlt();
-                float u = (float(x) + urand) / float(m_camera.width());
-                float v = (float(y) + vrand) / float(m_camera.height());
-
-                m_camera.generateRay(u, v, ray);
+                // Sample the camera to the (x, y) pixel and fill the Ray with the content
+                sampleCamera(x, y, ray);
 
                 // Adding the new sample to the existing render
                 renderedColor = computeRay(ray, 0);
                 // std::cout << "    " << renderedColor << std::endl;
+
+                colorIndex = (y * m_camera.width() + x) * 3;
+                storedColor.r = m_pixels[colorIndex];
+                storedColor.g = m_pixels[colorIndex + 1];
+                storedColor.b = m_pixels[colorIndex + 2];
 
                 storedColor = (storedColor * float(s) + renderedColor) / float(s + 1);
                 //  std::cout << " after: " << storedColor << std::endl;
@@ -91,7 +99,7 @@ Color RayTracer::computeRay(const Ray& ray, int depth) const
 {
 	HitData hitdata;
 
-	if (m_world.intersect(ray, m_near_clip, m_far_clip, hitdata))
+	if (scene->intersect(ray, m_near_clip, m_far_clip, hitdata))
 	{
 		if (hitdata.shader_ptr == nullptr) {
 			hitdata.shader_ptr = m_default_shader;
@@ -117,3 +125,5 @@ Color RayTracer::computeRay(const Ray& ray, int depth) const
 	}
 
 }
+
+

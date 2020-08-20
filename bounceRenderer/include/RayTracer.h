@@ -1,6 +1,7 @@
 #ifndef RAYTRACERH
 #define RAYTRACERH
 
+#include "Scene.hpp"
 #include "FileAdapters.h"
 #include "Shape.hpp"
 #include "Sphere.h"
@@ -32,10 +33,9 @@ public:
     Camera &camera() { return m_camera; };
 	void setCamera(Camera &cam) { m_camera = cam; };
 
-	void addShape( Shape* h) { m_world.addShape(h); }
-
 	bool initialize();
-	bool trace();
+    void sampleCamera(unsigned int x, unsigned int y, Ray& ray);
+    bool trace(Scene* sc);
 	Color computeRay(const Ray& ray, int depth) const;
 
 	Shader* m_default_shader = new Lambert();
@@ -56,7 +56,7 @@ private:
     std::string m_outpath;
     std::vector<float> m_pixels;
 
-    ShapeList m_world;
+    Scene* scene;
 };
 
 #endif

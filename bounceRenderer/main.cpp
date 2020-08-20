@@ -13,6 +13,8 @@ int main() {
     float farClip = 100000;
     int samples = 16;
 
+    Scene scene;
+
     RayTracer tracer(nearClip, farClip, samples);
     tracer.setOutpath(R"(D:\REPO\Bounce\bounceRenderer\output\output.ppm)");
 //    tracer.setOutpath(R"(C:\REPOSITORIES\Bounce\bounceRenderer\output\output.ppm)");
@@ -33,13 +35,13 @@ int main() {
 
     for (Shape *shape : loader.shapes) {
         shape->shader = greyLambert;
-        tracer.addShape(shape);
+        scene.addShape(shape);
     }
 
     transform = Transform::Identity();
     transform->translate(0, 1, -7);
     Shape *sphere1 = new Sphere(transform, 1, redLambert);
-    tracer.addShape(sphere1);
+    scene.addShape(sphere1);
 
     transform = Transform::Identity();
     transform->rotate(Axis::y, degToRad(45));
@@ -51,18 +53,18 @@ int main() {
 
     for (Shape *shape : loader.shapes) {
         shape->shader = greenLambert;
-        tracer.addShape(shape);
+        scene.addShape(shape);
     }
 
     transform = Transform::Identity();
     transform->translate(1, 1, -12);
     Shape *sphere2 = new Sphere(transform, 1, greenLambert);
-    tracer.addShape(sphere2);
+    scene.addShape(sphere2);
 
     transform = Transform::Identity();
     transform->translate(-1, 1, -2);
     Shape *sphere3 = new Sphere(transform, 1, blueLambert);
-    tracer.addShape(sphere3);
+    scene.addShape(sphere3);
 
     // Camera
     Vector3 from(0, 1.2, 11), to(0, 1.2, -7);
@@ -79,109 +81,7 @@ int main() {
     tracer.initialize();
 
     // Start rendering
-    tracer.trace();
+    tracer.trace(&scene);
 
     return (EXIT_SUCCESS);
 }
-
-
-//int main() {
-//    Vector3 from(0, 5, 0);
-//    Vector3 to(0, 0, 5);
-//
-//    Transform *trans = Transform::LookAt(from, to, true);
-//    for (int i=0 ; i < 4 ; i++) {
-//        for (int j = 0; j < 4; j++)
-//            std::cout << trans->matrix.m[i][j] << " ";
-//        std::cout << std::endl;
-//
-//    Matrix4 mat(0.8967334, 0.4425711, 0, 0,
-//                -0.4425711, 0.8967334, 0, 0,
-//                0, 0, 1, 0,
-//                20, -12, 7.6, 1);
-//
-//    Matrix4 other(1, 0, 0, 0,
-//                  0, 0, -1, 0,
-//                  0, 1, 0, 0,
-//                  0, 0, 0, 1);
-//
-//    Transform trans(mat, mat.getInversed());
-//    trans.rotate(Axis::x, degToRad(90));
-//
-
-//    for (int i=0 ; i < 4 ; i++)
-//        for (int j=0 ; j < 4 ; j++)
-//            m[i][j] = int(float(rand()) / RAND_MAX * 10);
-//
-//    for (int i=0 ; i < 4 ; i++) {
-//        for (int j = 0; j < 4; j++)
-//            std::cout << trans.matrix.m[i][j] << " ";
-//        std::cout << std::endl;
-//    }
-//
-//    std::cout << std::endl << "DET" << std::endl;
-//
-//    std::cout << matrixDeterminant(m, 4) << std::endl;
-//
-//    std::cout << std::endl << "COF" << std::endl;
-
-//    float **cof = createMatrix(4);
-//    cofactorMatrix(m, cof, 4);
-//
-//    for (int i=0 ; i < 4 ; i++) {
-//        for (int j=0 ; j < 4 ; j++) {
-//            std::cout << cof[i][j] << " ";
-//        }
-//        std::cout << std::endl;
-//    }
-//
-//    std::cout << std::endl << "TRANS" << std::endl;
-//
-//    float **trans = createMatrix(4);
-//    transposeMatrix(cof, trans, 4);
-//
-//    for (int i=0 ; i < 4 ; i++) {
-//        for (int j=0 ; j < 4 ; j++) {
-//            std::cout << trans[i][j] << " ";
-//        }
-//        std::cout << std::endl;
-//    }
-//
-//    std::cout << std::endl << "ADJ" << std::endl;
-//
-//    float **adj = createMatrix(4);
-//    adjugateMatrix(m, adj, 4);
-//
-//    for (int i=0 ; i < 4 ; i++) {
-//        for (int j=0 ; j < 4 ; j++) {
-//            std::cout << adj[i][j] << " ";
-//        }
-//        std::cout << std::endl;
-//    }
-//
-//    std::cout << std::endl << "INV" << std::endl;
-//
-//    float **inv = createMatrix(4);
-//    inverseMatrix(m, inv, 4);
-//
-//    for (int i=0 ; i < 4 ; i++) {
-//        for (int j=0 ; j < 4 ; j++) {
-//            std::cout << inv[i][j] << " ";
-//        }
-//        std::cout << std::endl;
-//    }
-//
-//    Matrix4 mat(1, 0, 0, 0,
-//                0, 1, 0, 0,
-//                0, 0, 1, 0,
-//                3, 2, -5, 1);
-//    std::cout << "test" << std::endl;
-//    Transform trans(mat, mat.getInversed());
-//
-//    Vector3 vec(1, 5, -4);
-//
-//    std::cout << vec << std::endl;
-//    vec*= mat;
-//    std::cout << vec << std::endl;
-//    std::cout << vec * trans.inverseMatrix << std::endl;
-//}
