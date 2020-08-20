@@ -27,8 +27,8 @@ public:
 
 	// Resolution
 	unsigned int *resolution() { static unsigned int res[] = {renderWidth, renderHeight} ; return res; }
-	unsigned int width() { return renderWidth; }
-	unsigned int height() { return renderHeight; }
+	unsigned int width() const { return renderWidth; }
+	unsigned int height() const { return renderHeight; }
 
 	void setResolution(unsigned int w, unsigned int h) {
 	    renderWidth = w;

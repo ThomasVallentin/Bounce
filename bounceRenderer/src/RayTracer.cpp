@@ -28,7 +28,7 @@ bool RayTracer::initialize()
     return true;
 }
 
-void RayTracer::sampleCamera(unsigned int x, unsigned int y, Ray &ray) {
+void RayTracer::sampleCamera(const unsigned int &x, const unsigned int &y, Ray& ray) {
     // Sampling the camera using a very simple random sampling
     float urand = randomFlt();
     float vrand = randomFlt();
@@ -50,39 +50,29 @@ bool RayTracer::trace(Scene* sc)
 	// Init timer variables
     std::chrono::time_point<std::chrono::high_resolution_clock> startTime = std::chrono::high_resolution_clock::now();
 
-    unsigned int colorIndex;
-    Color storedColor, renderedColor;
+    // -- Main Render Loop --
+    Color renderedColor;
     Ray ray;
-    for (int s = 0; s < m_samples; s++)
+    for (unsigned int s = 0; s < m_samples; s++)
     {
         for (unsigned int y = 0; y < m_camera.height(); y++)
         {
             for (unsigned int x = 0; x < m_camera.width(); x++)
             {
-                // Sample the camera to the (x, y) pixel and fill the Ray with the content
+                // Sample the camera to the (x, y) pixel & fill the ray
                 sampleCamera(x, y, ray);
 
                 // Adding the new sample to the existing render
-                renderedColor = computeRay(ray, 0);
-                // std::cout << "    " << renderedColor << std::endl;
+                renderedColor = computeIllumination(ray);
 
-                colorIndex = (y * m_camera.width() + x) * 3;
-                storedColor.r = m_pixels[colorIndex];
-                storedColor.g = m_pixels[colorIndex + 1];
-                storedColor.b = m_pixels[colorIndex + 2];
-
-                storedColor = (storedColor * float(s) + renderedColor) / float(s + 1);
-                //  std::cout << " after: " << storedColor << std::endl;
-
-                m_pixels[colorIndex] = storedColor.r;
-                m_pixels[colorIndex + 1] = storedColor.g;
-                m_pixels[colorIndex + 2] = storedColor.b;
+                // Merge the rendered color with the already rendered pixel (merge colors based on sample)
+                mergeColorToPixel(x, y, s, renderedColor);
             }
         }
         progress = float(s+1) / float(m_samples) * 100;
         std::cout << "Rendering " << std::setprecision(4) << progress << "%... ";
 
-        // Print timer
+        // Print elapsed & remaining time
         printTimeInfo(startTime, progress);
     }
 
@@ -95,7 +85,7 @@ bool RayTracer::trace(Scene* sc)
 }
 
 
-Color RayTracer::computeRay(const Ray& ray, int depth) const
+Color RayTracer::computeIllumination(const Ray& ray, int depth) const
 {
 	HitData hitdata;
 
@@ -110,7 +100,7 @@ Color RayTracer::computeRay(const Ray& ray, int depth) const
 		Color outColor;
 		if (depth < m_max_depth && hitdata.shader_ptr->scatter(ray, hitdata, absorbedColors, outRays)) {
 			for (int i = 0; i < outRays.size(); i++) {
-				outColor += absorbedColors[i] * computeRay(outRays[i], depth + 1);
+				outColor += absorbedColors[i] * computeIllumination(outRays[i], depth + 1);
 			}
 			return outColor;
 		}
@@ -123,7 +113,14 @@ Color RayTracer::computeRay(const Ray& ray, int depth) const
 		// hit nothing -> skydome color
 		return Color(0.8f, 0.8f, 1.0f);
 	}
+}
 
+void RayTracer::mergeColorToPixel(const unsigned int &x, const unsigned int &y, unsigned int &currentSample, Color &color) {
+    unsigned int colorIndex = (y * m_camera.width() + x) * 3;
+
+    m_pixels[colorIndex]     = (m_pixels[colorIndex]     * float(currentSample) + color.r)     / float(currentSample + 1);
+    m_pixels[colorIndex + 1] = (m_pixels[colorIndex + 1] * float(currentSample) + color.g) / float(currentSample + 1);
+    m_pixels[colorIndex + 2] = (m_pixels[colorIndex + 2] * float(currentSample) + color.b) / float(currentSample + 1);
 }
 
 

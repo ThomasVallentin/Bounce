@@ -18,8 +18,8 @@ class RayTracer {
 
 public:
 	RayTracer() : m_near_clip(0.001), m_far_clip(100000), m_samples(100), m_max_depth(50), m_gamma(2.2) {}
-	RayTracer(float near_clip = 0.001, float far_clip = 10000, int sample = 100) {
-		m_near_clip = near_clip; m_far_clip = far_clip; m_samples = sample; m_max_depth = 50; m_gamma = 2.2; }
+	RayTracer(float near_clip = 0.001, float far_clip = 10000, int sample = 100) :
+	    m_near_clip(near_clip), m_far_clip(far_clip), m_samples(sample), m_max_depth(50), m_gamma(2.2f) {}
 
     std::string outpath() { return m_outpath; }
 	void setOutpath(const std::string& str) { m_outpath = std::string(str); }
@@ -34,9 +34,10 @@ public:
 	void setCamera(Camera &cam) { m_camera = cam; };
 
 	bool initialize();
-    void sampleCamera(unsigned int x, unsigned int y, Ray& ray);
+    void sampleCamera(const unsigned int &x, const unsigned int &y, Ray& ray);
     bool trace(Scene* sc);
-	Color computeRay(const Ray& ray, int depth) const;
+	Color computeIllumination(const Ray& ray, int depth=0) const;
+	void mergeColorToPixel(const unsigned int &x, const unsigned int &y, unsigned int &currentSample, Color& color);
 
 	Shader* m_default_shader = new Lambert();
 
