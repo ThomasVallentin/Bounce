@@ -82,7 +82,7 @@ std::istream &operator>>(std::istream &is, Color &col) {
 }
 
 std::ostream &operator<<(std::ostream &os, const Color &col) {
-    os << "Point3(" << col.r << ", " << col.g << ", " << col.b << ", " << col.a << ")";
+    os << "Color(" << col.r << ", " << col.g << ", " << col.b << ", " << col.a << ")";
     return os;
 }
 
