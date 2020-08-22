@@ -11,7 +11,7 @@
 class TransformObject {
 public:
     TransformObject() = default;
-    TransformObject(const Transform* objectToWorld) : t(objectToWorld) {}
+    explicit TransformObject(const Transform* objectToWorld) : t(objectToWorld) {}
 
     const Transform &transform() const { return *t; }
     void setTransform(const Transform *transform) { t = transform; }

@@ -88,8 +88,10 @@ std::ostream &operator<<(std::ostream &os, const Color &col) {
 
 /// == Color utils functions ===========================================================================================
 
-Color colorfToColor8(const Color& color) {
-    return Color(color.r * 255.9f, color.g * 255.9f, color.b* 255.9f);
+Color colorfToColor8(const Color &color) {
+    return Color(std::min(255.0f, color.r * 255.9f),
+                 std::min(255.0f, color.g * 255.9f),
+                 std::min(255.0f, color.b * 255.9f));
 }
 
 Color applyGamma(const Color& color, float gamma) {

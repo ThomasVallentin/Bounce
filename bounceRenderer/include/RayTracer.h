@@ -2,6 +2,7 @@
 #define RAYTRACERH
 
 #include "Scene.hpp"
+#include "Light.hpp"
 #include "FileAdapters.h"
 #include "Shape.hpp"
 #include "Sphere.h"
@@ -37,6 +38,7 @@ public:
     void sampleCamera(const unsigned int &x, const unsigned int &y, Ray& ray);
     bool trace(Scene* sc);
 	Color computeIllumination(const Ray& ray, int depth=0) const;
+//	Color computeSpecular(const Ray& ray, int depth=0) const;
 	void mergeColorToPixel(const unsigned int &x, const unsigned int &y, unsigned int &currentSample, Color& color);
 
 	Shader* m_default_shader = new Lambert();

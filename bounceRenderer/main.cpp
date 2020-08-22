@@ -7,11 +7,11 @@
 int main() {
     std::cout << "Hello, welcome to Bounce Renderer !" << std::endl;
 
-    int renderWidth = 500;
-    int renderHeight = 500;
+    int renderWidth = 1000;
+    int renderHeight = 1000;
     float nearClip = 0.001;
     float farClip = 100000;
-    int samples = 16;
+    int samples = 50;
 
     Scene scene;
 
@@ -66,13 +66,18 @@ int main() {
     Shape *sphere3 = new Sphere(transform, 1, blueLambert);
     scene.addShape(sphere3);
 
+    transform = Transform::Identity();
+    transform->translate(2, 5, -7);
+    Light *pLight = new PointLight(transform, Color(1.0f, 1.0f, 1.0f), 10.0f);
+    scene.addLight(pLight);
+
     // Camera
     Vector3 from(0, 1.2, 11), to(0, 1.2, -7);
     transform = Transform::LookAt(from, to, true);
 
     Camera cam(transform, 35, FilmGate::Film35mm);
     cam.focusDistance = (to - from).length();
-    cam.apertureRadius = 0.5f;
+    cam.apertureRadius = 0.0f;
     cam.setResolution(renderWidth, renderHeight);
 
     tracer.setCamera(cam);

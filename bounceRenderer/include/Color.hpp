@@ -44,8 +44,15 @@ public:
     Color operator/(const Color& col) const;
     Color operator/(float f) const;
 
+    static Color Black() { return Color(0.0f, 0.0f, 0.0f); };
+    static Color Red() { return Color(1.0f, 0.0f, 0.0f); };
+    static Color Green() { return Color(0.0f, 1.0f, 0.0f); };
+    static Color Blue() { return Color(0.0f, 0.0f, 1.0f); };
+
     float r, g, b, a;
 };
+
+
 
 extern std::istream& operator>>(std::istream& is, Color& col);
 extern std::ostream& operator<<(std::ostream& os, const Color& col);

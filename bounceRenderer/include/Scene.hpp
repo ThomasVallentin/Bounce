@@ -7,22 +7,21 @@
 #define BOUNCE_SCENE_HPP
 
 #include "Shape.hpp"
-#include "Light.hpp"
+
+class Light;
 
 class Scene {
 public:
     Scene() = default;
 
-    std::vector<Shape*> shapes() { return shapeList; };
-    std::vector<Light*> lights() { return lightList; };
-    void addShape(Shape* h) { shapeList.push_back(h); }
-    void addLight(Light* h) { lightList.push_back(h); }
+    void addShape(Shape* h) { shapes.push_back(h); }
+    void addLight(Light* h) { lights.push_back(h); }
 
     bool intersect(const Ray& ray, float tmin, float tmax, HitData& data) const;
+    bool intersectAny(const Ray& ray, float tmin, float tmax);
 
-protected:
-    std::vector<Shape*> shapeList;
-    std::vector<Light*> lightList;
+    std::vector<Shape*> shapes;
+    std::vector<Light*> lights;
 };
 
 #endif //BOUNCE_SCENE_HPP

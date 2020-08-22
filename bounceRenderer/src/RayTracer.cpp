@@ -42,7 +42,7 @@ bool RayTracer::trace(Scene* sc)
 {
     scene = sc;
 
-    std::cout << "Tracing scene composed of " << scene->shapes().size() << " shapes..." << std::endl;
+    std::cout << "Tracing scene composed of " << scene->shapes.size() << " shapes..." << std::endl;
 
 	// Progress bar
 	float progress(0);
@@ -88,31 +88,36 @@ bool RayTracer::trace(Scene* sc)
 Color RayTracer::computeIllumination(const Ray& ray, int depth) const
 {
 	HitData hitdata;
+    Color outColor = Color::Black();
 
-	if (scene->intersect(ray, m_near_clip, m_far_clip, hitdata))
-	{
-		if (hitdata.shader_ptr == nullptr) {
-			hitdata.shader_ptr = m_default_shader;
-		}
+	if (!scene->intersect(ray, m_near_clip, m_far_clip, hitdata)) {
+        // hit nothing -> get color at infinity (pseudo skyDome)
+        return Color(0.0f, 0.0f, 0.0f);
+    }
 
-        std::vector<Ray> outRays;
-        std::vector<Color> absorbedColors;
-		Color outColor;
-		if (depth < m_max_depth && hitdata.shader_ptr->scatter(ray, hitdata, absorbedColors, outRays)) {
-			for (int i = 0; i < outRays.size(); i++) {
-				outColor += absorbedColors[i] * computeIllumination(outRays[i], depth + 1);
-			}
-			return outColor;
-		}
-		else {
-			return Color(0.0f, 0.0f, 0.0f);
-		}
+    if (hitdata.shader_ptr == nullptr) {
+        hitdata.shader_ptr = m_default_shader;
+    }
 
-	}
-	else {
-		// hit nothing -> skydome color
-		return Color(0.8f, 0.8f, 1.0f);
-	}
+    // Sample indirect lighting
+    std::vector<Ray> outRays;
+    std::vector<Color> absorbedColors;
+    if (depth > m_max_depth)
+        return outColor;
+
+    if(hitdata.shader_ptr->scatter(ray, hitdata, absorbedColors, outRays)) {
+        for (int i = 0; i < outRays.size(); i++) {
+            outColor += absorbedColors[i] * computeIllumination(outRays[i], depth + 1);
+        }
+    }
+
+//    std::cout << absorbedColors.size() << std::endl;
+    // Sample direct lighting
+    for (auto light : scene->lights) {
+        outColor += absorbedColors[0] * light->getIllumination(hitdata, scene);
+    }
+
+    return outColor;
 }
 
 void RayTracer::mergeColorToPixel(const unsigned int &x, const unsigned int &y, unsigned int &currentSample, Color &color) {

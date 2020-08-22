@@ -7,13 +7,11 @@
 
 bool Scene::intersect(const Ray& ray, float tmin, float tmax, HitData& data) const
 {
-    double closest_so_far = tmax;
+    float closest_so_far = tmax;
     bool hit_anything = false;
     HitData temp_data;
 
-    // std::cout << "tracing pixel with " << m_hitableList.size() << std::endl;
-    for (Shape *shape : shapeList) {
-        // cout << m_hitableList[i] << endl;
+    for (Shape *shape : shapes) {
         if (shape->intersect(ray, tmin, closest_so_far, temp_data)) {
             hit_anything = true;
             closest_so_far = temp_data.t;
@@ -22,5 +20,18 @@ bool Scene::intersect(const Ray& ray, float tmin, float tmax, HitData& data) con
 
     }
     return hit_anything;
+}
+
+bool Scene::intersectAny(const Ray &ray, float tmin, float tmax) {
+    float closest_so_far = tmax;
+    HitData temp_data;
+
+    for (Shape *shape : shapes) {
+        if (shape->intersect(ray, tmin, closest_so_far, temp_data)) {
+            return true;
+        }
+    }
+
+    return false;
 }
 

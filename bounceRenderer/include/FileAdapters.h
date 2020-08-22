@@ -10,7 +10,6 @@
 #include <iostream>
 #include <fstream>
 
-
 class RayTracer;
 
 class AbstractFileAdapter

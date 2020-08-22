@@ -4,3 +4,24 @@
 //
 
 #include "Light.hpp"
+
+
+Color PointLight::getIllumination(const HitData &hitdata, Scene *scene) const {
+    Vector3 toLight;
+    Ray lightRay;
+
+    toLight = sample() - hitdata.position;
+    float lightDistance = toLight.length();
+
+    lightRay.origin = hitdata.position;
+    lightRay.direction = toLight.normalized();
+
+    if (!scene->intersectAny(lightRay, 0.0001, lightDistance))
+        return power() * dot(hitdata.normal, lightRay.direction)  / powf(lightDistance, 2);
+
+    return Color::Black();
+}
+
+Point3 PointLight::sample() const {
+    return Point3(t->matrix.m[3][0], t->matrix.m[3][1], t->matrix.m[3][2]);
+}
