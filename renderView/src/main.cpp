@@ -18,6 +18,7 @@ void windowSizeChanged(GLFWwindow *window, int winWidth, int winHeight);
 //void onScroll(GLFWwindow *window, double winWidth, double winHeight);
 
 static RayTracer tracer(0.001, 10000, 100);
+static Scene scene;
 void traceRender();
 void initializeTracer(RayTracer &raytracer);
 void fillScene();
@@ -26,7 +27,7 @@ void extractTracedImage(float *data);
 void updateTextureFromRender(GLuint texture, float *data);
 
 static int initialWidth(1200), initialHeight(600);
-static int renderWidth(500), renderHeight(500);
+static int renderWidth(1280), renderHeight(720);
 static int samples(100);
 
 const int renderPixelCount(renderWidth * renderHeight * 3);
@@ -71,9 +72,10 @@ int main()
 
     // == Window initialization ==========================================================================================
 
+    glfwSetWindowPos(window, 200, 200);
+
     // Setting up callbacks
     glfwSetWindowSizeCallback(window, windowSizeChanged);
-//    glfwSetScrollCallback(window, onScroll);
 
     // Resize viewport to fit window size
     windowSizeChanged(window, initialWidth, initialHeight);
@@ -210,7 +212,7 @@ void extractTracedImage(float *data)
 
 void traceRender()
 {
-    tracer.trace();
+    tracer.trace(&scene);
 }
 
 void initializeTracer(RayTracer &raytracer)
@@ -220,59 +222,72 @@ void initializeTracer(RayTracer &raytracer)
 }
 
 void fillScene() {
-    Shader *mirrorShader = new SurfaceShader(.1, .1, .1, .1);
-    Shader *greyLambert = new Lambert(.3, .3, .3);
-    Shader *redLambert = new Lambert(0.8, 0.05, 0.05);
+
+    Shader *mirror = new SurfaceShader(.0, .0, .0, 0);
+    Shader *darkMirrorShader = new SurfaceShader(.1, .1, .1, 0);
+    Shader *greyLambert = new Lambert(.2, .2, .2);
+    Shader *redLambert = new Lambert(.8, 0.05, 0.05);
     Shader *greenLambert = new Lambert(0.1, 0.9, 0.1);
     Shader *blueLambert = new Lambert(0.1, 0.1, 0.9);
 
     // Loading the ground
     Transform *transform = Transform::Identity();
-    transform->scale(2, 2, 2);
-    transform->translate(0, 0.04, 0);
+    transform->scale(10, 10, 10);
+
     OBJLoader loader = OBJLoader(transform);
     std::string objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\ground.obj)";
     loader.load(objPath, false);
 
-    for (Shape *shape : loader.shapes)
-    {
-        shape->shader = mirrorShader;
-        tracer.addShape(shape);
+    for (Shape *shape : loader.shapes) {
+        shape->shader = greyLambert;
+        scene.addShape(shape);
     }
 
-//    transform = Transform::Identity();
-//    transform->translate(0, 1, -7);
-//    Shape *sphere1 = new Sphere(transform, 1, redLambert);
-//    tracer.addShape(sphere1);
+    transform = Transform::Identity();
+    transform->translate(0, 1, -7);
+    Shape *sphere1 = new Sphere(transform, 1, redLambert);
+    scene.addShape(sphere1);
 
     transform = Transform::Identity();
-    transform->translate(0, 0.01, -7);
-    objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\fawn.obj)";
+    transform->rotate(Axis::y, degToRad(45));
+    transform->rotate(Axis::x, degToRad(45));
+    transform->translate(0, 3, -7);
+    objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\cube.obj)";
     loader.setTransform(transform);
     loader.load(objPath, false);
 
     for (Shape *shape : loader.shapes) {
-        shape->shader = redLambert;
-        tracer.addShape(shape);
+        shape->shader = greenLambert;
+        scene.addShape(shape);
     }
 
     transform = Transform::Identity();
     transform->translate(1, 1, -12);
     Shape *sphere2 = new Sphere(transform, 1, greenLambert);
-    tracer.addShape(sphere2);
+    scene.addShape(sphere2);
 
     transform = Transform::Identity();
     transform->translate(-1, 1, -2);
     Shape *sphere3 = new Sphere(transform, 1, blueLambert);
-    tracer.addShape(sphere3);
+    scene.addShape(sphere3);
+
+    transform = Transform::Identity();
+    transform->translate(2, 5, -7);
+    Light *pLight = new PointLight(transform, Color(1.0f, 0.7f, 0.5f), 10.0f);
+    scene.addLight(pLight);
+
+    transform = Transform::Identity();
+    transform->translate(-4, 1, 2);
+    Light *rimLight = new PointLight(transform, Color(1.0f, 1.0f, 1.0f), 2.0f);
+    scene.addLight(rimLight);
 
     // Camera
-    Vector3 from(0, 1.5, 11), to(0, 1.5, -7);
+    Vector3 from(0, 1.2, 11), to(0, 1.2, -7);
     transform = Transform::LookAt(from, to, true);
 
-    Camera cam(transform, 45, FilmGate::Film35mm);
+    Camera cam(transform, 35, FilmGate::Film35mm);
     cam.focusDistance = (to - from).length();
-    cam.apertureRadius = 0.5f;
+    cam.apertureRadius = 0.0f;
     cam.setResolution(renderWidth, renderHeight);
 
     tracer.setCamera(cam);
