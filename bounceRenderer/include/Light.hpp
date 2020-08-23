@@ -47,23 +47,21 @@ public:
 
 class DirectionalLight : virtual public Light {
 public:
-    DirectionalLight() : Light(), direction(Vector3(0.5f, -0.5f, 0.5f).normalized()) {}
-    DirectionalLight(const Vector3& dir, const Color& c, const float& i) : Light() {
-        direction = dir.normalized();
+    DirectionalLight() : Light() {}
+    explicit DirectionalLight(const Transform* transform) : Light(transform) {}
+    DirectionalLight(const Transform* transform, const Color& c, const float& i) : Light(transform) {
         color = c;
         intensity = i;
     }
 
-    virtual Color getIllumination(const HitData &hitdata, Scene *scene) const override;
-
-    Vector3 direction;
+    Color getIllumination(const HitData &hitdata, Scene *scene) const override;
 };
 
 class EnvironmentLight : virtual public Light {
 public:
     EnvironmentLight() : Light() {}
     EnvironmentLight(const Color& c, const float& i) : Light() { color = c; intensity = i; }
-    virtual Color getInfiniteIllumination(const Ray& ray) const override;
+    Color getInfiniteIllumination(const Ray& ray) const override;
 };
 
 

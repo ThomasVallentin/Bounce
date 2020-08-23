@@ -76,7 +76,10 @@ int main() {
     Light *eLight = new EnvironmentLight(Color(0.5f, 0.5f, 1.0f), 1.0f);
     scene.addLight(eLight);
 
-    Light *dLight = new DirectionalLight(Vector3(-0.5f, -0.5f, 0.5f),
+    transform = Transform::Identity();
+    transform->rotate(Axis::y, degToRad(-45));
+    transform->rotate(Axis::x, degToRad(-45));
+    Light *dLight = new DirectionalLight(transform,
                                          Color(1.0f, 1.01f, 1.0f), 1.0f);
     scene.addLight(dLight);
 
