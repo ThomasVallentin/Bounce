@@ -35,34 +35,5 @@ public:
 };
 
 
-class PointLight : public Light {
-public:
-    PointLight() : Light() {}
-    explicit PointLight(const Transform *worldToLight) : Light(worldToLight) {}
-    PointLight(const Transform *worldToLight, const Color &c, const float &i) : Light(worldToLight, c, i) {}
-
-    Color getIllumination(const HitData &hitdata, Scene *scene) const override;
-};
-
-
-class DirectionalLight : virtual public Light {
-public:
-    DirectionalLight() : Light() {}
-    explicit DirectionalLight(const Transform* transform) : Light(transform) {}
-    DirectionalLight(const Transform* transform, const Color& c, const float& i) : Light(transform) {
-        color = c;
-        intensity = i;
-    }
-
-    Color getIllumination(const HitData &hitdata, Scene *scene) const override;
-};
-
-class EnvironmentLight : virtual public Light {
-public:
-    EnvironmentLight() : Light() {}
-    EnvironmentLight(const Color& c, const float& i) : Light() { color = c; intensity = i; }
-    Color getInfiniteIllumination(const Ray& ray) const override;
-};
-
 
 #endif //BOUNCE_LIGHT_HPP
