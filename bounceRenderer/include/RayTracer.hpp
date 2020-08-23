@@ -38,7 +38,8 @@ public:
     void sampleCamera(const unsigned int &x, const unsigned int &y, Ray& ray);
     bool trace(Scene* sc);
 	Color computeIllumination(const Ray& ray, int depth=0) const;
-//	Color computeSpecular(const Ray& ray, int depth=0) const;
+    Color computeReflection(const Ray& ray, HitData &hitdata, const int depth) const;
+    Color computeTransmission(const Ray& ray, HitData &hitdata, const int depth) const;
 	void mergeColorToPixel(const unsigned int &x, const unsigned int &y, unsigned int &currentSample, Color& color);
 
 	Shader* m_default_shader = new Lambert();

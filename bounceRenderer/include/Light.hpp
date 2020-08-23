@@ -27,10 +27,8 @@ public:
                                                                            color(c) {}
 
     Color power() const { return color * intensity; }
-
-    // Light interface. These methods are abstract and need to be reimplemented in concrete Lights.
-    virtual Color getIllumination(const HitData &hit, Scene *scene) const = 0;
-    virtual Point3 sample() const = 0;
+    virtual Color getIllumination(const HitData &hitdata, Scene *scene) const { return Color::Black(); }
+    virtual Color getInfiniteIllumination(const Ray& ray) const { return Color::Black(); }
 
     float intensity;
     Color color;
@@ -43,10 +41,30 @@ public:
     explicit PointLight(const Transform *worldToLight) : Light(worldToLight) {}
     PointLight(const Transform *worldToLight, const Color &c, const float &i) : Light(worldToLight, c, i) {}
 
-    // Overrides
     Color getIllumination(const HitData &hitdata, Scene *scene) const override;
-
-    Point3 sample() const override;
 };
+
+
+class DirectionalLight : virtual public Light {
+public:
+    DirectionalLight() : Light(), direction(Vector3(0.5f, -0.5f, 0.5f).normalized()) {}
+    DirectionalLight(const Vector3& dir, const Color& c, const float& i) : Light() {
+        direction = dir.normalized();
+        color = c;
+        intensity = i;
+    }
+
+    virtual Color getIllumination(const HitData &hitdata, Scene *scene) const override;
+
+    Vector3 direction;
+};
+
+class EnvironmentLight : virtual public Light {
+public:
+    EnvironmentLight() : Light() {}
+    EnvironmentLight(const Color& c, const float& i) : Light() { color = c; intensity = i; }
+    virtual Color getInfiniteIllumination(const Ray& ray) const override;
+};
+
 
 #endif //BOUNCE_LIGHT_HPP

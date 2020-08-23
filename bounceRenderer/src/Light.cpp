@@ -10,7 +10,7 @@ Color PointLight::getIllumination(const HitData &hitdata, Scene *scene) const {
     Vector3 toLight;
     Ray lightRay;
 
-    toLight = sample() - hitdata.position;
+    toLight = Point3(t->matrix.m[3][0], t->matrix.m[3][1], t->matrix.m[3][2]) - hitdata.position;
     float lightDistance = toLight.length();
 
     lightRay.origin = hitdata.position;
@@ -22,6 +22,15 @@ Color PointLight::getIllumination(const HitData &hitdata, Scene *scene) const {
     return Color::Black();
 }
 
-Point3 PointLight::sample() const {
-    return Point3(t->matrix.m[3][0], t->matrix.m[3][1], t->matrix.m[3][2]);
+Color EnvironmentLight::getInfiniteIllumination(const Ray &ray) const {
+    return power();
+}
+
+Color DirectionalLight::getIllumination(const HitData &hitdata, Scene *scene) const {
+    Ray lightRay(hitdata.position, direction * -1);
+
+    if (!scene->intersectAny(lightRay, 0.0001, 9999999))
+        return power() * std::max(0.0f, dot(hitdata.normal, lightRay.direction));
+
+    return Color::Black();
 }

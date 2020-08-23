@@ -1,7 +1,7 @@
 #ifndef FILEADAPTERH
 #define FILEADAPTERH
 
-#include "RayTracer.h"
+#include "RayTracer.hpp"
 #include "Iterators.h"
 #include "Color.hpp"
 
@@ -15,7 +15,7 @@ class RayTracer;
 class AbstractFileAdapter
 {
 public:
-	explicit AbstractFileAdapter() {}
+	AbstractFileAdapter() = default;
 	virtual bool write(RayTracer& tracer) const = 0;
 
 //protected:
@@ -26,7 +26,7 @@ public:
 class PPMAdapter : public AbstractFileAdapter
 {
 public:
-    explicit PPMAdapter() : AbstractFileAdapter() {}
+    PPMAdapter() : AbstractFileAdapter() {}
     bool write(RayTracer& tracer) const override;
 
 };

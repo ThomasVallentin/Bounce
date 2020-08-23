@@ -3,11 +3,11 @@
 
 bool PPMAdapter::write(RayTracer& tracer) const
 {
-    // opening file stream
+    // open file stream
     std::ofstream outFileStream(tracer.outpath());
 
-    float width = tracer.camera().width();
-    float height = tracer.camera().height();
+    unsigned int width = tracer.camera().width();
+    unsigned int height = tracer.camera().height();
     // Write ppm format data
     outFileStream << "P3\n" << width << " " << height << "\n255\n";
 

@@ -5,7 +5,6 @@
 #include "Point3.hpp"
 #include <iostream>
 
-// just here to be able to create a pointer without creating a loop between ray and shader headers
 class Shader;
 
 class Ray {
@@ -26,7 +25,7 @@ struct HitData {
 	double t;
 	Point3 position;
 	Vector3 normal;
-	Shader* shader_ptr;
+	Shader* shader;
 };
 
 #endif

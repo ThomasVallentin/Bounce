@@ -1,4 +1,4 @@
-#include "RayTracer.h"
+#include "RayTracer.hpp"
 #include "Sphere.h"
 #include "FileLoaders.hpp"
 
@@ -7,11 +7,11 @@
 int main() {
     std::cout << "Hello, welcome to Bounce Renderer !" << std::endl;
 
-    int renderWidth = 1000;
-    int renderHeight = 1000;
+    int renderWidth = 500;
+    int renderHeight = 500;
     float nearClip = 0.001;
     float farClip = 100000;
-    int samples = 50;
+    int samples = 16;
 
     Scene scene;
 
@@ -19,17 +19,19 @@ int main() {
     tracer.setOutpath(R"(D:\REPO\Bounce\bounceRenderer\output\output.ppm)");
 //    tracer.setOutpath(R"(C:\REPOSITORIES\Bounce\bounceRenderer\output\output.ppm)");
 
-    Shader *darkMirrorShader = new SurfaceShader(.1, .1, .1, 0);
+    Shader *mirror = new Metal(0, 0, 0, 0);
     Shader *greyLambert = new Lambert(.2, .2, .2);
+    Shader *greySurface = new SurfaceShader(.2, .2, .2, 1);
     Shader *redLambert = new Lambert(.8, 0.05, 0.05);
     Shader *greenLambert = new Lambert(0.1, 0.9, 0.1);
     Shader *blueLambert = new Lambert(0.1, 0.1, 0.9);
 
+    OBJLoader loader = OBJLoader();
+
     // Loading the ground
     Transform *transform = Transform::Identity();
-    transform->scale(10, 10, 10);
-
-    OBJLoader loader = OBJLoader(transform);
+    transform->scale(100, 100, 100);
+    loader.setTransform(transform);
     std::string objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\ground.obj)";
     loader.load(objPath, false);
 
@@ -66,10 +68,17 @@ int main() {
     Shape *sphere3 = new Sphere(transform, 1, blueLambert);
     scene.addShape(sphere3);
 
-    transform = Transform::Identity();
-    transform->translate(2, 5, -7);
-    Light *pLight = new PointLight(transform, Color(1.0f, 1.0f, 1.0f), 10.0f);
-    scene.addLight(pLight);
+//    transform = Transform::Identity();
+//    transform->translate(2, 5, -7);
+//    Light *pLight = new PointLight(transform, Color(1.0f, 1.0f, 1.0f), 10.0f);
+//    scene.addLight(pLight);
+
+    Light *eLight = new EnvironmentLight(Color(0.5f, 0.5f, 1.0f), 1.0f);
+    scene.addLight(eLight);
+
+    Light *dLight = new DirectionalLight(Vector3(-0.5f, -0.5f, 0.5f),
+                                         Color(1.0f, 1.01f, 1.0f), 1.0f);
+    scene.addLight(dLight);
 
     // Camera
     Vector3 from(0, 1.2, 11), to(0, 1.2, -7);

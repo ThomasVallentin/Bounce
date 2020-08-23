@@ -22,7 +22,7 @@ bool Sphere::intersect(const Ray& ray, float tmin, float tmax, HitData& hit) con
 			hit.position = ray.pointAtParameter(t);
 			hit.normal = (hit.position - center());
 			hit.normal.normalize();
-			hit.shader_ptr = shader;
+			hit.shader = shader;
 			return true;
 		}
 
@@ -32,7 +32,7 @@ bool Sphere::intersect(const Ray& ray, float tmin, float tmax, HitData& hit) con
 			hit.t = t;
 			hit.position = ray.pointAtParameter(t);
 			hit.normal = (hit.position - center()) / radius();
-			hit.shader_ptr = shader;
+			hit.shader = shader;
 			return true;
 		}
 	}

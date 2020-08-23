@@ -76,7 +76,7 @@ bool Triangle::intersect(const Ray &ray, float tmin, float tmax, HitData &hit) c
         hit.position = ray.pointAtParameter(t);
         hit.normal = N.normalized();
 
-        hit.shader_ptr = shader;
+        hit.shader = shader;
         return true;
     }
 

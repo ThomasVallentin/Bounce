@@ -1,4 +1,4 @@
-#include "RayTracer.h"
+#include "RayTracer.hpp"
 
 void printTimeInfo(const std::chrono::time_point<std::chrono::high_resolution_clock>& startTime, float percentage)
 {
@@ -87,35 +87,39 @@ bool RayTracer::trace(Scene* sc)
 
 Color RayTracer::computeIllumination(const Ray& ray, int depth) const
 {
-	HitData hitdata;
+    if (depth > m_max_depth)
+        return Color::Black();
+
+    HitData hitdata;
     Color outColor = Color::Black();
 
 	if (!scene->intersect(ray, m_near_clip, m_far_clip, hitdata)) {
-        // hit nothing -> get color at infinity (pseudo skyDome)
-        return Color(0.0f, 0.0f, 0.0f);
-    }
-
-    if (hitdata.shader_ptr == nullptr) {
-        hitdata.shader_ptr = m_default_shader;
-    }
-
-    // Sample indirect lighting
-    std::vector<Ray> outRays;
-    std::vector<Color> absorbedColors;
-    if (depth > m_max_depth)
-        return outColor;
-
-    if(hitdata.shader_ptr->scatter(ray, hitdata, absorbedColors, outRays)) {
-        for (int i = 0; i < outRays.size(); i++) {
-            outColor += absorbedColors[i] * computeIllumination(outRays[i], depth + 1);
+        // hit nothing -> get color at infinity (EnvLights, SkyLights, etc...)
+        for (auto light : scene->lights) {
+            outColor += light->getInfiniteIllumination(ray);
         }
+        return outColor;
     }
 
-//    std::cout << absorbedColors.size() << std::endl;
+	// Ensure hit object has a shader
+    if (hitdata.shader == nullptr) {
+        hitdata.shader = m_default_shader;
+    }
+
+    // Sample light diffusion
+    Ray outRay;
+    Color absorbance;
+    if(hitdata.shader->sampleDiffusion(ray, hitdata, outRay, absorbance)) {
+        outColor += absorbance * computeIllumination(outRay, depth + 1);
+    }
+
     // Sample direct lighting
     for (auto light : scene->lights) {
-        outColor += absorbedColors[0] * light->getIllumination(hitdata, scene);
+        outColor += absorbance * light->getIllumination(hitdata, scene);
     }
+
+    outColor += computeReflection(ray, hitdata, depth);
+    outColor += computeTransmission(ray, hitdata, depth);
 
     return outColor;
 }
@@ -126,6 +130,26 @@ void RayTracer::mergeColorToPixel(const unsigned int &x, const unsigned int &y, 
     m_pixels[colorIndex]     = (m_pixels[colorIndex]     * float(currentSample) + color.r)     / float(currentSample + 1);
     m_pixels[colorIndex + 1] = (m_pixels[colorIndex + 1] * float(currentSample) + color.g) / float(currentSample + 1);
     m_pixels[colorIndex + 2] = (m_pixels[colorIndex + 2] * float(currentSample) + color.b) / float(currentSample + 1);
+}
+
+
+Color RayTracer::computeReflection(const Ray &ray, HitData &hitdata, const int depth) const {
+    Ray outRay;
+    Color absorbance;
+    if(hitdata.shader->sampleReflection(ray, hitdata, outRay, absorbance)) {
+        return absorbance * computeIllumination(outRay, depth + 1);
+    }
+    return Color::Black();
+}
+
+
+Color RayTracer::computeTransmission(const Ray &ray, HitData &hitdata, const int depth) const {
+    Ray outRay;
+    Color absorbance;
+    if(hitdata.shader->sampleTransmission(ray, hitdata, outRay, absorbance)) {
+        return absorbance * computeIllumination(outRay, depth + 1);
+    }
+    return Color::Black();
 }
 
 

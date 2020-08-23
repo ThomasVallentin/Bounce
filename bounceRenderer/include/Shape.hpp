@@ -1,7 +1,7 @@
 #ifndef SHAPE_HPP
 #define SHAPE_HPP
 
-#include "Shader.h"
+#include "Shader.hpp"
 #include "TransformObject.hpp"
 
 class Shape : public TransformObject {
