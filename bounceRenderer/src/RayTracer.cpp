@@ -78,9 +78,7 @@ bool RayTracer::trace(Scene* sc)
 
     std::cout << "Done !" << std::endl;
 
-    PPMAdapter adapter;
-    adapter.write(*this);
-
+    writeImage();
 	return true;
 }
 
@@ -150,6 +148,14 @@ Color RayTracer::computeTransmission(const Ray &ray, HitData &hitdata, const int
         return absorbance * computeIllumination(outRay, depth + 1);
     }
     return Color::Black();
+}
+
+bool RayTracer::writeImage() const {
+    if (adapter == nullptr)
+        return false;
+
+    adapter->write(m_outpath, m_camera.width(), m_camera.height(), m_pixels.data());
+    return true;
 }
 
 

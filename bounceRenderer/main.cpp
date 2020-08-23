@@ -2,6 +2,10 @@
 #include "Sphere.h"
 #include "FileLoaders.hpp"
 
+#include "fileAdapters/PPMAdapter.hpp"
+#include "lights/EnvironmentLight.hpp"
+#include "lights/DirectionalLight.hpp"
+
 #include <iostream>
 
 int main() {
@@ -17,6 +21,7 @@ int main() {
 
     RayTracer tracer(nearClip, farClip, samples);
     tracer.setOutpath(R"(D:\REPO\Bounce\bounceRenderer\output\output.ppm)");
+    tracer.setAdapter(new PPMAdapter());
 //    tracer.setOutpath(R"(C:\REPOSITORIES\Bounce\bounceRenderer\output\output.ppm)");
 
     Shader *mirror = new Metal(0, 0, 0, 0);

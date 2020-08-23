@@ -3,7 +3,7 @@
 
 #include "Scene.hpp"
 #include "Light.hpp"
-#include "FileAdapters.h"
+#include "FileAdapters.hpp"
 #include "Shape.hpp"
 #include "Sphere.h"
 #include "Camera.hpp"
@@ -18,17 +18,19 @@
 class RayTracer {
 
 public:
-	RayTracer() : m_near_clip(0.001), m_far_clip(100000), m_samples(100), m_max_depth(50), m_gamma(2.2) {}
+	RayTracer() :
+	    m_near_clip(0.001), m_far_clip(100000), m_samples(100), m_max_depth(50), m_gamma(2.2), adapter(nullptr) {}
 	RayTracer(float near_clip = 0.001, float far_clip = 10000, int sample = 100) :
-	    m_near_clip(near_clip), m_far_clip(far_clip), m_samples(sample), m_max_depth(50), m_gamma(2.2f) {}
+	    m_near_clip(near_clip), m_far_clip(far_clip), m_samples(sample), m_max_depth(50), m_gamma(2.2f), adapter(nullptr) {}
 
-    std::string outpath() { return m_outpath; }
+    std::string outpath() const { return m_outpath; }
 	void setOutpath(const std::string& str) { m_outpath = std::string(str); }
+	void setAdapter(FileAdapter* adapt) { adapter = adapt; }
 
-	int samples() { return m_samples; };
+	int samples() const { return m_samples; };
 	void setSamples(int samples) { m_samples = samples; };
 
-    float gamma() { return m_gamma; };
+    float gamma() const { return m_gamma; };
 	void setGamma(float gamma) { m_gamma = gamma; };
 
     Camera &camera() { return m_camera; };
@@ -41,6 +43,7 @@ public:
     Color computeReflection(const Ray& ray, HitData &hitdata, const int depth) const;
     Color computeTransmission(const Ray& ray, HitData &hitdata, const int depth) const;
 	void mergeColorToPixel(const unsigned int &x, const unsigned int &y, unsigned int &currentSample, Color& color);
+    bool writeImage() const;
 
 	Shader* m_default_shader = new Lambert();
 
@@ -61,6 +64,7 @@ private:
     std::vector<float> m_pixels;
 
     Scene* scene;
+    FileAdapter* adapter;
 };
 
 #endif
