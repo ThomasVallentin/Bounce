@@ -3,7 +3,7 @@
 #include "FileLoaders.hpp"
 
 #include "fileAdapters/PPMAdapter.hpp"
-#include "lights/EnvironmentLight.hpp"
+#include "lights/GradientLight.hpp"
 #include "lights/DirectionalLight.hpp"
 
 #include <iostream>
@@ -78,7 +78,7 @@ int main() {
 //    Light *pLight = new PointLight(transform, Color(1.0f, 1.0f, 1.0f), 10.0f);
 //    scene.addLight(pLight);
 
-    Light *eLight = new EnvironmentLight(Color(0.5f, 0.5f, 1.0f), 1.0f);
+    Light *eLight = new GradientLight();
     scene.addLight(eLight);
 
     transform = Transform::Identity();

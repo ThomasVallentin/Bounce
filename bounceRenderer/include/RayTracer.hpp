@@ -2,6 +2,7 @@
 #define RAYTRACERH
 
 #include "Scene.hpp"
+#include "Shader.hpp"
 #include "Light.hpp"
 #include "FileAdapters.hpp"
 #include "Shape.hpp"
@@ -45,7 +46,7 @@ public:
 	void mergeColorToPixel(const unsigned int &x, const unsigned int &y, unsigned int &currentSample, Color& color);
     bool writeImage() const;
 
-	Shader* m_default_shader = new Lambert();
+	Shader* m_default_shader = new Lambert(0.5f, 0.5f, 0.5f);
 
     std::vector<float>& pixels() { return m_pixels; };
 

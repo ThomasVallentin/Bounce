@@ -6,7 +6,9 @@
 #ifndef BOUNCE_SCENE_HPP
 #define BOUNCE_SCENE_HPP
 
+#include "Ray.h"
 #include "Shape.hpp"
+#include <vector>
 
 class Light;
 

@@ -116,6 +116,9 @@ Color RayTracer::computeIllumination(const Ray& ray, int depth) const
         outColor += absorbance * light->getIllumination(hitdata, scene);
     }
 
+    // Add emission
+    outColor += hitdata.shader->sampleEmission(ray, hitdata);
+
     outColor += computeReflection(ray, hitdata, depth);
     outColor += computeTransmission(ray, hitdata, depth);
 
