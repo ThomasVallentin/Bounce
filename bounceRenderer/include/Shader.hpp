@@ -1,13 +1,14 @@
 #ifndef SHADERH
 #define SHADERH
 
-#include "Ray.h"
-//#include "Scene.hpp"
+#include "Light.hpp"
 #include "Color.hpp"
 #include "mathUtils.h"
 
 #include <vector>
 #include <algorithm>
+
+class Light;
 
 class Scene;
 
@@ -21,7 +22,7 @@ class Scene;
 class Shader {
 
 public:
-    Shader(const Color &alb = Color(0.5, 0.5, 0.5)) { albedo = alb; }
+    Shader(const Color &alb) { albedo = alb; emission=Color::Black(); }
 
     virtual bool sampleDiffusion(const Ray &inRay, const HitData &hitdata, Ray& outRay, Color& absorbance) {
         return false;
@@ -32,7 +33,11 @@ public:
     virtual bool sampleTransmission(const Ray &inRay, const HitData &hitdata, Ray& outRay, Color& absorbance) {
         return false;
     }
+    virtual Color sampleEmission(const Ray &inRay, const HitData &hitdata) {
+        return emission;
+    }
 
+    Color emission;
 protected:
     Color albedo;
 };
@@ -43,8 +48,8 @@ protected:
 
 class Lambert: public Shader {
 public:
-	explicit Lambert(const Color& alb = Color(.5, .5, .5)) { albedo = alb; };
-	Lambert(float albR, float albG, float albB) { albedo = Color(albR, albG, albB); };
+	explicit Lambert(const Color& alb) : Shader(alb) {}
+	Lambert(float albR, float albG, float albB) : Shader(Color(albR, albG, albB)) {}
 
     bool sampleDiffusion(const Ray& inRay, const HitData& hitdata, Ray& outRay, Color& absorbance) override;
 };
@@ -55,8 +60,8 @@ public:
 
 class Metal: public Shader {
 public:
-	Metal(const Color& alb = Color(.5, .5, .5), float rough = 0.2) { albedo = alb; m_roughness = rough; }
-	Metal(float albR, float albG, float albB, float rough) { albedo = Color(albR, albG, albB); m_roughness = rough; };
+	Metal(const Color& alb, float rough) : Shader(alb), m_roughness(rough) {}
+	Metal(float albR, float albG, float albB, float rough)  : Shader(Color(albR, albG, albB)), m_roughness(rough) {}
 
 	bool sampleReflection(const Ray& inRay, const HitData& hitdata, Ray& outRay, Color& absorbance) override;
 
@@ -125,26 +130,30 @@ inline float fresnel(const Vector3& in, const Vector3& surfaceNormal, float ior)
 // == GLASS SHADER =================================================================
 
 
-class Glass: public Shader {
-public:
-	Glass() { m_reflectColor = Color(1, 1, 1); m_refractColor = Color(1, 1, 1); m_ior = 1.3; };
-
-	bool sampleDiffusion(const Ray& inRay, const HitData& hitdata, Ray& outRay, Color& absorbance) override {
-        // We compute the reflect/refract ratio that will be used in sampleReflection & sampleTransmission
-        reflectRatio = fresnel(inRay.direction, hitdata.normal, m_ior);
-    }
-    bool sampleReflection(const Ray& inRay, const HitData& hitdata, Ray& outRay, Color& absorbance) override;
-    bool sampleTransmission(const Ray& inRay, const HitData& hitdata, Ray& outRay, Color& absorbance) override;
-
-protected:
-    Color m_reflectColor;
-    Color m_refractColor;
-
-	float m_ior;
-
-private:
-    float reflectRatio;
-};
+//class Glass: public Shader {
+//public:
+//	Glass() : Shader(Color()),
+//              m_reflectColor(Color(1, 1, 1)),
+//              m_refractColor(Color(1, 1, 1)),
+//              m_ior(1.3) {}
+//
+//    bool sampleDiffusion(const Ray& inRay, const HitData& hitdata, Ray& outRay, Color& absorbance) override {
+//        // We compute the reflect/refract ratio that will be used in sampleReflection & sampleTransmission
+//        reflectRatio = fresnel(inRay.direction, hitdata.normal, m_ior);
+//
+//    }
+//    bool sampleReflection(const Ray& inRay, const HitData& hitdata, Ray& outRay, Color& absorbance) override;
+//    bool sampleTransmission(const Ray& inRay, const HitData& hitdata, Ray& outRay, Color& absorbance) override;
+//
+//protected:
+//    Color m_reflectColor;
+//    Color m_refractColor;
+//
+//	float m_ior;
+//
+//private:
+//    float reflectRatio;
+//};
 
 
 // == SURFACE SHADER =================================================================
@@ -152,15 +161,27 @@ private:
 
 class SurfaceShader: public Shader {
 public:
-	SurfaceShader(const Color& alb = Color(.5, .5, .5), float rough = 0.2) { albedo = alb; m_roughness = rough; }
-	SurfaceShader(float albR, float albG, float albB, float rough) { albedo = Color(albR, albG, albB); m_roughness = rough; };
+    SurfaceShader(const Color& alb, float rough) : Shader(alb), m_roughness(rough) {}
+    SurfaceShader(float albR, float albG, float albB, float rough)  : Shader(Color(albR, albG, albB)), m_roughness(rough) {}
 
     bool sampleDiffusion(const Ray& inRay, const HitData& hitdata, Ray& outRay, Color& absorbance) override;
+    bool sampleReflection(const Ray& inRay, const HitData& hitdata, Ray& outRay, Color& absorbance) override;
 
 protected:
 	float m_roughness;
 };
 
 
+// == LIGHT SHADER =================================================================
+
+
+class LightShader : public Shader {
+public:
+    explicit LightShader(const Light *light) : Shader(Color::Black()), light(light) {}
+
+    virtual Color sampleEmission(const Ray &inRay, const HitData &hitdata) override;
+
+    const Light *light;
+};
 
 #endif

@@ -33,3 +33,23 @@ Vector3 randPointInUnitSphere() {
 
 	return point;
 }
+
+bool intersectPlane(const Ray& ray, const Vector3& normal, const Point3& pointOnPlane, float& outParameter) {
+    float a = dot(normal, ray.direction);
+
+    if (a < 0.000001)
+        return false;
+
+    Vector3 b(pointOnPlane - ray.origin);
+    outParameter = dot(b, normal) / a;
+
+    return outParameter >= 0;
+}
+
+bool intersectDisk(const Ray& ray, const Vector3& normal, const float& radius, const Point3& center, float& outParameter) {
+    if (!intersectPlane(ray, normal, center, outParameter))
+        return false;
+
+    Vector3 centerToHit = center - (ray.origin + ray.direction * outParameter);
+    return centerToHit.squaredLength() <= (radius * radius);
+}

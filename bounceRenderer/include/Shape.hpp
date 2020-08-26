@@ -4,7 +4,7 @@
 #include "Ray.h"
 #include "TransformObject.hpp"
 
-class Shape : public TransformObject {
+class Shape : virtual public TransformObject {
 
 public:
     Shape() : TransformObject(), shader(nullptr) {}

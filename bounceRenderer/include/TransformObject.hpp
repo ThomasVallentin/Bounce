@@ -10,7 +10,7 @@
 
 class TransformObject {
 public:
-    TransformObject() = default;
+    TransformObject() : t(Transform::Identity()) {}
     explicit TransformObject(const Transform* objectToWorld) : t(objectToWorld) {}
 
     const Transform &transform() const { return *t; }

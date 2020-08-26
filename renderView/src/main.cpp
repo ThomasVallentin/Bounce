@@ -1,9 +1,11 @@
 #define _WIN32_WINNT 0x0501
 // Bounce renderer
 #include "GLShader.hpp"
-#include "RayTracer.h"
+#include "RayTracer.hpp"
 #include "TriangleMesh.hpp"
 #include "FileLoaders.hpp"
+#include "lights/PointLight.hpp"
+#include "lights/GradientLight.hpp"
 
 // OpenGL
 #include <GL/glew.h>
@@ -27,7 +29,7 @@ void extractTracedImage(float *data);
 void updateTextureFromRender(GLuint texture, float *data);
 
 static int initialWidth(1200), initialHeight(600);
-static int renderWidth(1280), renderHeight(720);
+static int renderWidth(100), renderHeight(100);
 static int samples(100);
 
 const int renderPixelCount(renderWidth * renderHeight * 3);
@@ -151,6 +153,7 @@ int main()
     // Starting thread using render
     std::thread renderThread(traceRender);
 
+
     // Main window loop
     do {
         updateTextureFromRender(texture, data);
@@ -206,8 +209,9 @@ void extractTracedImage(float *data)
 {
     for (int i=0 ; i < renderHeight; i++)
         for (int j=0 ; j < renderWidth * 3; j++)
-
+        {
             data[(renderHeight - 1 - i) * renderWidth * 3 + j] = applyGamma(tracer.pixels()[i*renderWidth * 3 + j], tracer.gamma());
+        }
 }
 
 void traceRender()
@@ -222,19 +226,21 @@ void initializeTracer(RayTracer &raytracer)
 }
 
 void fillScene() {
+    std::cout << "Hello, welcome to Bounce Renderer !" << std::endl;
 
-    Shader *mirror = new SurfaceShader(.0, .0, .0, 0);
-    Shader *darkMirrorShader = new SurfaceShader(.1, .1, .1, 0);
+    Shader *mirror = new Metal(0, 0, 0, 0);
     Shader *greyLambert = new Lambert(.2, .2, .2);
+    Shader *greySurface = new SurfaceShader(.2, .2, .2, 1);
     Shader *redLambert = new Lambert(.8, 0.05, 0.05);
     Shader *greenLambert = new Lambert(0.1, 0.9, 0.1);
     Shader *blueLambert = new Lambert(0.1, 0.1, 0.9);
 
+    OBJLoader loader = OBJLoader();
+
     // Loading the ground
     Transform *transform = Transform::Identity();
-    transform->scale(10, 10, 10);
-
-    OBJLoader loader = OBJLoader(transform);
+    transform->scale(100, 100, 100);
+    loader.setTransform(transform);
     std::string objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\ground.obj)";
     loader.load(objPath, false);
 
@@ -248,38 +254,17 @@ void fillScene() {
     Shape *sphere1 = new Sphere(transform, 1, redLambert);
     scene.addShape(sphere1);
 
-    transform = Transform::Identity();
-    transform->rotate(Axis::y, degToRad(45));
-    transform->rotate(Axis::x, degToRad(45));
-    transform->translate(0, 3, -7);
-    objPath = R"(D:\REPO\Bounce\bounceRenderer\ressources\geometries\cube.obj)";
-    loader.setTransform(transform);
-    loader.load(objPath, false);
-
-    for (Shape *shape : loader.shapes) {
-        shape->shader = greenLambert;
-        scene.addShape(shape);
-    }
+    Light *eLight = new GradientLight();
+    scene.addLight(eLight);
 
     transform = Transform::Identity();
-    transform->translate(1, 1, -12);
-    Shape *sphere2 = new Sphere(transform, 1, greenLambert);
-    scene.addShape(sphere2);
-
-    transform = Transform::Identity();
-    transform->translate(-1, 1, -2);
-    Shape *sphere3 = new Sphere(transform, 1, blueLambert);
-    scene.addShape(sphere3);
-
-    transform = Transform::Identity();
-    transform->translate(2, 5, -7);
-    Light *pLight = new PointLight(transform, Color(1.0f, 0.7f, 0.5f), 10.0f);
-    scene.addLight(pLight);
-
-    transform = Transform::Identity();
-    transform->translate(-4, 1, 2);
-    Light *rimLight = new PointLight(transform, Color(1.0f, 1.0f, 1.0f), 2.0f);
-    scene.addLight(rimLight);
+//    transform->rotate(Axis::y, degToRad(-45));
+    transform->rotate(Axis::x, degToRad(15));
+    transform->rotate(Axis::y, degToRad(135));
+    transform->translate(2, 3, -10);
+    PointLight dLight(transform, Color(1.0f, 1.0f, 1.0f), 0.0f);
+    scene.addLight(&dLight);
+//    scene.addShape(&dLight);
 
     // Camera
     Vector3 from(0, 1.2, 11), to(0, 1.2, -7);

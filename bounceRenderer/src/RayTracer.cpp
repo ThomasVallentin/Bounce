@@ -108,6 +108,8 @@ Color RayTracer::computeIllumination(const Ray& ray, int depth) const
     Ray outRay;
     Color absorbance;
     if(hitdata.shader->sampleDiffusion(ray, hitdata, outRay, absorbance)) {
+        // TODO(tvallentin) : optimisation by not computing more since everything will be absorbed
+//        if (!absorbance.isBlack())
         outColor += absorbance * computeIllumination(outRay, depth + 1);
     }
 

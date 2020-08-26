@@ -12,13 +12,13 @@
 #include "TransformObject.hpp"
 
 
-class Light : public TransformObject {
+class Light : virtual public TransformObject {
 public:
     Light() : TransformObject(),
               intensity(1.0f),
               color(1.0f, 1.0f, 1.0f) {}
 
-    explicit Light(const Transform *worldToLight) : TransformObject(worldToLight),
+    Light(const Transform *worldToLight) : TransformObject(worldToLight),
                                                     intensity(1.0f),
                                                     color(1.0f, 1.0f, 1.0f) {}
 
