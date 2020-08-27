@@ -14,6 +14,8 @@ public:
     Point3 center() const { return m_center; }
     float radius() const { return m_radius; }
 	bool intersect(const Ray& ray, float tmin, float tmax, HitData& hit) const override;
+    void buildBBox() override;
+    Point3 barycenter() override;
 
 private:
 	Point3 m_center;

@@ -10,14 +10,18 @@
 class BoundingBox {
 public:
     BoundingBox() = default;
+    BoundingBox(const BoundingBox& bb) :
+            min(bb.min), max(bb.max) {}
+    BoundingBox(const Vector3& min, const Vector3& max) :
+            min(min), max(max) {}
     BoundingBox(const float &xmin, const float &ymin, const float &zmin,
                 const float &xmax, const float& ymax, const float& zmax) :
-            xmin(xmin), ymin(ymin), zmin(zmin), xmax(xmax), ymax(ymax), zmax(zmax) {}
+            min(xmin, ymin, zmin), max(xmax, ymax, zmax) {}
 
     bool intersect(const Ray& ray) const;
     bool contains(const Point3& point) const;
 
-    float xmin, ymin, zmin, xmax, ymax, zmax;
+    Point3 min, max;
 };
 
 

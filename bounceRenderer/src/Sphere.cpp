@@ -38,3 +38,16 @@ bool Sphere::intersect(const Ray& ray, float tmin, float tmax, HitData& hit) con
 	}
 	return false; // does not hit
 }
+
+void Sphere::buildBBox() {
+    bbox = BoundingBox(m_center.x - m_radius,
+                       m_center.y - m_radius,
+                       m_center.z - m_radius,
+                       m_center.x + m_radius,
+                       m_center.y + m_radius,
+                       m_center.z + m_radius);
+}
+
+Point3 Sphere::barycenter() {
+    return m_center;
+}

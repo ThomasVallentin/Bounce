@@ -10,7 +10,7 @@ TriangleMeshData::TriangleMeshData(const Transform &objectToWorld,
         vertexIndices(vtxIndices, vtxIndices + 3 * nTriangles)
 {
     // Creates a Vector3 array based on nbVertices
-    points = new Vector3[nVertices];
+    points = new Point3[nVertices];
 
     // Copying the points of pnts to points
     for (int i = 0; i < nVertices; i++)
@@ -32,9 +32,9 @@ Triangle::Triangle(const Transform *objectToWorld, const TriangleMeshData *mesh,
 
 bool Triangle::intersect(const Ray &ray, float tmin, float tmax, HitData &hit) const {
     // Getting the point data
-    const Vector3 &p0 = mesh->points[vertices[0]];
-    const Vector3 &p1 = mesh->points[vertices[1]];
-    const Vector3 &p2 = mesh->points[vertices[2]];
+    const Point3 &p0 = mesh->points[vertices[0]];
+    const Point3 &p1 = mesh->points[vertices[1]];
+    const Point3 &p2 = mesh->points[vertices[2]];
 
     Vector3 p0p1 = p1 - p0;
     Vector3 p0p2 = p2 - p0;
@@ -82,3 +82,21 @@ bool Triangle::intersect(const Ray &ray, float tmin, float tmax, HitData &hit) c
 
     return false;
 }
+
+void Triangle::buildBBox() {
+    const Point3 &p0 = mesh->points[vertices[0]];
+    const Point3 &p1 = mesh->points[vertices[1]];
+    const Point3 &p2 = mesh->points[vertices[2]];
+
+    bbox = BoundingBox(std::min(std::min(p0.x, p1.x), p2.x),
+                       std::min(std::min(p0.y, p1.y), p2.y),
+                       std::min(std::min(p0.z, p1.z), p2.z),
+                       std::max(std::max(p0.x, p1.x), p2.x),
+                       std::max(std::max(p0.y, p1.y), p2.y),
+                       std::max(std::max(p0.z, p1.z), p2.z));
+}
+
+Point3 Triangle::barycenter() {
+    return (mesh->points[vertices[0]] + mesh->points[vertices[1]] + mesh->points[vertices[2]]) / 3.0f;
+}
+
