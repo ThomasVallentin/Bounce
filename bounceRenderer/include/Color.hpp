@@ -27,6 +27,9 @@ public:
     Color(const Color& col) {
         r = col.r ; g = col.g ; b = col.b ; a = col.a; }
 
+    float operator[](const unsigned int& i) { float array[]{r, g, b}; return array[i]; }
+
+
     Color operator+() { return *this; }
     Color operator-() { return Color(-r, -g, -b, -a); }
 

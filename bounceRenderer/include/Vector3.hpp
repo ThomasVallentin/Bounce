@@ -18,6 +18,8 @@ public:
 	Vector3(const Vector3& vec)  { x=vec.x ; y=vec.y ; z=vec.z; }
     Vector3(const Point3 &pt);
 
+	float operator[](const unsigned int& i) { float array[]{x, y, z}; return array[i]; }
+
 	Vector3 operator+() { return *this; }
 	Vector3 operator-() { return Vector3(-x, -y, -z); }
 
