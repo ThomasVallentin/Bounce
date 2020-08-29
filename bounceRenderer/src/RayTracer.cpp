@@ -23,8 +23,18 @@ bool RayTracer::initialize()
         m_pixels[i] = 0;
     }
     // TODO(c++ course): insert may be a better way than looping:
-    // m_pixels.clear();
-    // m_pixels.insert(m_pixels.begin(), pixelsFullLength, 0);
+
+    // Build the bbox of all the objects of the scene
+    for (Shape* shape : scene->shapes)
+        shape->buildBBox();
+
+    // build the scene accelerator
+    if (scene->accelerator) {
+        std::cout << "Building accelerator..." << std::endl;
+
+        scene->accelerator->scene = scene;
+        scene->accelerator->build();
+    }
     return true;
 }
 
@@ -41,6 +51,7 @@ void RayTracer::sampleCamera(const unsigned int &x, const unsigned int &y, Ray& 
 bool RayTracer::trace(Scene* sc)
 {
     scene = sc;
+    initialize();
 
     std::cout << "Tracing scene composed of " << scene->shapes.size() << " shapes..." << std::endl;
 
