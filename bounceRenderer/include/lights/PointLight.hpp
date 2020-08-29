@@ -11,8 +11,10 @@
 class PointLight : public Light {
 public:
     PointLight() : Light() {}
-    explicit PointLight(const Transform *worldToLight) : Light(worldToLight) {}
-    PointLight(const Transform *worldToLight, const Color &c, const float &i) : Light(worldToLight, c, i) {}
+    explicit PointLight(const Transform *lightToWorld) : Light(lightToWorld) {}
+    PointLight(const Transform *lightToWorld, const Color &c, const float &i) :
+            Light(lightToWorld, c, i),
+            TransformObject(lightToWorld) {}
 
     Color getIllumination(const HitData &hitdata, Scene *scene) const override;
 };
