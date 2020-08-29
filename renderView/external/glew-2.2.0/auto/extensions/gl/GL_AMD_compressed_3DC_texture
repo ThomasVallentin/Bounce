@@ -1,6 +1,3 @@
-GL_AMD_compressed_3DC_texture
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_compressed_3DC_texture.txt
-GL_AMD_compressed_3DC_texture
-
-	GL_3DC_X_AMD 0x87F9
-	GL_3DC_XY_AMD 0x87FA
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c06483b1ceff8de3dbcda470c0a48b3da462ce4dea8167ba99c20715041f2fe
+size 190

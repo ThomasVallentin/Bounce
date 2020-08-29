@@ -1,4 +1,3 @@
-GL_NV_shader_noperspective_interpolation
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_shader_noperspective_interpolation.txt
-GL_NV_shader_noperspective_interpolation
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:060bedcc129aa34b20ac64a41d0fdcc34d3e6ea8514b5b039b18604dc3c09650
+size 179

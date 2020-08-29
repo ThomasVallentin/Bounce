@@ -1,31 +1,3 @@
-NAME = $(REGAL_NAME)
-
-M_PREFIX = i686
-M_NAME ?= $(shell uname -s)
-ifeq (Linux,${M_NAME})
-M_PREFIX = i686
-endif
-
-CC  = $(M_PREFIX)-nacl-gcc
-CXX = $(M_PREFIX)-nacl-g++
-LD  = $(M_PREFIX)-nacl-ld
-STRIP ?=
-EXT.DYNAMIC = so
-LDFLAGS.EXTRA =
-LIBDIR =
-CFLAGS.EXTRA  += -fPIC
-CFLAGS.EXTRA  += -m32
-LDFLAGS.EXTRA += -melf_nacl
-LDFLAGS.GL =
-LDFLAGS.GLU = -lRegalGLU
-LDFLAGS.GLUT = -lRegalGLUT
-LDFLAGS.STATIC =
-LDFLAGS.DYNAMIC = -shared
-WARN = -Wall -W -Wno-unused-parameter
-POPT = -O2
-BIN.SUFFIX =
-LIB.SONAME = lib$(NAME).so.$(SO_MAJOR)
-LIB.DEVLNK = lib$(NAME).so
-LIB.SHARED = lib$(NAME).so.$(SO_VERSION)
-LIB.STATIC = lib$(NAME).a
-LDFLAGS.SO = $(LDFLAGS.DYNAMIC) -soname=$(LIB.SONAME)
+version https://git-lfs.github.com/spec/v1
+oid sha256:54fa318523d913249e3fb607b41e4645c72dbc56e6a18dd071c610319f9b13dc
+size 673

@@ -1,6 +1,3 @@
-EGL_IMG_image_plane_attribs
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_IMG_image_plane_attribs
-
-	EGL_NATIVE_BUFFER_MULTIPLANE_SEPARATE_IMG 0x3105
-	EGL_NATIVE_BUFFER_PLANE_OFFSET_IMG 0x3106
+version https://git-lfs.github.com/spec/v1
+oid sha256:07acab12a41ab27c5d6c5041774a8e9163ec143565cb18aeb31b1340699aaa9b
+size 209

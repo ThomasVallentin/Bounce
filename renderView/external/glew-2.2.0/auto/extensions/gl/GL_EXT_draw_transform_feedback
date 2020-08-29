@@ -1,6 +1,3 @@
-GL_EXT_draw_transform_feedback
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_draw_transform_feedback.txt
-GL_EXT_draw_transform_feedback
-
-	void glDrawTransformFeedbackEXT (GLenum mode, GLuint id)
-	void glDrawTransformFeedbackInstancedEXT (GLenum mode, GLuint id, GLsizei instancecount)
+version https://git-lfs.github.com/spec/v1
+oid sha256:b9ba017e820a3ff0537e7860d471997fc95e238fdfef3572afa659affa8ccf3d
+size 298

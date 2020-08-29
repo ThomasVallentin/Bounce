@@ -1,5 +1,3 @@
-EGL_NV_stream_cross_system
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_stream_cross_system
-
-	EGL_STREAM_CROSS_SYSTEM_NV 0x334F
+version https://git-lfs.github.com/spec/v1
+oid sha256:e4f8fde4ecf8f361f27b36a34b77ea368868e74787b6fa31b9bd426d6e162f63
+size 149

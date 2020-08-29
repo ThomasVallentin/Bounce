@@ -1,5 +1,3 @@
-EGL_ARM_pixmap_multisample_discard
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_ARM_pixmap_multisample_discard
-
-	EGL_DISCARD_SAMPLES_ARM 0x3286
+version https://git-lfs.github.com/spec/v1
+oid sha256:210d84f24a70d56ebb07f5f67fdb0e4a7c28a5eb07480dcd6421d98acf2a7e05
+size 162

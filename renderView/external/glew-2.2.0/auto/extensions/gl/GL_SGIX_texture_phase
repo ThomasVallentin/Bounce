@@ -1,5 +1,3 @@
-GL_SGIX_texture_phase
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_texture_phase.txt
-GL_SGIX_texture_phase
-
-	GL_PHASE_SGIX 0x832A
+version https://git-lfs.github.com/spec/v1
+oid sha256:2c8802477f67535dca55b016dd96762d34f73913935bd66f90ac4812cc15bed5
+size 146

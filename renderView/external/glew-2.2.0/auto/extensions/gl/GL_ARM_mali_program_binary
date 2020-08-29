@@ -1,5 +1,3 @@
-GL_ARM_mali_program_binary
-https://www.khronos.org/registry/OpenGL/extensions/ARM/ARM_mali_program_binary.txt
-GL_ARM_mali_program_binary
-
-	GL_MALI_PROGRAM_BINARY_ARM 0x8F61
+version https://git-lfs.github.com/spec/v1
+oid sha256:9f175357d229f3a22d54ba97b420007d6f9eb04fe033f8024b05ddc5c0183489
+size 173

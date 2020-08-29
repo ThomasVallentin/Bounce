@@ -1,5 +1,3 @@
-GL_ARM_rgba8
-https://www.khronos.org/registry/OpenGL/extensions/ARM/ARM_rgba8.txt
-GL_ARM_rgba8
-
-	GL_RGBA8_OES 0x8058
+version https://git-lfs.github.com/spec/v1
+oid sha256:a8507fea4ea919fdfccf379998df5591212fdbb2c7ffb023c4293a1768204613
+size 117

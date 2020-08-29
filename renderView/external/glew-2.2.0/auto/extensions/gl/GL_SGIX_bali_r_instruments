@@ -1,7 +1,3 @@
-GL_SGIX_bali_r_instruments
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_bali_r_instruments.txt
-GL_SGIX_bali_r_instruments
-
-	GL_BALI_FRAGMENTS_GENERATED_INSTRUMENT 0x6090
-	GL_BALI_DEPTH_PASS_INSTRUMENT 0x6091
-	GL_BALI_R_CHIP_COUNT 0x6092
+version https://git-lfs.github.com/spec/v1
+oid sha256:657350e652bd1bd877e69f692f2da47f27210f52211e6633554f66fa12d56b9d
+size 253

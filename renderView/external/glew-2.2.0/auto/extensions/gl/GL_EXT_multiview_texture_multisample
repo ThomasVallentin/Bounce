@@ -1,4 +1,3 @@
-GL_EXT_multiview_texture_multisample
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_multiview_texture_multisample.txt
-GL_EXT_multiview_texture_multisample
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:8ebb9e582b4dab678ba3befccbf898379cfca8cebf96bf98d46806a9882628fb
+size 168

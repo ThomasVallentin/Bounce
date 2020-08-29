@@ -1,8 +1,3 @@
-EGL_IMG_context_priority
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_IMG_context_priority
-
-	EGL_CONTEXT_PRIORITY_LEVEL_IMG 0x3100
-	EGL_CONTEXT_PRIORITY_HIGH_IMG 0x3101
-	EGL_CONTEXT_PRIORITY_MEDIUM_IMG 0x3102
-	EGL_CONTEXT_PRIORITY_LOW_IMG 0x3103
+version https://git-lfs.github.com/spec/v1
+oid sha256:80eae6a8501f7d745780627369d7dc71a06f9785cd05fda3c6b2111ace9cda22
+size 264

@@ -1,6 +1,3 @@
-GL_EXT_multi_draw_arrays
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_multi_draw_arrays.txt
-GL_EXT_multi_draw_arrays
-
-	void glMultiDrawArraysEXT (GLenum mode, const GLint* first, const GLsizei *count, GLsizei primcount)
-	void glMultiDrawElementsEXT (GLenum mode, GLsizei* count, GLenum type, const void *const *indices, GLsizei primcount)
+version https://git-lfs.github.com/spec/v1
+oid sha256:f4367e3b3ed9c365af8b9c3c72054c422a442cd87aecb89968892ade7eb499bc
+size 353

@@ -1,4 +1,3 @@
-GL_NV_gpu_program_fp64
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_gpu_program5.txt
-GL_NV_gpu_program_fp64
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c97193eefa59155a2c9f2296a1a1e6dd3fa6411e519c28f13c8d8e39a8b956e
+size 121

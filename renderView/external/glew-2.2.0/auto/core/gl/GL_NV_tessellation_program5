@@ -1,9 +1,3 @@
-GL_NV_tessellation_program5
-http://www.opengl.org/registry/specs/NV/tessellation_program5.txt
-GL_NV_gpu_program5
-
-	GL_MAX_PROGRAM_PATCH_ATTRIBS_NV 0x86D8
-	GL_TESS_CONTROL_PROGRAM_NV 0x891E
-	GL_TESS_EVALUATION_PROGRAM_NV 0x891F
-	GL_TESS_CONTROL_PROGRAM_PARAMETER_BUFFER_NV 0x8C74
-	GL_TESS_EVALUATION_PROGRAM_PARAMETER_BUFFER_NV 0x8C75
+version https://git-lfs.github.com/spec/v1
+oid sha256:b33eaeda584be105b46f1bfa88cd3bc6f7fb213278e93eb81bd199a26495fc26
+size 334

@@ -1,5 +1,3 @@
-WGL_EXT_create_context_es2_profile
-https://www.khronos.org/registry/OpenGL/extensions/EXT/WGL_EXT_create_context_es2_profile.txt
-WGL_EXT_create_context_es2_profile
-
-	WGL_CONTEXT_ES2_PROFILE_BIT_EXT 0x00000004
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f4332ae1d3546dd39a4a9028bf869dca61d4947837254adc75b3845a0d6cb7b
+size 209

@@ -1,7 +1,3 @@
-GL_ATIX_texture_env_route
-http://www.ati.com/developer/sdk/RadeonSDK/Html/Info/ATIX_texture_env_route.txt
-GL_ATIX_texture_env_route
-
-	GL_SECONDARY_COLOR_ATIX 0x8747
-	GL_TEXTURE_OUTPUT_RGB_ATIX 0x8748
-	GL_TEXTURE_OUTPUT_ALPHA_ATIX 0x8749
+version https://git-lfs.github.com/spec/v1
+oid sha256:3976c94ba8aee39f41ba869c471001c716ba91b179a2bde64ac08ad06543a8d8
+size 237

@@ -1,6 +1,3 @@
-WGL_3DFX_multisample
-https://www.khronos.org/registry/OpenGL/extensions/3DFX/WGL_3DFX_multisample.txt
-WGL_3DFX_multisample
-
-	WGL_SAMPLE_BUFFERS_3DFX 0x2060
-	WGL_SAMPLES_3DFX 0x2061
+version https://git-lfs.github.com/spec/v1
+oid sha256:dbcb897af4f535fcc459dbda926b9df05c151a0d9c2fca026101e5a21552bf9e
+size 181

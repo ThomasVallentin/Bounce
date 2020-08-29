@@ -1,6 +1,3 @@
-GL_APPLE_row_bytes
-https://www.khronos.org/registry/OpenGL/extensions/APPLE/APPLE_row_bytes.txt
-GL_APPLE_row_bytes
-
-	GL_PACK_ROW_BYTES_APPLE 0x8A15
-	GL_UNPACK_ROW_BYTES_APPLE 0x8A16
+version https://git-lfs.github.com/spec/v1
+oid sha256:750e377e669f9ff429f35af433a04ba5a588e63d7d30be4dac27671623733c46
+size 182

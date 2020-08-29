@@ -1,5 +1,3 @@
-GLX_ARB_vertex_buffer_object
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_ARB_vertex_buffer_object
-
-	GLX_CONTEXT_ALLOW_BUFFER_BYTE_ORDER_MISMATCH_ARB 0x2095
+version https://git-lfs.github.com/spec/v1
+oid sha256:690683a8a76582175aada3d59d256f4a006e1e133c46b47c80fe51ff63d3066d
+size 175

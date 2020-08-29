@@ -1,7 +1,3 @@
-GL_NV_register_combiners2
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_register_combiners2.txt
-GL_NV_register_combiners2
-
-	GL_PER_STAGE_CONSTANTS_NV 0x8535
-	void glCombinerStageParameterfvNV (GLenum stage, GLenum pname, const GLfloat* params)
-	void glGetCombinerStageParameterfvNV (GLenum stage, GLenum pname, GLfloat* params)
+version https://git-lfs.github.com/spec/v1
+oid sha256:98745292c42e4d477e4eced92e5df9e566a48601ba40a149690f2a73c5916b93
+size 339

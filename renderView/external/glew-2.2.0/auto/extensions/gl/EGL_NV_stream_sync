@@ -1,7 +1,3 @@
-EGL_NV_stream_sync
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_stream_sync
-
-	EGL_SYNC_TYPE_KHR 0x30F7
-	EGL_SYNC_NEW_FRAME_NV 0x321F
-	EGLSyncKHR eglCreateStreamSyncNV (EGLDisplay dpy, EGLStreamKHR stream, EGLenum type, const EGLint* attrib_list)
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a94df1f610673067dc8112dab3b8d676379e6805355175098efb3cdc435852e
+size 267

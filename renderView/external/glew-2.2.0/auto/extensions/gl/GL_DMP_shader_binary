@@ -1,5 +1,3 @@
-GL_DMP_shader_binary
-https://www.khronos.org/registry/OpenGL/extensions/DMP/DMP_shader_binary.txt
-GL_DMP_shader_binary
-
-	GL_SHADER_BINARY_DMP 0x9250
+version https://git-lfs.github.com/spec/v1
+oid sha256:1596e9c08523bcacc7c6816d62df687eb652a4ec313f3163ab71309402f14a48
+size 149

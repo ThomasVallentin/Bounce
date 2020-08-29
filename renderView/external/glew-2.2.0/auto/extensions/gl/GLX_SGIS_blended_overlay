@@ -1,5 +1,3 @@
-GLX_SGIS_blended_overlay
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_SGIS_blended_overlay
-
-	GLX_BLENDED_RGBA_SGIS 0x8025
+version https://git-lfs.github.com/spec/v1
+oid sha256:36d14d5b977b9c42d17283f50b2c5f4877f23b06d949c6f3585ba5f568060666
+size 140

@@ -1,5 +1,3 @@
-EGL_ARM_implicit_external_sync
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_ARM_implicit_external_sync
-
-	EGL_SYNC_PRIOR_COMMANDS_IMPLICIT_EXTERNAL_ARM 0x328A
+version https://git-lfs.github.com/spec/v1
+oid sha256:23fcd34dfa6c0fbeb7456627eabcb98c0b1ee2e3baff1f9f1907cf0675623b30
+size 176

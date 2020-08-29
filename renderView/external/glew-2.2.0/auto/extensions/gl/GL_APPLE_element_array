@@ -1,12 +1,3 @@
-GL_APPLE_element_array
-https://www.khronos.org/registry/OpenGL/extensions/APPLE/APPLE_element_array.txt
-GL_APPLE_element_array
-
-	GL_ELEMENT_ARRAY_APPLE 0x8A0C
-	GL_ELEMENT_ARRAY_TYPE_APPLE 0x8A0D
-	GL_ELEMENT_ARRAY_POINTER_APPLE 0x8A0E
-	void glDrawElementArrayAPPLE (GLenum mode, GLint first, GLsizei count)
-	void glDrawRangeElementArrayAPPLE (GLenum mode, GLuint start, GLuint end, GLint first, GLsizei count)
-	void glElementPointerAPPLE (GLenum type, const void *pointer)
-	void glMultiDrawElementArrayAPPLE (GLenum mode, const GLint* first, const GLsizei *count, GLsizei primcount)
-	void glMultiDrawRangeElementArrayAPPLE (GLenum mode, GLuint start, GLuint end, const GLint* first, const GLsizei *count, GLsizei primcount)
+version https://git-lfs.github.com/spec/v1
+oid sha256:68520e64fbe80016652ad355a873e5e69bb2474be64f39a60d7927a7ef0721fd
+size 723

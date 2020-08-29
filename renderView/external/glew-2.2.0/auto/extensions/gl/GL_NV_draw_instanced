@@ -1,6 +1,3 @@
-GL_NV_draw_instanced
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_draw_instanced.txt
-GL_NV_draw_instanced
-
-	void glDrawArraysInstancedNV (GLenum mode, GLint first, GLsizei count, GLsizei primcount)
-	void glDrawElementsInstancedNV (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount)
+version https://git-lfs.github.com/spec/v1
+oid sha256:a018b6b94ccfa17c809cb9ff76cd1a78b4568dc97a0c9b38aea839871464f68c
+size 324

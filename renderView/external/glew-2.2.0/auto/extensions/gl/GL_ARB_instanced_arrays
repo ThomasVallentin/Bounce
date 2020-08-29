@@ -1,8 +1,3 @@
-GL_ARB_instanced_arrays
-http://www.opengl.org/registry/specs/ARB/instanced_arrays.txt
-GL_ARB_instanced_arrays
-
-	GL_VERTEX_ATTRIB_ARRAY_DIVISOR_ARB 0x88FE
-	void glVertexAttribDivisorARB (GLuint index, GLuint divisor)
-	void glDrawArraysInstancedARB (GLenum mode, GLint first, GLsizei count, GLsizei primcount)
-	void glDrawElementsInstancedARB (GLenum mode, GLsizei count, GLenum type, const void* indices, GLsizei primcount)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2f1469c710f1b6013f046af5dac526b09461534a9689c0fbc7ca4b48a6fcc2d0
+size 423

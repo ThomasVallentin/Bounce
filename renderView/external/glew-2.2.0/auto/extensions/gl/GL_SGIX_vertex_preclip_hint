@@ -1,6 +1,3 @@
-GL_SGIX_vertex_preclip_hint
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_vertex_preclip.txt
-GL_SGIX_vertex_preclip_hint
-
-	GL_VERTEX_PRECLIP_SGIX 0x83EE
-	GL_VERTEX_PRECLIP_HINT_SGIX 0x83EF
+version https://git-lfs.github.com/spec/v1
+oid sha256:708509dfa57b6a69f6e4bf9b71e48698cc5a69f21c8a13934095705b71ea709b
+size 204

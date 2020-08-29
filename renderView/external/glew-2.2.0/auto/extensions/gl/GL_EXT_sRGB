@@ -1,8 +1,3 @@
-GL_EXT_sRGB
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_sRGB.txt
-GL_EXT_sRGB
-
-	GL_FRAMEBUFFER_ATTACHMENT_COLOR_ENCODING_EXT 0x8210
-	GL_SRGB_EXT 0x8C40
-	GL_SRGB_ALPHA_EXT 0x8C42
-	GL_SRGB8_ALPHA8_EXT 0x8C43
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9e4c69f692c0286ce1285d5cbcafeb901f164198dcbe1edad0fc6e4a07ab248
+size 220

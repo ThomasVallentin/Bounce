@@ -1,5 +1,3 @@
-GL_SGIX_blend_cadd
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_blend_cadd.txt
-GL_SGIX_blend_cadd
-
-	GL_FUNC_COMPLEX_ADD_EXT 0x601C
+version https://git-lfs.github.com/spec/v1
+oid sha256:917d36b371cc378923e828dbbac2ca1901322857eee107056fabfd00eac80253
+size 147

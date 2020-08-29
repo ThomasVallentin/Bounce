@@ -1,5 +1,3 @@
-include config/Makefile.mingw
-
-POPT := -march=i686 -mtune=generic -O2
-CFLAGS.EXTRA  += -m32
-LDFLAGS.EXTRA += -m32
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b3f75f44dfe2ea01a6dc24669caea80f126e3eecf783c1434e69c9c23f31df2
+size 114

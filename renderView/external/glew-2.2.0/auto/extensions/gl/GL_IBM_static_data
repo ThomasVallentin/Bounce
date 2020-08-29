@@ -1,6 +1,3 @@
-GL_IBM_static_data
-https://www.khronos.org/registry/OpenGL/extensions/IBM/IBM_static_data.txt
-GL_IBM_static_data
-
-	GL_ALL_STATIC_DATA_IBM 103060
-	GL_STATIC_VERTEX_ARRAY_IBM 103061
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c01d60deb8d3540329fb39cea9e54c8235cba3915f9b2193fe71119fb88d426
+size 180

@@ -1,8 +1,3 @@
-GL_EXT_separate_shader_objects
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_separate_shader_objects.gl.txt
-GL_EXT_separate_shader_objects
-
-	GL_ACTIVE_PROGRAM_EXT 0x8B8D
-	void glActiveProgramEXT (GLuint program)
-	GLuint glCreateShaderProgramEXT (GLenum type, const GLchar* string)
-	void glUseShaderProgramEXT (GLenum type, GLuint program)
+version https://git-lfs.github.com/spec/v1
+oid sha256:dba6c87d355fbfe76221fcd9d5e52d8d0ef47ca11e40cae3d7c00486a7cb4477
+size 352

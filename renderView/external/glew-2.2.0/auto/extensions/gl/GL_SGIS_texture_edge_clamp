@@ -1,5 +1,3 @@
-GL_SGIS_texture_edge_clamp
-https://www.khronos.org/registry/OpenGL/extensions/SGIS/SGIS_texture_edge_clamp.txt
-GL_SGIS_texture_edge_clamp
-
-	GL_CLAMP_TO_EDGE_SGIS 0x812F
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c50673400b362396b4e8b7446c81563e4202173691391bb5da69e5f93af33c2
+size 169

@@ -1,8 +1,3 @@
-GL_NV_EGL_stream_consumer_external
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_EGL_stream_consumer_external.txt
-GL_NV_EGL_stream_consumer_external
-
-	GL_TEXTURE_EXTERNAL_OES 0x8D65
-	GL_SAMPLER_EXTERNAL_OES 0x8D66
-	GL_TEXTURE_BINDING_EXTERNAL_OES 0x8D67
-	GL_REQUIRED_TEXTURE_IMAGE_UNITS_OES 0x8D68
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e4b654c097e46382ca23435c6df9883a92a3c3c710cac6eda3c3b43d5961690
+size 309

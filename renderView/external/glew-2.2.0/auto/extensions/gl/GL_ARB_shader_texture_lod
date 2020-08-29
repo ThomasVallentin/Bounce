@@ -1,4 +1,3 @@
-GL_ARB_shader_texture_lod
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_shader_texture_lod.txt
-GL_ARB_shader_texture_lod
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:d057eb52704af9775e22c0819c0e850008f33a215040f55efbfbc957ebb95980
+size 135

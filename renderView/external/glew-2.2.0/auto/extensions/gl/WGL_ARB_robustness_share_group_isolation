@@ -1,5 +1,3 @@
-WGL_ARB_robustness_share_group_isolation
-https://www.khronos.org/registry/OpenGL/extensions/ARB/WGL_ARB_robustness_share_group_isolation.txt
-WGL_ARB_robustness_share_group_isolation
-
-	WGL_CONTEXT_RESET_ISOLATION_BIT_ARB 0x00000008
+version https://git-lfs.github.com/spec/v1
+oid sha256:a9a4fa6da6e11e19c8745bd2f0d07e23e9f11c2e4c2a279c4280f902d409381c
+size 231

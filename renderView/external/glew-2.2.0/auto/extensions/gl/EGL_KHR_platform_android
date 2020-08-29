@@ -1,5 +1,3 @@
-EGL_KHR_platform_android
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_platform_android
-
-	EGL_PLATFORM_ANDROID_KHR 0x3141
+version https://git-lfs.github.com/spec/v1
+oid sha256:1207165cf1166874bd9d85b409c8d676f6e4ecb9c02cbe599449ee173e530314
+size 143

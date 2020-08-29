@@ -1,5 +1,3 @@
-GL_NV_draw_texture
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_draw_texture.txt
-GL_NV_draw_texture
-
-	void glDrawTextureNV (GLuint texture, GLuint sampler, GLfloat x0, GLfloat y0, GLfloat x1, GLfloat y1, GLfloat z, GLfloat s0, GLfloat t0, GLfloat s1, GLfloat t1)
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b0d81019d86f42f985907ca5a162fbc52305435505373f5104d6903b1ffc7df
+size 275

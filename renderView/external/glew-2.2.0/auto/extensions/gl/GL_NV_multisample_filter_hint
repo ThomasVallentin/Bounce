@@ -1,5 +1,3 @@
-GL_NV_multisample_filter_hint
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_multisample_filter_hint.txt
-GL_NV_multisample_filter_hint
-
-	GL_MULTISAMPLE_FILTER_HINT_NV 0x8534
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e68272feb055ad019b385807ca70c31190405463dd6716ebf05a916aa4baccb
+size 184

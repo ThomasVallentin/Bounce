@@ -1,6 +1,3 @@
-EGL_NV_post_sub_buffer
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_post_sub_buffer
-
-	EGL_POST_SUB_BUFFER_SUPPORTED_NV 0x30BE
-	EGLBoolean eglPostSubBufferNV (EGLDisplay dpy, EGLSurface surface, EGLint x, EGLint y, EGLint width, EGLint height)
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b7883bf01fec7d5283d87e42ef066598ba80eb1d3fb223959fbaa81fd3ad835
+size 264

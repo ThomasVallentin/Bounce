@@ -1,6 +1,3 @@
-GL_IBM_multimode_draw_arrays
-https://www.khronos.org/registry/OpenGL/extensions/IBM/IBM_multimode_draw_arrays.txt
-GL_IBM_multimode_draw_arrays
-
-	void glMultiModeDrawArraysIBM (const GLenum* mode, const GLint *first, const GLsizei *count, GLsizei primcount, GLint modestride)
-	void glMultiModeDrawElementsIBM (const GLenum* mode, const GLsizei *count, GLenum type, const void *const *indices, GLsizei primcount, GLint modestride)
+version https://git-lfs.github.com/spec/v1
+oid sha256:0212a2ff300de6887e38b4156ec0914f9118aefa8a10107a744c551abef2e330
+size 429

@@ -1,10 +1,3 @@
-GL_OES_texture_view
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_texture_view.txt
-GL_OES_texture_view
-
-	GL_TEXTURE_VIEW_MIN_LEVEL_OES 0x82DB
-	GL_TEXTURE_VIEW_NUM_LEVELS_OES 0x82DC
-	GL_TEXTURE_VIEW_MIN_LAYER_OES 0x82DD
-	GL_TEXTURE_VIEW_NUM_LAYERS_OES 0x82DE
-	GL_TEXTURE_IMMUTABLE_LEVELS 0x82DF
-	void glTextureViewOES (GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers)
+version https://git-lfs.github.com/spec/v1
+oid sha256:a9f8f243bedf8543781a49443325e77307a3bf33b1f1ffb1cca1cb08fc6c3cd4
+size 475

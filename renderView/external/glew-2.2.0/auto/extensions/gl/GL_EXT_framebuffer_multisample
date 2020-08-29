@@ -1,10 +1,3 @@
-GL_EXT_framebuffer_multisample
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_framebuffer_multisample.txt
-GL_EXT_framebuffer_multisample
-
-	GL_RENDERBUFFER_SAMPLES_EXT 0x8CAB
-	GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT 0x8D56
-	GL_MAX_SAMPLES_EXT 0x8D57
-	void glRenderbufferStorageMultisampleEXT (GLenum target, GLsizei samples, GLenum internalformat, GLsizei width, GLsizei height)
-	GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT 0x8D56
-	GL_MAX_SAMPLES_EXT 0x8D57
+version https://git-lfs.github.com/spec/v1
+oid sha256:8e7af10b0c076e54091b6206085b198b4d7432dda12b3578f518b4cc165e52de
+size 469

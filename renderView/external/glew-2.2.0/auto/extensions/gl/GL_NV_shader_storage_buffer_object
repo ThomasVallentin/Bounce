@@ -1,4 +1,3 @@
-GL_NV_shader_storage_buffer_object
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_shader_storage_buffer_object.txt
-GL_NV_shader_storage_buffer_object
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7460b83dc464e77c43fde3a5309bf040c20ba8f914f1335869ecc48bc6522e6
+size 161

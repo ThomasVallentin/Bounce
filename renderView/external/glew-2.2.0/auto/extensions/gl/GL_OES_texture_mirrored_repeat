@@ -1,5 +1,3 @@
-GL_OES_texture_mirrored_repeat
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_texture_mirrored_repeat.txt
-GL_OES_texture_mirrored_repeat
-
-	GL_MIRRORED_REPEAT 0x8370
+version https://git-lfs.github.com/spec/v1
+oid sha256:fba3486d64435b781002ba87f5381d033547391203163f44cb85a885ae249bdb
+size 177

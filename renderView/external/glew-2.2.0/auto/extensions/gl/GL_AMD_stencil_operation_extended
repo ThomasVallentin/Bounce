@@ -1,9 +1,3 @@
-GL_AMD_stencil_operation_extended
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_stencil_operation_extended.txt
-GL_AMD_stencil_operation_extended
-
-	GL_SET_AMD 0x874A
-	GL_REPLACE_VALUE_AMD 0x874B
-	GL_STENCIL_OP_VALUE_AMD 0x874C
-	GL_STENCIL_BACK_OP_VALUE_AMD 0x874D
-	void glStencilOpValueAMD (GLenum face, GLuint value)
+version https://git-lfs.github.com/spec/v1
+oid sha256:f39f5b88178479f7cb9e9c8ea19226ca8db1d16409093f7981859c473bab4dec
+size 330

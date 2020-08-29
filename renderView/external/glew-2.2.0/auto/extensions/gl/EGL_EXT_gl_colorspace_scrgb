@@ -1,5 +1,3 @@
-EGL_EXT_gl_colorspace_scrgb
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_gl_colorspace_scrgb
-
-	EGL_GL_COLORSPACE_SCRGB_EXT 0x3351
+version https://git-lfs.github.com/spec/v1
+oid sha256:42ebf2d4d8197b994c915309ae3cd254a155e0c777c4e9850d8d8ca2b34b528e
+size 152

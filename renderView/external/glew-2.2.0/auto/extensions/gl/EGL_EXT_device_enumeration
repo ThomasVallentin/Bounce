@@ -1,5 +1,3 @@
-EGL_EXT_device_enumeration
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_device_enumeration
-
-	EGLBoolean eglQueryDevicesEXT (EGLint max_devices, EGLDeviceEXT* devices, EGLint* num_devices)
+version https://git-lfs.github.com/spec/v1
+oid sha256:8146719f6a99d4f489faee5e023710b01bcd357ab853300e3862efe0416cebef
+size 210

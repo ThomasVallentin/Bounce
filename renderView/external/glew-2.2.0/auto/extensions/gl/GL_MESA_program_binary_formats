@@ -1,5 +1,3 @@
-GL_MESA_program_binary_formats
-https://www.khronos.org/registry/OpenGL/extensions/MESA/MESA_program_binary_formats.txt
-GL_MESA_program_binary_formats
-
-	GL_PROGRAM_BINARY_FORMAT_MESA 0x875F
+version https://git-lfs.github.com/spec/v1
+oid sha256:2fec1c7ac2af34dbae665e391d839f27f9dd6e704e17e231118634d05e2384f2
+size 189

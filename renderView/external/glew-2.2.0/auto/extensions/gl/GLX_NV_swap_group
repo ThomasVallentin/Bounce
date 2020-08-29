@@ -1,10 +1,3 @@
-GLX_NV_swap_group
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_NV_swap_group
-
-	Bool glXBindSwapBarrierNV (Display* dpy, GLuint group, GLuint barrier)
-	Bool glXJoinSwapGroupNV (Display* dpy, GLXDrawable drawable, GLuint group)
-	Bool glXQueryFrameCountNV (Display* dpy, int screen, GLuint* count)
-	Bool glXQueryMaxSwapGroupsNV (Display* dpy, int screen, GLuint* maxGroups, GLuint* maxBarriers)
-	Bool glXQuerySwapGroupNV (Display* dpy, GLXDrawable drawable, GLuint* group, GLuint* barrier)
-	Bool glXResetFrameCountNV (Display* dpy, int screen)
+version https://git-lfs.github.com/spec/v1
+oid sha256:03f9fd423b9ace07b857b9441b90c5aa27eea720d79be4a01634ee41ca0cbe67
+size 559

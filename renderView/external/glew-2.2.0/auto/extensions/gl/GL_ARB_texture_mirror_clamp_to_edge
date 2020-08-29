@@ -1,5 +1,3 @@
-GL_ARB_texture_mirror_clamp_to_edge
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_texture_mirror_clamp_to_edge.txt
-GL_ARB_texture_mirror_clamp_to_edge
-
-	GL_MIRROR_CLAMP_TO_EDGE 0x8743
+version https://git-lfs.github.com/spec/v1
+oid sha256:745849fc160d839e527155531eb3342cfb1bf120df129f1752c0c48ebd4d9a58
+size 197

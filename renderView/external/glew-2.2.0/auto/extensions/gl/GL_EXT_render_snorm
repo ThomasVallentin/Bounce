@@ -1,12 +1,3 @@
-GL_EXT_render_snorm
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_render_snorm.txt
-GL_EXT_render_snorm
-
-	GL_BYTE 0x1400
-	GL_SHORT 0x1402
-	GL_R8_SNORM 0x8F94
-	GL_RG8_SNORM 0x8F95
-	GL_RGBA8_SNORM 0x8F97
-	GL_R16_SNORM_EXT 0x8F98
-	GL_RG16_SNORM_EXT 0x8F99
-	GL_RGBA16_SNORM_EXT 0x8F9B
+version https://git-lfs.github.com/spec/v1
+oid sha256:8261fb02cddb676ad684e06035e7920db53068d02463ad6c1d5dba071b65f88e
+size 293

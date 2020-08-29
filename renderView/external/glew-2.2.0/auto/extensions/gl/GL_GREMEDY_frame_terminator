@@ -1,5 +1,3 @@
-GL_GREMEDY_frame_terminator
-https://www.khronos.org/registry/OpenGL/extensions/GREMEDY/GREMEDY_frame_terminator.txt
-GL_GREMEDY_frame_terminator
-
-	void glFrameTerminatorGREMEDY (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:074a9242fdec968eec912ceba0ff4e59034973b4784455b4cc0f40878e51f825
+size 183

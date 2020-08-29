@@ -1,15 +1,3 @@
-WGL_NV_DX_interop
-https://www.khronos.org/registry/OpenGL/extensions/NV/WGL_NV_DX_interop.txt
-WGL_NV_DX_interop
-
-	WGL_ACCESS_READ_ONLY_NV 0x00000000
-	WGL_ACCESS_READ_WRITE_NV 0x00000001
-	WGL_ACCESS_WRITE_DISCARD_NV 0x00000002
-	BOOL wglDXCloseDeviceNV (HANDLE hDevice)
-	BOOL wglDXLockObjectsNV (HANDLE hDevice, GLint count, HANDLE* hObjects)
-	BOOL wglDXObjectAccessNV (HANDLE hObject, GLenum access)
-	HANDLE wglDXOpenDeviceNV (void* dxDevice)
-	HANDLE wglDXRegisterObjectNV (HANDLE hDevice, void* dxObject, GLuint name, GLenum type, GLenum access)
-	BOOL wglDXSetResourceShareHandleNV (void* dxObject, HANDLE shareHandle)
-	BOOL wglDXUnlockObjectsNV (HANDLE hDevice, GLint count, HANDLE* hObjects)
-	BOOL wglDXUnregisterObjectNV (HANDLE hDevice, HANDLE hObject)
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c59aeb37d9b1572fcebf56472e6ecbe30ac035d01c8cf8b5277a8d48ee07eef
+size 757

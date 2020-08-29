@@ -1,7 +1,3 @@
-EGL_KHR_stream_cross_process_fd
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_stream_cross_process_fd
-
-	EGL_NO_FILE_DESCRIPTOR_KHR EGL_CAST(EGLNativeFileDescriptorKHR,-1)
-	EGLStreamKHR eglCreateStreamFromFileDescriptorKHR (EGLDisplay dpy, EGLNativeFileDescriptorKHR file_descriptor)
-	EGLNativeFileDescriptorKHR eglGetStreamFileDescriptorKHR (EGLDisplay dpy, EGLStreamKHR stream)
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac9f775f728b0161fd426b80338ef429a94cab19a251e2caf11b57d16af306b0
+size 400

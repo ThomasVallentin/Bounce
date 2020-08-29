@@ -1,13 +1,3 @@
-GL_APPLE_texture_range
-http://www.opengl.org/registry/specs/APPLE/texture_range.txt
-GL_APPLE_texture_range
-
-	GL_TEXTURE_STORAGE_HINT_APPLE 0x85BC
-	GL_STORAGE_PRIVATE_APPLE 0x85BD
-	GL_STORAGE_CACHED_APPLE 0x85BE
-	GL_STORAGE_SHARED_APPLE 0x85BF
-	GL_TEXTURE_RANGE_LENGTH_APPLE 0x85B7
-	GL_TEXTURE_RANGE_POINTER_APPLE 0x85B8
-	void glTextureRangeAPPLE (GLenum target, GLsizei length, void *pointer)
-	void glGetTexParameterPointervAPPLE (GLenum target, GLenum pname, void **params)
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:690e6563dc117a203d24ed1c73a92b8b6268d5ca1b0c2a2cf36018167386c04f
+size 476

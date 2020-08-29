@@ -1,4 +1,3 @@
-GL_ARB_shader_viewport_layer_array
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_shader_viewport_layer_array.txt
-GL_ARB_shader_viewport_layer_array
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:a07e83922ef68de805956cd32e227cf00ec7831c332dda5bbc39d2236af7caf4
+size 162

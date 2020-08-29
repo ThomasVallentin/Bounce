@@ -1,17 +1,3 @@
-    }
-    ret = (len == 0);
-  }
-  return ret;
-}
-
-#elif defined(GLEW_EGL)
-
-GLboolean eglewIsSupported (const char* name)
-{
-  const GLubyte* pos = (const GLubyte*)name;
-  GLuint len = _glewStrLen(pos);
-  GLboolean ret = GL_TRUE;
-  while (ret && len > 0)
-  {
-    if(_glewStrSame1(&pos, &len, (const GLubyte*)"EGL_", 4))
-    {
+version https://git-lfs.github.com/spec/v1
+oid sha256:57cf7e495248d396f4f902d1bedcfdc2a50f0f070ff85cc81252907603d92828
+size 323

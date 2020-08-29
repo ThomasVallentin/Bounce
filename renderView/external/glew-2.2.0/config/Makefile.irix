@@ -1,17 +1,3 @@
-NAME = $(GLEW_NAME)
-CC = cc
-LD = ld
-ABI = -64# -n32
-CC += $(ABI)
-LD += $(ABI)
-LDFLAGS.EXTRA =
-LDFLAGS.GL = -lGL -lXext -lX11
-NAME = GLEW
-WARN = -fullwarn -woff 1110,1498
-POPT = -O2 -OPT:Olimit=0
-BIN.SUFFIX =
-LIB.SONAME    = lib$(NAME).so.$(SO_MAJOR)
-LIB.DEVLNK    = lib$(NAME).so
-LIB.SHARED    = lib$(NAME).so.$(SO_VERSION)
-LIB.STATIC    = lib$(NAME).a
-LDFLAGS.SO    = -shared -soname $(LIB.SONAME)
+version https://git-lfs.github.com/spec/v1
+oid sha256:869a82cf2e357fa2d2f4d575a9b0923f28b76c842bbac82381d701ec2ef91563
+size 399

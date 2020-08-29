@@ -1,4 +1,3 @@
-GL_ARB_texture_query_levels
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_texture_query_levels.txt
-GL_ARB_texture_query_levels
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:473c3893a3f807d6367b9969cb4a89e3cbc3bdf0823d1107a089fa414bfc23be
+size 141

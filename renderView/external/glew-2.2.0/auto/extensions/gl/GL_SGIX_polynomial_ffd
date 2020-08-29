@@ -1,8 +1,3 @@
-GL_SGIX_polynomial_ffd
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_polynomial_ffd.txt
-GL_SGIX_polynomial_ffd
-
-	GL_TEXTURE_DEFORMATION_BIT_SGIX 0x1
-	GL_GEOMETRY_DEFORMATION_BIT_SGIX 0x2
-	void glDeformSGIX (GLbitfield mask)
-	void glLoadIdentityDeformationMapSGIX (GLbitfield mask)
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd53af642ff4db7b8d4b1d704b867c2f0841c62d3b65ffbf2f0b535a9406fb19
+size 296

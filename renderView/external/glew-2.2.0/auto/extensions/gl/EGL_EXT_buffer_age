@@ -1,5 +1,3 @@
-EGL_EXT_buffer_age
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_buffer_age
-
-	EGL_BUFFER_AGE_EXT 0x313D
+version https://git-lfs.github.com/spec/v1
+oid sha256:0f8bdda5498d191be4fef32d760ac4af2227b24a56aa4afda79c5f981506f3b2
+size 125

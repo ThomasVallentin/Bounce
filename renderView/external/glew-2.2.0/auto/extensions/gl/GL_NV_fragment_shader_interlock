@@ -1,4 +1,3 @@
-GL_NV_fragment_shader_interlock
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_fragment_shader_interlock.txt
-GL_NV_fragment_shader_interlock
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:a788c03ef61a6c3bd27783801680b44cb9ae4c9285ff3a159259c22b81d0fa55
+size 152

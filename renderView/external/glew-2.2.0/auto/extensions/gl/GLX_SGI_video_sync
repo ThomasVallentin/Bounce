@@ -1,6 +1,3 @@
-GLX_SGI_video_sync
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_SGI_video_sync
-
-	int glXGetVideoSyncSGI (unsigned int* count)
-	int glXWaitVideoSyncSGI (int divisor, int remainder, unsigned int* count)
+version https://git-lfs.github.com/spec/v1
+oid sha256:9caf542fbbde176ff2546cad5ccec11edc38f838235a5cacafcdc0b700e168d8
+size 219

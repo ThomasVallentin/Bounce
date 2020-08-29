@@ -1,7 +1,3 @@
-GL_EXT_blend_equation_separate
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_blend_equation_separate.txt
-GL_EXT_blend_equation_separate
-
-	GL_BLEND_EQUATION_RGB_EXT 0x8009
-	GL_BLEND_EQUATION_ALPHA_EXT 0x883D
-	void glBlendEquationSeparateEXT (GLenum modeRGB, GLenum modeAlpha)
+version https://git-lfs.github.com/spec/v1
+oid sha256:01ed4ade291c2d3e44b5ab281b21b175875ebe0ea9de9fffb68be18288061c23
+size 288

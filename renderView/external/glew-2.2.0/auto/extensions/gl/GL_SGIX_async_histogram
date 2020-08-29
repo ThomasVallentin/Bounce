@@ -1,6 +1,3 @@
-GL_SGIX_async_histogram
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_async_histogram.txt
-GL_SGIX_async_histogram
-
-	GL_ASYNC_HISTOGRAM_SGIX 0x832C
-	GL_MAX_ASYNC_HISTOGRAM_SGIX 0x832D
+version https://git-lfs.github.com/spec/v1
+oid sha256:f99ccdee19732e66d0e43880250a8a29482fb6e8d3a37ca89ec2cd08d0ee1c7a
+size 198

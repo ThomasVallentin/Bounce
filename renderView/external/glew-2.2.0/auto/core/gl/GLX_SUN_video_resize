@@ -1,8 +1,3 @@
-GLX_SUN_video_resize
-http://wwws.sun.com/software/graphics/opengl/extensions/glx_sun_video_resize.txt
-GLX_SUN_video_resize
-
-	GL_VIDEO_RESIZE_COMPENSATION_SUN 0x85CD
-	GLX_VIDEO_RESIZE_SUN 0x8171
-	int glXVideoResizeSUN (Display* display, GLXDrawable window, float factor)
-	int glXGetVideoResizeSUN (Display* display, GLXDrawable window, float* factor)
+version https://git-lfs.github.com/spec/v1
+oid sha256:6af3d828f2586b1d7b5dac8f5e38dcd8de1e838261aabe55e9818a0c3e7b844f
+size 350

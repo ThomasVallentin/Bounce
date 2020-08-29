@@ -1,4 +1,3 @@
-GL_APPLE_texture_2D_limited_npot
-https://www.khronos.org/registry/OpenGL/extensions/APPLE/APPLE_texture_2D_limited_npot.txt
-GL_APPLE_texture_2D_limited_npot
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac2a49390eb027f9f43c0819e5d14d8cfab3f269d860d88f4cbe5225af2a54f8
+size 158

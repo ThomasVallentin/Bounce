@@ -1,6 +1,3 @@
-GL_EXT_win32_keyed_mutex
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_win32_keyed_mutex.txt
-GL_EXT_win32_keyed_mutex
-
-	GLboolean glAcquireKeyedMutexWin32EXT (GLuint memory, GLuint64 key, GLuint timeout)
-	GLboolean glReleaseKeyedMutexWin32EXT (GLuint memory, GLuint64 key)
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b72232af58f1c7b35be5211dfa4068859f25b332eff53266f11be6d62658f5a
+size 286

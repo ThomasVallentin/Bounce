@@ -1,8 +1,3 @@
-GL_EXT_polygon_offset
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_polygon_offset.txt
-GL_EXT_polygon_offset
-
-	GL_POLYGON_OFFSET_EXT 0x8037
-	GL_POLYGON_OFFSET_FACTOR_EXT 0x8038
-	GL_POLYGON_OFFSET_BIAS_EXT 0x8039
-	void glPolygonOffsetEXT (GLfloat factor, GLfloat bias)
+version https://git-lfs.github.com/spec/v1
+oid sha256:13c43d36ff8b12abed064b4418176d720455a75c9d2d4a62ef0c51103b8069ac
+size 281

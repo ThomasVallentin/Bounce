@@ -1,6 +1,3 @@
-GL_WIN_phong_shading
-https://www.khronos.org/registry/OpenGL/extensions/WIN/WIN_phong_shading.txt
-GL_WIN_phong_shading
-
-	GL_PHONG_WIN 0x80EA
-	GL_PHONG_HINT_WIN 0x80EB
+version https://git-lfs.github.com/spec/v1
+oid sha256:7aff1aba30007a568c920798bbcd87bb42102654b43eb2dba98d84190ff20cee
+size 167

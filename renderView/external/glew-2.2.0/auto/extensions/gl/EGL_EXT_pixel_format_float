@@ -1,7 +1,3 @@
-EGL_EXT_pixel_format_float
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_pixel_format_float
-
-	EGL_COLOR_COMPONENT_TYPE_EXT 0x3339
-	EGL_COLOR_COMPONENT_TYPE_FIXED_EXT 0x333A
-	EGL_COLOR_COMPONENT_TYPE_FLOAT_EXT 0x333B
+version https://git-lfs.github.com/spec/v1
+oid sha256:a0c18c094347b831d5011fa542840264abb0508677b60f104793634e5e608112
+size 237

@@ -1,6 +1,3 @@
-GL_AMD_multi_draw_indirect
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_multi_draw_indirect.txt
-GL_AMD_multi_draw_indirect
-
-	void glMultiDrawArraysIndirectAMD (GLenum mode, const void *indirect, GLsizei primcount, GLsizei stride)
-	void glMultiDrawElementsIndirectAMD (GLenum mode, GLenum type, const void *indirect, GLsizei primcount, GLsizei stride)
+version https://git-lfs.github.com/spec/v1
+oid sha256:19d9e0fde217a2b868b48677062225c4afcf0a80f50e54227e51dae8a088198a
+size 365

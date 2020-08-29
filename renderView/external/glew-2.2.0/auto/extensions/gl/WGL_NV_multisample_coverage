@@ -1,6 +1,3 @@
-WGL_NV_multisample_coverage
-https://www.khronos.org/registry/OpenGL/extensions/NV/WGL_NV_multisample_coverage.txt
-WGL_NV_multisample_coverage
-
-	WGL_COVERAGE_SAMPLES_NV 0x2042
-	WGL_COLOR_SAMPLES_NV 0x20B9
+version https://git-lfs.github.com/spec/v1
+oid sha256:5debc7c2a1c634edca4c367e353d26a01a4811e968e9c3c344e8e7a6ca32758e
+size 204

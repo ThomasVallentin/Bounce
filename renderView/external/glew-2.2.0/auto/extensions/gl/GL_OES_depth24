@@ -1,5 +1,3 @@
-GL_OES_depth24
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_depth24.txt
-GL_OES_depth24
-
-	GL_DEPTH_COMPONENT24_OES 0x81A6
+version https://git-lfs.github.com/spec/v1
+oid sha256:6714475a3e9cc9a2620219985c058337be04b16531ead02bff9774d7dc5c962d
+size 135

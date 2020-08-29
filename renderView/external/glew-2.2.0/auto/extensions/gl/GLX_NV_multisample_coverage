@@ -1,6 +1,3 @@
-GLX_NV_multisample_coverage
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_NV_multisample_coverage
-
-	GLX_COLOR_SAMPLES_NV 0x20B3
-	GLX_COVERAGE_SAMPLES_NV 100001
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ef971f57c1e64afcdf0de9affebfccc800745cf4a431276e47061389905cc28
+size 177

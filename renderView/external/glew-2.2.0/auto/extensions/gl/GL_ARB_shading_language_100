@@ -1,5 +1,3 @@
-GL_ARB_shading_language_100
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_shading_language_100.txt
-GL_ARB_shading_language_100
-
-	GL_SHADING_LANGUAGE_VERSION_ARB 0x8B8C
+version https://git-lfs.github.com/spec/v1
+oid sha256:ba48bc1dfad062c910a56ac1ea26c7e72de94774a74dc5544f6af650a103c698
+size 181

@@ -1,6 +1,3 @@
-GL_ATI_texture_mirror_once
-https://www.khronos.org/registry/OpenGL/extensions/ATI/ATI_texture_mirror_once.txt
-GL_ATI_texture_mirror_once
-
-	GL_MIRROR_CLAMP_ATI 0x8742
-	GL_MIRROR_CLAMP_TO_EDGE_ATI 0x8743
+version https://git-lfs.github.com/spec/v1
+oid sha256:40a6a7b4438a537428a76e66882414fc6015bac8b17314ecd6bcd44a2facbd33
+size 202

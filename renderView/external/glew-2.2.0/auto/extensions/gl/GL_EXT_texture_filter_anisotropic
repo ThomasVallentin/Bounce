@@ -1,6 +1,3 @@
-GL_EXT_texture_filter_anisotropic
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_texture_filter_anisotropic.txt
-GL_EXT_texture_filter_anisotropic
-
-	GL_TEXTURE_MAX_ANISOTROPY_EXT 0x84FE
-	GL_MAX_TEXTURE_MAX_ANISOTROPY_EXT 0x84FF
+version https://git-lfs.github.com/spec/v1
+oid sha256:425c7567a62cd422239848c596d6e7de8b08fee91351593db9da088264e5c057
+size 239

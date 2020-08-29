@@ -1,8 +1,3 @@
-GL_EXT_compiled_vertex_array
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_compiled_vertex_array.txt
-GL_EXT_compiled_vertex_array
-
-	GL_ARRAY_ELEMENT_LOCK_FIRST_EXT 0x81A8
-	GL_ARRAY_ELEMENT_LOCK_COUNT_EXT 0x81A9
-	void glLockArraysEXT (GLint first, GLsizei count)
-	void glUnlockArraysEXT (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb97a4e12d547c018ed14a09d8681d18cd366eb52398e39f763cf8a6f92a66ac
+size 306

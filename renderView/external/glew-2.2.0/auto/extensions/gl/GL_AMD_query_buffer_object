@@ -1,7 +1,3 @@
-GL_AMD_query_buffer_object
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_query_buffer_object.txt
-GL_AMD_query_buffer_object
-
-	GL_QUERY_BUFFER_AMD 0x9192
-	GL_QUERY_BUFFER_BINDING_AMD 0x9193
-	GL_QUERY_RESULT_NO_WAIT_AMD 0x9194
+version https://git-lfs.github.com/spec/v1
+oid sha256:27ee3b8fb3c87dd41478802bc0a39683233e55f51914a36e70cd15e98e91b344
+size 238

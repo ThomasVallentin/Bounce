@@ -1,4 +1,3 @@
-GL_AMD_vertex_shader_layer
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_vertex_shader_layer.txt
-GL_AMD_vertex_shader_layer
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:86bfcf334f9e5f0de26db0d49bbbf1fd75fe736110ff81c1b20f19297999d8c5
+size 138

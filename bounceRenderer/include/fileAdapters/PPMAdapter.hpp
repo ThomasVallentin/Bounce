@@ -1,22 +1,3 @@
-//
-// Created by Thomas Vallentin on 23/08/2020.
-// Copyright (c) 2020. All rights reserved.
-//
-
-#ifndef BOUNCE_PPMADAPTER_HPP
-#define BOUNCE_PPMADAPTER_HPP
-
-
-#include "FileAdapters.hpp"
-
-
-class PPMAdapter : public FileAdapter
-{
-public:
-    PPMAdapter() : FileAdapter() {}
-    bool write(const std::string& outpath, const unsigned int& width, const unsigned int& height, const float* pixels) const override;
-
-};
-
-
-#endif //BOUNCE_PPMADAPTER_HPP
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f22d47cd46d54de8b18dae10339bd72be59b2e9c35c04543788a62826a3dd0e
+size 445

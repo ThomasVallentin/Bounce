@@ -1,4 +1,3 @@
-GL_NV_texture_compression_s3tc_update
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_texture_compression_s3tc_update.txt
-GL_NV_texture_compression_s3tc_update
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:027a7f14314def3bb904a925f1ce26d7063ec9ca45ca85410f2bb44fe84624b7
+size 170

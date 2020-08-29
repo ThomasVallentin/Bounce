@@ -1,5 +1,3 @@
-GL_NV_shader_subgroup_partitioned
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_shader_subgroup_partitioned.txt
-GL_NV_shader_subgroup_partitioned
-
-	GL_SUBGROUP_FEATURE_PARTITIONED_BIT_NV 0x00000100
+version https://git-lfs.github.com/spec/v1
+oid sha256:2115e489194b6cf54c6953209683a094782e869f6e284fc382ac2014d195414f
+size 209

@@ -1,10 +1,3 @@
-GL_ARB_transform_feedback3
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_transform_feedback3.txt
-GL_ARB_transform_feedback3
-
-	GL_MAX_TRANSFORM_FEEDBACK_BUFFERS 0x8E70
-	GL_MAX_VERTEX_STREAMS 0x8E71
-	void glBeginQueryIndexed (GLenum target, GLuint index, GLuint id)
-	void glDrawTransformFeedbackStream (GLenum mode, GLuint id, GLuint stream)
-	void glEndQueryIndexed (GLenum target, GLuint index)
-	void glGetQueryIndexediv (GLenum target, GLuint index, GLenum pname, GLint* params)
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b834f199e9d34c773e0d8f35a431724198beb5d20a195843825b6030617ecb0
+size 492

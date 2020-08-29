@@ -1,6 +1,3 @@
-GL_EXT_draw_instanced
-http://developer.download.nvidia.com/opengl/specs/GL_EXT_draw_instanced.txt
-GL_EXT_draw_instanced
-
-	void glDrawArraysInstancedEXT (GLenum mode, GLint start, GLsizei count, GLsizei primcount)
-	void glDrawElementsInstancedEXT (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount)
+version https://git-lfs.github.com/spec/v1
+oid sha256:ab443b7118b7486503e857533d8ae579aecd233cfa05d1f56028e9a2f1af35d9
+size 328

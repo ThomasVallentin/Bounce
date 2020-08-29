@@ -1,4 +1,3 @@
-GL_ARB_texture_env_crossbar
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_texture_env_crossbar.txt
-GL_ARB_texture_env_crossbar
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1b76cb87ff492392cfaea09bdd84debf9418bf96279bee854a8148042cdfbd6
+size 141

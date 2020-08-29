@@ -1,5 +1,3 @@
-GL_NV_vertex_array_range2
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_vertex_array_range2.txt
-GL_NV_vertex_array_range2
-
-	GL_VERTEX_ARRAY_RANGE_WITHOUT_FLUSH_NV 0x8533
+version https://git-lfs.github.com/spec/v1
+oid sha256:84fac8773810b66c3fb3dd6336ec825755b31cd245eb77e22d5529ec06c1ae0a
+size 181

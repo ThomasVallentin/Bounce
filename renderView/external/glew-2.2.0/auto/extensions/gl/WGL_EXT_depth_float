@@ -1,5 +1,3 @@
-WGL_EXT_depth_float
-https://www.khronos.org/registry/OpenGL/extensions/EXT/WGL_EXT_depth_float.txt
-WGL_EXT_depth_float
-
-	WGL_DEPTH_FLOAT_EXT 0x2040
+version https://git-lfs.github.com/spec/v1
+oid sha256:18217de6e2227cb5b973327d6ff85006f6a1a0454bf39c85a0e17f8e0784ed8e
+size 148

@@ -1,6 +1,3 @@
-GL_ARB_transform_feedback_instanced
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_transform_feedback_instanced.txt
-GL_ARB_transform_feedback_instanced
-
-	void glDrawTransformFeedbackInstanced (GLenum mode, GLuint id, GLsizei primcount)
-	void glDrawTransformFeedbackStreamInstanced (GLenum mode, GLuint id, GLuint stream, GLsizei primcount)
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb6420a3ed287006af74d283757f16ecb4362e24c969c903d4bb06c5580fc314
+size 352

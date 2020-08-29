@@ -1,6 +1,3 @@
-GL_SGIX_fog_blend
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_fog_blend.txt
-GL_SGIX_fog_blend
-
-	GL_FOG_BLEND_ALPHA_SGIX 0x81FE
-	GL_FOG_BLEND_COLOR_SGIX 0x81FF
+version https://git-lfs.github.com/spec/v1
+oid sha256:2aa0655ec1ade4826284e53a08a9360ab6d0ba83d48dab9339047320ff3da622
+size 176

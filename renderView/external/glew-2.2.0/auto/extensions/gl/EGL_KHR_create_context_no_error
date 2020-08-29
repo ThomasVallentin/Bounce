@@ -1,5 +1,3 @@
-EGL_KHR_create_context_no_error
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_create_context_no_error
-
-	EGL_CONTEXT_OPENGL_NO_ERROR_KHR 0x31B3
+version https://git-lfs.github.com/spec/v1
+oid sha256:d48f4c496d2fab88e50c7f93be4a66fdf64fec4ad1d926e59d89eb0f7dd456a1
+size 164

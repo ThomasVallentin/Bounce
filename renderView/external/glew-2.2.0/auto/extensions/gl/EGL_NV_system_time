@@ -1,6 +1,3 @@
-EGL_NV_system_time
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_system_time
-
-	EGLuint64NV eglGetSystemTimeFrequencyNV (void)
-	EGLuint64NV eglGetSystemTimeNV (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2602e3234b98c2723572b54bf8855d24ccc635f529638a8301ed9ae54a8fefa6
+size 185

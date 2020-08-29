@@ -1,4 +1,3 @@
-GL_NV_fragment_program4
-http://developer.download.nvidia.com/opengl/specs/GL_NV_fragment_program4.txt
-GL_NV_gpu_program4
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:722892a989c3dd9dbf93a7b29a639ef63df56af7d1b9df4a2af0f62e1ac15e57
+size 122

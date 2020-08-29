@@ -1,6 +1,3 @@
-GL_OES_rgb8_rgba8
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_rgb8_rgba8.txt
-GL_OES_rgb8_rgba8
-
-	GL_RGB8_OES 0x8051
-	GL_RGBA8_OES 0x8058
+version https://git-lfs.github.com/spec/v1
+oid sha256:0ebb8fe40a821fba5164dba57e4eb54680ac6d7964b0e4efb7a251374e12d27f
+size 152

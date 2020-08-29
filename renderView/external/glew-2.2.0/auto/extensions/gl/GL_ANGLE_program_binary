@@ -1,5 +1,3 @@
-GL_ANGLE_program_binary
-https://www.khronos.org/registry/OpenGL/extensions/ANGLE/program_binary.txt
-GL_ANGLE_program_binary
-
-	GL_PROGRAM_BINARY_ANGLE 0x93A6
+version https://git-lfs.github.com/spec/v1
+oid sha256:4383524a83781a363784a4ffc0ebc492748a56a59f69d351cd47ed9301df0c3d
+size 157

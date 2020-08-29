@@ -1,6 +1,3 @@
-GL_EXT_scene_marker
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_scene_marker.txt
-GL_EXT_scene_marker
-
-	void glBeginSceneEXT (void)
-	void glEndSceneEXT (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c2f4b4a6e6e9c098daee03b208be0be934b9f172bdefa5306f8fb047cb2e5bb
+size 173

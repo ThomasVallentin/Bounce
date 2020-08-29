@@ -1,6 +1,3 @@
-GL_IMG_texture_compression_pvrtc2
-https://www.khronos.org/registry/OpenGL/extensions/IMG/IMG_texture_compression_pvrtc2.txt
-GL_IMG_texture_compression_pvrtc2
-
-	GL_COMPRESSED_RGBA_PVRTC_2BPPV2_IMG 0x9137
-	GL_COMPRESSED_RGBA_PVRTC_4BPPV2_IMG 0x9138
+version https://git-lfs.github.com/spec/v1
+oid sha256:70f25d0b84be53eb56ce79211187d490623de6423c165248d7b17e11dd596373
+size 247

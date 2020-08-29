@@ -1,5 +1,3 @@
-GL_SGIS_shared_multisample
-https://www.khronos.org/registry/OpenGL/extensions/SGIS/SGIS_shared_multisample.txt
-GL_SGIS_shared_multisample
-
-	void glMultisampleSubRectPosSGIS (GLint x, GLint y)
+version https://git-lfs.github.com/spec/v1
+oid sha256:07a9808dd338bc7929d8c2c103ba6e5bfa2f197cad8b1aa89e48c1532a51d87a
+size 192

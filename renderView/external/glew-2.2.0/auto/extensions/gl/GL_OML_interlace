@@ -1,6 +1,3 @@
-GL_OML_interlace
-https://www.khronos.org/registry/OpenGL/extensions/OML/OML_interlace.txt
-GL_OML_interlace
-
-	GL_INTERLACE_OML 0x8980
-	GL_INTERLACE_READ_OML 0x8981
+version https://git-lfs.github.com/spec/v1
+oid sha256:d4b628ab18784942519fa717077f9c3da0d697ee978bdbf0b6ded0f82b0c8d01
+size 163

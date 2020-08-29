@@ -1,8 +1,3 @@
-GL_QCOM_extended_get2
-https://www.khronos.org/registry/OpenGL/extensions/QCOM/QCOM_extended_get2.txt
-GL_QCOM_extended_get2
-
-	void glExtGetProgramBinarySourceQCOM (GLuint program, GLenum shadertype, GLchar* source, GLint* length)
-	void glExtGetProgramsQCOM (GLuint* programs, GLint maxPrograms, GLint* numPrograms)
-	void glExtGetShadersQCOM (GLuint* shaders, GLint maxShaders, GLint* numShaders)
-	GLboolean glExtIsProgramBinaryQCOM (GLuint program)
+version https://git-lfs.github.com/spec/v1
+oid sha256:bfd48d048b9bc2d6641724c595957409cfb5a615c785ff7b8befeea80ee814ac
+size 448

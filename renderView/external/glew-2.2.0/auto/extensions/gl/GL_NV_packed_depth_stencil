@@ -1,6 +1,3 @@
-GL_NV_packed_depth_stencil
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_packed_depth_stencil.txt
-GL_NV_packed_depth_stencil
-
-	GL_DEPTH_STENCIL_NV 0x84F9
-	GL_UNSIGNED_INT_24_8_NV 0x84FA
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7bd2bc9184475b5c82085abc5d5198836990dd4c687184b9f82cb08e5fa50a8
+size 197

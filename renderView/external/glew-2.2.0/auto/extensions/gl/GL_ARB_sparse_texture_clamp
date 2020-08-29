@@ -1,4 +1,3 @@
-GL_ARB_sparse_texture_clamp
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_sparse_texture_clamp.txt
-GL_ARB_sparse_texture_clamp
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:8b658ea6e520c6ded95dccf4a215cbfc78c488546cfe0bd5672db85e913d4282
+size 141

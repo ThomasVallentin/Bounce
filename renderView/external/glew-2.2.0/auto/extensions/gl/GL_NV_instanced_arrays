@@ -1,6 +1,3 @@
-GL_NV_instanced_arrays
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_instanced_arrays.txt
-GL_NV_instanced_arrays
-
-	GL_VERTEX_ATTRIB_ARRAY_DIVISOR_NV 0x88FE
-	void glVertexAttribDivisorNV (GLuint index, GLuint divisor)
+version https://git-lfs.github.com/spec/v1
+oid sha256:16c612663e018c6f582579959fb8cb2d2829b6e513ae8d63ada6beacacf1fb1d
+size 228

@@ -1,5 +1,3 @@
-GL_OES_element_index_uint
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_element_index_uint.txt
-GL_OES_element_index_uint
-
-	GL_UNSIGNED_INT 0x1405
+version https://git-lfs.github.com/spec/v1
+oid sha256:589ba54d15e5c006e88ec1b2b6e0907ef4d7b51e643c8f8871236d17e531310d
+size 159

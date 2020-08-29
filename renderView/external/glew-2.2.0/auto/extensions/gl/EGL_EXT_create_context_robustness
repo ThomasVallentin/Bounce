@@ -1,8 +1,3 @@
-EGL_EXT_create_context_robustness
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_create_context_robustness
-
-	EGL_CONTEXT_OPENGL_ROBUST_ACCESS_EXT 0x30BF
-	EGL_CONTEXT_OPENGL_RESET_NOTIFICATION_STRATEGY_EXT 0x3138
-	EGL_NO_RESET_NOTIFICATION_EXT 0x31BE
-	EGL_LOSE_CONTEXT_ON_RESET_EXT 0x31BF
+version https://git-lfs.github.com/spec/v1
+oid sha256:6cf7f02e9040aa032fafc518369e893b23d3f94191f1e2af7ce1a894f55d9ec1
+size 308

@@ -1,5 +1,3 @@
-GL_NV_vertex_program4
-http://developer.download.nvidia.com/opengl/specs/GL_NV_vertex_program4.txt
-GL_NV_gpu_program4
-
-	GL_VERTEX_ATTRIB_ARRAY_INTEGER_NV 0x88FD
+version https://git-lfs.github.com/spec/v1
+oid sha256:b52653275b1aa8cb596d9d8dab584bf96540baf05295ad612424a93855428a6b
+size 160

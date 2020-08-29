@@ -1,4 +1,3 @@
-GL_EXT_shader_io_blocks
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_shader_io_blocks.txt
-GL_EXT_shader_io_blocks
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:b038e7567bdc53bd21011cfeb9c49fa53b90c49fc3c1fc58838971535bd7b675
+size 129

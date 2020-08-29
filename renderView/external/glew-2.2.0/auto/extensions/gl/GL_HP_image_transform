@@ -1,10 +1,3 @@
-GL_HP_image_transform
-https://www.khronos.org/registry/OpenGL/extensions/HP/HP_image_transform.txt
-GL_HP_image_transform
-
-	void glGetImageTransformParameterfvHP (GLenum target, GLenum pname, const GLfloat* params)
-	void glGetImageTransformParameterivHP (GLenum target, GLenum pname, const GLint* params)
-	void glImageTransformParameterfHP (GLenum target, GLenum pname, const GLfloat param)
-	void glImageTransformParameterfvHP (GLenum target, GLenum pname, const GLfloat* params)
-	void glImageTransformParameteriHP (GLenum target, GLenum pname, const GLint param)
-	void glImageTransformParameterivHP (GLenum target, GLenum pname, const GLint* params)
+version https://git-lfs.github.com/spec/v1
+oid sha256:49344ac83f283b35f9e73a5fe253de96687ff79a719d965b1d6f353bcd6d01dd
+size 650

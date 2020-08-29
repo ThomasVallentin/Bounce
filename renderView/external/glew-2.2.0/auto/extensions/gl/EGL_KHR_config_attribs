@@ -1,7 +1,3 @@
-EGL_KHR_config_attribs
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_config_attribs
-
-	EGL_VG_COLORSPACE_LINEAR_BIT_KHR 0x0020
-	EGL_VG_ALPHA_FORMAT_PRE_BIT_KHR 0x0040
-	EGL_CONFORMANT_KHR 0x3042
+version https://git-lfs.github.com/spec/v1
+oid sha256:7fc72e45e3d9f97acdd8e3784b96ef4b2059ba8ba4d9b3b791c4557da472d1a0
+size 214

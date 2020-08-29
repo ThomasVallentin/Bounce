@@ -1,12 +1,3 @@
-GL_AMD_name_gen_delete
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_name_gen_delete.txt
-GL_AMD_name_gen_delete
-
-	GL_DATA_BUFFER_AMD 0x9151
-	GL_PERFORMANCE_MONITOR_AMD 0x9152
-	GL_QUERY_OBJECT_AMD 0x9153
-	GL_VERTEX_ARRAY_OBJECT_AMD 0x9154
-	GL_SAMPLER_OBJECT_AMD 0x9155
-	void glDeleteNamesAMD (GLenum identifier, GLuint num, const GLuint* names)
-	void glGenNamesAMD (GLenum identifier, GLuint num, GLuint* names)
-	GLboolean glIsNameAMD (GLenum identifier, GLuint name)
+version https://git-lfs.github.com/spec/v1
+oid sha256:af5018fbc4d96c2957c9c959c7c9091cdd7366c2275e1c663d2c1b311bc3765f
+size 480

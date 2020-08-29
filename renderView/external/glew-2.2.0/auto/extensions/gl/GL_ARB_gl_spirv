@@ -1,7 +1,3 @@
-GL_ARB_gl_spirv
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_gl_spirv.txt
-GL_ARB_gl_spirv
-
-	GL_SHADER_BINARY_FORMAT_SPIR_V_ARB 0x9551
-	GL_SPIR_V_BINARY_ARB 0x9552
-	void glSpecializeShaderARB (GLuint shader, const GLchar* pEntryPoint, GLuint numSpecializationConstants, const GLuint* pConstantIndex, const GLuint* pConstantValue)
+version https://git-lfs.github.com/spec/v1
+oid sha256:e9105e78a24cd8cbfca492592cda3317ec4618972b9a3034e1ca9faae3c1548d
+size 343

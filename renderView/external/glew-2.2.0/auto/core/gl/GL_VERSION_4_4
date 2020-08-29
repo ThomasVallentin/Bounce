@@ -1,8 +1,3 @@
-GL_VERSION_4_4
-https://www.opengl.org/registry/doc/glspec44.compatibility.pdf
-
-
-	GL_MAX_VERTEX_ATTRIB_STRIDE 0x82E5
-	GL_PRIMITIVE_RESTART_FOR_PATCHES_SUPPORTED  0x8221
-	GL_TEXTURE_BUFFER_BINDING 0x8C2A
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:afc6a5c47fd40c804c33b149a59214389e62ecc39a5a1bb62b985e16d196ef8b
+size 203

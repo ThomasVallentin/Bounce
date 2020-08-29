@@ -1,5 +1,3 @@
-GL_OES_copy_image
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_copy_image.txt
-GL_OES_copy_image
-
-	void glCopyImageSubDataOES (GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth)
+version https://git-lfs.github.com/spec/v1
+oid sha256:0078d28d5fbf50acbff9fe3fa472791b3cfcc8bc5bbad99b6c06dfeace3f9cc7
+size 367

@@ -1,7 +1,3 @@
-EGL_EXT_device_base
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_device_base
-
-	EGL_BAD_DEVICE_EXT 0x322B
-	EGL_DEVICE_EXT 0x322C
-	EGL_NO_DEVICE_EXT EGL_CAST(EGLDeviceEXT,0)
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1bc435b055a2156eb15182a4df68bd8bbbc0b618ebd6805f46865022807d2ef
+size 194

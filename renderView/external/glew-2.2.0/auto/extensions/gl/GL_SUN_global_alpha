@@ -1,14 +1,3 @@
-GL_SUN_global_alpha
-https://www.khronos.org/registry/OpenGL/extensions/SUN/SUN_global_alpha.txt
-GL_SUN_global_alpha
-
-	GL_GLOBAL_ALPHA_SUN 0x81D9
-	GL_GLOBAL_ALPHA_FACTOR_SUN 0x81DA
-	void glGlobalAlphaFactorbSUN (GLbyte factor)
-	void glGlobalAlphaFactordSUN (GLdouble factor)
-	void glGlobalAlphaFactorfSUN (GLfloat factor)
-	void glGlobalAlphaFactoriSUN (GLint factor)
-	void glGlobalAlphaFactorsSUN (GLshort factor)
-	void glGlobalAlphaFactorubSUN (GLubyte factor)
-	void glGlobalAlphaFactoruiSUN (GLuint factor)
-	void glGlobalAlphaFactorusSUN (GLushort factor)
+version https://git-lfs.github.com/spec/v1
+oid sha256:f9f034ab420c3e2c18fd78521b6fc5ce76b6d9efaba5c29b00772891b6d71cd5
+size 557

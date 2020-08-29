@@ -1,6 +1,3 @@
-set(CMAKE_RC_COMPILER "C:/Program Files (x86)/Windows Kits/10/bin/10.0.17763.0/x64/rc.exe")
-set(CMAKE_RC_COMPILER_ARG1 "")
-set(CMAKE_RC_COMPILER_LOADED 1)
-set(CMAKE_RC_SOURCE_FILE_EXTENSIONS rc;RC)
-set(CMAKE_RC_OUTPUT_EXTENSION .res)
-set(CMAKE_RC_COMPILER_ENV_VAR "RC")
+version https://git-lfs.github.com/spec/v1
+oid sha256:856983571d870e5143402165743a49b6cfe6207c245dcc189d90959da19a205c
+size 270

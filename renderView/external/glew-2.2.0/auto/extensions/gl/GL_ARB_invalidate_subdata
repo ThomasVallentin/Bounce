@@ -1,10 +1,3 @@
-GL_ARB_invalidate_subdata
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_invalidate_subdata.txt
-GL_ARB_invalidate_subdata
-
-	void glInvalidateBufferData (GLuint buffer)
-	void glInvalidateBufferSubData (GLuint buffer, GLintptr offset, GLsizeiptr length)
-	void glInvalidateFramebuffer (GLenum target, GLsizei numAttachments, const GLenum* attachments)
-	void glInvalidateSubFramebuffer (GLenum target, GLsizei numAttachments, const GLenum* attachments, GLint x, GLint y, GLsizei width, GLsizei height)
-	void glInvalidateTexImage (GLuint texture, GLint level)
-	void glInvalidateTexSubImage (GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth)
+version https://git-lfs.github.com/spec/v1
+oid sha256:967a95bf76108131828ae5cdbd7315592418bc540deffe13ab6533d6a77724a6
+size 718

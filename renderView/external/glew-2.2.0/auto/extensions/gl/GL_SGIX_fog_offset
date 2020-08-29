@@ -1,6 +1,3 @@
-GL_SGIX_fog_offset
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_fog_offset.txt
-GL_SGIX_fog_offset
-
-	GL_FOG_OFFSET_SGIX 0x8198
-	GL_FOG_OFFSET_VALUE_SGIX 0x8199
+version https://git-lfs.github.com/spec/v1
+oid sha256:104a9fdf26004c017bb4250f53764655df54f2b51e3b35662bfbb75d6d9324b1
+size 175

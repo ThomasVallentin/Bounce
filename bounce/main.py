@@ -1,15 +1,3 @@
-import sys
-from PySide2 import QtWidgets
-
-from gui import main_ui
-
-
-def main(argv=sys.argv[1:]):
-    app = QtWidgets.QApplication(argv)
-    ui = main_ui.BounceMainWindow()
-    ui.show()
-    return app.exec_()
-
-
-if __name__ == '__main__':
-    main()
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac8adec24bed48482a5d6dd9f771605e8f10c91938496aa2b9e8985b14f3a68a
+size 249

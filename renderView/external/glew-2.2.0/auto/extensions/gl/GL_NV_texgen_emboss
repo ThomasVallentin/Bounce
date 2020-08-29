@@ -1,7 +1,3 @@
-GL_NV_texgen_emboss
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_texgen_emboss.txt
-GL_NV_texgen_emboss
-
-	GL_EMBOSS_LIGHT_NV 0x855D
-	GL_EMBOSS_CONSTANT_NV 0x855E
-	GL_EMBOSS_MAP_NV 0x855F
+version https://git-lfs.github.com/spec/v1
+oid sha256:b1e3317f395bd852e9d1499f51d9e984ef915b9a90046ebe09368e22437e7383
+size 198

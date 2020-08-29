@@ -1,7 +1,3 @@
-GL_MESA_ycbcr_texture
-https://www.khronos.org/registry/OpenGL/extensions/MESA/MESA_ycbcr_texture.txt
-GL_MESA_ycbcr_texture
-
-	GL_UNSIGNED_SHORT_8_8_MESA 0x85BA
-	GL_UNSIGNED_SHORT_8_8_REV_MESA 0x85BB
-	GL_YCBCR_MESA 0x8757
+version https://git-lfs.github.com/spec/v1
+oid sha256:2202d107c47d7bad7d2869b87e625a769093cef56f1472513727aaed947a9873
+size 220

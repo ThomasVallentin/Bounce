@@ -1,5 +1,3 @@
-GL_MESA_resize_buffers
-https://www.khronos.org/registry/OpenGL/extensions/MESA/MESA_resize_buffers.txt
-GL_MESA_resize_buffers
-
-	void glResizeBuffersMESA (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:1ae5f61eeb50e7a5e1be2aae32c51a692d6da947c47f6c3497b6ae8f02b2c9c5
+size 160

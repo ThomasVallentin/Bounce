@@ -1,11 +1,3 @@
-GL_IMG_texture_env_enhanced_fixed_function
-https://www.khronos.org/registry/OpenGL/extensions/IMG/IMG_texture_env_enhanced_fixed_function.txt
-GL_IMG_texture_env_enhanced_fixed_function
-
-	GL_DOT3_RGBA_IMG 0x86AF
-	GL_MODULATE_COLOR_IMG 0x8C04
-	GL_RECIP_ADD_SIGNED_ALPHA_IMG 0x8C05
-	GL_TEXTURE_ALPHA_MODULATE_IMG 0x8C06
-	GL_FACTOR_ALPHA_MODULATE_IMG 0x8C07
-	GL_FRAGMENT_ALPHA_MODULATE_IMG 0x8C08
-	GL_ADD_BLEND_IMG 0x8C09
+version https://git-lfs.github.com/spec/v1
+oid sha256:300c27a32c303055243b13a6754d118fbb2b2f61e311626f11ca0005396f7de6
+size 418

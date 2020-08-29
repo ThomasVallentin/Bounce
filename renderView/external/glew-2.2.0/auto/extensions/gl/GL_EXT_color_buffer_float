@@ -1,4 +1,3 @@
-GL_EXT_color_buffer_float
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_color_buffer_float.txt
-GL_EXT_color_buffer_float
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:d83d8256674a5a0d9590fedc790e4a49f86c2c438034339910c2c32cb67b0331
+size 135

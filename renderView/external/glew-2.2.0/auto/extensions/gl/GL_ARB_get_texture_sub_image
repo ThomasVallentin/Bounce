@@ -1,6 +1,3 @@
-GL_ARB_get_texture_sub_image
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_get_texture_sub_image.txt
-GL_ARB_get_texture_sub_image
-
-	void glGetCompressedTextureSubImage (GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLsizei bufSize, void *pixels)
-	void glGetTextureSubImage (GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, GLsizei bufSize, void *pixels)
+version https://git-lfs.github.com/spec/v1
+oid sha256:60f263c3cedbfda3f1b966408b01e24cb0346f5381d1db3937c3078a2b75fc05
+size 540

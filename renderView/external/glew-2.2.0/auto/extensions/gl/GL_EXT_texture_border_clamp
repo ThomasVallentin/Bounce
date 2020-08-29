@@ -1,10 +1,3 @@
-GL_EXT_texture_border_clamp
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_texture_border_clamp.txt
-GL_EXT_texture_border_clamp
-
-	GL_TEXTURE_BORDER_COLOR_EXT 0x1004
-	GL_CLAMP_TO_BORDER_EXT 0x812D
-	void glGetSamplerParameterIivEXT (GLuint sampler, GLenum pname, GLint* params)
-	void glGetSamplerParameterIuivEXT (GLuint sampler, GLenum pname, GLuint* params)
-	void glSamplerParameterIivEXT (GLuint sampler, GLenum pname, const GLint* params)
-	void glSamplerParameterIuivEXT (GLuint sampler, GLenum pname, const GLuint* params)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2523d09c67157b2869e79c3f11d7a6121ad28b957461d808a23f83a7a8d3f16d
+size 538

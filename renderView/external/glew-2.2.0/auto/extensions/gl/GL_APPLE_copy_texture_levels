@@ -1,5 +1,3 @@
-GL_APPLE_copy_texture_levels
-https://www.khronos.org/registry/OpenGL/extensions/APPLE/APPLE_copy_texture_levels.txt
-GL_APPLE_copy_texture_levels
-
-	void glCopyTextureLevelsAPPLE (GLuint destinationTexture, GLuint sourceTexture, GLint sourceBaseLevel, GLsizei sourceLevelCount)
+version https://git-lfs.github.com/spec/v1
+oid sha256:743dd7277b3f5c1b17a538de147897017bd9bc644552dbea0f69047d5f86c9ec
+size 276

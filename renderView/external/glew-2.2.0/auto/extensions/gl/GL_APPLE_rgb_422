@@ -1,8 +1,3 @@
-GL_APPLE_rgb_422
-https://www.khronos.org/registry/OpenGL/extensions/APPLE/APPLE_rgb_422.txt
-GL_APPLE_rgb_422
-
-	GL_UNSIGNED_SHORT_8_8_APPLE 0x85BA
-	GL_UNSIGNED_SHORT_8_8_REV_APPLE 0x85BB
-	GL_RGB_422_APPLE 0x8A1F
-	GL_RGB_RAW_422_APPLE 0x8A51
+version https://git-lfs.github.com/spec/v1
+oid sha256:c554a1721903b072b1928f510acd6a650255a67792beff65bba654a1a3f5ba3e
+size 240

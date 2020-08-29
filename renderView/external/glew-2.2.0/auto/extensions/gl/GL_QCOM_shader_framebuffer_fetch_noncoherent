@@ -1,6 +1,3 @@
-GL_QCOM_shader_framebuffer_fetch_noncoherent
-https://www.khronos.org/registry/OpenGL/extensions/QCOM/QCOM_shader_framebuffer_fetch_noncoherent.txt
-GL_QCOM_shader_framebuffer_fetch_noncoherent
-
-	GL_FRAMEBUFFER_FETCH_NONCOHERENT_QCOM 0x96A2
-	void glFramebufferFetchBarrierQCOM (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:5133da38f0e5dc71dff4e1a6d11d208a3ab340d793f40e4daf9bb96d8d673f91
+size 282

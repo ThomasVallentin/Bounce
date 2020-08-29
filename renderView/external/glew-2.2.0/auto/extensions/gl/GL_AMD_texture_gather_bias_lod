@@ -1,4 +1,3 @@
-GL_AMD_texture_gather_bias_lod
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_texture_gather_bias_lod.txt
-GL_AMD_texture_gather_bias_lod
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3fbc6a277558997b1b7a6ba1098fffab08dc2d57d33a46b54f5407fa61dd0f7
+size 150

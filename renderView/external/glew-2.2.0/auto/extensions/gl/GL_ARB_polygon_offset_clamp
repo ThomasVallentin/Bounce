@@ -1,6 +1,3 @@
-GL_ARB_polygon_offset_clamp
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_polygon_offset_clamp.txt
-GL_ARB_polygon_offset_clamp
-
-	GL_POLYGON_OFFSET_CLAMP 0x8E1B
-	void glPolygonOffsetClamp (GLfloat factor, GLfloat units, GLfloat clamp)
+version https://git-lfs.github.com/spec/v1
+oid sha256:5162b2f7527ec7556f66ca352a847beb1ca3d3ea3b5b1fc88d179eb0977ec64e
+size 247

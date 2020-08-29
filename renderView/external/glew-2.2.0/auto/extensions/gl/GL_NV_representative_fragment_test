@@ -1,5 +1,3 @@
-GL_NV_representative_fragment_test
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_representative_fragment_test.txt
-GL_NV_representative_fragment_test
-
-	GL_REPRESENTATIVE_FRAGMENT_TEST_NV 0x937F
+version https://git-lfs.github.com/spec/v1
+oid sha256:88cfab30e75aac0e5e812cdbcf768bb0858594c36e220dcb9d48fa3b64c69a63
+size 204

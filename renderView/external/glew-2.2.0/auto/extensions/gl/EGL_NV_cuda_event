@@ -1,7 +1,3 @@
-EGL_NV_cuda_event
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_cuda_event
-
-	EGL_CUDA_EVENT_HANDLE_NV 0x323B
-	EGL_SYNC_CUDA_EVENT_NV 0x323C
-	EGL_SYNC_CUDA_EVENT_COMPLETE_NV 0x323D
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8cd1ffb4072882bca5c625b9aefd5055f5cac79ad200700690002cfae120155
+size 200

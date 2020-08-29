@@ -1,4 +1,3 @@
-GL_EXT_conservative_depth
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_conservative_depth.txt
-GL_EXT_conservative_depth
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:be844194f191684ead9000a72a3216f771468f6e36a5abf39eeb56339188515d
+size 135

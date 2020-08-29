@@ -1,18 +1,3 @@
-include_directories(
-		glfw-3.3.2/include/GLFW/
-		glew-2.2.0/include/
-)
-
-### GLFW ###
-
-add_subdirectory (glfw-3.3.2)
-
-### GLEW ###
-
-set(GLEW_SOURCE glew-2.2.0/src/glew.c)
-
-add_library(GLEW_220 STATIC ${GLEW_SOURCE} ${GLEW_INCLUDE})
-
-target_link_libraries(GLEW_220 ${OPENGL_LIBRARY} ${EXTRA_LIBS})
-
-add_subdirectory(mingw-std-threads-master)
+version https://git-lfs.github.com/spec/v1
+oid sha256:8421b8e289ce214cc92b80a70e90b629d2ca825e172ef400186fe54056f1d10b
+size 340

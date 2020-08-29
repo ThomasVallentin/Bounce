@@ -1,5 +1,3 @@
-WGL_EXT_pixel_format_packed_float
-https://www.khronos.org/registry/OpenGL/extensions/EXT/WGL_EXT_pixel_format_packed_float.txt
-WGL_EXT_pixel_format_packed_float
-
-	WGL_TYPE_RGBA_UNSIGNED_FLOAT_EXT 0x20A8
+version https://git-lfs.github.com/spec/v1
+oid sha256:32b1621ec11365d7d130c5cb0dea5e8ad0529dcf0dd69ee08fd2c4b3522ce90e
+size 203

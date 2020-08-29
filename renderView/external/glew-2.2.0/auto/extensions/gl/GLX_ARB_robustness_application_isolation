@@ -1,5 +1,3 @@
-GLX_ARB_robustness_application_isolation
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_ARB_robustness_application_isolation
-
-	GLX_CONTEXT_RESET_ISOLATION_BIT_ARB 0x00000008
+version https://git-lfs.github.com/spec/v1
+oid sha256:87ad67b8bf657b35ef3fc3ac6972ee203afec4095dd8791712f9c114c50d5572
+size 190

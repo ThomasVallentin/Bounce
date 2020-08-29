@@ -1,6 +1,3 @@
-GLX_NV_copy_image
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_NV_copy_image
-
-	void glXCopyImageSubDataNV (Display* dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth)
-  void glXCopyImageSubDataNV (Display *dpy, GLXContext srcCtx, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLXContext dstCtx, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth)
+version https://git-lfs.github.com/spec/v1
+oid sha256:54f39debee027e6de6e691e592e8f86fd9248cd6aa89923a50f312bd004d7810
+size 695

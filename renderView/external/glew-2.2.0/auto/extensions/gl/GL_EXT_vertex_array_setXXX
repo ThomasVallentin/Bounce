@@ -1,7 +1,3 @@
-GL_EXT_vertex_array_setXXX
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_vertex_array_setXXX.txt
-GL_EXT_vertex_array_setXXX
-
-	void glBindArraySetEXT (const void *arrayset)
-	const void * glCreateArraySetExt (void)
-	void glDeleteArraySetsEXT (GLsizei n, const void *arrayset[])
+version https://git-lfs.github.com/spec/v1
+oid sha256:d23b322135d0541b1d2e6cf01f2e3ad1b8ba96b24cc6d4fcd6b82e149c978d60
+size 289

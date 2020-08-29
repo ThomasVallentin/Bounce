@@ -1,10 +1,3 @@
-WGL_NV_swap_group
-https://www.khronos.org/registry/OpenGL/extensions/NV/WGL_NV_swap_group.txt
-WGL_NV_swap_group
-
-	BOOL wglBindSwapBarrierNV (GLuint group, GLuint barrier)
-	BOOL wglJoinSwapGroupNV (HDC hDC, GLuint group)
-	BOOL wglQueryFrameCountNV (HDC hDC, GLuint* count)
-	BOOL wglQueryMaxSwapGroupsNV (HDC hDC, GLuint* maxGroups, GLuint* maxBarriers)
-	BOOL wglQuerySwapGroupNV (HDC hDC, GLuint* group, GLuint* barrier)
-	BOOL wglResetFrameCountNV (HDC hDC)
+version https://git-lfs.github.com/spec/v1
+oid sha256:020d09b7b8aba6bb13b5905160ccb85ff0a8a1a2342d26778e841dff5fdb3064
+size 457

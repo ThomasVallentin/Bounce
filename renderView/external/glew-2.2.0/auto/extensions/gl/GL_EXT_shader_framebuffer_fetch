@@ -1,6 +1,3 @@
-GL_EXT_shader_framebuffer_fetch
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_shader_framebuffer_fetch.txt
-GL_EXT_shader_framebuffer_fetch
-
-	GL_FRAGMENT_SHADER_DISCARDS_SAMPLES_EXT 0x8A52
-	void glFramebufferFetchBarrierEXT (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:f45a6e8f721be2f11879fe6fb48ca024c5b223821f55c8ea193be5623518ed83
+size 243

@@ -1,10 +1,3 @@
-GL_ATI_element_array
-https://www.khronos.org/registry/OpenGL/extensions/ATI/ATI_element_array.txt
-GL_ATI_element_array
-
-	GL_ELEMENT_ARRAY_ATI 0x8768
-	GL_ELEMENT_ARRAY_TYPE_ATI 0x8769
-	GL_ELEMENT_ARRAY_POINTER_ATI 0x876A
-	void glDrawElementArrayATI (GLenum mode, GLsizei count)
-	void glDrawRangeElementArrayATI (GLenum mode, GLuint start, GLuint end, GLsizei count)
-	void glElementPointerATI (GLenum type, const void *pointer)
+version https://git-lfs.github.com/spec/v1
+oid sha256:15d0ead72727d872680e845e49def818d0712372ddaf5d597891a73e5ff609f4
+size 426

@@ -1,5 +1,3 @@
-GL_INGR_interlace_read
-https://www.khronos.org/registry/OpenGL/extensions/INGR/INGR_interlace_read.txt
-GL_INGR_interlace_read
-
-	GL_INTERLACE_READ_INGR 0x8568
+version https://git-lfs.github.com/spec/v1
+oid sha256:7d51d0db4ce5bf4f01e90f11fb63fec6267a8d056aa1c7ccb2e7f213761c44f3
+size 158

@@ -1,5 +1,3 @@
-WGL_ARB_robustness_application_isolation
-https://www.khronos.org/registry/OpenGL/extensions/ARB/WGL_ARB_robustness_application_isolation.txt
-WGL_ARB_robustness_application_isolation
-
-	WGL_CONTEXT_RESET_ISOLATION_BIT_ARB 0x00000008
+version https://git-lfs.github.com/spec/v1
+oid sha256:29738814c0a1c7698bd949c176d6211d7b7fe8ba57fb1b56acec736b3f3061b0
+size 231

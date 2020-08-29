@@ -1,8 +1,3 @@
-GL_EXT_draw_elements_base_vertex
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_draw_elements_base_vertex.txt
-GL_EXT_draw_elements_base_vertex
-
-	void glDrawElementsBaseVertexEXT (GLenum mode, GLsizei count, GLenum type, const void *indices, GLint basevertex)
-	void glDrawElementsInstancedBaseVertexEXT (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLint basevertex)
-	void glDrawRangeElementsBaseVertexEXT (GLenum mode, GLuint start, GLuint end, GLsizei count, GLenum type, const void *indices, GLint basevertex)
-	void glMultiDrawElementsBaseVertexEXT (GLenum mode, const GLsizei* count, GLenum type, const void *const *indices, GLsizei primcount, const GLint *basevertex)
+version https://git-lfs.github.com/spec/v1
+oid sha256:00cbfa4f49c403fb5e4f58a7bdd615019c8f0ddb0bdddcea9b38a688b351aaaa
+size 724

@@ -1,6 +1,3 @@
-GLX_SGIS_multisample
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_SGIS_multisample
-
-	GLX_SAMPLE_BUFFERS_SGIS 100000
-	GLX_SAMPLES_SGIS 100001
+version https://git-lfs.github.com/spec/v1
+oid sha256:8aae88e3b68321fc845e2d6f1c4fbbff16803688de05c29c9512461f27222206
+size 159

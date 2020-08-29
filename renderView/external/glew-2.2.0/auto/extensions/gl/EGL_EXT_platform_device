@@ -1,5 +1,3 @@
-EGL_EXT_platform_device
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_platform_device
-
-	EGL_PLATFORM_DEVICE_EXT 0x313F
+version https://git-lfs.github.com/spec/v1
+oid sha256:b883d73e48f983a54b17f2decb43fddb272b52208ac65fa9897d8528f644b081
+size 140

@@ -1,36 +1,3 @@
-#ifndef __wglew_h__
-#define __wglew_h__
-#define __WGLEW_H__
-
-#ifdef __wglext_h_
-#error wglext.h included before wglew.h
-#endif
-
-#define __wglext_h_
-
-#if !defined(WINAPI)
-#  ifndef WIN32_LEAN_AND_MEAN
-#    define WIN32_LEAN_AND_MEAN 1
-#  endif
-#include <windows.h>
-#  undef WIN32_LEAN_AND_MEAN
-#endif
-
-/*
- * GLEW_STATIC needs to be set when using the static version.
- * GLEW_BUILD is set when building the DLL version.
- */
-#ifdef GLEW_STATIC
-#  define GLEWAPI extern
-#else
-#  ifdef GLEW_BUILD
-#    define GLEWAPI extern __declspec(dllexport)
-#  else
-#    define GLEWAPI extern __declspec(dllimport)
-#  endif
-#endif
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:8fdc30e4e5ddc20c75857f6f7950c161d03344c6be3b12b7ba764eef346ddf73
+size 655

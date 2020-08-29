@@ -1,6 +1,3 @@
-GL_NV_blend_minmax_factor
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_blend_minmax_factor.txt
-GL_NV_blend_minmax_factor
-
-	GL_FACTOR_MIN_AMD 0x901C
-	GL_FACTOR_MAX_AMD 0x901D
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ad3868793d60c0ce1d84192995bc99a4318ea31e9798acd48bff7b853b7d70d
+size 186

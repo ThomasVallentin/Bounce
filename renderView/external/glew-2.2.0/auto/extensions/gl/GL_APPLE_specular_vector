@@ -1,5 +1,3 @@
-GL_APPLE_specular_vector
-https://www.khronos.org/registry/OpenGL/extensions/APPLE/APPLE_specular_vector.txt
-GL_APPLE_specular_vector
-
-	GL_LIGHT_MODEL_SPECULAR_VECTOR_APPLE 0x85B0
+version https://git-lfs.github.com/spec/v1
+oid sha256:cbee6b40851071ad3be4612b970bb8a780368b55fe8bf9a661751912df876164
+size 179

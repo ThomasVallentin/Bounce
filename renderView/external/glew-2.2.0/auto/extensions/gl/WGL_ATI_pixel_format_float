@@ -1,7 +1,3 @@
-WGL_ATI_pixel_format_float
-https://www.khronos.org/registry/OpenGL/extensions/ATI/WGL_ATI_pixel_format_float.txt
-WGL_ATI_pixel_format_float
-
-	WGL_TYPE_RGBA_FLOAT_ATI 0x21A0
-	GL_RGBA_FLOAT_MODE_ATI 0x8820
-	GL_COLOR_CLEAR_UNCLAMPED_VALUE_ATI 0x8835
+version https://git-lfs.github.com/spec/v1
+oid sha256:1cbeaf858b3f3d743faa5a48b04eddca317614abe97ca03dda45bec767065623
+size 247

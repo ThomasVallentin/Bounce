@@ -1,10 +1,3 @@
-GL_ARB_texture_view
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_texture_view.txt
-GL_ARB_texture_view
-
-	GL_TEXTURE_VIEW_MIN_LEVEL 0x82DB
-	GL_TEXTURE_VIEW_NUM_LEVELS 0x82DC
-	GL_TEXTURE_VIEW_MIN_LAYER 0x82DD
-	GL_TEXTURE_VIEW_NUM_LAYERS 0x82DE
-	GL_TEXTURE_IMMUTABLE_LEVELS 0x82DF
-	void glTextureView (GLuint texture, GLenum target, GLuint origtexture, GLenum internalformat, GLuint minlevel, GLuint numlevels, GLuint minlayer, GLuint numlayers)
+version https://git-lfs.github.com/spec/v1
+oid sha256:89d75fefb057e7e15d93cbcda8a8f0df742d44d17251cb8470227a0a2fe0f534
+size 456

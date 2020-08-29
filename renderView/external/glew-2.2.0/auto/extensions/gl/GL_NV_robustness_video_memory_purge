@@ -1,5 +1,3 @@
-GL_NV_robustness_video_memory_purge
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_robustness_video_memory_purge.txt
-GL_NV_robustness_video_memory_purge
-
-	GL_PURGED_CONTEXT_RESET_NV 0x92BB
+version https://git-lfs.github.com/spec/v1
+oid sha256:3c6b014be7fb86d29f74778df2397485868271b2f9f0ce3a841bcc3b7fd98056
+size 199

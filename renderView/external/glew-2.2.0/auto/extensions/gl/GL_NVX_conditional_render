@@ -1,6 +1,3 @@
-GL_NVX_conditional_render
-https://www.khronos.org/registry/OpenGL/extensions/NVX/NVX_conditional_render.txt
-GL_NVX_conditional_render
-
-	void glBeginConditionalRenderNVX (GLuint id)
-	void glEndConditionalRenderNVX (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:54afb499419b9a1fbb8fd71dd47496343cbc94263ccbbc2813bc38597793faeb
+size 220

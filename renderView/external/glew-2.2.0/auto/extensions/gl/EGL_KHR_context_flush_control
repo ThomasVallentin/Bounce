@@ -1,7 +1,3 @@
-EGL_KHR_context_flush_control
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_context_flush_control
-
-	EGL_CONTEXT_RELEASE_BEHAVIOR_NONE_KHR 0
-	EGL_CONTEXT_RELEASE_BEHAVIOR_KHR 0x2097
-	EGL_CONTEXT_RELEASE_BEHAVIOR_FLUSH_KHR 0x2098
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef95e562c5e7dc97efeb7507781059e73d98b72b75cffd2a007975e78fc75c00
+size 249

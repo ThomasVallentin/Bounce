@@ -1,5 +1,3 @@
-EGL_ANDROID_recordable
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_ANDROID_recordable
-
-	EGL_RECORDABLE_ANDROID 0x3142
+version https://git-lfs.github.com/spec/v1
+oid sha256:a133e27d91b010acc5c538a8b70ed8c30db97c4823ba131b3d44259c11cf6699
+size 137

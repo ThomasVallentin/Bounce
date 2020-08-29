@@ -1,5 +1,3 @@
-GL_EXT_copy_image
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_copy_image.txt
-GL_EXT_copy_image
-
-	void glCopyImageSubDataEXT (GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei srcWidth, GLsizei srcHeight, GLsizei srcDepth)
+version https://git-lfs.github.com/spec/v1
+oid sha256:4be2254aa37df459f0bb809d236bdd01db84ffc73936420d5ad5358a1f21ed32
+size 367

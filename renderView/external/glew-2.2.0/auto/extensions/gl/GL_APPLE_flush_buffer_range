@@ -1,8 +1,3 @@
-GL_APPLE_flush_buffer_range
-https://www.khronos.org/registry/OpenGL/extensions/APPLE/APPLE_flush_buffer_range.txt
-GL_APPLE_flush_buffer_range
-
-	GL_BUFFER_SERIALIZED_MODIFY_APPLE 0x8A12
-	GL_BUFFER_FLUSHING_UNMAP_APPLE 0x8A13
-	void glBufferParameteriAPPLE (GLenum target, GLenum pname, GLint param)
-	void glFlushMappedBufferRangeAPPLE (GLenum target, GLintptr offset, GLsizeiptr size)
+version https://git-lfs.github.com/spec/v1
+oid sha256:46a147cab4d7d9e09cc042c30f6eb28609135b4ee406e353a6ef3be2c7b2a175
+size 383

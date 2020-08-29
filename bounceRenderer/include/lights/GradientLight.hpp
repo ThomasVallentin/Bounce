@@ -1,31 +1,3 @@
-//
-// Created by Thomas Vallentin on 23/08/2020.
-// Copyright (c) 2020. All rights reserved.
-//
-
-#ifndef BOUNCE_GRADIENTLIGHT_HPP
-#define BOUNCE_GRADIENTLIGHT_HPP
-
-#include "Light.hpp"
-#include "lights/EnvironmentLight.hpp"
-
-
-class GradientLight : public EnvironmentLight {
-public:
-    GradientLight() :
-            EnvironmentLight(Color(0.4f, 0.6f, 1.0f), 1.0f),
-            horizonColor(1.0f, 1.0f, 1.0f) {}
-    explicit GradientLight(const float &i) :
-            EnvironmentLight(Color(0.4f, 0.6f, 1.0f), i),
-            horizonColor(1.0f, 1.0f, 1.0f) {}
-    GradientLight(const Color &sky, const Color &horizon, const float& i) :
-            EnvironmentLight(sky, i),
-            horizonColor(horizon) {}
-
-    Color getInfiniteIllumination(const Ray &ray) const override;
-
-    Color horizonColor;
-};
-
-
-#endif //BOUNCE_GRADIENTLIGHT_HPP
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ffe594e8213514aaab6c537d8c37b1ee5a47af7f670ce0af1c471d4bc770e09
+size 842

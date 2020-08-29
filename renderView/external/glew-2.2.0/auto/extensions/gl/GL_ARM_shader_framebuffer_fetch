@@ -1,6 +1,3 @@
-GL_ARM_shader_framebuffer_fetch
-https://www.khronos.org/registry/OpenGL/extensions/ARM/ARM_shader_framebuffer_fetch.txt
-GL_ARM_shader_framebuffer_fetch
-
-	GL_FETCH_PER_SAMPLE_ARM 0x8F65
-	GL_FRAGMENT_SHADER_FRAMEBUFFER_FETCH_MRT_ARM 0x8F66
+version https://git-lfs.github.com/spec/v1
+oid sha256:eefba590255330ab8a270416f3706071b7a8014d4e6429409f9526fb03296b02
+size 238

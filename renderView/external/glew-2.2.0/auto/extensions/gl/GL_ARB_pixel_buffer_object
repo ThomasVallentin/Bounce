@@ -1,8 +1,3 @@
-GL_ARB_pixel_buffer_object
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_pixel_buffer_object.txt
-GL_ARB_pixel_buffer_object
-
-	GL_PIXEL_PACK_BUFFER_ARB 0x88EB
-	GL_PIXEL_UNPACK_BUFFER_ARB 0x88EC
-	GL_PIXEL_PACK_BUFFER_BINDING_ARB 0x88ED
-	GL_PIXEL_UNPACK_BUFFER_BINDING_ARB 0x88EF
+version https://git-lfs.github.com/spec/v1
+oid sha256:37b1179fbe693f7da1c38c791650fdbbfca0603cff27006e29da5efc962fb40f
+size 290

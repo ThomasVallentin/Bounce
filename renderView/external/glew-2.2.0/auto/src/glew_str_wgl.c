@@ -1,17 +1,3 @@
-    }
-    ret = (len == 0);
-  }
-  return ret;
-}
-
-#if defined(_WIN32) && !defined(GLEW_EGL) && !defined(GLEW_OSMESA)
-
-GLboolean GLEWAPIENTRY wglewIsSupported (const char* name)
-{
-  const GLubyte* pos = (const GLubyte*)name;
-  GLuint len = _glewStrLen(pos);
-  GLboolean ret = GL_TRUE;
-  while (ret && len > 0)
-  {
-    if (_glewStrSame1(&pos, &len, (const GLubyte*)"WGL_", 4))
-    {
+version https://git-lfs.github.com/spec/v1
+oid sha256:abe98dcb858c7030da5365974dc0cfd74082eb01dbc8c788c43d9b450f55b2c1
+size 380

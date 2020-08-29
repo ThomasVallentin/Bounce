@@ -1,9 +1,3 @@
-GL_ARB_depth_texture
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_depth_texture.txt
-GL_ARB_depth_texture
-
-	GL_DEPTH_COMPONENT16_ARB 0x81A5
-	GL_DEPTH_COMPONENT24_ARB 0x81A6
-	GL_DEPTH_COMPONENT32_ARB 0x81A7
-	GL_TEXTURE_DEPTH_SIZE_ARB 0x884A
-	GL_DEPTH_TEXTURE_MODE_ARB 0x884B
+version https://git-lfs.github.com/spec/v1
+oid sha256:fce35b8fdb9f13bd19708adecb85cd2a5c92b44c20def9436e9860d3c71b6431
+size 287

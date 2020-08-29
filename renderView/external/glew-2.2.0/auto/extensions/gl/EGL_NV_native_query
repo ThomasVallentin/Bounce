@@ -1,7 +1,3 @@
-EGL_NV_native_query
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_native_query
-
-	EGLBoolean eglQueryNativeDisplayNV (EGLDisplay dpy, EGLNativeDisplayType* display_id)
-	EGLBoolean eglQueryNativePixmapNV (EGLDisplay dpy, EGLSurface surf, EGLNativePixmapType* pixmap)
-	EGLBoolean eglQueryNativeWindowNV (EGLDisplay dpy, EGLSurface surf, EGLNativeWindowType* window)
+version https://git-lfs.github.com/spec/v1
+oid sha256:d9230e6aafe8b395be66103b7593c7a9f41cd8eceb748872f2a30ee2a86b5f6c
+size 383

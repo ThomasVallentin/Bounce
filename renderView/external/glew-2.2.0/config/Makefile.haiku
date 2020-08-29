@@ -1,20 +1,3 @@
-NAME = $(GLEW_NAME)
-CC = cc
-LD = cc
-
-LDFLAGS.GL = -lGL
-LDFLAGS.STATIC = -Wl,-Bstatic
-LDFLAGS.DYNAMIC = -Wl,-Bdynamic
-
-NAME = GLEW
-WARN = -Wall -W
-POPT = -O2
-
-BIN.SUFFIX =
-
-LIB.SONAME = lib$(NAME).so.$(SO_MAJOR)
-LIB.DEVLNK = lib$(NAME).so
-LIB.SHARED = lib$(NAME).so.$(SO_VERSION)
-LIB.STATIC = lib$(NAME).a
-LDFLAGS.SO = -shared -Wl,-soname=$(LIB.SONAME)
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:de33ae18cd9f6c696cb53b55b6c776b2a07aac0a4fef028f9909c8a59006e99d
+size 353

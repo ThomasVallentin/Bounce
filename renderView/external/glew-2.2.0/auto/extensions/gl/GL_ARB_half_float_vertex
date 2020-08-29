@@ -1,5 +1,3 @@
-GL_ARB_half_float_vertex
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_half_float_vertex.txt
-GL_ARB_half_float_vertex
-
-	GL_HALF_FLOAT 0x140B
+version https://git-lfs.github.com/spec/v1
+oid sha256:cd109003c792422b9342473fb13b271b5f15e074771a1b62af40a78a46aaf1a6
+size 154

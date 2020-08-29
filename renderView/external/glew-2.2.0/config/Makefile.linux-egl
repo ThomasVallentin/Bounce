@@ -1,4 +1,3 @@
-include config/Makefile.linux
-
-LDFLAGS.GL = -lEGL -lGL
-CFLAGS.EXTRA += -DGLEW_EGL
+version https://git-lfs.github.com/spec/v1
+oid sha256:419c9a1f0aa7a9668c7b9c8b497298243bd00d249d3e54b036481907e283ad7b
+size 82

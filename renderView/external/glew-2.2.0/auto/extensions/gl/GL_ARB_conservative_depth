@@ -1,4 +1,3 @@
-GL_ARB_conservative_depth
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_conservative_depth.txt
-GL_ARB_conservative_depth
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f1f504ac72a4907d2250bbeb31bc3d96aaf52995ea31dc75e8b3ac98d3df58f
+size 135

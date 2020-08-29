@@ -1,14 +1,3 @@
-GL_ARB_sample_locations
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_sample_locations.txt
-GL_ARB_sample_locations
-
-	GL_SAMPLE_LOCATION_ARB 0x8E50
-	GL_SAMPLE_LOCATION_SUBPIXEL_BITS_ARB 0x933D
-	GL_SAMPLE_LOCATION_PIXEL_GRID_WIDTH_ARB 0x933E
-	GL_SAMPLE_LOCATION_PIXEL_GRID_HEIGHT_ARB 0x933F
-	GL_PROGRAMMABLE_SAMPLE_LOCATION_TABLE_SIZE_ARB 0x9340
-	GL_PROGRAMMABLE_SAMPLE_LOCATION_ARB 0x9341
-	GL_FRAMEBUFFER_PROGRAMMABLE_SAMPLE_LOCATIONS_ARB 0x9342
-	GL_FRAMEBUFFER_SAMPLE_LOCATION_PIXEL_GRID_ARB 0x9343
-	void glFramebufferSampleLocationsfvARB (GLenum target, GLuint start, GLsizei count, const GLfloat* v)
-	void glNamedFramebufferSampleLocationsfvARB (GLuint framebuffer, GLuint start, GLsizei count, const GLfloat* v)
+version https://git-lfs.github.com/spec/v1
+oid sha256:b053bf4ee5e654e86d5a631f4cf996484201620ffee294c25f98c51e6dd8da2b
+size 728

@@ -1,4 +1,3 @@
-GL_NV_texture_npot_2D_mipmap
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_texture_npot_2D_mipmap.txt
-GL_NV_texture_npot_2D_mipmap
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a9f6a372979cccc1e54fc067311fbc9344da9dbffb2d0e340fc5bf3f4995009
+size 143

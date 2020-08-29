@@ -1,4 +1,3 @@
-GL_AMD_shader_atomic_counter_ops
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_shader_atomic_counter_ops.txt
-GL_AMD_shader_atomic_counter_ops
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f90e8e02baa8d64299dcc1c04961a9cea646b4fb2bd214f114aad2370e0a070
+size 156

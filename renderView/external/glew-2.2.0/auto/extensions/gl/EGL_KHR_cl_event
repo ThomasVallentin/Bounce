@@ -1,7 +1,3 @@
-EGL_KHR_cl_event
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_cl_event
-
-	EGL_CL_EVENT_HANDLE_KHR 0x309C
-	EGL_SYNC_CL_EVENT_KHR 0x30FE
-	EGL_SYNC_CL_EVENT_COMPLETE_KHR 0x30FF
+version https://git-lfs.github.com/spec/v1
+oid sha256:ac4bc3c6b40651f7084a36cdd4b0b540097bf6f14c746c304909246a8f555be8
+size 195

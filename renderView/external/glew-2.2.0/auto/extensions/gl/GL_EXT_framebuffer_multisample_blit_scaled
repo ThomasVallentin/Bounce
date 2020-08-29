@@ -1,6 +1,3 @@
-GL_EXT_framebuffer_multisample_blit_scaled
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_framebuffer_multisample_blit_scaled.txt
-GL_EXT_framebuffer_multisample_blit_scaled
-
-	GL_SCALED_RESOLVE_FASTEST_EXT 0x90BA
-	GL_SCALED_RESOLVE_NICEST_EXT 0x90BB
+version https://git-lfs.github.com/spec/v1
+oid sha256:e0405e6af5e8d66bd20944de5b3b2f539731775e740cbd8f9be60a94f07bf0aa
+size 261

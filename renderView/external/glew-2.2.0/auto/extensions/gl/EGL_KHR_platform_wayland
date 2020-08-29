@@ -1,5 +1,3 @@
-EGL_KHR_platform_wayland
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_platform_wayland
-
-	EGL_PLATFORM_WAYLAND_KHR 0x31D8
+version https://git-lfs.github.com/spec/v1
+oid sha256:e3d47542719251069b4e37965bf4e521ac2d0cd32b2fb0b9618667192f07808b
+size 143

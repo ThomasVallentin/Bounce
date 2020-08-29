@@ -1,15 +1,3 @@
-GL_SGIX_mpeg1
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_mpeg1.txt
-GL_SGIX_mpeg1
-
-	void glAllocMPEGPredictorsSGIX (GLsizei width, GLsizei height, GLsizei n, GLuint* predictors)
-	void glDeleteMPEGPredictorsSGIX (GLsizei n, GLuint* predictors)
-	void glGenMPEGPredictorsSGIX (GLsizei n, GLuint* predictors)
-	void glGetMPEGParameterfvSGIX (GLenum target, GLenum pname, GLfloat* params)
-	void glGetMPEGParameterivSGIX (GLenum target, GLenum pname, GLint* params)
-	void glGetMPEGPredictorSGIX (GLenum target, GLenum format, GLenum type, void *pixels)
-	void glGetMPEGQuantTableubv (GLenum target, GLubyte* values)
-	GLboolean glIsMPEGPredictorSGIX (GLuint predictor)
-	void glMPEGPredictorSGIX (GLenum target, GLenum format, GLenum type, void *pixels)
-	void glMPEGQuantTableubv (GLenum target, GLubyte* values)
-	void glSwapMPEGPredictorsSGIX (GLenum target0, GLenum target1)
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8e48ebc5e7d02513852656910136d7ba2e1e852d9f04b4aded4b1eea99819e4
+size 884

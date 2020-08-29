@@ -1,7 +1,3 @@
-GL_NVX_progress_fence
-https://www.khronos.org/registry/OpenGL/extensions/NVX/NVX_progress_fence.txt
-GL_NVX_progress_fence
-
-	void glClientWaitSemaphoreui64NVX (GLsizei fenceObjectCount, const GLuint* semaphoreArray, const GLuint64 *fenceValueArray)
-	void glSignalSemaphoreui64NVX (GLuint signalGpu, GLsizei fenceObjectCount, const GLuint* semaphoreArray, const GLuint64 *fenceValueArray)
-	void glWaitSemaphoreui64NVX (GLuint waitGpu, GLsizei fenceObjectCount, const GLuint* semaphoreArray, const GLuint64 *fenceValueArray)
+version https://git-lfs.github.com/spec/v1
+oid sha256:782332d943fd72a3454052c0f9d2ee2e12af78da718550fe3932fcf0dc19f7fd
+size 522

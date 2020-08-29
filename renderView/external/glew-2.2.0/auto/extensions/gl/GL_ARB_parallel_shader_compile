@@ -1,7 +1,3 @@
-GL_ARB_parallel_shader_compile
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_parallel_shader_compile.txt
-GL_ARB_parallel_shader_compile
-
-	GL_MAX_SHADER_COMPILER_THREADS_ARB 0x91B0
-	GL_COMPLETION_STATUS_ARB 0x91B1
-	void glMaxShaderCompilerThreadsARB (GLuint count)
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7b01fdbce8bbb23a3519d566d68b8d7c7af846f16af01fc0578e82843f94b26
+size 277

@@ -1,5 +1,3 @@
-GL_AMD_transform_feedback4
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_transform_feedback4.txt
-GL_AMD_transform_feedback4
-
-	GL_STREAM_RASTERIZATION_AMD 0x91A0
+version https://git-lfs.github.com/spec/v1
+oid sha256:45aa8de7880e2e1f7840cf6315ff4a1006fbfb4a2c39bdb8e4b39e49d279cd3e
+size 174

@@ -1,4 +1,3 @@
-/* ------------------------------------------------------------------------- */
-
-#define WGLEW_FUN_EXPORT GLEW_FUN_EXPORT
-#define WGLEW_VAR_EXPORT GLEW_VAR_EXPORT
+version https://git-lfs.github.com/spec/v1
+oid sha256:419330849f3ddf20232dfa24511525105a7ee99451f340fc28de90b8f262e06b
+size 163

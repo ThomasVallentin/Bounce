@@ -1,5 +1,3 @@
-GL_SGIX_convolution_accuracy
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_convolution_accuracy.txt
-GL_SGIX_convolution_accuracy
-
-	GL_CONVOLUTION_HINT_SGIX 0x8316
+version https://git-lfs.github.com/spec/v1
+oid sha256:81935b67690529c6029d9c2d7105d24ddf8ae4492f3aae44182758e68b587a0a
+size 178

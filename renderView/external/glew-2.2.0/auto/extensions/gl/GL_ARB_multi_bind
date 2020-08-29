@@ -1,10 +1,3 @@
-GL_ARB_multi_bind
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_multi_bind.txt
-GL_ARB_multi_bind
-
-	void glBindBuffersBase (GLenum target, GLuint first, GLsizei count, const GLuint* buffers)
-	void glBindBuffersRange (GLenum target, GLuint first, GLsizei count, const GLuint* buffers, const GLintptr *offsets, const GLsizeiptr *sizes)
-	void glBindImageTextures (GLuint first, GLsizei count, const GLuint* textures)
-	void glBindSamplers (GLuint first, GLsizei count, const GLuint* samplers)
-	void glBindTextures (GLuint first, GLsizei count, const GLuint* textures)
-	void glBindVertexBuffers (GLuint first, GLsizei count, const GLuint* buffers, const GLintptr *offsets, const GLsizei *strides)
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7fc8b1ad48ddff25a8940c0c5b1eaa84cee357880bd8a205b7fc2b45e895b35
+size 704

@@ -1,20 +1,3 @@
-NAME = GLEW
-GLEW_DEST ?= /usr
-# use gcc for linking, with ld it does not work
-CC := cc
-LD := cc
-LN :=
-CFLAGS.EXTRA += -D_WIN32
-LDFLAGS.EXTRA =
-LIBDIR = $(GLEW_DEST)/lib
-LDFLAGS.GL = -lOpenGL32 -mwindows
-LDFLAGS.STATIC = -Wl,-Bstatic
-LDFLAGS.DYNAMIC = -Wl,-Bdynamic
-WARN = -Wall -W
-POPT = -O2
-BIN.SUFFIX = .exe
-LIB.SONAME    = cyg$(NAME)-$(GLEW_MAJOR)-$(GLEW_MINOR).dll
-LIB.DEVLNK    = lib$(NAME).dll.a
-LIB.SHARED    = cyg$(NAME)-$(GLEW_MAJOR)-$(GLEW_MINOR).dll
-LIB.STATIC    = lib$(NAME).a
-LDFLAGS.SO    = -shared -Wl,--out-implib,lib/$(LIB.DEVLNK)
+version https://git-lfs.github.com/spec/v1
+oid sha256:e43310a2a570b1fadfb0878b8fc7fd75e86948e0255196a296dec1894c0f6608
+size 549

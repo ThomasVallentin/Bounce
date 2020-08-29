@@ -1,7 +1,3 @@
-GL_ATI_vertex_attrib_array_object
-https://www.khronos.org/registry/OpenGL/extensions/ATI/ATI_vertex_attrib_array_object.txt
-GL_ATI_vertex_attrib_array_object
-
-	void glGetVertexAttribArrayObjectfvATI (GLuint index, GLenum pname, GLfloat* params)
-	void glGetVertexAttribArrayObjectivATI (GLuint index, GLenum pname, GLint* params)
-	void glVertexAttribArrayObjectATI (GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, GLuint buffer, GLuint offset)
+version https://git-lfs.github.com/spec/v1
+oid sha256:10a24f8611dbfd699a3ed7cb1aa4fbedd05d48cc4401766a866dc7bc89d7965d
+size 472

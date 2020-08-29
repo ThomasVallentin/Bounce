@@ -1,9 +1,3 @@
-GL_APPLE_vertex_array_object
-https://www.khronos.org/registry/OpenGL/extensions/APPLE/APPLE_vertex_array_object.txt
-GL_APPLE_vertex_array_object
-
-	GL_VERTEX_ARRAY_BINDING_APPLE 0x85B5
-	void glBindVertexArrayAPPLE (GLuint array)
-	void glDeleteVertexArraysAPPLE (GLsizei n, const GLuint* arrays)
-	void glGenVertexArraysAPPLE (GLsizei n, const GLuint* arrays)
-	GLboolean glIsVertexArrayAPPLE (GLuint array)
+version https://git-lfs.github.com/spec/v1
+oid sha256:830b2baf8a2fd5d80cd537b203e5dee2076ab717de8eebd3352ce58379fe94bd
+size 404

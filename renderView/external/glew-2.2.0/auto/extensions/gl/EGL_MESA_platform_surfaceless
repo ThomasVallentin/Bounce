@@ -1,5 +1,3 @@
-EGL_MESA_platform_surfaceless
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_MESA_platform_surfaceless
-
-	EGL_PLATFORM_SURFACELESS_MESA 0x31DD
+version https://git-lfs.github.com/spec/v1
+oid sha256:68b6b0459f8904f2cae764c6a33e61050842aef7c98abc1b32fc597d70528be4
+size 158

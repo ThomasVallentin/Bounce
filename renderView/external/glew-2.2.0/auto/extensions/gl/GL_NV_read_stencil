@@ -1,4 +1,3 @@
-GL_NV_read_stencil
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_read_depth_stencil.txt
-GL_NV_read_stencil
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc143107ae46b41cf71ba9b40096af1fd1b2518400457065858b7568412b0c64
+size 119

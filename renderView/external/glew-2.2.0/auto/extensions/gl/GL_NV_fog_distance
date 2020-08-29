@@ -1,7 +1,3 @@
-GL_NV_fog_distance
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_fog_distance.txt
-GL_NV_fog_distance
-
-	GL_FOG_DISTANCE_MODE_NV 0x855A
-	GL_EYE_RADIAL_NV 0x855B
-	GL_EYE_PLANE_ABSOLUTE_NV 0x855C
+version https://git-lfs.github.com/spec/v1
+oid sha256:52c3c0e0ce068a3107a77df12a37976e6fc12a858c26c2e9a5c767ca93105f0c
+size 203

@@ -1,5 +1,3 @@
-GLX_NV_float_buffer
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_NV_float_buffer
-
-	GLX_FLOAT_COMPONENTS_NV 0x20B0
+version https://git-lfs.github.com/spec/v1
+oid sha256:64f4175db840583055e611f1b03c4058974045c3c95cfb8cc0ee8352480ad42d
+size 132

@@ -1,4 +1,3 @@
-EGL_KHR_get_all_proc_addresses
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_get_all_proc_addresses
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:1a013ad184f304b69b933c3795c8b00b468f52ac2186f174fa3690dedd6c51dc
+size 122

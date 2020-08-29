@@ -1,19 +1,3 @@
-#ifndef MATHUTILSH
-#define MATHUTILSH
-
-#define PI 3.14159265f
-
-#include "Ray.h"
-#include <cmath>
-#include <cstdlib>
-
-extern float degToRad(const float deg);
-extern float radToDeg(const float rad);
-
-extern float randomFlt(float a=0, float b=1);
-extern Vector3 randPointInUnitCircle();
-extern Vector3 randPointInUnitSphere();
-extern bool intersectPlane(const Ray& ray, const Vector3& normal, const Point3& pointOnPlane, float& outParameter);
-extern bool intersectDisk(const Ray& ray, const Vector3& normal, const float &radius, const Point3& center, float& outParameter);
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:9b6ceedfafa4bc78040cc52ebf593b228f9cffc8b0726f4c424bca675f8fb3ab
+size 577

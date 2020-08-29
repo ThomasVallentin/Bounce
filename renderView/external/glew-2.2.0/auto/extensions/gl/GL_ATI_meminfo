@@ -1,7 +1,3 @@
-GL_ATI_meminfo
-https://www.khronos.org/registry/OpenGL/extensions/ATI/ATI_meminfo.txt
-GL_ATI_meminfo
-
-	GL_VBO_FREE_MEMORY_ATI 0x87FB
-	GL_TEXTURE_FREE_MEMORY_ATI 0x87FC
-	GL_RENDERBUFFER_FREE_MEMORY_ATI 0x87FD
+version https://git-lfs.github.com/spec/v1
+oid sha256:8db3be9998218d1019abde72c2e11cb350c83573cb37cd373144e075539ff902
+size 208

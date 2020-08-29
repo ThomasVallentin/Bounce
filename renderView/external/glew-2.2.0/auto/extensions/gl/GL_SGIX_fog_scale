@@ -1,6 +1,3 @@
-GL_SGIX_fog_scale
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_fog_scale.txt
-GL_SGIX_fog_scale
-
-	GL_FOG_SCALE_SGIX 0x81FC
-	GL_FOG_SCALE_VALUE_SGIX 0x81FD
+version https://git-lfs.github.com/spec/v1
+oid sha256:056473506f2b6769b18856ff9531b5e169fa7f8251321339f7dfcbe54cb7827e
+size 170

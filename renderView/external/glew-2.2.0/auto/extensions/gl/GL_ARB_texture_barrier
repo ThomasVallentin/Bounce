@@ -1,5 +1,3 @@
-GL_ARB_texture_barrier
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_texture_barrier.txt
-GL_ARB_texture_barrier
-
-	void glTextureBarrier (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:b789e335852ec2bf021cdadd8129f21fd8be1e6396625fca0e0050cc6aa6753d
+size 156

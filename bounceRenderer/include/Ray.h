@@ -1,31 +1,3 @@
-#ifndef RAYH
-#define RAYH
-
-#include "Vector3.hpp"
-#include "Point3.hpp"
-#include <iostream>
-
-class Shader;
-
-class Ray {
-
-public:
-	Ray() = default;
-	Ray(const Vector3& o, const Vector3& d) { origin = o; direction = d.normalized(); }
-
-	Point3 pointAtParameter(float t) const { return origin + direction * t; }
-
-    Point3 origin;
-    Vector3 direction;
-};
-
-extern std::ostream& operator<<(std::ostream& os, const Ray& r);
-
-struct HitData {
-	double t;
-	Point3 position;
-	Vector3 normal;
-	Shader* shader;
-};
-
-#endif
+version https://git-lfs.github.com/spec/v1
+oid sha256:8ffd6e89204b40c819649ef179f5f2a948494a363a4af2f560494c4c0385bb9a
+size 511

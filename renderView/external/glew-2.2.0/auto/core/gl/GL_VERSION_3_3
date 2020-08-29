@@ -1,7 +1,3 @@
-GL_VERSION_3_3
-https://www.opengl.org/registry/doc/glspec33.compatibility.20100311.pdf
-
-
-	GL_RGB10_A2UI 0x906F
-	GL_VERTEX_ATTRIB_ARRAY_DIVISOR 0x88FE
-	void glVertexAttribDivisor (GLuint index, GLuint divisor)
+version https://git-lfs.github.com/spec/v1
+oid sha256:65da3a860f9a3e218f6dbb9c83b68adecc6aaf08fdf65bb096bd9f6f952fc2a9
+size 209

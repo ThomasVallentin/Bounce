@@ -1,4 +1,3 @@
-GL_ARB_draw_instanced
-http://www.opengl.org/registry/specs/ARB/draw_instanced.txt
-GL_ARB_draw_instanced
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:021326930b7c6bbe7c2af3b554784f4cc42963c1fbc30296acbddcc7168ff371
+size 105

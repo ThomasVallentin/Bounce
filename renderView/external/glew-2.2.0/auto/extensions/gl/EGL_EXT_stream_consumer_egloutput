@@ -1,5 +1,3 @@
-EGL_EXT_stream_consumer_egloutput
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_stream_consumer_egloutput
-
-	EGLBoolean eglStreamConsumerOutputEXT (EGLDisplay dpy, EGLStreamKHR stream, EGLOutputLayerEXT layer)
+version https://git-lfs.github.com/spec/v1
+oid sha256:0625dea5e303a2ca7e9e229bdec39aa069ea3e8aae5c4be57322d67c2d9b5610
+size 230

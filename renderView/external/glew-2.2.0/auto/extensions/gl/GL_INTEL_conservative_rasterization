@@ -1,5 +1,3 @@
-GL_INTEL_conservative_rasterization
-https://www.khronos.org/registry/OpenGL/extensions/INTEL/INTEL_conservative_rasterization.txt
-GL_INTEL_conservative_rasterization
-
-	GL_CONSERVATIVE_RASTERIZATION_INTEL 0x83FE
+version https://git-lfs.github.com/spec/v1
+oid sha256:b779ccfba1c63b7ccaa4aa8c423f7f58961a5f3dc4dca07a7561be682ab674fc
+size 211

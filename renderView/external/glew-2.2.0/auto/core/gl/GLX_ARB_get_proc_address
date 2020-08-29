@@ -1,5 +1,3 @@
-GLX_ARB_get_proc_address
-http://oss.sgi.com/projects/ogl-sample/registry/ARB/get_proc_address.txt
-GLX_ARB_get_proc_address
-
-	extern void ( * glXGetProcAddressARB (const GLubyte *procName)) (void);
+version https://git-lfs.github.com/spec/v1
+oid sha256:f10ac08a13757690287589837a3fca5fd334ec23a42c82453d99f12316f0e938
+size 197

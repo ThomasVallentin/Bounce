@@ -1,7 +1,3 @@
-GL_ARB_texture_gather
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_texture_gather.txt
-GL_ARB_texture_gather
-
-	GL_MIN_PROGRAM_TEXTURE_GATHER_OFFSET_ARB 0x8E5E
-	GL_MAX_PROGRAM_TEXTURE_GATHER_OFFSET_ARB 0x8E5F
-	GL_MAX_PROGRAM_TEXTURE_GATHER_COMPONENTS_ARB 0x8F9F
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d12421f47ceb21b556fcd4547a4ed68d57e1642a480b97aeb27d9257daae071
+size 274

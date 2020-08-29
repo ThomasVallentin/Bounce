@@ -1,6 +1,3 @@
-GL_NV_light_max_exponent
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_light_max_exponent.txt
-GL_NV_light_max_exponent
-
-	GL_MAX_SHININESS_NV 0x8504
-	GL_MAX_SPOT_EXPONENT_NV 0x8505
+version https://git-lfs.github.com/spec/v1
+oid sha256:8532ec86067d41041fdebad94fb327dbcdfb5a25e93c04625fd6e99d6e6a38c6
+size 191

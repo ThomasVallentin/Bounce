@@ -1,4 +1,3 @@
-GL_ARB_robustness_application_isolation
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_robustness_application_isolation.txt
-GL_ARB_robustness_application_isolation
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:6261b3bdc18a0ac8a35b76f19e37714c5965512bf9e561d33880f8e7f1091553
+size 177

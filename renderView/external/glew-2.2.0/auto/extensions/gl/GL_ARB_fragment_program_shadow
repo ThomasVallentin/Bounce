@@ -1,4 +1,3 @@
-GL_ARB_fragment_program_shadow
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_fragment_program_shadow.txt
-GL_ARB_fragment_program_shadow
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:dc31e30bc6737c6ebe6bf03fc6a7b314dfa8f2b126a177099555041c34e203fb
+size 150

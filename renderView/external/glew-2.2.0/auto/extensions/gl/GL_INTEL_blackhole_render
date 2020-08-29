@@ -1,5 +1,3 @@
-GL_INTEL_blackhole_render
-https://www.khronos.org/registry/OpenGL/extensions/INTEL/INTEL_blackhole_render.txt
-GL_INTEL_blackhole_render
-
-	GL_BLACKHOLE_RENDER_INTEL 0x83FC
+version https://git-lfs.github.com/spec/v1
+oid sha256:750072744865cacd0cd3dd5db76ad81f5211656b71455f8f17ec6caa4c74f61d
+size 171

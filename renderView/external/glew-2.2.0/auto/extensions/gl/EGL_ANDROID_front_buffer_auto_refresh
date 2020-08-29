@@ -1,5 +1,3 @@
-EGL_ANDROID_front_buffer_auto_refresh
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_ANDROID_front_buffer_auto_refresh
-
-	EGL_FRONT_BUFFER_AUTO_REFRESH_ANDROID 0x314C
+version https://git-lfs.github.com/spec/v1
+oid sha256:396993e90cb4a7140da3192217918532e472fe7958ec1a44b1028fb759b38aa1
+size 182

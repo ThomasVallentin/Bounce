@@ -1,5 +1,3 @@
-GL_EXT_index_func
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_index_func.txt
-GL_EXT_index_func
-
-	void glIndexFuncEXT (GLenum func, GLfloat ref)
+version https://git-lfs.github.com/spec/v1
+oid sha256:816473bb88c70302324c346a079434a86bcffd4feb5a61191fc9b0147b82d6eb
+size 159

@@ -1,5 +1,3 @@
-GL_IMG_program_binary
-https://www.khronos.org/registry/OpenGL/extensions/IMG/IMG_program_binary.txt
-GL_IMG_program_binary
-
-	GL_SGX_PROGRAM_BINARY_IMG 0x9130
+version https://git-lfs.github.com/spec/v1
+oid sha256:fae8e81ac0bae25a7741c9759f488f16be6fd4f41fa02efc747324811d9285bf
+size 157

@@ -1,12 +1,3 @@
-GL_EXT_draw_buffers_indexed
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_draw_buffers_indexed.txt
-GL_EXT_draw_buffers_indexed
-
-	void glBlendEquationSeparateiEXT (GLuint buf, GLenum modeRGB, GLenum modeAlpha)
-	void glBlendEquationiEXT (GLuint buf, GLenum mode)
-	void glBlendFuncSeparateiEXT (GLuint buf, GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha)
-	void glBlendFunciEXT (GLuint buf, GLenum src, GLenum dst)
-	void glColorMaskiEXT (GLuint buf, GLboolean r, GLboolean g, GLboolean b, GLboolean a)
-	void glDisableiEXT (GLenum target, GLuint index)
-	void glEnableiEXT (GLenum target, GLuint index)
-	GLboolean glIsEnablediEXT (GLenum target, GLuint index)
+version https://git-lfs.github.com/spec/v1
+oid sha256:5aec964778ca3697cef377ad30953425e5bf785106748d35be9c36781727abd7
+size 683

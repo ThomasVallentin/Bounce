@@ -1,4 +1,3 @@
-GL_NV_fragment_shader_barycentric
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_fragment_shader_barycentric.txt
-GL_NV_fragment_shader_barycentric
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:37458b6f0a13616e76280a58188bec61a9c2436f360b97aacd1c93a4d01c2ba2
+size 158

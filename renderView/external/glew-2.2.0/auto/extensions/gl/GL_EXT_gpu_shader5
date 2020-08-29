@@ -1,4 +1,3 @@
-GL_EXT_gpu_shader5
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_gpu_shader5.txt
-GL_EXT_gpu_shader5
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:3cca50b047bc02da02f05bb367ae5eb26963440c4bb89a5d38ca3eafc1eb5dd5
+size 114

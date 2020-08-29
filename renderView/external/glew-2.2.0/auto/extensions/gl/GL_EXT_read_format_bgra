@@ -1,7 +1,3 @@
-GL_EXT_read_format_bgra
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_read_format_bgra.txt
-GL_EXT_read_format_bgra
-
-	GL_BGRA_EXT 0x80E1
-	GL_UNSIGNED_SHORT_4_4_4_4_REV_EXT 0x8365
-	GL_UNSIGNED_SHORT_1_5_5_5_REV_EXT 0x8366
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e48661aa7419eb52786437d0214b735d7f8c74faff1e4ea5e8a56313ac7dc8c
+size 233

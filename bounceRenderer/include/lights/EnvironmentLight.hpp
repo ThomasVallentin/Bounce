@@ -1,20 +1,3 @@
-//
-// Created by Thomas Vallentin on 23/08/2020.
-// Copyright (c) 2020. All rights reserved.
-//
-
-#ifndef BOUNCE_ENVIRONMENTLIGHT_HPP
-#define BOUNCE_ENVIRONMENTLIGHT_HPP
-
-
-#include "Light.hpp"
-
-
-class EnvironmentLight : public Light {
-public:
-    EnvironmentLight() : Light() {}
-    EnvironmentLight(const Color& c, const float& i) : Light() { color = c; intensity = i; }
-    Color getInfiniteIllumination(const Ray& ray) const override;
-};
-
-#endif //BOUNCE_ENVIRONMENTLIGHT_HPP
+version https://git-lfs.github.com/spec/v1
+oid sha256:dfab21f9c2b8f7a5f67924e4bde07f4e7968331ce4a5fc7e78c0321fb24f5a95
+size 478

@@ -1,5 +1,3 @@
-EGL_EXT_device_openwf
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_device_openwf
-
-	EGL_OPENWF_DEVICE_ID_EXT 0x3237
+version https://git-lfs.github.com/spec/v1
+oid sha256:389c4ab0b03577035dbe35dda95b6947bff85edd7072499ba463c40ee5bd0ee0
+size 137

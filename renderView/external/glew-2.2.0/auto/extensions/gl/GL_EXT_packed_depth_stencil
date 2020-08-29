@@ -1,8 +1,3 @@
-GL_EXT_packed_depth_stencil
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_packed_depth_stencil.txt
-GL_EXT_packed_depth_stencil
-
-	GL_DEPTH_STENCIL_EXT 0x84F9
-	GL_UNSIGNED_INT_24_8_EXT 0x84FA
-	GL_DEPTH24_STENCIL8_EXT 0x88F0
-	GL_TEXTURE_STENCIL_SIZE_EXT 0x88F1
+version https://git-lfs.github.com/spec/v1
+oid sha256:446694c544f7849a5809a1acdb46d52d207339e2ab8da0c587536b55186ee0e0
+size 271

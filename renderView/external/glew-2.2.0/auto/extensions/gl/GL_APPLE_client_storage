@@ -1,5 +1,3 @@
-GL_APPLE_client_storage
-https://www.khronos.org/registry/OpenGL/extensions/APPLE/APPLE_client_storage.txt
-GL_APPLE_client_storage
-
-	GL_UNPACK_CLIENT_STORAGE_APPLE 0x85B2
+version https://git-lfs.github.com/spec/v1
+oid sha256:1c3cd21d2d8ddbe1d45a2bea9b5838fff15ce4ee09a51ac33dea709debc0ceb8
+size 170

@@ -1,9 +1,3 @@
-WGL_NV_render_depth_texture
-https://www.khronos.org/registry/OpenGL/extensions/NV/WGL_NV_render_depth_texture.txt
-WGL_NV_render_depth_texture
-
-	WGL_BIND_TO_TEXTURE_DEPTH_NV 0x20A3
-	WGL_BIND_TO_TEXTURE_RECTANGLE_DEPTH_NV 0x20A4
-	WGL_DEPTH_TEXTURE_FORMAT_NV 0x20A5
-	WGL_TEXTURE_DEPTH_COMPONENT_NV 0x20A6
-	WGL_DEPTH_COMPONENT_NV 0x20A7
+version https://git-lfs.github.com/spec/v1
+oid sha256:8149fd61e0c9637df607cff6ac142230ef0ada6bb184e0cccb0cfde49559d768
+size 333

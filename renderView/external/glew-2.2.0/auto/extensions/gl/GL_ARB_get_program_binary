@@ -1,11 +1,3 @@
-GL_ARB_get_program_binary
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_get_program_binary.txt
-GL_ARB_get_program_binary
-
-	GL_PROGRAM_BINARY_RETRIEVABLE_HINT 0x8257
-	GL_PROGRAM_BINARY_LENGTH 0x8741
-	GL_NUM_PROGRAM_BINARY_FORMATS 0x87FE
-	GL_PROGRAM_BINARY_FORMATS 0x87FF
-	void glGetProgramBinary (GLuint program, GLsizei bufSize, GLsizei* length, GLenum *binaryFormat, void*binary)
-	void glProgramBinary (GLuint program, GLenum binaryFormat, const void *binary, GLsizei length)
-	void glProgramParameteri (GLuint program, GLenum pname, GLint value)
+version https://git-lfs.github.com/spec/v1
+oid sha256:26284f5f3e4b4fcab15617f027b2e7a95786f0e1772af1145f8f036c5f07f90e
+size 560

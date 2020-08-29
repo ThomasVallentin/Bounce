@@ -1,25 +1,3 @@
-GL_NV_vertex_attrib_integer_64bit
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_vertex_attrib_integer_64bit.txt
-GL_NV_vertex_attrib_integer_64bit
-
-	GL_INT64_NV 0x140E
-	GL_UNSIGNED_INT64_NV 0x140F
-	void glGetVertexAttribLi64vNV (GLuint index, GLenum pname, GLint64EXT* params)
-	void glGetVertexAttribLui64vNV (GLuint index, GLenum pname, GLuint64EXT* params)
-	void glVertexAttribL1i64NV (GLuint index, GLint64EXT x)
-	void glVertexAttribL1i64vNV (GLuint index, const GLint64EXT* v)
-	void glVertexAttribL1ui64NV (GLuint index, GLuint64EXT x)
-	void glVertexAttribL1ui64vNV (GLuint index, const GLuint64EXT* v)
-	void glVertexAttribL2i64NV (GLuint index, GLint64EXT x, GLint64EXT y)
-	void glVertexAttribL2i64vNV (GLuint index, const GLint64EXT* v)
-	void glVertexAttribL2ui64NV (GLuint index, GLuint64EXT x, GLuint64EXT y)
-	void glVertexAttribL2ui64vNV (GLuint index, const GLuint64EXT* v)
-	void glVertexAttribL3i64NV (GLuint index, GLint64EXT x, GLint64EXT y, GLint64EXT z)
-	void glVertexAttribL3i64vNV (GLuint index, const GLint64EXT* v)
-	void glVertexAttribL3ui64NV (GLuint index, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z)
-	void glVertexAttribL3ui64vNV (GLuint index, const GLuint64EXT* v)
-	void glVertexAttribL4i64NV (GLuint index, GLint64EXT x, GLint64EXT y, GLint64EXT z, GLint64EXT w)
-	void glVertexAttribL4i64vNV (GLuint index, const GLint64EXT* v)
-	void glVertexAttribL4ui64NV (GLuint index, GLuint64EXT x, GLuint64EXT y, GLuint64EXT z, GLuint64EXT w)
-	void glVertexAttribL4ui64vNV (GLuint index, const GLuint64EXT* v)
-	void glVertexAttribLFormatNV (GLuint index, GLint size, GLenum type, GLsizei stride)
+version https://git-lfs.github.com/spec/v1
+oid sha256:5eb6143dd0934a2c5fb3f2640d22a5613992b0c69d86d298916e1c9bd2b0ea15
+size 1621

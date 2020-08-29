@@ -1,5 +1,3 @@
-EGL_NV_stream_cross_object
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_stream_cross_object
-
-	EGL_STREAM_CROSS_OBJECT_NV 0x334D
+version https://git-lfs.github.com/spec/v1
+oid sha256:f2759bc4706d56ef7e6db31e18f893b896f9c4c58c3b7ea038aa654673e1cf82
+size 149

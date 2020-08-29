@@ -1,5 +1,3 @@
-GL_NV_conservative_raster_pre_snap
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_conservative_raster_pre_snap.txt
-GL_NV_conservative_raster_pre_snap
-
-	GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_NV 0x9550
+version https://git-lfs.github.com/spec/v1
+oid sha256:78c7988416c7c1ca4684d246d03726e691f6cab0d9867e5d814fd277113f8bb1
+size 209

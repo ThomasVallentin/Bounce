@@ -1,5 +1,3 @@
-GL_AMD_seamless_cubemap_per_texture
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_seamless_cubemap_per_texture.txt
-GL_AMD_seamless_cubemap_per_texture
-
-	GL_TEXTURE_CUBE_MAP_SEAMLESS 0x884F
+version https://git-lfs.github.com/spec/v1
+oid sha256:d97765ab3aea0d890472718cd0298312afe8ef18152e2ba8a0b2ffc462fc664e
+size 202

@@ -1,4 +1,3 @@
-GL_ARB_shader_clock
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_shader_clock.txt
-GL_ARB_shader_clock
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea1b5502cff637a3545c6f019ec162e45ebab019e5dcd7b1d01856901d1b9cfd
+size 117

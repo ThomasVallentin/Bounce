@@ -1,14 +1,3 @@
-GL_EXT_robustness
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_robustness.txt
-GL_EXT_robustness
-
-	GL_LOSE_CONTEXT_ON_RESET_EXT 0x8252
-	GL_GUILTY_CONTEXT_RESET_EXT 0x8253
-	GL_INNOCENT_CONTEXT_RESET_EXT 0x8254
-	GL_UNKNOWN_CONTEXT_RESET_EXT 0x8255
-	GL_RESET_NOTIFICATION_STRATEGY_EXT 0x8256
-	GL_NO_RESET_NOTIFICATION_EXT 0x8261
-	GL_CONTEXT_ROBUST_ACCESS_EXT 0x90F3
-	void glGetnUniformfvEXT (GLuint program, GLint location, GLsizei bufSize, GLfloat* params)
-	void glGetnUniformivEXT (GLuint program, GLint location, GLsizei bufSize, GLint* params)
-	void glReadnPixelsEXT (GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLsizei bufSize, void *data)
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd593ef16f43096d1717b98df35c52397723d064d4a9e48c52cdc2ce5dc8f815
+size 688

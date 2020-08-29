@@ -1,5 +1,3 @@
-EGL_EXT_platform_wayland
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_platform_wayland
-
-	EGL_PLATFORM_WAYLAND_EXT 0x31D8
+version https://git-lfs.github.com/spec/v1
+oid sha256:577895162cd262dad118d79163bdb54ac019c1464edac20285b29b5c954350a6
+size 143

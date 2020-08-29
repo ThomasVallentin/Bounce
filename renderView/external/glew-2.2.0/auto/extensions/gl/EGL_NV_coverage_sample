@@ -1,6 +1,3 @@
-EGL_NV_coverage_sample
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_coverage_sample
-
-	EGL_COVERAGE_BUFFERS_NV 0x30E0
-	EGL_COVERAGE_SAMPLES_NV 0x30E1
+version https://git-lfs.github.com/spec/v1
+oid sha256:efd811b22fe3d91a4269ed88e41977bfbf35f4e86a44e2f54ca657df55aa3982
+size 170

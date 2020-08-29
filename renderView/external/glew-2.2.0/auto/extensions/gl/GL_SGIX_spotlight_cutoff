@@ -1,5 +1,3 @@
-GL_SGIX_spotlight_cutoff
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_spotlight_cutoff.txt
-GL_SGIX_spotlight_cutoff
-
-	GL_SPOT_CUTOFF_DELTA_SGIX 0x8193
+version https://git-lfs.github.com/spec/v1
+oid sha256:eeeabbc81e981ddfb697408735940388c390014cd33c1df3e756f8f541733439
+size 167

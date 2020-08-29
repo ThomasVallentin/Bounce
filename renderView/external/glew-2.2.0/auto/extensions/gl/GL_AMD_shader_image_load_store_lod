@@ -1,4 +1,3 @@
-GL_AMD_shader_image_load_store_lod
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_shader_image_load_store_lod.txt
-GL_AMD_shader_image_load_store_lod
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ff5795996c23ceb970ae6df24f020cd0ab8d8d8706ea808256f4a433dc76102
+size 162

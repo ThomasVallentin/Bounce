@@ -1,7 +1,3 @@
-GL_EXT_debug_marker
-http://www.khronos.org/registry/gles/extensions/EXT/EXT_debug_marker.txt
-GL_EXT_debug_marker
-
-	void glInsertEventMarkerEXT (GLsizei length, const GLchar* marker)
-	void glPushGroupMarkerEXT (GLsizei length, const GLchar* marker)
-	void glPopGroupMarkerEXT (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:24d6414d289c0a74ffd53f8b9e151e420bff2d8adab70c1e34472e3c1bd702a1
+size 281

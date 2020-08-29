@@ -1,5 +1,3 @@
-GL_REGAL_proc_address
-https://www.khronos.org/registry/OpenGL/extensions/REGAL/proc_address.txt
-GL_REGAL_proc_address
-
-	void * glGetProcAddressREGAL (const GLchar *name)
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd09c4b8f744c9c48bed60da0f9bcdb33fbe78c14f01728dcc6b83bba5d67921
+size 170

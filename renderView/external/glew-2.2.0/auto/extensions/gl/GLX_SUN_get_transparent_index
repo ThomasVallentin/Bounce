@@ -1,5 +1,3 @@
-GLX_SUN_get_transparent_index
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_SUN_get_transparent_index
-
-	Status glXGetTransparentIndexSUN (Display* dpy, Window overlay, Window underlay, unsigned long* pTransparentIndex)
+version https://git-lfs.github.com/spec/v1
+oid sha256:98e6eeb0be2dafab537a2f7399a1ef09332fd13fa4836e9a66f718b11a84ce1e
+size 236

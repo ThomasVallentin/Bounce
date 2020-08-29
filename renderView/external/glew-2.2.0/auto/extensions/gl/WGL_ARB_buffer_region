@@ -1,12 +1,3 @@
-WGL_ARB_buffer_region
-https://www.khronos.org/registry/OpenGL/extensions/ARB/WGL_ARB_buffer_region.txt
-WGL_ARB_buffer_region
-
-	WGL_FRONT_COLOR_BUFFER_BIT_ARB 0x00000001
-	WGL_BACK_COLOR_BUFFER_BIT_ARB 0x00000002
-	WGL_DEPTH_BUFFER_BIT_ARB 0x00000004
-	WGL_STENCIL_BUFFER_BIT_ARB 0x00000008
-	HANDLE wglCreateBufferRegionARB (HDC hDC, int iLayerPlane, UINT uType)
-	VOID wglDeleteBufferRegionARB (HANDLE hRegion)
-	BOOL wglRestoreBufferRegionARB (HANDLE hRegion, int x, int y, int width, int height, int xSrc, int ySrc)
-	BOOL wglSaveBufferRegionARB (HANDLE hRegion, int x, int y, int width, int height)
+version https://git-lfs.github.com/spec/v1
+oid sha256:e5d8d1d1a9f13026c555098136039743143b7fbda6198c3a6202b97381020499
+size 596

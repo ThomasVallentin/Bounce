@@ -1,9 +1,3 @@
-GL_ANGLE_framebuffer_blit
-https://www.khronos.org/registry/OpenGL/extensions/ANGLE/framebuffer_blit.txt
-GL_ANGLE_framebuffer_blit
-
-	GL_DRAW_FRAMEBUFFER_BINDING_ANGLE 0x8CA6
-	GL_READ_FRAMEBUFFER_ANGLE 0x8CA8
-	GL_DRAW_FRAMEBUFFER_ANGLE 0x8CA9
-	GL_READ_FRAMEBUFFER_BINDING_ANGLE 0x8CAA
-	void glBlitFramebufferANGLE (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e1a29022031f62e8bd5f86c815ad2f7609f03385f3cabbdf69dd1dc641f52be
+size 449

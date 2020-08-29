@@ -1,8 +1,3 @@
-GL_EXT_discard_framebuffer
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_discard_framebuffer.txt
-GL_EXT_discard_framebuffer
-
-	GL_COLOR_EXT 0x1800
-	GL_DEPTH_EXT 0x1801
-	GL_STENCIL_EXT 0x1802
-	void glDiscardFramebufferEXT (GLenum target, GLsizei numAttachments, const GLenum* attachments)
+version https://git-lfs.github.com/spec/v1
+oid sha256:24b5bdfc1541f769b82102dca653b8fae7e71cfd8cd43418e795967147f249a4
+size 300

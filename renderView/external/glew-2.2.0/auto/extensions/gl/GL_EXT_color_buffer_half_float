@@ -1,10 +1,3 @@
-GL_EXT_color_buffer_half_float
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_color_buffer_half_float.txt
-GL_EXT_color_buffer_half_float
-
-	GL_FRAMEBUFFER_ATTACHMENT_COMPONENT_TYPE_EXT 0x8211
-	GL_R16F_EXT 0x822D
-	GL_RG16F_EXT 0x822F
-	GL_RGBA16F_EXT 0x881A
-	GL_RGB16F_EXT 0x881B
-	GL_UNSIGNED_NORMALIZED_EXT 0x8C17
+version https://git-lfs.github.com/spec/v1
+oid sha256:d48057233f20d17862a1e1c6d77e8061a22c74be383c65afac829be4e963b0b5
+size 324

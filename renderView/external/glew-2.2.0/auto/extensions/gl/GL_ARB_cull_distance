@@ -1,6 +1,3 @@
-GL_ARB_cull_distance
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_cull_distance.txt
-GL_ARB_cull_distance
-
-	GL_MAX_CULL_DISTANCES 0x82F9
-	GL_MAX_COMBINED_CLIP_AND_CULL_DISTANCES 0x82FA
+version https://git-lfs.github.com/spec/v1
+oid sha256:046bc9003479ee44f7f6c88787802c2da21b615907bbefd6e85172035db069b4
+size 198

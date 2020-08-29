@@ -1,5 +1,3 @@
-EGL_NOK_texture_from_pixmap
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NOK_texture_from_pixmap
-
-	EGL_Y_INVERTED_NOK 0x307F
+version https://git-lfs.github.com/spec/v1
+oid sha256:d9e554a3f66f0e46ac7bbe8b81b10648c2dc01ade89da18ac34c2d7eafd9fece
+size 143

@@ -1,4 +1,3 @@
-GL_ARB_shader_texture_image_samples
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_shader_texture_image_samples.txt
-GL_ARB_shader_texture_image_samples
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:a59f801f323d80d3bcb394dd1329e8f4fcc2ad212f2108a550b746d28f703d9b
+size 165

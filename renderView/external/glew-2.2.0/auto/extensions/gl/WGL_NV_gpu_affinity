@@ -1,13 +1,3 @@
-WGL_NV_gpu_affinity
-http://developer.download.nvidia.com/opengl/specs/WGL_nv_gpu_affinity.txt
-WGL_NV_gpu_affinity
-
-	WGL_ERROR_INCOMPATIBLE_AFFINITY_MASKS_NV 0x20D0
-	WGL_ERROR_MISSING_AFFINITY_MASK_NV 0x20D1
-	BOOL wglEnumGpusNV (UINT iGpuIndex, HGPUNV *phGpu)
-	BOOL wglEnumGpuDevicesNV (HGPUNV hGpu, UINT iDeviceIndex, PGPU_DEVICE lpGpuDevice)
-	HDC wglCreateAffinityDCNV (const HGPUNV *phGpuList)
-	BOOL wglEnumGpusFromAffinityDCNV (HDC hAffinityDC, UINT iGpuIndex, HGPUNV *hGpu)
-	BOOL wglDeleteDCNV (HDC hdc)
-	DECLARE_HANDLE(HGPUNV);
-	typedef struct _GPU_DEVICE {  DWORD cb;   CHAR DeviceName[32];   CHAR DeviceString[128];   DWORD Flags;   RECT rcVirtualScreen; } GPU_DEVICE, *PGPU_DEVICE;
+version https://git-lfs.github.com/spec/v1
+oid sha256:d3842f64c25cd04b70a925238f78c34dcb1ded11c9d64c5d12c3bb9f89b8f108
+size 690

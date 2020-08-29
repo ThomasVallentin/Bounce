@@ -1,18 +1,3 @@
-//
-// Created by Thomas Vallentin on 23/08/2020.
-// Copyright (c) 2020. All rights reserved.
-//
-
-#include "lights/DirectionalLight.hpp"
-
-
-Color DirectionalLight::getIllumination(const HitData &hitdata, Scene *scene) const {
-    Ray lightRay;
-
-    lightRay.origin = hitdata.position;
-    lightRay.direction = toLight;
-    if (!scene->intersectAny(lightRay, 0.0001, 9999999))
-        return power() * std::max(0.0f, dot(hitdata.normal, lightRay.direction));
-
-    return Color::Black();
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8cc6050c2bec261de0c38a786ed479615f971131112ec04ec30ed94302ff1f30
+size 485

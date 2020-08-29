@@ -1,13 +1,3 @@
-prefix=D:/REPO/Bounce/renderView/external/glfw-3.3.2/out/install/x64-Debug
-exec_prefix=${prefix}
-includedir=D:/REPO/Bounce/renderView/external/glfw-3.3.2/out/install/x64-Debug/include
-libdir=D:/REPO/Bounce/renderView/external/glfw-3.3.2/out/install/x64-Debug/lib
-
-Name: GLFW
-Description: A multi-platform library for OpenGL, window and input
-Version: 3.3.2
-URL: https://www.glfw.org/
-Requires.private: 
-Libs: -L${libdir} -lglfw3
-Libs.private:  -lgdi32
-Cflags: -I${includedir}
+version https://git-lfs.github.com/spec/v1
+oid sha256:e89c2017f5fd32427abe2ff216460419ef04812c47d153ef5609f994fc2adbd6
+size 476

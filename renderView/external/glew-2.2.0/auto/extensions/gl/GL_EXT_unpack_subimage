@@ -1,7 +1,3 @@
-GL_EXT_unpack_subimage
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_unpack_subimage.txt
-GL_EXT_unpack_subimage
-
-	GL_UNPACK_ROW_LENGTH_EXT 0x0CF2
-	GL_UNPACK_SKIP_ROWS_EXT 0x0CF3
-	GL_UNPACK_SKIP_PIXELS_EXT 0x0CF4
+version https://git-lfs.github.com/spec/v1
+oid sha256:2aa14168fdc1ba14550b94d407023c78e59c05a2759ddc4f1b10b1e0f7135317
+size 225

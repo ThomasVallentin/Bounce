@@ -1,4 +1,3 @@
-EGL_KHR_surfaceless_context
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_surfaceless_context
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:90cb26396c601792b9f3ba751fde366887c51de36c88a3c1e6e7ce69bddabe8a
+size 116

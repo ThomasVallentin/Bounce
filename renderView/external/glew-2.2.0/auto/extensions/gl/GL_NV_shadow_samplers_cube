@@ -1,5 +1,3 @@
-GL_NV_shadow_samplers_cube
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_shadow_samplers_cube.txt
-GL_NV_shadow_samplers_cube
-
-	GL_SAMPLER_CUBE_SHADOW_NV 0x8DC5
+version https://git-lfs.github.com/spec/v1
+oid sha256:493150a4cdff9f952e60539a1f7da091f1afe2fb250371400fb8ab7192225a72
+size 171

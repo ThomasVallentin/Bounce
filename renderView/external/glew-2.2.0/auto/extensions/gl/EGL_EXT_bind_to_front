@@ -1,5 +1,3 @@
-EGL_EXT_bind_to_front
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_bind_to_front
-
-	EGL_FRONT_BUFFER_EXT 0x3464
+version https://git-lfs.github.com/spec/v1
+oid sha256:219f020699dfa1071165a906b1af982ecd5cb6fbff1867a31ba36f2f880d6301
+size 133

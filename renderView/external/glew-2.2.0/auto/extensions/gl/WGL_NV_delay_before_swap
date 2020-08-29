@@ -1,5 +1,3 @@
-WGL_NV_delay_before_swap
-https://www.khronos.org/registry/OpenGL/extensions/NV/WGL_NV_delay_before_swap.txt
-WGL_NV_delay_before_swap
-
-	BOOL wglDelayBeforeSwapNV (HDC hDC, GLfloat seconds)
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2c0638df28a427126f20caa4ab1610176f2b5d8faa9e2b29be985125006c1b2
+size 188

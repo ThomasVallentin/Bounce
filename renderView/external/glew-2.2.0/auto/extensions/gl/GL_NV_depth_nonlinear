@@ -1,5 +1,3 @@
-GL_NV_depth_nonlinear
-https://www.khronos.org/registry/OpenGL/extensions/NV/EGL_NV_depth_nonlinear.txt
-GL_NV_depth_nonlinear
-
-	GL_DEPTH_COMPONENT16_NONLINEAR_NV 0x8E2C
+version https://git-lfs.github.com/spec/v1
+oid sha256:236bde1325b98782d26bf2817bd8fb232d3f547f93c0de53d864d25804eafbf0
+size 168

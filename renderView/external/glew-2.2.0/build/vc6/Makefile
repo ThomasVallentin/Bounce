@@ -1,21 +1,3 @@
-MSDEV := msdev
-RM := rm -rf
-
-default:
-	$(MSDEV) glew.dsw /make \
-	"glew_static - Win32 Release" \
-	"glew_shared - Win32 Release" \
-	"glewinfo - Win32 Release" \
-	"visualinfo - Win32 Release" /build
-
-debug:
-	$(MSDEV) glew.dsw /make \
-	"glew_static - Win32 Debug" \
-	"glew_shared - Win32 Debug" \
-	"glewinfo - Win32 Debug" \
-	"visualinfo - Win32 Debug" /build
-
-
-clean:
-	$(MSDEV) glew.dsw /make all /clean
-	$(RM) static shared *.plg *.ncb *.opt
+version https://git-lfs.github.com/spec/v1
+oid sha256:57dd72155f2baecc5c305ab16bb6e412ea6bafa1403e17bdaf1adb5e20a0abf4
+size 442

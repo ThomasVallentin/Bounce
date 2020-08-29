@@ -1,4 +1,3 @@
-GL_EXT_multisampled_render_to_texture2
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_multisampled_render_to_texture2.txt
-GL_EXT_multisampled_render_to_texture2
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:930e90890864db6e2932075663882471a609a41eda8d485613c7c7d7fd532f05
+size 174

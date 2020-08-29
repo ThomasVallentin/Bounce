@@ -1,29 +1,3 @@
-//
-// Created by Thomas Vallentin on 23/08/2020.
-// Copyright (c) 2020. All rights reserved.
-//
-
-#ifndef BOUNCE_DIRECTIONALLIGHT_HPP
-#define BOUNCE_DIRECTIONALLIGHT_HPP
-
-#include "Light.hpp"
-
-class DirectionalLight : public Light {
-public:
-    DirectionalLight() : Light() {}
-    explicit DirectionalLight(const Transform* transform) :
-            Light(transform), TransformObject(transform), toLight(t->matrix.m[2][0] * -1,
-                                                                  t->matrix.m[2][1] * -1,
-                                                                  t->matrix.m[2][2] * -1) {}
-    DirectionalLight(const Transform *transform, const Color &c, const float &i) :
-            Light(transform, c, i), TransformObject(transform), toLight(t->matrix.m[2][0] * -1,
-                                                                        t->matrix.m[2][1] * -1,
-                                                                        t->matrix.m[2][2] * -1) {}
-
-    Color getIllumination(const HitData &hitdata, Scene *scene) const override;
-
-private:
-    Vector3 toLight;
-};
-
-#endif //BOUNCE_DIRECTIONALLIGHT_HPP
+version https://git-lfs.github.com/spec/v1
+oid sha256:c03a3e413f610feefa3f397fe2b05c24670f55a0f131cd6cbfe61b2df8205fa9
+size 1136

@@ -1,10 +1,3 @@
-GL_MESAX_texture_stack
-https://www.khronos.org/registry/OpenGL/extensions/MESAX/MESAX_texture_stack.txt
-GL_MESAX_texture_stack
-
-	GL_TEXTURE_1D_STACK_MESAX 0x8759
-	GL_TEXTURE_2D_STACK_MESAX 0x875A
-	GL_PROXY_TEXTURE_1D_STACK_MESAX 0x875B
-	GL_PROXY_TEXTURE_2D_STACK_MESAX 0x875C
-	GL_TEXTURE_1D_STACK_BINDING_MESAX 0x875D
-	GL_TEXTURE_2D_STACK_BINDING_MESAX 0x875E
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5d33f7ff9ec9c8d9d88164d46ce8e00554a3ec21c5d6c066f90d7461ab55b1c
+size 360

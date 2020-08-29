@@ -1,8 +1,3 @@
-GLX_EXT_context_priority
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_EXT_context_priority
-
-	GLX_CONTEXT_PRIORITY_LEVEL_EXT 0x3100
-	GLX_CONTEXT_PRIORITY_HIGH_EXT 0x3101
-	GLX_CONTEXT_PRIORITY_MEDIUM_EXT 0x3102
-	GLX_CONTEXT_PRIORITY_LOW_EXT 0x3103
+version https://git-lfs.github.com/spec/v1
+oid sha256:613dc1890b2b6059fecc2f2fd00fef7aa0d640fe2ea911db5ee1e5c3899f1a12
+size 264

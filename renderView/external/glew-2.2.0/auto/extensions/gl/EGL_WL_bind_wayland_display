@@ -1,14 +1,3 @@
-EGL_WL_bind_wayland_display
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_WL_bind_wayland_display
-
-	EGL_WAYLAND_BUFFER_WL 0x31D5
-	EGL_WAYLAND_PLANE_WL 0x31D6
-	EGL_TEXTURE_Y_U_V_WL 0x31D7
-	EGL_TEXTURE_Y_UV_WL 0x31D8
-	EGL_TEXTURE_Y_XUXV_WL 0x31D9
-	EGL_TEXTURE_EXTERNAL_WL 0x31DA
-	EGL_WAYLAND_Y_INVERTED_WL 0x31DB
-	EGLBoolean eglBindWaylandDisplayWL (EGLDisplay dpy, struct wl_display* display)
-	EGLBoolean eglQueryWaylandBufferWL (EGLDisplay dpy, struct wl_resource* buffer, EGLint attribute, EGLint* value)
-	EGLBoolean eglUnbindWaylandDisplayWL (EGLDisplay dpy, struct wl_display* display)
+version https://git-lfs.github.com/spec/v1
+oid sha256:69462555c6786a292c1199f661f9fec56138332419be2f1fdb1451db55f9d3dc
+size 606

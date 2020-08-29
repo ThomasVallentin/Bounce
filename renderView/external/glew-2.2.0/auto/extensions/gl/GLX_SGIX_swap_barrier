@@ -1,6 +1,3 @@
-GLX_SGIX_swap_barrier
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_SGIX_swap_barrier
-
-	void glXBindSwapBarrierSGIX (Display* dpy, GLXDrawable drawable, int barrier)
-	Bool glXQueryMaxSwapBarriersSGIX (Display* dpy, int screen, int* max)
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e00d17a83e59b137ba4a93923321b2cf86e6099eba108961b09dab554aed498
+size 254

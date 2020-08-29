@@ -1,7 +1,3 @@
-GLX_VERSION_1_4
-http://www.opengl.org/documentation/specs/glx/glx1.4.pdf
-GLX_VERSION_1_4
-
-	GLX_SAMPLE_BUFFERS 100000
-	GLX_SAMPLES 100001
-	extern void ( * glXGetProcAddress (const GLubyte *procName)) (void);
+version https://git-lfs.github.com/spec/v1
+oid sha256:427143a335134e7b518b26f251f2a44de941e5f06131ca2601e31b068a9ae253
+size 207

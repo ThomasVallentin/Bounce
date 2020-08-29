@@ -1,7 +1,3 @@
-EGL_EXT_image_implicit_sync_control
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_image_implicit_sync_control
-
-	EGL_IMPORT_SYNC_TYPE_EXT 0x3470
-	EGL_IMPORT_IMPLICIT_SYNC_EXT 0x3471
-	EGL_IMPORT_EXPLICIT_SYNC_EXT 0x3472
+version https://git-lfs.github.com/spec/v1
+oid sha256:d42ab95df58d30800b69418cc42fc8f1b191b4ae6e7307a19d7be6b6c4509447
+size 239

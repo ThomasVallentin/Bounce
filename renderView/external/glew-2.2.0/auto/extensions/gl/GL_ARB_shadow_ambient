@@ -1,5 +1,3 @@
-GL_ARB_shadow_ambient
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_shadow_ambient.txt
-GL_ARB_shadow_ambient
-
-	GL_TEXTURE_COMPARE_FAIL_VALUE_ARB 0x80BF
+version https://git-lfs.github.com/spec/v1
+oid sha256:5bfc121ec2ebc47b197115144c6068c39bad1fb65cef752737de5d9254ff86db
+size 165

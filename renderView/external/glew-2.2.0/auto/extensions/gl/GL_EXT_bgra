@@ -1,6 +1,3 @@
-GL_EXT_bgra
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_bgra.txt
-GL_EXT_bgra
-
-	GL_BGR_EXT 0x80E0
-	GL_BGRA_EXT 0x80E1
+version https://git-lfs.github.com/spec/v1
+oid sha256:cbb27d55d5df19b37ee36c5d09ca5411991616c98f351f8898ee26f66be5b2c9
+size 132

@@ -1,6 +1,3 @@
-GL_OML_subsample
-https://www.khronos.org/registry/OpenGL/extensions/OML/OML_subsample.txt
-GL_OML_subsample
-
-	GL_FORMAT_SUBSAMPLE_24_24_OML 0x8982
-	GL_FORMAT_SUBSAMPLE_244_244_OML 0x8983
+version https://git-lfs.github.com/spec/v1
+oid sha256:dd0024893fcab4dfd5016beea8fc03bedc535a293773d9244da583f28b43f5e4
+size 186

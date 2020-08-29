@@ -1,13 +1,3 @@
-GL_EXT_texture_array
-http://developer.download.nvidia.com/opengl/specs/GL_EXT_texture_array.txt
-GL_EXT_texture_array
-
-	GL_TEXTURE_1D_ARRAY_EXT 0x8C18
-	GL_PROXY_TEXTURE_1D_ARRAY_EXT 0x8C19
-	GL_TEXTURE_2D_ARRAY_EXT 0x8C1A
-	GL_PROXY_TEXTURE_2D_ARRAY_EXT 0x8C1B
-	GL_TEXTURE_BINDING_1D_ARRAY_EXT 0x8C1C
-	GL_TEXTURE_BINDING_2D_ARRAY_EXT 0x8C1D
-	GL_MAX_ARRAY_TEXTURE_LAYERS_EXT 0x88FF
-	GL_COMPARE_REF_DEPTH_TO_TEXTURE_EXT 0x884E
-	void glFramebufferTextureLayerEXT (GLenum target, GLenum attachment, GLuint texture, GLint level, GLint layer)
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ae8e4418d6a47b09990e8a3827e3e51f81fafe40101b43d2b8f3f47fde9da9a
+size 534

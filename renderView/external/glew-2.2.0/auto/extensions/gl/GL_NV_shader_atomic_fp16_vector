@@ -1,4 +1,3 @@
-GL_NV_shader_atomic_fp16_vector
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_shader_atomic_fp16_vector.txt
-GL_NV_shader_atomic_fp16_vector
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:cbc4b466f9cb541583fe579b9c21b90fb50d6449ed63ddd360fa77a4b5eed051
+size 152

@@ -1,4 +1,3 @@
-GL_NV_shader_texture_footprint
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_shader_texture_footprint.txt
-GL_NV_shader_texture_footprint
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:00dc98b0cc7b83673083a8c47297118cea8fbfccb7ee001d1004392495a29f7c
+size 149

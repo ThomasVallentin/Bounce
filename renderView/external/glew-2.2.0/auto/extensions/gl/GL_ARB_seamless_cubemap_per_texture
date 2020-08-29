@@ -1,5 +1,3 @@
-GL_ARB_seamless_cubemap_per_texture
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_seamless_cubemap_per_texture.txt
-GL_ARB_seamless_cubemap_per_texture
-
-	GL_TEXTURE_CUBE_MAP_SEAMLESS 0x884F
+version https://git-lfs.github.com/spec/v1
+oid sha256:6f6767a407543229aecf4c7f6a958c008f4052013cb839a16c92612b9b2b6f5a
+size 202

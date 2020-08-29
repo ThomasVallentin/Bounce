@@ -1,6 +1,3 @@
-GL_OES_point_sprite
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_point_sprite.txt
-GL_OES_point_sprite
-
-	GL_POINT_SPRITE_OES 0x8861
-	GL_COORD_REPLACE_OES 0x8862
+version https://git-lfs.github.com/spec/v1
+oid sha256:c1c4519c1196a996a72aa57967016a6a0ed3ec2ab883b804e15695295cb18169
+size 174

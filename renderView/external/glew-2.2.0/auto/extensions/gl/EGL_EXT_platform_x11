@@ -1,6 +1,3 @@
-EGL_EXT_platform_x11
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_platform_x11
-
-	EGL_PLATFORM_X11_EXT 0x31D5
-	EGL_PLATFORM_X11_SCREEN_EXT 0x31D6
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a6f1fca4a248352f4092b304867999a61a626b186ac0bd19b409aa229a3d10b
+size 167

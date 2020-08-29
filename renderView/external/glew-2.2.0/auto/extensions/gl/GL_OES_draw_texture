@@ -1,5 +1,3 @@
-GL_OES_draw_texture
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_draw_texture.txt
-GL_OES_draw_texture
-
-	GL_TEXTURE_CROP_RECT_OES 0x8B9D
+version https://git-lfs.github.com/spec/v1
+oid sha256:8ad94f723e51b54d3eacfecccef09aff153a5f51f0252e11ab43b8cc6c72def7
+size 150

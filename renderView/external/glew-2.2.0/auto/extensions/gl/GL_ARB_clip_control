@@ -1,11 +1,3 @@
-GL_ARB_clip_control
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_clip_control.txt
-GL_ARB_clip_control
-
-	GL_LOWER_LEFT 0x8CA1
-	GL_UPPER_LEFT 0x8CA2
-	GL_CLIP_ORIGIN 0x935C
-	GL_CLIP_DEPTH_MODE 0x935D
-	GL_NEGATIVE_ONE_TO_ONE 0x935E
-	GL_ZERO_TO_ONE 0x935F
-	void glClipControl (GLenum origin, GLenum depth)
+version https://git-lfs.github.com/spec/v1
+oid sha256:8f28ec6573807958d3af868f0167f98de4a23e1d281d8d1b5b742821ed57ec21
+size 315

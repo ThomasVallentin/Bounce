@@ -1,4 +1,3 @@
-GL_QCOM_shader_framebuffer_fetch_rate
-https://www.khronos.org/registry/OpenGL/extensions/QCOM/QCOM_shader_framebuffer_fetch_rate.txt
-GL_QCOM_shader_framebuffer_fetch_rate
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:23039c11c89aa6c061da82ca9051bc2d24f5af94d4a9886fd67b924c6e5a0d41
+size 172

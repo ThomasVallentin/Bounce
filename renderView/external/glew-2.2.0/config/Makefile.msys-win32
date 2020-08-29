@@ -1,5 +1,3 @@
-include config/Makefile.msys
-
-POPT := -march=i686 -mtune=generic -O2
-CFLAGS.EXTRA  += -m32
-LDFLAGS.EXTRA += -m32
+version https://git-lfs.github.com/spec/v1
+oid sha256:87c7e80e3ffe43fe043b4d106a4c52a93d056e3e7c2afa2361fe5f7cad95f29f
+size 113

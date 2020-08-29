@@ -1,5 +1,3 @@
-GL_OES_surfaceless_context
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_surfaceless_context.txt
-GL_OES_surfaceless_context
-
-	GL_FRAMEBUFFER_UNDEFINED_OES 0x8219
+version https://git-lfs.github.com/spec/v1
+oid sha256:05b601ce657e5daabbf88e796087e70bfa0300700e292f3cefe512bdc68e23c9
+size 175

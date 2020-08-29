@@ -1,5 +1,3 @@
-GL_SGIX_pixel_texture
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_pixel_texture.txt
-GL_SGIX_pixel_texture
-
-	void glPixelTexGenSGIX (GLenum mode)
+version https://git-lfs.github.com/spec/v1
+oid sha256:88a60665fa50e6d5873f1fc570d33764cefcd41dae1f742987d6f1b0f036a61b
+size 162

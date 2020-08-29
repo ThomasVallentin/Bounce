@@ -1,4 +1,3 @@
-GL_ARM_shader_framebuffer_fetch_depth_stencil
-https://www.khronos.org/registry/OpenGL/extensions/ARM/ARM_shader_framebuffer_fetch_depth_stencil.txt
-GL_ARM_shader_framebuffer_fetch_depth_stencil
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:69968c942858df3f03969f4afdcddcb84077c89da7cdecacf3cf0deee87c8730
+size 195

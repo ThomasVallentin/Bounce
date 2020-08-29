@@ -1,5 +1,3 @@
-GL_GREMEDY_string_marker
-https://www.khronos.org/registry/OpenGL/extensions/GREMEDY/GREMEDY_string_marker.txt
-GL_GREMEDY_string_marker
-
-	void glStringMarkerGREMEDY (GLsizei len, const void *string)
+version https://git-lfs.github.com/spec/v1
+oid sha256:7005c7af76b9d9acf0ccecf9e94ef177a52116d7a137be1438b336fa079a2df6
+size 198

@@ -1,6 +1,3 @@
-WGL_NV_copy_image
-https://www.khronos.org/registry/OpenGL/extensions/NV/WGL_NV_copy_image.txt
-WGL_NV_copy_image
-
-	BOOL wglCopyImageSubDataNV (HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth)
-  BOOL wglCopyImageSubDataNV (HGLRC hSrcRC, GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, HGLRC hDstRC, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth)
+version https://git-lfs.github.com/spec/v1
+oid sha256:0a15b4f2b762fa2b1c66ae85627c84a9d951c397569efa8a6dbc5fae544e6c97
+size 664

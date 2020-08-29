@@ -1,4 +1,3 @@
-GL_AMD_shader_ballot
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_shader_ballot.txt
-GL_AMD_shader_ballot
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:20bef9707a70536f758de7ed379d5b104507d5214e860b0492faca2214674559
+size 120

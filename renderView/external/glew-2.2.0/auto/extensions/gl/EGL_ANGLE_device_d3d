@@ -1,6 +1,3 @@
-EGL_ANGLE_device_d3d
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_ANGLE_device_d3d
-
-	EGL_D3D9_DEVICE_ANGLE 0x33A0
-	EGL_D3D11_DEVICE_ANGLE 0x33A1
+version https://git-lfs.github.com/spec/v1
+oid sha256:5040bb76f5450619457105d80ca0a5f88f813a2b5575af9b705e5354b2f67923
+size 163

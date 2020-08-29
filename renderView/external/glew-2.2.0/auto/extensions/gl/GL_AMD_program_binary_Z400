@@ -1,5 +1,3 @@
-GL_AMD_program_binary_Z400
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_program_binary_Z400.txt
-GL_AMD_program_binary_Z400
-
-	GL_Z400_BINARY_AMD 0x8740
+version https://git-lfs.github.com/spec/v1
+oid sha256:fa3e7d9fcf8d8970d99205cffd3abc456feea460f20dae429fd9aa5ef6e29f6a
+size 165

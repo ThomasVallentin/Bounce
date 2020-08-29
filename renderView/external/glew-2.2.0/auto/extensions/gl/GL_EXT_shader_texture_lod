@@ -1,4 +1,3 @@
-GL_EXT_shader_texture_lod
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_shader_texture_lod.txt
-GL_EXT_shader_texture_lod
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:2caf54db9252333b7ff6be6af4266b77b0aa3d3ba5775fc1b83c577fee1878c0
+size 135

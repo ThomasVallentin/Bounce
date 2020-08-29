@@ -1,8 +1,3 @@
-GL_NV_conservative_raster_pre_snap_triangles
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_conservative_raster_pre_snap_triangles.txt
-GL_NV_conservative_raster_pre_snap_triangles
-
-	GL_CONSERVATIVE_RASTER_MODE_NV 0x954D
-	GL_CONSERVATIVE_RASTER_MODE_POST_SNAP_NV 0x954E
-	GL_CONSERVATIVE_RASTER_MODE_PRE_SNAP_TRIANGLES_NV 0x954F
-	void glConservativeRasterParameteriNV (GLenum pname, GLint param)
+version https://git-lfs.github.com/spec/v1
+oid sha256:5565109dcd0c8c05b6d877f82423883e21a099f0435030853a31662a205cdd46
+size 404

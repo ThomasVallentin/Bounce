@@ -1,5 +1,3 @@
-GL_OVR_multiview_multisampled_render_to_texture
-https://www.khronos.org/registry/OpenGL/extensions/OVR/OVR_multiview_multisampled_render_to_texture.txt
-GL_OVR_multiview_multisampled_render_to_texture
-
-	void glFramebufferTextureMultisampleMultiviewOVR (GLenum target, GLenum attachment, GLuint texture, GLint level, GLsizei samples, GLint baseViewIndex, GLsizei numViews)
+version https://git-lfs.github.com/spec/v1
+oid sha256:7f6248842937e0d2a36e364651d0947c8711cfef1fe08eda8df5e128b861fd5e
+size 371

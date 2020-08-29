@@ -1,5 +1,3 @@
-EGL_EXT_swap_buffers_with_damage
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_swap_buffers_with_damage
-
-	EGLBoolean eglSwapBuffersWithDamageEXT (EGLDisplay dpy, EGLSurface surface, const EGLint* rects, EGLint n_rects)
+version https://git-lfs.github.com/spec/v1
+oid sha256:426c5fd753505b99de9260ba165d3c4e40ffe55a96d447a890dc8f176dce72e1
+size 240

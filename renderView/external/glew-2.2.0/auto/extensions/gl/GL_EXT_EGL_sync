@@ -1,4 +1,3 @@
-GL_EXT_EGL_sync
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_EGL_sync.txt
-GL_EXT_EGL_sync
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d63e878a676f98fc1a1a3c19618f182a5a7a527c94def41259bcbf036ffc584
+size 105

@@ -1,9 +1,3 @@
-GL_OES_blend_func_separate
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_blend_func_separate.txt
-GL_OES_blend_func_separate
-
-	GL_BLEND_DST_RGB_OES 0x80C8
-	GL_BLEND_SRC_RGB_OES 0x80C9
-	GL_BLEND_DST_ALPHA_OES 0x80CA
-	GL_BLEND_SRC_ALPHA_OES 0x80CB
-	void glBlendFuncSeparateOES (GLenum sfactorRGB, GLenum dfactorRGB, GLenum sfactorAlpha, GLenum dfactorAlpha)
+version https://git-lfs.github.com/spec/v1
+oid sha256:f66e926b95f496fee48665f954aa8dad8646d843b5bc36b86a82559ff8bd7336
+size 368

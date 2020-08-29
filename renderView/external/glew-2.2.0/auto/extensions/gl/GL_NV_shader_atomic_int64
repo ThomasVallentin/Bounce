@@ -1,4 +1,3 @@
-GL_NV_shader_atomic_int64
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_shader_atomic_int64.txt
-GL_NV_shader_atomic_int64
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:6de5626ae997c83073dfc4ba808d54071239d6830ec5b3d53f14d35e2bbcdf49
+size 134

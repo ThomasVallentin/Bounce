@@ -1,6 +1,3 @@
-GL_NV_vertex_program2_option
-http://www.nvidia.com/dev_content/nvopenglspecs/GL_NV_vertex_program2_option.txt
-GL_NV_vertex_program2_option
-
-	GL_MAX_PROGRAM_EXEC_INSTRUCTIONS_NV 0x88F4
-	GL_MAX_PROGRAM_CALL_DEPTH_NV 0x88F5
+version https://git-lfs.github.com/spec/v1
+oid sha256:e74a61c9055372b14ce07efe96070223f22114841be7ffddc482dee32123b9d5
+size 221

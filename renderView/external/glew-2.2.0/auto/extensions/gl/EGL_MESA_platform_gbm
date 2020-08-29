@@ -1,5 +1,3 @@
-EGL_MESA_platform_gbm
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_MESA_platform_gbm
-
-	EGL_PLATFORM_GBM_MESA 0x31D7
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb4d643aa17dad574c18e2f48cac45e692a0875dbeb7b8530d0f2aa0002547e3
+size 134

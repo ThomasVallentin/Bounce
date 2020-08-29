@@ -1,5 +1,3 @@
-GL_EXT_depth_clamp
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_depth_clamp.txt
-GL_EXT_depth_clamp
-
-	GL_DEPTH_CLAMP_EXT 0x864F
+version https://git-lfs.github.com/spec/v1
+oid sha256:fcf723469976ede1de7d561485d69a592b9caa41f31cfdba4830c7ba845b5acc
+size 141

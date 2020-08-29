@@ -1,7 +1,3 @@
-WGL_EXT_colorspace
-https://www.khronos.org/registry/OpenGL/extensions/EXT/WGL_EXT_colorspace.txt
-WGL_EXT_colorspace
-
-	WGL_COLORSPACE_SRGB_EXT 0x3089
-	WGL_COLORSPACE_LINEAR_EXT 0x308A
-	WGL_COLORSPACE_EXT 0x309D
+version https://git-lfs.github.com/spec/v1
+oid sha256:eab9277511834c94b8dd1c7a8923965d91563ea2838c166d07c256506c9a0667
+size 210

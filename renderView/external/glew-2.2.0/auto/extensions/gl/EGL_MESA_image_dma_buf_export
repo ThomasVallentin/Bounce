@@ -1,6 +1,3 @@
-EGL_MESA_image_dma_buf_export
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_MESA_image_dma_buf_export
-
-	EGLBoolean eglExportDMABUFImageMESA (EGLDisplay dpy, EGLImageKHR image, int* fds, EGLint* strides, EGLint* offsets)
-	EGLBoolean eglExportDMABUFImageQueryMESA (EGLDisplay dpy, EGLImageKHR image, int* fourcc, int* num_planes, EGLuint64KHR* modifiers)
+version https://git-lfs.github.com/spec/v1
+oid sha256:e73b8012aec515db968def73ad193567345bda34caef53b816739fc1f191509d
+size 370

@@ -1,5 +1,3 @@
-GL_WIN_specular_fog
-https://www.khronos.org/registry/OpenGL/extensions/WIN/WIN_specular_fog.txt
-GL_WIN_specular_fog
-
-	GL_FOG_SPECULAR_TEXTURE_WIN 0x80EC
+version https://git-lfs.github.com/spec/v1
+oid sha256:2a7c399b4864278a4ed504b1738e66e5b02e414a1a6e497381f7369bdf971a38
+size 153

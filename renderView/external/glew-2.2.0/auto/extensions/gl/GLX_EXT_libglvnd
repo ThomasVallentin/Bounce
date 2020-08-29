@@ -1,5 +1,3 @@
-GLX_EXT_libglvnd
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_EXT_libglvnd
-
-	GLX_VENDOR_NAMES_EXT 0x20F6
+version https://git-lfs.github.com/spec/v1
+oid sha256:8196355451429684c01e2d5de3002c4e33240b52b996b0c8d2f8e9338dc7ff7a
+size 123

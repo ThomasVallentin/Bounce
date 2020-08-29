@@ -1,8 +1,3 @@
-GL_NV_primitive_restart
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_primitive_restart.txt
-GL_NV_primitive_restart
-
-	GL_PRIMITIVE_RESTART_NV 0x8558
-	GL_PRIMITIVE_RESTART_INDEX_NV 0x8559
-	void glPrimitiveRestartIndexNV (GLuint index)
-	void glPrimitiveRestartNV (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:de629ad77b1a0766b9b738b1bdf0689a5518806a5ff4a2458f2ac2575790d269
+size 279

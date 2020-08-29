@@ -1,5 +1,3 @@
-GLX_VERSION_1_2
-http://www.opengl.org/documentation/specs/glx/glx1.2.ps
-GLX_VERSION_1_2
-
-	Display* glXGetCurrentDisplay (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:0a25d7b643cf64b0aba307d7c337f236dd567d4cfc59403cde4ebdbb7d4a7fec
+size 127

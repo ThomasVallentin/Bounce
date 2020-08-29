@@ -1,6 +1,3 @@
-GL_ANGLE_translated_shader_source
-https://www.khronos.org/registry/OpenGL/extensions/ANGLE/translated_shader_source.txt
-GL_ANGLE_translated_shader_source
-
-	GL_TRANSLATED_SHADER_SOURCE_LENGTH_ANGLE 0x93A0
-	void glGetTranslatedShaderSourceANGLE (GLuint shader, GLsizei bufsize, GLsizei* length, GLchar* source)
+version https://git-lfs.github.com/spec/v1
+oid sha256:e39d8f36c0b4e0209d426f885f09df743de902f8b29d3ed677fab2bcd8a9a934
+size 309

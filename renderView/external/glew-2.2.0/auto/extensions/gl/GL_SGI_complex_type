@@ -1,11 +1,3 @@
-GL_SGI_complex_type
-https://www.khronos.org/registry/OpenGL/extensions/SGI/SGI_complex_type.txt
-GL_SGI_complex_type
-
-	GL_COMPLEX_UNSIGNED_BYTE_SGI 0x81BD
-	GL_COMPLEX_BYTE_SGI 0x81BE
-	GL_COMPLEX_UNSIGNED_SHORT_SGI 0x81BF
-	GL_COMPLEX_SHORT_SGI 0x81C0
-	GL_COMPLEX_UNSIGNED_INT_SGI 0x81C1
-	GL_COMPLEX_INT_SGI 0x81C2
-	GL_COMPLEX_FLOAT_SGI 0x81C3
+version https://git-lfs.github.com/spec/v1
+oid sha256:a37d0b60e1fb2e67514f6c38a4893fde880dc7e43db04e916cc0f9416aca3827
+size 341

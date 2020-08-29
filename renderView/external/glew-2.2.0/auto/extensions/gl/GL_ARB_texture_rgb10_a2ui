@@ -1,5 +1,3 @@
-GL_ARB_texture_rgb10_a2ui
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_texture_rgb10_a2ui.txt
-GL_ARB_texture_rgb10_a2ui
-
-	GL_RGB10_A2UI 0x906F
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e6e6b784214c8865504212443ce3e1d6215fc341804b4e94572210203d3d314
+size 157

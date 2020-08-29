@@ -1,6 +1,3 @@
-GL_EXT_instanced_arrays
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_instanced_arrays.txt
-GL_EXT_instanced_arrays
-
-	GL_VERTEX_ATTRIB_ARRAY_DIVISOR_EXT 0x88FE
-	void glVertexAttribDivisorEXT (GLuint index, GLuint divisor)
+version https://git-lfs.github.com/spec/v1
+oid sha256:1b0e04145584fbca320316734e8cfcb565c8d11f4f30dc6dfead99a0f6ccafc6
+size 234

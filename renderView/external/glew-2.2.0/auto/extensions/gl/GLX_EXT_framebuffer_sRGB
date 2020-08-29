@@ -1,5 +1,3 @@
-GLX_EXT_framebuffer_sRGB
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_EXT_framebuffer_sRGB
-
-	GLX_FRAMEBUFFER_SRGB_CAPABLE_EXT 0x20B2
+version https://git-lfs.github.com/spec/v1
+oid sha256:f0f022e8d66ab9627f4fac164abc01dcf45c96a1be4972af4a573bd2ca144713
+size 151

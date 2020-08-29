@@ -1,6 +1,3 @@
-GL_SGIS_generate_mipmap
-https://www.khronos.org/registry/OpenGL/extensions/SGIS/SGIS_generate_mipmap.txt
-GL_SGIS_generate_mipmap
-
-	GL_GENERATE_MIPMAP_SGIS 0x8191
-	GL_GENERATE_MIPMAP_HINT_SGIS 0x8192
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c68445664c5c73fbb24c2d8f629e1482a728f20663708f643000f82c327b728
+size 199

@@ -1,5 +1,3 @@
-GL_NV_vertex_program3
-http://www.nvidia.com/dev_content/nvopenglspecs/GL_NV_vertex_program3.txt
-GL_NV_vertex_program3
-
-	MAX_VERTEX_TEXTURE_IMAGE_UNITS_ARB 0x8B4C
+version https://git-lfs.github.com/spec/v1
+oid sha256:7bd502efbd492b5bcec5e9123b6fb344a4ec82a258b6ff638a62b3be6b41e74a
+size 162

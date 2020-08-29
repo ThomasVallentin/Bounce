@@ -1,6 +1,3 @@
-GL_AMD_depth_clamp_separate
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_depth_clamp_separate.txt
-GL_AMD_depth_clamp_separate
-
-	GL_DEPTH_CLAMP_NEAR_AMD 0x901E
-	GL_DEPTH_CLAMP_FAR_AMD 0x901F
+version https://git-lfs.github.com/spec/v1
+oid sha256:df5422f93ae4884c342aac6452f681287af9df39a72d344915e6254720fda878
+size 204

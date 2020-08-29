@@ -1,6 +1,3 @@
-GL_3DFX_texture_compression_FXT1
-https://www.khronos.org/registry/OpenGL/extensions/3DFX/3DFX_texture_compression_FXT1.txt
-GL_3DFX_texture_compression_FXT1
-
-	GL_COMPRESSED_RGB_FXT1_3DFX 0x86B0
-	GL_COMPRESSED_RGBA_FXT1_3DFX 0x86B1
+version https://git-lfs.github.com/spec/v1
+oid sha256:b8290f00eac3a4f28ac128e348d4dc27d59cc91831819361d79e386ab996db85
+size 230

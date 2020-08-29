@@ -1,5 +1,3 @@
-EGL_NV_robustness_video_memory_purge
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_robustness_video_memory_purge
-
-	EGL_GENERATE_RESET_ON_VIDEO_MEMORY_PURGE_NV 0x334C
+version https://git-lfs.github.com/spec/v1
+oid sha256:7cc05bba65da0a315aaaf2b505e958ef906bc4bebb251d4bcbc0051c49a014bf
+size 186

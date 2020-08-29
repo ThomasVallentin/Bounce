@@ -1,5 +1,3 @@
-GL_EXT_texture_type_2_10_10_10_REV
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_texture_type_2_10_10_10_REV.txt
-GL_EXT_texture_type_2_10_10_10_REV
-
-	GL_UNSIGNED_INT_2_10_10_10_REV_EXT 0x8368
+version https://git-lfs.github.com/spec/v1
+oid sha256:b169ae3bee56e2499293678b831125a2512a577c71d57812a67dc99beb173b94
+size 205

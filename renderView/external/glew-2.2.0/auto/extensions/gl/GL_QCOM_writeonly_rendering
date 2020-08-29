@@ -1,5 +1,3 @@
-GL_QCOM_writeonly_rendering
-https://www.khronos.org/registry/OpenGL/extensions/QCOM/QCOM_writeonly_rendering.txt
-GL_QCOM_writeonly_rendering
-
-	GL_WRITEONLY_RENDERING_QCOM 0x8823
+version https://git-lfs.github.com/spec/v1
+oid sha256:1a029b3c76b8849dd9f0934ceaab04dd12d324cc5a33077d0b8e356f3e493fa0
+size 178

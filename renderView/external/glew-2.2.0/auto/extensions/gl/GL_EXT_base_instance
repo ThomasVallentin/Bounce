@@ -1,7 +1,3 @@
-GL_EXT_base_instance
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_base_instance.txt
-GL_EXT_base_instance
-
-	void glDrawArraysInstancedBaseInstanceEXT (GLenum mode, GLint first, GLsizei count, GLsizei instancecount, GLuint baseinstance)
-	void glDrawElementsInstancedBaseInstanceEXT (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLuint baseinstance)
-	void glDrawElementsInstancedBaseVertexBaseInstanceEXT (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei instancecount, GLint basevertex, GLuint baseinstance)
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d099af23bfe62cfcdf8da48d842d5803c7e427bc8e1a9a16ecb64b97d201b24
+size 581

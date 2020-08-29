@@ -1,8 +1,3 @@
-GL_SGIS_texture_lod
-https://www.khronos.org/registry/OpenGL/extensions/SGIS/SGIS_texture_lod.txt
-GL_SGIS_texture_lod
-
-	GL_TEXTURE_MIN_LOD_SGIS 0x813A
-	GL_TEXTURE_MAX_LOD_SGIS 0x813B
-	GL_TEXTURE_BASE_LEVEL_SGIS 0x813C
-	GL_TEXTURE_MAX_LEVEL_SGIS 0x813D
+version https://git-lfs.github.com/spec/v1
+oid sha256:9eb3d4a7523b0b0b7e7ff582f69713c2496657bd701e1fc9978b95bb3cc88f79
+size 251

@@ -1,5 +1,3 @@
-GL_NV_multisample_coverage
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_multisample_coverage.txt
-GL_NV_multisample_coverage
-
-	GL_COLOR_SAMPLES_NV 0x8E20
+version https://git-lfs.github.com/spec/v1
+oid sha256:b567b8f6d73131d35c57291ff7dddf1e7d6fa9a23942099befd75e166a89387e
+size 165

@@ -1,8 +1,3 @@
-EGL_HI_colorformats
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_HI_colorformats
-
-	EGL_COLOR_FORMAT_HI 0x8F70
-	EGL_COLOR_RGB_HI 0x8F71
-	EGL_COLOR_RGBA_HI 0x8F72
-	EGL_COLOR_ARGB_HI 0x8F73
+version https://git-lfs.github.com/spec/v1
+oid sha256:9bc0b62996229807f9ac7be2bee21be42d923aad8657b1870deac9616d09bec2
+size 205

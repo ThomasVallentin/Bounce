@@ -1,7 +1,3 @@
-GL_EXT_packed_float
-http://developer.download.nvidia.com/opengl/specs/GL_EXT_packed_float.txt
-GL_EXT_packed_float
-
-	GL_R11F_G11F_B10F_EXT 0x8C3A
-	GL_UNSIGNED_INT_10F_11F_11F_REV_EXT 0x8C3B
-	GL_RGBA_SIGNED_COMPONENTS_EXT 0x8C3C
+version https://git-lfs.github.com/spec/v1
+oid sha256:0942d23e409a4056aab7021e02054e81adfda816a0c137a2714ec9b5ac4e78a2
+size 227

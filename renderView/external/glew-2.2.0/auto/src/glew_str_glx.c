@@ -1,17 +1,3 @@
-    }
-    ret = (len == 0);
-  }
-  return ret;
-}
-
-#elif !defined(GLEW_OSMESA) && !defined(GLEW_EGL) && !defined(__ANDROID__) && !defined(__native_client__) && !defined(__HAIKU__) && !defined(__APPLE__) || defined(GLEW_APPLE_GLX)
-
-GLboolean glxewIsSupported (const char* name)
-{
-  const GLubyte* pos = (const GLubyte*)name;
-  GLuint len = _glewStrLen(pos);
-  GLboolean ret = GL_TRUE;
-  while (ret && len > 0)
-  {
-    if(_glewStrSame1(&pos, &len, (const GLubyte*)"GLX_", 4))
-    {
+version https://git-lfs.github.com/spec/v1
+oid sha256:45b23bfe5d039484c223f5f30a1667018981b85333ba4822d683f8ca722ca37d
+size 478

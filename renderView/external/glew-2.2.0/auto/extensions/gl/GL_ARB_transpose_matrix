@@ -1,12 +1,3 @@
-GL_ARB_transpose_matrix
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_transpose_matrix.txt
-GL_ARB_transpose_matrix
-
-	GL_TRANSPOSE_MODELVIEW_MATRIX_ARB 0x84E3
-	GL_TRANSPOSE_PROJECTION_MATRIX_ARB 0x84E4
-	GL_TRANSPOSE_TEXTURE_MATRIX_ARB 0x84E5
-	GL_TRANSPOSE_COLOR_MATRIX_ARB 0x84E6
-	void glLoadTransposeMatrixfARB (GLfloat m[16])
-	void glLoadTransposeMatrixdARB (GLdouble m[16])
-	void glMultTransposeMatrixfARB (GLfloat m[16])
-	void glMultTransposeMatrixdARB (GLdouble m[16])
+version https://git-lfs.github.com/spec/v1
+oid sha256:43af5eacef05d68daab5049a5cc92b3d8a7a0cd4a06eb0f29f87977cec5552a4
+size 486

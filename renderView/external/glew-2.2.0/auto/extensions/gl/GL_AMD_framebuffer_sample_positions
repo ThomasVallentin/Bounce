@@ -1,12 +1,3 @@
-GL_AMD_framebuffer_sample_positions
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_framebuffer_sample_positions.txt
-GL_AMD_framebuffer_sample_positions
-
-	GL_SUBSAMPLE_DISTANCE_AMD 0x883F
-	GL_PIXELS_PER_SAMPLE_PATTERN_X_AMD 0x91AE
-	GL_PIXELS_PER_SAMPLE_PATTERN_Y_AMD 0x91AF
-	GL_ALL_PIXELS_AMD 0xFFFFFFFF
-	void glFramebufferSamplePositionsfvAMD (GLenum target, GLuint numsamples, GLuint pixelindex, const GLfloat* values)
-	void glGetFramebufferParameterfvAMD (GLenum target, GLenum pname, GLuint numsamples, GLuint pixelindex, GLsizei size, GLfloat* values)
-	void glGetNamedFramebufferParameterfvAMD (GLuint framebuffer, GLenum pname, GLuint numsamples, GLuint pixelindex, GLsizei size, GLfloat* values)
-	void glNamedFramebufferSamplePositionsfvAMD (GLuint framebuffer, GLuint numsamples, GLuint pixelindex, const GLfloat* values)
+version https://git-lfs.github.com/spec/v1
+oid sha256:49d9b3f1b36e233eb9f6cef5a4fe15242419d41f9c1a3491f1b3750d46a81eb2
+size 841

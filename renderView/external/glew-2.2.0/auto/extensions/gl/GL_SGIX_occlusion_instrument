@@ -1,5 +1,3 @@
-GL_SGIX_occlusion_instrument
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_occlusion_instrument.txt
-GL_SGIX_occlusion_instrument
-
-	GL_OCCLUSION_INSTRUMENT_SGIX 0x6060
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d99732603b3968bc453075aaada418403a1147951d81d2d9f878edfcaff61ac
+size 182

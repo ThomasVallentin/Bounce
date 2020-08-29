@@ -1,5 +1,3 @@
-EGL_ANGLE_window_fixed_size
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_ANGLE_window_fixed_size
-
-	EGL_FIXED_SIZE_ANGLE 0x3201
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b7e98ae1e7893267511db1cb857cc38f906deca3415e1e6c39c33f0b54ae7a1
+size 145

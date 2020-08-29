@@ -1,5 +1,3 @@
-GL_ANGLE_pack_reverse_row_order
-https://www.khronos.org/registry/OpenGL/extensions/ANGLE/pack_reverse_row_order.txt
-GL_ANGLE_pack_reverse_row_order
-
-	GL_PACK_REVERSE_ROW_ORDER_ANGLE 0x93A4
+version https://git-lfs.github.com/spec/v1
+oid sha256:50903565f800ef7c9bbcafc29f7dac46e35a817af04c7cb8f918e47df0a2decc
+size 189

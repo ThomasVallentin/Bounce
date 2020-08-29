@@ -1,10 +1,3 @@
-GL_OES_single_precision
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_single_precision.txt
-GL_OES_single_precision
-
-	void glClearDepthfOES (GLclampf depth)
-	void glClipPlanefOES (GLenum plane, const GLfloat* equation)
-	void glDepthRangefOES (GLclampf n, GLclampf f)
-	void glFrustumfOES (GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloat n, GLfloat f)
-	void glGetClipPlanefOES (GLenum plane, GLfloat* equation)
-	void glOrthofOES (GLfloat l, GLfloat r, GLfloat b, GLfloat t, GLfloat n, GLfloat f)
+version https://git-lfs.github.com/spec/v1
+oid sha256:5190ef9370ca80894523aa540e23c41c1cdf9d7c05d9b3d5989e1298c1ba2adc
+size 510

@@ -1,4 +1,3 @@
-GL_ARB_shader_precision
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_shader_precision.txt
-GL_ARB_shader_precision
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d7f317ab5dd74f5cd498a52b0c41f93dac31137110cd7c594473a4c49103e81
+size 129

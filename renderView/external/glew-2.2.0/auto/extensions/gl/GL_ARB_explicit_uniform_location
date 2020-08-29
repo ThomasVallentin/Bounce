@@ -1,5 +1,3 @@
-GL_ARB_explicit_uniform_location
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_explicit_uniform_location.txt
-GL_ARB_explicit_uniform_location
-
-	GL_MAX_UNIFORM_LOCATIONS 0x826E
+version https://git-lfs.github.com/spec/v1
+oid sha256:de5a48cd468d2607653e5593eb92d1a70bd9d2e62e1a5508146d9f565afa5794
+size 189

@@ -1,7 +1,3 @@
-GL_IMG_texture_filter_cubic
-https://www.khronos.org/registry/OpenGL/extensions/IMG/IMG_texture_filter_cubic.txt
-GL_IMG_texture_filter_cubic
-
-	GL_CUBIC_IMG 0x9139
-	GL_CUBIC_MIPMAP_NEAREST_IMG 0x913A
-	GL_CUBIC_MIPMAP_LINEAR_IMG 0x913B
+version https://git-lfs.github.com/spec/v1
+oid sha256:74674a17bd73e8aa7ef4577cd45ae2920c08132d7cdb4d6574985ac167966762
+size 233

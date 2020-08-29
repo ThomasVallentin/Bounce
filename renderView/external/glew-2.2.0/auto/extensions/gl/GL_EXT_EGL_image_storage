@@ -1,6 +1,3 @@
-GL_EXT_EGL_image_storage
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_EGL_image_storage.txt
-GL_EXT_EGL_image_storage
-
-	void glEGLImageTargetTexStorageEXT (GLenum target, GLeglImageOES image, const GLint* attrib_list)
-	void glEGLImageTargetTextureStorageEXT (GLuint texture, GLeglImageOES image, const GLint* attrib_list)
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea1ea3cbe668672fba31adc523aff650069329e9cf05eb21543c3b748cf2b74a
+size 335

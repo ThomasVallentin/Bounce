@@ -1,5 +1,3 @@
-GL_EXT_semaphore_fd
-http://www.opengl.org/registry/specs/EXT/external_objects_fd.txt
-GL_EXT_semaphore_fd
-
-	void glImportSemaphoreFdEXT (GLuint semaphore, GLenum handleType, GLint fd)
+version https://git-lfs.github.com/spec/v1
+oid sha256:925180a75f591c530aa9085a60dd91f9ce952bea375e8312b16f3478302ce5ff
+size 183

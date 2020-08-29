@@ -1,6 +1,3 @@
-EGL_KHR_gl_texture_2D_image
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_gl_texture_2D_image
-
-	EGL_GL_TEXTURE_2D_KHR 0x30B1
-	EGL_GL_TEXTURE_LEVEL_KHR 0x30BC
+version https://git-lfs.github.com/spec/v1
+oid sha256:df9ef775c8c298ef496b7723f16783686b5dced54e4ab55e506bca38a586ba05
+size 179

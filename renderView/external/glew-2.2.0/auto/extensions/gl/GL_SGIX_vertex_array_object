@@ -1,10 +1,3 @@
-GL_SGIX_vertex_array_object
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_vertex_array_object.txt
-GL_SGIX_vertex_array_object
-
-	GLboolean glAreVertexArraysResidentSGIX (GLsizei n, const GLuint* arrays, GLboolean* residences)
-	void glBindVertexArraySGIX (GLuint array)
-	void glDeleteVertexArraysSGIX (GLsizei n, const GLuint* arrays)
-	void glGenVertexArraysSGIX (GLsizei n, GLuint* arrays)
-	GLboolean glIsVertexArraySGIX (GLuint array)
-	void glPrioritizeVertexArraysSGIX (GLsizei n, const GLuint* arrays, const GLclampf* priorities)
+version https://git-lfs.github.com/spec/v1
+oid sha256:b295776efa02b2c2f11fa776975ae2ea477f4409fbb1143f4869d2de275138a9
+size 547

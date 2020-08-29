@@ -1,5 +1,3 @@
-EGL_NV_stream_flush
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_stream_flush
-
-	EGLBoolean eglStreamFlushNV (EGLDisplay dpy, EGLStreamKHR stream)
+version https://git-lfs.github.com/spec/v1
+oid sha256:8b223f7a805813573fb801006729fe34190db6d89379736293b8496614906460
+size 167

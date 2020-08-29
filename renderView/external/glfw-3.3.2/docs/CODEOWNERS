@@ -1,10 +1,3 @@
-
-*               @elmindreda
-
-src/wl_*        @linkmauve
-
-docs/*.css      @glfw/webdev
-docs/*.less     @glfw/webdev
-docs/*.html     @glfw/webdev
-docs/*.xml      @glfw/webdev
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:04e06b46b1a6f00d67955f14ee2558bed4925c043850754ecc24934cac5fffd2
+size 175

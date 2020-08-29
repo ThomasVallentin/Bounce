@@ -1,7 +1,3 @@
-GL_SGIX_texture_coordinate_clamp
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_texture_coordinate_clamp.txt
-GL_SGIX_texture_coordinate_clamp
-
-	GL_TEXTURE_MAX_CLAMP_S_SGIX 0x8369
-	GL_TEXTURE_MAX_CLAMP_T_SGIX 0x836A
-	GL_TEXTURE_MAX_CLAMP_R_SGIX 0x836B
+version https://git-lfs.github.com/spec/v1
+oid sha256:f3d02ab0e76ba6a6b9998ec25919d621a9b980ac80c9c161828bdb2af851cc7e
+size 265

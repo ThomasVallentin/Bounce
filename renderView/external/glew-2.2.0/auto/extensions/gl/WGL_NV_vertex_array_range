@@ -1,6 +1,3 @@
-WGL_NV_vertex_array_range
-https://www.khronos.org/registry/OpenGL/extensions/NV/WGL_NV_vertex_array_range.txt
-WGL_NV_vertex_array_range
-
-	void* wglAllocateMemoryNV (GLsizei size, GLfloat readfreq, GLfloat writefreq, GLfloat priority)
-	void wglFreeMemoryNV (void* pointer)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2dc695e07edd4569292ecd301ae716ac05afaf1cb77a4cbf9ae6f01470572f53
+size 272

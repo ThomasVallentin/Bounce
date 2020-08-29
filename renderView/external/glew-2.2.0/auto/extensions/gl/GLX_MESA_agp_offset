@@ -1,5 +1,3 @@
-GLX_MESA_agp_offset
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_MESA_agp_offset
-
-	unsigned int glXGetAGPOffsetMESA (const void* pointer)
+version https://git-lfs.github.com/spec/v1
+oid sha256:893e95708b5a112deae057deb92e3aea0661318e1f64879ba5972cbe8f5401bd
+size 156

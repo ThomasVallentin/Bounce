@@ -1,5 +1,3 @@
-GLX_NV_robustness_video_memory_purge
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_NV_robustness_video_memory_purge
-
-	GLX_GENERATE_RESET_ON_VIDEO_MEMORY_PURGE_NV 0x20F7
+version https://git-lfs.github.com/spec/v1
+oid sha256:769e7d43868c3c5f6a1308ba372ceee30e31b180e8c5939d0b754fec77769ea0
+size 186

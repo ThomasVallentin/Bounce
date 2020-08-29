@@ -1,9 +1,3 @@
-GL_QCOM_binning_control
-https://www.khronos.org/registry/OpenGL/extensions/QCOM/QCOM_binning_control.txt
-GL_QCOM_binning_control
-
-	GL_DONT_CARE 0x1100
-	GL_BINNING_CONTROL_HINT_QCOM 0x8FB0
-	GL_CPU_OPTIMIZED_QCOM 0x8FB1
-	GL_GPU_OPTIMIZED_QCOM 0x8FB2
-	GL_RENDER_DIRECT_TO_FRAMEBUFFER_QCOM 0x8FB3
+version https://git-lfs.github.com/spec/v1
+oid sha256:977f32b0d3f83e9501b569bc636c0424fbc58659e16a4fb06ce559caff297e66
+size 293

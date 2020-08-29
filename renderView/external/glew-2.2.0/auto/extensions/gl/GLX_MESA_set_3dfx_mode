@@ -1,7 +1,3 @@
-GLX_MESA_set_3dfx_mode
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_MESA_set_3dfx_mode
-
-	GLX_3DFX_WINDOW_MODE_MESA 0x1
-	GLX_3DFX_FULLSCREEN_MODE_MESA 0x2
-	GLboolean glXSet3DfxModeMESA (GLint mode)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2db4e004a60ae984bd60fb82039e0af9620e68dc5b27a5ecc0c32be6c7421a07
+size 215

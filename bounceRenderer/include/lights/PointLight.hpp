@@ -1,24 +1,3 @@
-//
-// Created by Thomas Vallentin on 23/08/2020.
-// Copyright (c) 2020. All rights reserved.
-//
-
-#ifndef BOUNCE_POINT_HPP
-#define BOUNCE_POINT_HPP
-
-#include "Light.hpp"
-
-class PointLight : public Light {
-public:
-    PointLight() : Light() {}
-    explicit PointLight(const Transform *lightToWorld) : Light(lightToWorld) {}
-    PointLight(const Transform *lightToWorld, const Color &c, const float &i) :
-            Light(lightToWorld, c, i),
-            TransformObject(lightToWorld) {}
-
-    Color getIllumination(const HitData &hitdata, Scene *scene) const override;
-};
-
-
-
-#endif //BOUNCE_POINT_HPP
+version https://git-lfs.github.com/spec/v1
+oid sha256:d15a47b130a52b35ec77692c919c2c2d2ec5b8ec7d307e3394c7307d7a406323
+size 599

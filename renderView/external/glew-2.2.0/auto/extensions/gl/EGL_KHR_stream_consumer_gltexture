@@ -1,8 +1,3 @@
-EGL_KHR_stream_consumer_gltexture
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_stream_consumer_gltexture
-
-	EGL_CONSUMER_ACQUIRE_TIMEOUT_USEC_KHR 0x321E
-	EGLBoolean eglStreamConsumerAcquireKHR (EGLDisplay dpy, EGLStreamKHR stream)
-	EGLBoolean eglStreamConsumerGLTextureExternalKHR (EGLDisplay dpy, EGLStreamKHR stream)
-	EGLBoolean eglStreamConsumerReleaseKHR (EGLDisplay dpy, EGLStreamKHR stream)
+version https://git-lfs.github.com/spec/v1
+oid sha256:6d3cf0c6fdf1d17133807ebef0f749d736c5153e2fc89af503518363cd719c18
+size 418

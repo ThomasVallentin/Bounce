@@ -1,6 +1,3 @@
-GL_ARB_internalformat_query
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_internalformat_query.txt
-GL_ARB_internalformat_query
-
-	GL_NUM_SAMPLE_COUNTS 0x9380
-	void glGetInternalformativ (GLenum target, GLenum internalformat, GLenum pname, GLsizei bufSize, GLint* params)
+version https://git-lfs.github.com/spec/v1
+oid sha256:213f97de22cb9ec43819ef95bc82b7501584f594551c326c1d209966660342c8
+size 283

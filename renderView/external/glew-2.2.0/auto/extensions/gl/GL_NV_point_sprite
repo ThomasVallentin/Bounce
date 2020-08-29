@@ -1,9 +1,3 @@
-GL_NV_point_sprite
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_point_sprite.txt
-GL_NV_point_sprite
-
-	GL_POINT_SPRITE_NV 0x8861
-	GL_COORD_REPLACE_NV 0x8862
-	GL_POINT_SPRITE_R_MODE_NV 0x8863
-	void glPointParameteriNV (GLenum pname, GLint param)
-	void glPointParameterivNV (GLenum pname, const GLint* params)
+version https://git-lfs.github.com/spec/v1
+oid sha256:19a205c16c4af6b512cabf3c1aaf9f82a85ac0dae37a836e73ff461b2731f662
+size 319

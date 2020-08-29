@@ -1,5 +1,3 @@
-GL_FJ_shader_binary_GCCSO
-https://www.khronos.org/registry/OpenGL/extensions/FJ/FJ_shader_binary_GCCSO.txt
-GL_FJ_shader_binary_GCCSO
-
-	GL_GCCSO_SHADER_BINARY_FJ 0x9260
+version https://git-lfs.github.com/spec/v1
+oid sha256:6786d0d376ad291687c3ef79f2b73e506eb674509e81e92b947d46cc1d8a5738
+size 168

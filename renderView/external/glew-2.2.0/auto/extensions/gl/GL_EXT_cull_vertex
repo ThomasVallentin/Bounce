@@ -1,9 +1,3 @@
-GL_EXT_cull_vertex
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_cull_vertex.txt
-GL_EXT_cull_vertex
-
-	GL_CULL_VERTEX_EXT 0x81AA
-	GL_CULL_VERTEX_EYE_POSITION_EXT 0x81AB
-	GL_CULL_VERTEX_OBJECT_POSITION_EXT 0x81AC
-	void glCullParameterdvEXT (GLenum pname, GLdouble* params)
-	void glCullParameterfvEXT (GLenum pname, GLfloat* params)
+version https://git-lfs.github.com/spec/v1
+oid sha256:d919f335fd76351a936960cb7d84889c7adcdd3d60febfff19b0eb4b36c74a03
+size 343

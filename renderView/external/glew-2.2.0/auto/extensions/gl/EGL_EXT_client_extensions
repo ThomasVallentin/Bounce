@@ -1,4 +1,3 @@
-EGL_EXT_client_extensions
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_client_extensions
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:b5962fa8005966b93120df8786dd0b9aea86f333a1d287f258ca9b1cc6dec322
+size 112

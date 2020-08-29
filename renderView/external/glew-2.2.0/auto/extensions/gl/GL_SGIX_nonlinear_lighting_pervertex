@@ -1,8 +1,3 @@
-GL_SGIX_nonlinear_lighting_pervertex
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_nonlinear_lighting_pervertex.txt
-GL_SGIX_nonlinear_lighting_pervertex
-
-	void glGetNonlinLightfvSGIX (GLenum light, GLenum pname, GLint* terms, GLfloat *data)
-	void glGetNonlinMaterialfvSGIX (GLenum face, GLenum pname, GLint* terms, const GLfloat *data)
-	void glNonlinLightfvSGIX (GLenum light, GLenum pname, GLint terms, GLfloat* params)
-	void glNonlinMaterialfvSGIX (GLenum face, GLenum pname, GLint terms, const GLfloat* params)
+version https://git-lfs.github.com/spec/v1
+oid sha256:fd8a251d3053f492357b393b6796532ea836286b92bbfc06701b8f90e0e369b7
+size 529

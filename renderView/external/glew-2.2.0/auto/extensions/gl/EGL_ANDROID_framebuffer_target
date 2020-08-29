@@ -1,5 +1,3 @@
-EGL_ANDROID_framebuffer_target
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_ANDROID_framebuffer_target
-
-	EGL_FRAMEBUFFER_TARGET_ANDROID 0x3147
+version https://git-lfs.github.com/spec/v1
+oid sha256:483f5aadfa9ec713250ff6db212e17ae1f795260c8f0b13b10f38adbb938a776
+size 161

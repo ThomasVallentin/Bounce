@@ -1,6 +1,3 @@
-GL_EXT_texture_env_dot3
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_texture_env_dot3.txt
-GL_EXT_texture_env_dot3
-
-	GL_DOT3_RGB_EXT 0x8740
-	GL_DOT3_RGBA_EXT 0x8741
+version https://git-lfs.github.com/spec/v1
+oid sha256:980cc0332a16741e827bb0bc6acdb7f2acb82cf75e1dc483e5f5040a1fe0cab9
+size 178

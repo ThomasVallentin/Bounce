@@ -1,9 +1,3 @@
-GL_OES_blend_subtract
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_blend_subtract.txt
-GL_OES_blend_subtract
-
-	GL_FUNC_ADD_OES 0x8006
-	GL_BLEND_EQUATION_OES 0x8009
-	GL_FUNC_SUBTRACT_OES 0x800A
-	GL_FUNC_REVERSE_SUBTRACT_OES 0x800B
-	void glBlendEquationOES (GLenum mode)
+version https://git-lfs.github.com/spec/v1
+oid sha256:6e84fedcb7597eb906605647e62f04f511cff7162b16ac31ffcba9c2989b2f60
+size 282

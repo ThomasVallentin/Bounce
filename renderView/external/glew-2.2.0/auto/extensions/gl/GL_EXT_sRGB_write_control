@@ -1,5 +1,3 @@
-GL_EXT_sRGB_write_control
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_sRGB_write_control.txt
-GL_EXT_sRGB_write_control
-
-	GL_FRAMEBUFFER_SRGB_EXT 0x8DB9
+version https://git-lfs.github.com/spec/v1
+oid sha256:2438fc678e38d3c2a150d0f4f38808b2b5254a0e5ab5f7cfb7c3592c3d57420a
+size 167

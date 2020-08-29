@@ -1,14 +1,3 @@
-GL_EXT_blend_func_extended
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_blend_func_extended.txt
-GL_EXT_blend_func_extended
-
-	GL_SRC_ALPHA_SATURATE_EXT 0x0308
-	GL_SRC1_ALPHA_EXT 0x8589
-	GL_SRC1_COLOR_EXT 0x88F9
-	GL_ONE_MINUS_SRC1_COLOR_EXT 0x88FA
-	GL_ONE_MINUS_SRC1_ALPHA_EXT 0x88FB
-	GL_MAX_DUAL_SOURCE_DRAW_BUFFERS_EXT 0x88FC
-	GL_LOCATION_INDEX_EXT 0x930F
-	void glBindFragDataLocationIndexedEXT (GLuint program, GLuint colorNumber, GLuint index, const GLchar * name)
-	GLint glGetFragDataIndexEXT (GLuint program, const GLchar * name)
-	GLint glGetProgramResourceLocationIndexEXT (GLuint program, GLenum programInterface, const GLchar* name)
+version https://git-lfs.github.com/spec/v1
+oid sha256:b7d3e7a4c0f69aa9db2d70d132b3d935a387f9e8aedd7ffd5457f0d8f8dbc7e9
+size 654

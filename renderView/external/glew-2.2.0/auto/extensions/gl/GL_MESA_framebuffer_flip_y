@@ -1,7 +1,3 @@
-GL_MESA_framebuffer_flip_y
-https://www.khronos.org/registry/OpenGL/extensions/MESA/MESA_framebuffer_flip_y.txt
-GL_MESA_framebuffer_flip_y
-
-	GL_FRAMEBUFFER_FLIP_Y_MESA 0x8BBB
-	void glFramebufferParameteriMESA (GLenum target, GLenum pname, GLint param)
-	void glGetFramebufferParameterivMESA (GLenum target, GLenum pname, GLint* params)
+version https://git-lfs.github.com/spec/v1
+oid sha256:a9220ade2267b76120b214e7a595a0a0e396e2f64bf760aa0def8592369c0f76
+size 334

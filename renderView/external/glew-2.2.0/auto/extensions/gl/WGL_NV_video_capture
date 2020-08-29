@@ -1,12 +1,3 @@
-WGL_NV_video_capture
-https://www.khronos.org/registry/OpenGL/extensions/NV/WGL_NV_video_capture.txt
-WGL_NV_video_capture
-
-	WGL_UNIQUE_ID_NV 0x20CE
-	WGL_NUM_VIDEO_CAPTURE_SLOTS_NV 0x20CF
-	BOOL wglBindVideoCaptureDeviceNV (UINT uVideoSlot, HVIDEOINPUTDEVICENV hDevice)
-	UINT wglEnumerateVideoCaptureDevicesNV (HDC hDc, HVIDEOINPUTDEVICENV* phDeviceList)
-	BOOL wglLockVideoCaptureDeviceNV (HDC hDc, HVIDEOINPUTDEVICENV hDevice)
-	BOOL wglQueryVideoCaptureDeviceNV (HDC hDc, HVIDEOINPUTDEVICENV hDevice, int iAttribute, int* piValue)
-	BOOL wglReleaseVideoCaptureDeviceNV (HDC hDc, HVIDEOINPUTDEVICENV hDevice)
-    DECLARE_HANDLE(HVIDEOINPUTDEVICENV);
+version https://git-lfs.github.com/spec/v1
+oid sha256:da57704425e8993f0fcbd1c94d962be3cdc04d91f18bf6945059e1a1bf2fa657
+size 646

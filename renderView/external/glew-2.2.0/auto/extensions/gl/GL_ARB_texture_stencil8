@@ -1,6 +1,3 @@
-GL_ARB_texture_stencil8
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_texture_stencil8.txt
-GL_ARB_texture_stencil8
-
-	GL_STENCIL_INDEX 0x1901
-	GL_STENCIL_INDEX8 0x8D48
+version https://git-lfs.github.com/spec/v1
+oid sha256:637412a0b13f25bfd78cb74bc899c20a6d9c4591b91d4aa321cc0df7d98d179b
+size 180

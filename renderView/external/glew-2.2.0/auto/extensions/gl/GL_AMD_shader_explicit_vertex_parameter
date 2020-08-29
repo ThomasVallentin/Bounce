@@ -1,4 +1,3 @@
-GL_AMD_shader_explicit_vertex_parameter
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_shader_explicit_vertex_parameter.txt
-GL_AMD_shader_explicit_vertex_parameter
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:9a5e0ee6eadc3e6417fb1b9812a8452ce695439bb3fc41742d54200e7eb0ea95
+size 177

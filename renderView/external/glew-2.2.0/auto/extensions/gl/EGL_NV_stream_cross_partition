@@ -1,5 +1,3 @@
-EGL_NV_stream_cross_partition
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_stream_cross_partition
-
-	EGL_STREAM_CROSS_PARTITION_NV 0x323F
+version https://git-lfs.github.com/spec/v1
+oid sha256:acf20e1bbed44a62e93d0646b71dbcc5b9bf453dd6e9e0a6df7685445111d178
+size 158

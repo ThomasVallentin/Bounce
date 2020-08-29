@@ -1,5 +1,3 @@
-GL_IBM_cull_vertex
-https://www.khronos.org/registry/OpenGL/extensions/IBM/IBM_cull_vertex.txt
-GL_IBM_cull_vertex
-
-	GL_CULL_VERTEX_IBM 103050
+version https://git-lfs.github.com/spec/v1
+oid sha256:5d3b3af01365793a1d97c0679d2731d0c36230dd5580b983ecf4f77ee6dd6e17
+size 141

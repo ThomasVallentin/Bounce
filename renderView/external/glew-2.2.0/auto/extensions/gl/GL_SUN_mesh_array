@@ -1,6 +1,3 @@
-GL_SUN_mesh_array
-https://www.khronos.org/registry/OpenGL/extensions/SUN/SUN_mesh_array.txt
-GL_SUN_mesh_array
-
-	GL_QUAD_MESH_SUN 0x8614
-	GL_TRIANGLE_MESH_SUN 0x8615
+version https://git-lfs.github.com/spec/v1
+oid sha256:6dea4c555d509cedca8245167620e06981da875e723f208ea44e352f6e688111
+size 165

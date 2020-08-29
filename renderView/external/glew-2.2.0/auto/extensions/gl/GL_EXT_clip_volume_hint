@@ -1,5 +1,3 @@
-GL_EXT_clip_volume_hint
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_clip_volume_hint.txt
-GL_EXT_clip_volume_hint
-
-	GL_CLIP_VOLUME_CLIPPING_HINT_EXT 0x80F0
+version https://git-lfs.github.com/spec/v1
+oid sha256:93e1289af38417e94ca85e60cace1316898651c2f92d73c0de99a41af9eba4b6
+size 170

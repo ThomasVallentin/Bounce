@@ -1,7 +1,3 @@
-GL_ARB_copy_buffer
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_copy_buffer.txt
-GL_ARB_copy_buffer
-
-	GL_COPY_READ_BUFFER 0x8F36
-	GL_COPY_WRITE_BUFFER 0x8F37
-	void glCopyBufferSubData (GLenum readtarget, GLenum writetarget, GLintptr readoffset, GLintptr writeoffset, GLsizeiptr size)
+version https://git-lfs.github.com/spec/v1
+oid sha256:d7f32634afa05da965e2305223a986b6fd77953375bd0c1ae5c3fad923580af4
+size 297

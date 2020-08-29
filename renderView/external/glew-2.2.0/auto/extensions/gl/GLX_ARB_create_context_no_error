@@ -1,5 +1,3 @@
-GLX_ARB_create_context_no_error
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_ARB_create_context_no_error
-
-	GLX_CONTEXT_OPENGL_NO_ERROR_ARB 0x31B3
+version https://git-lfs.github.com/spec/v1
+oid sha256:76d7d01435a52e90b23a0e3a9dd0d655c23aab5c5f3c3bac8c265bec1ed738e8
+size 164

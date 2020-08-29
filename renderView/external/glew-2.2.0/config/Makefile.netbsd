@@ -1,17 +1,3 @@
-NAME = $(GLEW_NAME)
-CC = cc
-LD = ld
-LDFLAGS.EXTRA = -L/usr/X11R7/lib -R /usr/X11R7/lib 
-LDFLAGS.GL = -lGL -lX11
-LDFLAGS.STATIC = -Wl,-Bstatic
-LDFLAGS.DYNAMIC = -Wl,-Bdynamic
-CFLAGS.EXTRA += -I/usr/X11R7/include -fPIC
-NAME = GLEW
-WARN = -Wall -W
-POPT = -O2
-BIN.SUFFIX =
-LIB.SONAME    = lib$(NAME).so.$(SO_MAJOR)
-LIB.DEVLNK    = lib$(NAME).so
-LIB.SHARED    = lib$(NAME).so.$(SO_VERSION)
-LIB.STATIC    = lib$(NAME).a
-LDFLAGS.SO    = -shared -soname $(LIB.SONAME)
+version https://git-lfs.github.com/spec/v1
+oid sha256:d64374eb4e74f67545264b7cf7923f853e090a77377f8420642ffaaf74693ca0
+size 460

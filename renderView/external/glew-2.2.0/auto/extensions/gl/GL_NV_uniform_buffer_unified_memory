@@ -1,7 +1,3 @@
-GL_NV_uniform_buffer_unified_memory
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_uniform_buffer_unified_memory.txt
-GL_NV_uniform_buffer_unified_memory
-
-	GL_UNIFORM_BUFFER_UNIFIED_NV 0x936E
-	GL_UNIFORM_BUFFER_ADDRESS_NV 0x936F
-	GL_UNIFORM_BUFFER_LENGTH_NV 0x9370
+version https://git-lfs.github.com/spec/v1
+oid sha256:5474409bf59e493ddb74e26f29986bc977af7f7ff96b6f17b3a008d639bcd551
+size 274

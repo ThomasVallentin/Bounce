@@ -1,5 +1,3 @@
-GL_SGIX_color_matrix_accuracy
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_color_matrix_accuracy.txt
-GL_SGIX_color_matrix_accuracy
-
-	GL_COLOR_MATRIX_HINT 0x8317
+version https://git-lfs.github.com/spec/v1
+oid sha256:fbbfadcfba210c37800ebc0ea34d07b27ffceefa608eaab2ba0dc8502b9d1f69
+size 177

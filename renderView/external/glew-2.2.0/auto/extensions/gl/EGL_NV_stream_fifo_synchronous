@@ -1,5 +1,3 @@
-EGL_NV_stream_fifo_synchronous
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_stream_fifo_synchronous
-
-	EGL_STREAM_FIFO_SYNCHRONOUS_NV 0x3336
+version https://git-lfs.github.com/spec/v1
+oid sha256:c29f5de111fb3184dec10073635b1cff4eff57ea941bc08b3b814e7ca41a0042
+size 161

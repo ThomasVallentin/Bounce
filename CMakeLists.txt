@@ -1,8 +1,3 @@
-project(Bounce)
-
-# C++ version
-set(CMAKE_CXX_STANDARD 11)
-
-add_subdirectory("bounceRenderer")
-
-add_subdirectory("renderView")
+version https://git-lfs.github.com/spec/v1
+oid sha256:c38be8a5b7c552f1093809d655f6cb547fa74f8ef420ba338d05e4b6d763df8c
+size 125

@@ -1,6 +1,3 @@
-GL_EXT_stencil_wrap
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_stencil_wrap.txt
-GL_EXT_stencil_wrap
-
-	GL_INCR_WRAP_EXT 0x8507
-	GL_DECR_WRAP_EXT 0x8508
+version https://git-lfs.github.com/spec/v1
+oid sha256:894e577470dbdc4de35e7857ef654a1bafa516c1145ba807a17ed94e6dca5101
+size 167

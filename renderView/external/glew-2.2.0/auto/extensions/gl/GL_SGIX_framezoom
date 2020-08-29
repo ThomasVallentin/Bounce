@@ -1,5 +1,3 @@
-GL_SGIX_framezoom
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_framezoom.txt
-GL_SGIX_framezoom
-
-	void glFrameZoomSGIX (GLint factor)
+version https://git-lfs.github.com/spec/v1
+oid sha256:70dc5919b97053fe10fe50ce8b97eba4b9091ff0dd0ee43a49b1cc0343be421c
+size 149

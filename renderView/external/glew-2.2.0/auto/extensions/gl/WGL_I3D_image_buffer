@@ -1,10 +1,3 @@
-WGL_I3D_image_buffer
-https://www.khronos.org/registry/OpenGL/extensions/I3D/WGL_I3D_image_buffer.txt
-WGL_I3D_image_buffer
-
-	WGL_IMAGE_BUFFER_MIN_ACCESS_I3D 0x00000001
-	WGL_IMAGE_BUFFER_LOCK_I3D 0x00000002
-	BOOL wglAssociateImageBufferEventsI3D (HDC hDC, const HANDLE* pEvent, const LPVOID* pAddress, const DWORD* pSize, UINT count)
-	LPVOID wglCreateImageBufferI3D (HDC hDC, DWORD dwSize, UINT uFlags)
-	BOOL wglDestroyImageBufferI3D (HDC hDC, LPVOID pAddress)
-	BOOL wglReleaseImageBufferEventsI3D (HDC hDC, const LPVOID* pAddress, UINT count)
+version https://git-lfs.github.com/spec/v1
+oid sha256:5160dfe9d38d951052ffd917208f02080ea62103b9d8e94846804b9b8b2a4fb3
+size 542

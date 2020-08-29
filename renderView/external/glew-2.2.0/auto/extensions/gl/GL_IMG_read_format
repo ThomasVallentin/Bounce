@@ -1,6 +1,3 @@
-GL_IMG_read_format
-https://www.khronos.org/registry/OpenGL/extensions/IMG/IMG_read_format.txt
-GL_IMG_read_format
-
-	GL_BGRA_IMG 0x80E1
-	GL_UNSIGNED_SHORT_4_4_4_4_REV_IMG 0x8365
+version https://git-lfs.github.com/spec/v1
+oid sha256:4d30f1eaa61495e4819d5243bac4809c8a04b38a48a7bc24bbba2e147a6ef040
+size 176

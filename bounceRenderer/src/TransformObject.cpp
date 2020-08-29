@@ -1,6 +1,3 @@
-//
-// Created by Thomas Vallentin on 04/08/2020.
-// Copyright (c) 2020. All rights reserved.
-//
-
-#include "TransformObject.hpp"
+version https://git-lfs.github.com/spec/v1
+oid sha256:0b4e2f481cb6b989516d5813df8639457ad262efdd39c2d04f69c87f67fbad8d
+size 127

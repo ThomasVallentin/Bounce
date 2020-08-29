@@ -1,6 +1,3 @@
-GL_SGIX_quad_mesh
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_quad_mesh.txt
-GL_SGIX_quad_mesh
-
-	void glMeshBreadthSGIX (GLint breadth)
-	void glMeshStrideSGIX (GLint stride)
+version https://git-lfs.github.com/spec/v1
+oid sha256:8563399aad1f21e44b67e6c33a23ee5fa91268924fb0a9aeb5ee323846b77af2
+size 190

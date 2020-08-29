@@ -1,5 +1,3 @@
-GLX_SGIX_swap_group
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_SGIX_swap_group
-
-	void glXJoinSwapGroupSGIX (Display* dpy, GLXDrawable drawable, GLXDrawable member)
+version https://git-lfs.github.com/spec/v1
+oid sha256:1884e24f7d39d38f3e34a60c86388857893ce61b1f255ac5d0d8c3f8e051c973
+size 184

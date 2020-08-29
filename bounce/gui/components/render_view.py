@@ -1,20 +1,3 @@
-from PySide2 import QtWidgets
-
-
-class RenderItem(QtWidgets.QGraphicsPixmapItem):
-    def __init__(self, ):
-        super(RenderItem, self).__init__()
-
-
-class RenderScene(QtWidgets.QGraphicsScene):
-    def __init__(self, parent=None):
-        super(RenderScene, self).__init__(parent=parent)
-
-
-class RenderView(QtWidgets.QGraphicsView):
-    def __init__(self, parent=None):
-        super(RenderView, self).__init__(parent=parent)
-        scene = RenderScene()
-        self.setScene(scene)
-
-        self.setSceneRect(0,0, 500, 500)
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d1063041d78f21e027bef594ee1e86143702321229223843323b1168c24f78d
+size 529

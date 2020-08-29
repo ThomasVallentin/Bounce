@@ -1,7 +1,3 @@
-GLX_EXT_stereo_tree
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_EXT_stereo_tree
-
-	GLX_STEREO_NOTIFY_EXT 0x00000000
-	GLX_STEREO_NOTIFY_MASK_EXT 0x00000001
-	GLX_STEREO_TREE_EXT 0x20F5
+version https://git-lfs.github.com/spec/v1
+oid sha256:aef41d8c6aa4829cb6428a6086539bc9489bd0053abccbcb568fec7a035828ae
+size 201

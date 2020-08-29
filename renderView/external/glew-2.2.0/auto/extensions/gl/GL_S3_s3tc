@@ -1,10 +1,3 @@
-GL_S3_s3tc
-https://www.khronos.org/registry/OpenGL/extensions/S3/S3_s3tc.txt
-GL_S3_s3tc
-
-	GL_RGB_S3TC 0x83A0
-	GL_RGB4_S3TC 0x83A1
-	GL_RGBA_S3TC 0x83A2
-	GL_RGBA4_S3TC 0x83A3
-	GL_RGBA_DXT5_S3TC 0x83A4
-	GL_RGBA4_DXT5_S3TC 0x83A5
+version https://git-lfs.github.com/spec/v1
+oid sha256:422e23977ee58dcc41c93c6e38042e71fe47ffe8f35cf6a9d66fcc2034a84efd
+size 226

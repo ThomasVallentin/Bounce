@@ -1,6 +1,3 @@
-GLX_MESA_swap_control
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_MESA_swap_control
-
-	int glXGetSwapIntervalMESA (void)
-	int glXSwapIntervalMESA (unsigned int interval)
+version https://git-lfs.github.com/spec/v1
+oid sha256:6c65456ecdcae60b50547f851234be9106c92a61ae45ed99de90dd9b854e3d28
+size 188

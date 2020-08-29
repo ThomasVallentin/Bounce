@@ -1,6 +1,3 @@
-GL_SGIS_texture4D
-https://www.khronos.org/registry/OpenGL/extensions/SGIS/SGIS_texture4D.txt
-GL_SGIS_texture4D
-
-	void glTexImage4DSGIS (GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLsizei depth, GLsizei extent, GLint border, GLenum format, GLenum type, const void *pixels)
-	void glTexSubImage4DSGIS (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint woffset, GLsizei width, GLsizei height, GLsizei depth, GLsizei extent, GLenum format, GLenum type, const void *pixels)
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b7a1504f1c508c32d0d61b7159c828c2ed383274941cf4a18e1fce01d242b09
+size 536

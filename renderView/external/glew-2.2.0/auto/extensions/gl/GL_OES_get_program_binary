@@ -1,9 +1,3 @@
-GL_OES_get_program_binary
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_get_program_binary.txt
-GL_OES_get_program_binary
-
-	GL_PROGRAM_BINARY_LENGTH_OES 0x8741
-	GL_NUM_PROGRAM_BINARY_FORMATS_OES 0x87FE
-	GL_PROGRAM_BINARY_FORMATS_OES 0x87FF
-	void glGetProgramBinaryOES (GLuint program, GLsizei bufSize, GLsizei* length, GLenum *binaryFormat, void*binary)
-	void glProgramBinaryOES (GLuint program, GLenum binaryFormat, const void *binary, GLint length)
+version https://git-lfs.github.com/spec/v1
+oid sha256:1cc3a3094a3ebb89652fd6593141f5ed84879bc5cb73e7369600d9e35b0905a0
+size 463

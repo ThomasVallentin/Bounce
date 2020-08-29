@@ -1,9 +1,3 @@
-GL_SGIX_resample
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_resample.txt
-GL_SGIX_resample
-
-	GL_PACK_RESAMPLE_SGIX 0x842E
-	GL_UNPACK_RESAMPLE_SGIX 0x842F
-	GL_RESAMPLE_DECIMATE_SGIX 0x8430
-	GL_RESAMPLE_REPLICATE_SGIX 0x8433
-	GL_RESAMPLE_ZERO_FILL_SGIX 0x8434
+version https://git-lfs.github.com/spec/v1
+oid sha256:a631ebc4707aad3f3d50ccd3514ef8c28be7808c4e6c07f93373e9a2ee24fb78
+size 275

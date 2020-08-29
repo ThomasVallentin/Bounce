@@ -1,8 +1,3 @@
-GL_OES_EGL_image_external
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_EGL_image_external.txt
-GL_OES_EGL_image_external
-
-	GL_TEXTURE_EXTERNAL_OES 0x8D65
-	GL_SAMPLER_EXTERNAL_OES 0x8D66
-	GL_TEXTURE_BINDING_EXTERNAL_OES 0x8D67
-	GL_REQUIRED_TEXTURE_IMAGE_UNITS_OES 0x8D68
+version https://git-lfs.github.com/spec/v1
+oid sha256:f32ecd9be14b17605c43194179835b008aba5084de3b277deef00935184b274d
+size 283

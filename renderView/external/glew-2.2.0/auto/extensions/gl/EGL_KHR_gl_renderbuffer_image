@@ -1,5 +1,3 @@
-EGL_KHR_gl_renderbuffer_image
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_gl_renderbuffer_image
-
-	EGL_GL_RENDERBUFFER_KHR 0x30B9
+version https://git-lfs.github.com/spec/v1
+oid sha256:42889153def0abb1566d371ae39cb6b18db770be08309ba3883b6e97480866a6
+size 152

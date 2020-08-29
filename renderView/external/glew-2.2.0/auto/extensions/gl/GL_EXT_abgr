@@ -1,5 +1,3 @@
-GL_EXT_abgr
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_abgr.txt
-GL_EXT_abgr
-
-	GL_ABGR_EXT 0x8000
+version https://git-lfs.github.com/spec/v1
+oid sha256:9d6752fe7626ec092ecb3e0cd6a861f5420c8371f7eb17af46a05fc019167e75
+size 113

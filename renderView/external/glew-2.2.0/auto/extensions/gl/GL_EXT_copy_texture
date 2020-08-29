@@ -1,9 +1,3 @@
-GL_EXT_copy_texture
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_copy_texture.txt
-GL_EXT_copy_texture
-
-	void glCopyTexImage1DEXT (GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLint border)
-	void glCopyTexImage2DEXT (GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border)
-	void glCopyTexSubImage1DEXT (GLenum target, GLint level, GLint xoffset, GLint x, GLint y, GLsizei width)
-	void glCopyTexSubImage2DEXT (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height)
-	void glCopyTexSubImage3DEXT (GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLint x, GLint y, GLsizei width, GLsizei height)
+version https://git-lfs.github.com/spec/v1
+oid sha256:83af835708c3950e9b431b6ccc4891bdf98d4568a5de47841da967209a07b8ee
+size 778

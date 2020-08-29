@@ -1,5 +1,3 @@
-WGL_ARB_create_context_no_error
-https://www.khronos.org/registry/OpenGL/extensions/ARB/WGL_ARB_create_context_no_error.txt
-WGL_ARB_create_context_no_error
-
-	WGL_CONTEXT_OPENGL_NO_ERROR_ARB 0x31B3
+version https://git-lfs.github.com/spec/v1
+oid sha256:eac0d8a5ab3021ad628072e76bec567435b0df224873029e4ed54908232e1a06
+size 196

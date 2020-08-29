@@ -1,11 +1,3 @@
-GL_SGIX_async
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_async.txt
-GL_SGIX_async
-
-	GL_ASYNC_MARKER_SGIX 0x8329
-	void glAsyncMarkerSGIX (GLuint marker)
-	void glDeleteAsyncMarkersSGIX (GLuint marker, GLsizei range)
-	GLint glFinishAsyncSGIX (GLuint* markerp)
-	GLuint glGenAsyncMarkersSGIX (GLsizei range)
-	GLboolean glIsAsyncMarkerSGIX (GLuint marker)
-	GLint glPollAsyncSGIX (GLuint* markerp)
+version https://git-lfs.github.com/spec/v1
+oid sha256:60952eabf5fc37bb5cf7b7b5ad2b38a76347e06162cd6e9fbb69aa894c61b280
+size 408

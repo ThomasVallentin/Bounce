@@ -1,6 +1,3 @@
-GL_NV_texture_border_clamp
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_texture_border_clamp.txt
-GL_NV_texture_border_clamp
-
-	GL_TEXTURE_BORDER_COLOR_NV 0x1004
-	GL_CLAMP_TO_BORDER_NV 0x812D
+version https://git-lfs.github.com/spec/v1
+oid sha256:31a4ff256ce00800bdfca42b44f574410609e697a179d798614a5d4a6179fc6e
+size 202

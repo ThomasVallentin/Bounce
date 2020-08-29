@@ -1,5 +1,3 @@
-EGL_EXT_gl_colorspace_bt2020_linear
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_gl_colorspace_bt2020_linear
-
-	EGL_GL_COLORSPACE_BT2020_LINEAR_EXT 0x333F
+version https://git-lfs.github.com/spec/v1
+oid sha256:40c3e96e004abacf84cb0f28230009ce4d970831d06863cdd3c35872a5595587
+size 176

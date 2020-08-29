@@ -1,8 +1,3 @@
-GL_ARB_texture_compression_rgtc
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_texture_compression_rgtc.txt
-GL_ARB_texture_compression_rgtc
-
-	GL_COMPRESSED_RED_RGTC1 0x8DBB
-	GL_COMPRESSED_SIGNED_RED_RGTC1 0x8DBC
-	GL_COMPRESSED_RG_RGTC2 0x8DBD
-	GL_COMPRESSED_SIGNED_RG_RGTC2 0x8DBE
+version https://git-lfs.github.com/spec/v1
+oid sha256:21ef43d1c1d292c02fcef3faba0dd8bf1e8728f5926f19d55c93440dcc98d21e
+size 293

@@ -1,8 +1,3 @@
-GL_SGIX_slim
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_slim.txt
-GL_SGIX_slim
-
-	GL_PACK_MAX_COMPRESSED_SIZE_SGIX 0x831B
-	GL_SLIM8U_SGIX 0x831D
-	GL_SLIM10U_SGIX 0x831E
-	GL_SLIM12S_SGIX 0x831F
+version https://git-lfs.github.com/spec/v1
+oid sha256:a91d9f4a2328f4afca05b1e66eaf7bc411c331f4d86bce8c72e347d351b18b2b
+size 209

@@ -1,11 +1,3 @@
-#version 330 core
-layout (location = 0) in vec3 inPos;
-layout (location = 1) in vec2 inTexCoord;
-
-out vec2 TexCoord;
-
-void main()
-{
-    gl_Position = vec4(inPos, 1.0);
-    TexCoord = inTexCoord;
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:156f82f3b99ddfcf32234a677c64b2bdc6704e7fd174d1ab96bc344135ad6d45
+size 196

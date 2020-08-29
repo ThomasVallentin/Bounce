@@ -1,22 +1,3 @@
-/* ------------------------------------------------------------------------- */
-
-GLEWAPI GLenum GLEWAPIENTRY wglewInit ();
-GLEWAPI GLboolean GLEWAPIENTRY wglewIsSupported (const char *name);
-
-#ifndef WGLEW_GET_VAR
-#define WGLEW_GET_VAR(x) (*(const GLboolean*)&x)
-#endif
-
-#ifndef WGLEW_GET_FUN
-#define WGLEW_GET_FUN(x) x
-#endif
-
-GLEWAPI GLboolean GLEWAPIENTRY wglewGetExtension (const char *name);
-
-#ifdef __cplusplus
-}
-#endif
-
-#undef GLEWAPI
-
-#endif /* __wglew_h__ */
+version https://git-lfs.github.com/spec/v1
+oid sha256:a70787e249a35c15d6cc62f612cee2c54b9b133cfff884ca43333f070b63ad69
+size 468

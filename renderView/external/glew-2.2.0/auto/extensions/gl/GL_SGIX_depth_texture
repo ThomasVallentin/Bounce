@@ -1,7 +1,3 @@
-GL_SGIX_depth_texture
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_depth_texture.txt
-GL_SGIX_depth_texture
-
-	GL_DEPTH_COMPONENT16_SGIX 0x81A5
-	GL_DEPTH_COMPONENT24_SGIX 0x81A6
-	GL_DEPTH_COMPONENT32_SGIX 0x81A7
+version https://git-lfs.github.com/spec/v1
+oid sha256:821f1f16de21c9cff8c6cc33dc5407901bcd574b99c95d279822bc2d445b6182
+size 226

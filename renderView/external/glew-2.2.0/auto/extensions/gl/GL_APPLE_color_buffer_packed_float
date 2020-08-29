@@ -1,4 +1,3 @@
-GL_APPLE_color_buffer_packed_float
-https://www.khronos.org/registry/OpenGL/extensions/APPLE/APPLE_color_buffer_packed_float.txt
-GL_APPLE_color_buffer_packed_float
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:834854b1cf1f1ead7b531bea2817dfc80ed2c77ddb426629aac6ed93835104e3
+size 164

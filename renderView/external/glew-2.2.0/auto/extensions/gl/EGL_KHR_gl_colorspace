@@ -1,7 +1,3 @@
-EGL_KHR_gl_colorspace
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_gl_colorspace
-
-	EGL_GL_COLORSPACE_SRGB_KHR 0x3089
-	EGL_GL_COLORSPACE_LINEAR_KHR 0x308A
-	EGL_GL_COLORSPACE_KHR 0x309D
+version https://git-lfs.github.com/spec/v1
+oid sha256:4aca06b46c5f721635bb242ead98fd2d81f8bfdc064817e3ba5ee75b4439a6c6
+size 206

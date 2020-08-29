@@ -1,9 +1,3 @@
-GL_ARB_timer_query
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_timer_query.txt
-GL_ARB_timer_query
-
-	GL_TIME_ELAPSED 0x88BF
-	GL_TIMESTAMP 0x8E28
-	void glGetQueryObjecti64v (GLuint id, GLenum pname, GLint64* params)
-	void glGetQueryObjectui64v (GLuint id, GLenum pname, GLuint64* params)
-	void glQueryCounter (GLuint id, GLenum target)
+version https://git-lfs.github.com/spec/v1
+oid sha256:011c1d350e24c33054e38c22c96f79294df1eb5a4c279bbcdf4c0b40eb4df4dd
+size 349

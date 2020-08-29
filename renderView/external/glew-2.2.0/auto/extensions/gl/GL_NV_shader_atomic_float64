@@ -1,4 +1,3 @@
-GL_NV_shader_atomic_float64
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_shader_atomic_float64.txt
-GL_NV_shader_atomic_float64
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:bf156dd1ab4485adcbc2bd1d13a99c9f09b776ed9c918e9fbc611730dfa59680
+size 140

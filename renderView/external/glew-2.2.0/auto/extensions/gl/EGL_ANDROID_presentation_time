@@ -1,5 +1,3 @@
-EGL_ANDROID_presentation_time
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_ANDROID_presentation_time
-
-	EGLBoolean eglPresentationTimeANDROID (EGLDisplay dpy, EGLSurface surface, EGLnsecsANDROID time)
+version https://git-lfs.github.com/spec/v1
+oid sha256:aaf36afbb8330987866ecdaf51e2539a68fb4551eedc664a0c5d90778bedc2d0
+size 218

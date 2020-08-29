@@ -1,5 +1,3 @@
-GLX_SGIX_visual_select_group
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_SGIX_visual_select_group
-
-	GLX_VISUAL_SELECT_GROUP_SGIX 0x8028
+version https://git-lfs.github.com/spec/v1
+oid sha256:fbff685b125dcf8b489c27dd905841e79f548d8b236a94215e7d3eb6a536667e
+size 155

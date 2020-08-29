@@ -1,7 +1,3 @@
-GL_EXT_stencil_two_side
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_stencil_two_side.txt
-GL_EXT_stencil_two_side
-
-	GL_STENCIL_TEST_TWO_SIDE_EXT 0x8910
-	GL_ACTIVE_STENCIL_FACE_EXT 0x8911
-	void glActiveStencilFaceEXT (GLenum face)
+version https://git-lfs.github.com/spec/v1
+oid sha256:643a9e784bcfc34765c773f484832ad36f35f92232fdbb5f21ff58ab707be3d7
+size 244

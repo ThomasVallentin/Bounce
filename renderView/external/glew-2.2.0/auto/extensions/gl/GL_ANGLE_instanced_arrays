@@ -1,8 +1,3 @@
-GL_ANGLE_instanced_arrays
-https://www.khronos.org/registry/OpenGL/extensions/ANGLE/instanced_arrays.txt
-GL_ANGLE_instanced_arrays
-
-	GL_VERTEX_ATTRIB_ARRAY_DIVISOR_ANGLE 0x88FE
-	void glDrawArraysInstancedANGLE (GLenum mode, GLint first, GLsizei count, GLsizei primcount)
-	void glDrawElementsInstancedANGLE (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount)
-	void glVertexAttribDivisorANGLE (GLuint index, GLuint divisor)
+version https://git-lfs.github.com/spec/v1
+oid sha256:9089fe20afe7eb5b4163d8ebf7e13ca3cd47bd4697648aed4e21eda7523e0f53
+size 451

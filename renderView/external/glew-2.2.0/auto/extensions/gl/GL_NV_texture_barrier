@@ -1,5 +1,3 @@
-GL_NV_texture_barrier
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_texture_barrier.txt
-GL_NV_texture_barrier
-
-	void glTextureBarrierNV (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:625cc0792070e1a5f1bea08827c1a0667760efbcbbf2e2a71420a00facfd786f
+size 154

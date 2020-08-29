@@ -1,13 +1,3 @@
-GL_KTX_buffer_region
-
-GL_KTX_buffer_region
-
-	GL_KTX_FRONT_REGION 0x0
-	GL_KTX_BACK_REGION 0x1
-	GL_KTX_Z_REGION 0x2
-	GL_KTX_STENCIL_REGION 0x3
-	GLuint glBufferRegionEnabled (void)
-	GLuint glNewBufferRegion (GLenum region)
-	void glDeleteBufferRegion (GLenum region)
-	void glReadBufferRegion (GLuint region, GLint x, GLint y, GLsizei width, GLsizei height)
-	void glDrawBufferRegion (GLuint region, GLint x, GLint y, GLsizei width, GLsizei height, GLint xDest, GLint yDest)
+version https://git-lfs.github.com/spec/v1
+oid sha256:028effe0715182fbdd1fc713c965e0b4bb6274446dce29ef489ede5480c80212
+size 469

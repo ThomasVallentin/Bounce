@@ -1,6 +1,3 @@
-GL_NV_read_buffer
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_read_buffer.txt
-GL_NV_read_buffer
-
-	GL_READ_BUFFER_NV 0x0C02
-	void glReadBufferNV (GLenum mode)
+version https://git-lfs.github.com/spec/v1
+oid sha256:635cdd7ed6a9b720f0a4518e8722cc9e3ec34bc43096efa25e455389ea7b1cb4
+size 171

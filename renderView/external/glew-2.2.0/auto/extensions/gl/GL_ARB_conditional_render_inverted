@@ -1,8 +1,3 @@
-GL_ARB_conditional_render_inverted
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_conditional_render_inverted.txt
-GL_ARB_conditional_render_inverted
-
-	GL_QUERY_WAIT_INVERTED 0x8E17
-	GL_QUERY_NO_WAIT_INVERTED 0x8E18
-	GL_QUERY_BY_REGION_WAIT_INVERTED 0x8E19
-	GL_QUERY_BY_REGION_NO_WAIT_INVERTED 0x8E1A
+version https://git-lfs.github.com/spec/v1
+oid sha256:bcccf3155605dab9cd69f1e33b73d45302251b2077b87fe733c57675e8723c95
+size 312

@@ -1,6 +1,3 @@
-GL_ARB_point_sprite
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_point_sprite.txt
-GL_ARB_point_sprite
-
-	GL_POINT_SPRITE_ARB 0x8861
-	GL_COORD_REPLACE_ARB 0x8862
+version https://git-lfs.github.com/spec/v1
+oid sha256:dfe45bd50d3b7e5d39166abf74eee14ce78fd332d182bda2426c256b3792abfc
+size 174

@@ -1,6 +1,3 @@
-GL_ARB_spirv_extensions
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_spirv_extensions.txt
-GL_ARB_spirv_extensions
-
-	GL_SPIR_V_EXTENSIONS 0x9553
-	GL_NUM_SPIR_V_EXTENSIONS 0x9554
+version https://git-lfs.github.com/spec/v1
+oid sha256:b9f73a9c1666ca8117141e584604fc93f5a35a723c2101e879a116e1e9c5df1d
+size 191

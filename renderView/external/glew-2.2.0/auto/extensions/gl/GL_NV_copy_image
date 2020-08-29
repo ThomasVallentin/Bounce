@@ -1,5 +1,3 @@
-GL_NV_copy_image
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_copy_image.txt
-GL_NV_copy_image
-
-	void glCopyImageSubDataNV (GLuint srcName, GLenum srcTarget, GLint srcLevel, GLint srcX, GLint srcY, GLint srcZ, GLuint dstName, GLenum dstTarget, GLint dstLevel, GLint dstX, GLint dstY, GLint dstZ, GLsizei width, GLsizei height, GLsizei depth)
+version https://git-lfs.github.com/spec/v1
+oid sha256:dcd9252e908336b6ed1bcc02f18e79aa54e51ee537c3e025e17de8389a1c5837
+size 353

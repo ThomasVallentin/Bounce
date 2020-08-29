@@ -1,25 +1,3 @@
-//
-// Created by Thomas Vallentin on 30/07/2020.
-// Copyright (c) 2020. All rights reserved.
-//
-
-#ifndef BOUNCERENDERER_GLSHADER_HPP
-#define BOUNCERENDERER_GLSHADER_HPP
-
-#include <GL/glew.h>
-
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <string>
-
-class GLShader {
-public:
-    GLShader(const char *vertexShaderPath, const char *fragmentShaderPath);
-    void use();
-
-    GLuint programID;
-};
-
-
-#endif //BOUNCERENDERER_GLSHADER_HPP
+version https://git-lfs.github.com/spec/v1
+oid sha256:e95d0075365b0e5c84a9a07fd7b9fc6c7e5516eceb42a887cb5d2b8ce2b42a37
+size 451

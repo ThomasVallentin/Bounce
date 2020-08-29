@@ -1,6 +1,3 @@
-GL_NV_deep_texture3D
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_deep_texture3D.txt
-GL_NV_deep_texture3D
-
-	GL_MAX_DEEP_3D_TEXTURE_WIDTH_HEIGHT_NV 0x90D0
-	GL_MAX_DEEP_3D_TEXTURE_DEPTH_NV 0x90D1
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b3d3ebdd420f34bdf5c2b8f80adc356ece254d4fb2f136c7bb2a35544dba05c
+size 206

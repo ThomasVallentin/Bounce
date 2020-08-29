@@ -1,8 +1,3 @@
-WGL_I3D_swap_frame_usage
-https://www.khronos.org/registry/OpenGL/extensions/I3D/WGL_I3D_swap_frame_usage.txt
-WGL_I3D_swap_frame_usage
-
-	BOOL wglBeginFrameTrackingI3D (void)
-	BOOL wglEndFrameTrackingI3D (void)
-	BOOL wglGetFrameUsageI3D (float* pUsage)
-	BOOL wglQueryFrameTrackingI3D (DWORD* pFrameCount, DWORD* pMissedFrames, float* pLastMissedUsage)
+version https://git-lfs.github.com/spec/v1
+oid sha256:7a2aac13c95ebe399228393a4f989cfd73d25a10900da383fe1dd9148c407f87
+size 350

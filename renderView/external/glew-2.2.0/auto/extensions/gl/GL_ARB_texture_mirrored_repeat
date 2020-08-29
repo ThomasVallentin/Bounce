@@ -1,5 +1,3 @@
-GL_ARB_texture_mirrored_repeat
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_texture_mirrored_repeat.txt
-GL_ARB_texture_mirrored_repeat
-
-	GL_MIRRORED_REPEAT_ARB 0x8370
+version https://git-lfs.github.com/spec/v1
+oid sha256:ef912fc5d892486eaa1ee8e8767d1f88d09f50e46839d12961b4a0fa19689fc5
+size 181

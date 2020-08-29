@@ -1,6 +1,3 @@
-EGL_EXT_surface_CTA861_3_metadata
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_surface_CTA861_3_metadata
-
-	EGL_CTA861_3_MAX_CONTENT_LIGHT_LEVEL_EXT 0x3360
-	EGL_CTA861_3_MAX_FRAME_AVERAGE_LEVEL_EXT 0x3361
+version https://git-lfs.github.com/spec/v1
+oid sha256:720351a78d00ee062806f1d6b1494352ec3c9f5d05236a8940ea5078fed1e457
+size 226

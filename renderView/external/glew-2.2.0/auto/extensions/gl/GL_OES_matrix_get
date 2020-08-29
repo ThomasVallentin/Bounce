@@ -1,7 +1,3 @@
-GL_OES_matrix_get
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_matrix_get.txt
-GL_OES_matrix_get
-
-	GL_MODELVIEW_MATRIX_FLOAT_AS_INT_BITS_OES 0x898d
-	GL_PROJECTION_MATRIX_FLOAT_AS_INT_BITS_OES 0x898e
-	GL_TEXTURE_MATRIX_FLOAT_AS_INT_BITS_OES 0x898f
+version https://git-lfs.github.com/spec/v1
+oid sha256:2b10ffe37ed4e397c1ea21401bf170eb7e171bf4539db87f1c74b486dfb3a3ca
+size 260

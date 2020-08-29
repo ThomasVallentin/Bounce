@@ -1,5 +1,3 @@
-GL_IMG_shader_binary
-https://www.khronos.org/registry/OpenGL/extensions/IMG/IMG_shader_binary.txt
-GL_IMG_shader_binary
-
-	GL_SGX_BINARY_IMG 0x8C0A
+version https://git-lfs.github.com/spec/v1
+oid sha256:f15e2abe36f4387fe31b43e1aca3db0afe01a3bbb48455ae5d2bb0c55010e043
+size 146

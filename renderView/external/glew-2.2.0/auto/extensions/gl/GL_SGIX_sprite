@@ -1,8 +1,3 @@
-GL_SGIX_sprite
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_sprite.txt
-GL_SGIX_sprite
-
-	void glSpriteParameterfSGIX (GLenum pname, GLfloat param)
-	void glSpriteParameterfvSGIX (GLenum pname, GLfloat* params)
-	void glSpriteParameteriSGIX (GLenum pname, GLint param)
-	void glSpriteParameterivSGIX (GLenum pname, GLint* params)
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8341df51a55a242f6f658b5501b61dfdf2bb7c113980bc959ecac1842c8bdb9
+size 341

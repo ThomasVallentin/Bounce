@@ -1,7 +1,3 @@
-GL_SGIX_depth_pass_instrument
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_depth_pass_instrument.txt
-GL_SGIX_depth_pass_instrument
-
-	GL_DEPTH_PASS_INSTRUMENT_SGIX 0x8310
-	GL_DEPTH_PASS_INSTRUMENT_COUNTERS_SGIX 0x8311
-	GL_DEPTH_PASS_INSTRUMENT_MAX_SGIX 0x8312
+version https://git-lfs.github.com/spec/v1
+oid sha256:997e99ae9e8d0c2d25576016e703d5ae0171cd4dd5c9219c99e354f28587f156
+size 275

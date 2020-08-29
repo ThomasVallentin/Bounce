@@ -1,7 +1,3 @@
-GL_ARB_enhanced_layouts
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_enhanced_layouts.txt
-GL_ARB_enhanced_layouts
-
-	GL_LOCATION_COMPONENT 0x934A
-	GL_TRANSFORM_FEEDBACK_BUFFER_INDEX 0x934B
-	GL_TRANSFORM_FEEDBACK_BUFFER_STRIDE 0x934C
+version https://git-lfs.github.com/spec/v1
+oid sha256:fde1f9525d7dfc4f5aae27f266247169ae32d239c8756ddbc29bb6b0f0035fb8
+size 246

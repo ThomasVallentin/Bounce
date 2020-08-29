@@ -1,5 +1,3 @@
-EGL_EXT_gl_colorspace_display_p3_linear
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_gl_colorspace_display_p3_linear
-
-	EGL_GL_COLORSPACE_DISPLAY_P3_LINEAR_EXT 0x3362
+version https://git-lfs.github.com/spec/v1
+oid sha256:627d04b193e2ad904e16f95467e19bce1920522648caa1441e3047adb5545587
+size 188

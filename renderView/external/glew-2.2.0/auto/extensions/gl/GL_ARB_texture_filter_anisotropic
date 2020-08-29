@@ -1,6 +1,3 @@
-GL_ARB_texture_filter_anisotropic
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_texture_filter_anisotropic.txt
-GL_ARB_texture_filter_anisotropic
-
-	GL_TEXTURE_MAX_ANISOTROPY 0x84FE
-	GL_MAX_TEXTURE_MAX_ANISOTROPY 0x84FF
+version https://git-lfs.github.com/spec/v1
+oid sha256:130c062a73079d3feb01cedcfc4d3ccac0fb92474d3a1fbc6975eae96dbe5cf6
+size 231

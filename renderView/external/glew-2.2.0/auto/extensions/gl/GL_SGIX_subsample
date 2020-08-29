@@ -1,9 +1,3 @@
-GL_SGIX_subsample
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_subsample.txt
-GL_SGIX_subsample
-
-	GL_PACK_SUBSAMPLE_RATE_SGIX 0x85A0
-	GL_UNPACK_SUBSAMPLE_RATE_SGIX 0x85A1
-	GL_PIXEL_SUBSAMPLE_4444_SGIX 0x85A2
-	GL_PIXEL_SUBSAMPLE_2424_SGIX 0x85A3
-	GL_PIXEL_SUBSAMPLE_4242_SGIX 0x85A4
+version https://git-lfs.github.com/spec/v1
+oid sha256:b06a0b04021c2dde20e0a5b55e3507c83b5fc7ce97198a329f22476936c90473
+size 297

@@ -1,7 +1,3 @@
-GL_EXT_depth_bounds_test
-http://www.nvidia.com/dev_content/nvopenglspecs/GL_EXT_depth_bounds_test.txt
-GL_EXT_depth_bounds_test
-
-	GL_DEPTH_BOUNDS_TEST_EXT 0x8890
-	GL_DEPTH_BOUNDS_EXT 0x8891
-	void glDepthBoundsEXT (GLclampd zmin, GLclampd zmax)
+version https://git-lfs.github.com/spec/v1
+oid sha256:4603e78a36383b8c1a11081c463519813163205b28fc5cd860fecf7117172728
+size 243

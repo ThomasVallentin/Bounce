@@ -1,5 +1,3 @@
-EGL_ANDROID_get_native_client_buffer
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_ANDROID_get_native_client_buffer
-
-	EGLClientBuffer eglGetNativeClientBufferANDROID (const struct AHardwareBuffer* buffer)
+version https://git-lfs.github.com/spec/v1
+oid sha256:87ba9dbf684914134c5dda4ccf431a245a41b8d4f5b93ede9b5f0923bebf1259
+size 222

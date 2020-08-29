@@ -1,6 +1,3 @@
-GL_APPLE_texture_format_BGRA8888
-https://www.khronos.org/registry/OpenGL/extensions/APPLE/APPLE_texture_format_BGRA8888.txt
-GL_APPLE_texture_format_BGRA8888
-
-	GL_BGRA_EXT 0x80E1
-	GL_BGRA8_EXT 0x93A1
+version https://git-lfs.github.com/spec/v1
+oid sha256:0be301750c238ac37aea8721a954d5c4f220c2fc64676a24b41ea2698836392b
+size 199

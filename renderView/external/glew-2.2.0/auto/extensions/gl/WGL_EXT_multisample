@@ -1,6 +1,3 @@
-WGL_EXT_multisample
-https://www.khronos.org/registry/OpenGL/extensions/EXT/WGL_EXT_multisample.txt
-WGL_EXT_multisample
-
-	WGL_SAMPLE_BUFFERS_EXT 0x2041
-	WGL_SAMPLES_EXT 0x2042
+version https://git-lfs.github.com/spec/v1
+oid sha256:eabc15d176165830a8ebd6237f11981049c51dd666f964efce9f027f5d7edb0d
+size 175

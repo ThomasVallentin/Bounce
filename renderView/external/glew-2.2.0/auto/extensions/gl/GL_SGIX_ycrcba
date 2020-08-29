@@ -1,6 +1,3 @@
-GL_SGIX_ycrcba
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_ycrcba.txt
-GL_SGIX_ycrcba
-
-	GL_YCRCB_SGIX 0x8318
-	GL_YCRCBA_SGIX 0x8319
+version https://git-lfs.github.com/spec/v1
+oid sha256:682373bbf4f10bb14519957b919132e0ceaaac64004fe4f43d95566f157ba3bc
+size 148

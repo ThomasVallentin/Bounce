@@ -1,8 +1,3 @@
-GL_ANGLE_texture_compression_dxt3
-https://www.khronos.org/registry/OpenGL/extensions/ANGLE/texture_compression_dxt.txt
-GL_ANGLE_texture_compression_dxt3
-
-	GL_COMPRESSED_RGB_S3TC_DXT1_ANGLE 0x83F0
-	GL_COMPRESSED_RGBA_S3TC_DXT1_ANGLE 0x83F1
-	GL_COMPRESSED_RGBA_S3TC_DXT3_ANGLE 0x83F2
-	GL_COMPRESSED_RGBA_S3TC_DXT5_ANGLE 0x83F3
+version https://git-lfs.github.com/spec/v1
+oid sha256:9c38fae401442afcab520cb4c48e0a94cbe800f8c276bc5935c76298530e44fc
+size 325

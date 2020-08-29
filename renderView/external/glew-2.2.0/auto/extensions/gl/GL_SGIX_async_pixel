@@ -1,10 +1,3 @@
-GL_SGIX_async_pixel
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_async_pixel.txt
-GL_SGIX_async_pixel
-
-	GL_ASYNC_TEX_IMAGE_SGIX 0x835C
-	GL_ASYNC_DRAW_PIXELS_SGIX 0x835D
-	GL_ASYNC_READ_PIXELS_SGIX 0x835E
-	GL_MAX_ASYNC_TEX_IMAGE_SGIX 0x835F
-	GL_MAX_ASYNC_DRAW_PIXELS_SGIX 0x8360
-	GL_MAX_ASYNC_READ_PIXELS_SGIX 0x8361
+version https://git-lfs.github.com/spec/v1
+oid sha256:a45fd4903de67e3bfb13eaed56888b8fb5f8d49d2cdf6464dd7e84cca6fde581
+size 330

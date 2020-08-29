@@ -1,2 +1,3 @@
-#pragma code_page(65001)
-1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "D:/REPO/Bounce/renderView/external/glfw-3.3.2/out/build/x64-Debug/tests/CMakeFiles/windows.dir/embed.manifest"
+version https://git-lfs.github.com/spec/v1
+oid sha256:20efac392e3b3b5d77feddf40f98d7807db017aaf84d6f4d1f72a9cbf88a492c
+size 200

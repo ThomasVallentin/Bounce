@@ -1,5 +1,3 @@
-EGL_NV_device_cuda
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_device_cuda
-
-	EGL_CUDA_DEVICE_NV 0x323A
+version https://git-lfs.github.com/spec/v1
+oid sha256:b8f20622e643b651ae3d5d7c144071ebd9e57dfcfbd0b988d1e764011dcba069
+size 125

@@ -1,6 +1,3 @@
-GL_ARB_texture_filter_minmax
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_texture_filter_minmax.txt
-GL_ARB_texture_filter_minmax
-
-	GL_TEXTURE_REDUCTION_MODE_ARB 0x9366
-	GL_WEIGHTED_AVERAGE_ARB 0x9367
+version https://git-lfs.github.com/spec/v1
+oid sha256:752895871e81c88ba21bec4db8ffc581602368f0770dae60f8d7201faf6d329d
+size 214

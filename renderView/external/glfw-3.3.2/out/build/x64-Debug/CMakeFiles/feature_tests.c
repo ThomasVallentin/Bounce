@@ -1,20 +1,3 @@
-
-  const char features[] = {"\n"
-"C_FEATURE:"
-#if _MSC_VER >= 1600
-"1"
-#else
-"0"
-#endif
-"c_function_prototypes\n"
-"C_FEATURE:"
-#if _MSC_VER >= 1600
-"1"
-#else
-"0"
-#endif
-"c_variadic_macros\n"
-
-};
-
-int main(int argc, char** argv) { (void)argv; return features[argc]; }
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ffff60d6011f7a61cc410404f96c83b2ea69a02a919c2bae58751ce42688bfc
+size 267

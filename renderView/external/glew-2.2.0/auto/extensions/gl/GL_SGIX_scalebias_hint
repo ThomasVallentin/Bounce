@@ -1,5 +1,3 @@
-GL_SGIX_scalebias_hint
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_scalebias_hint.txt
-GL_SGIX_scalebias_hint
-
-	GL_SCALEBIAS_HINT_SGIX 0x8322
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c2998b09cb13a6d6eb59012079aadc9084187ddd1a63b98b511e0bc4c81ff42
+size 158

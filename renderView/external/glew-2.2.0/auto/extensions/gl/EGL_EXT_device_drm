@@ -1,6 +1,3 @@
-EGL_EXT_device_drm
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_device_drm
-
-	EGL_DRM_DEVICE_FILE_EXT 0x3233
-	EGL_DRM_MASTER_FD_EXT 0x333C
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e2b502bdf7cdd8c5fbd833b11b5981d61ee7d5403f985290fc2ada89d29a520
+size 160

@@ -1,14 +1,3 @@
-GL_APPLE_fence
-https://www.khronos.org/registry/OpenGL/extensions/APPLE/APPLE_fence.txt
-GL_APPLE_fence
-
-	GL_DRAW_PIXELS_APPLE 0x8A0A
-	GL_FENCE_APPLE 0x8A0B
-	void glDeleteFencesAPPLE (GLsizei n, const GLuint* fences)
-	void glFinishFenceAPPLE (GLuint fence)
-	void glFinishObjectAPPLE (GLenum object, GLint name)
-	void glGenFencesAPPLE (GLsizei n, GLuint* fences)
-	GLboolean glIsFenceAPPLE (GLuint fence)
-	void glSetFenceAPPLE (GLuint fence)
-	GLboolean glTestFenceAPPLE (GLuint fence)
-	GLboolean glTestObjectAPPLE (GLenum object, GLuint name)
+version https://git-lfs.github.com/spec/v1
+oid sha256:c6e2e865d5e99574f00adfd93ca1fe89f519073c394bada8a188ccf30189f039
+size 540

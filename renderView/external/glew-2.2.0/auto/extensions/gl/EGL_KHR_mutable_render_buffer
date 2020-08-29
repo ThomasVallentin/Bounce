@@ -1,5 +1,3 @@
-EGL_KHR_mutable_render_buffer
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_mutable_render_buffer
-
-	EGL_MUTABLE_RENDER_BUFFER_BIT_KHR 0x1000
+version https://git-lfs.github.com/spec/v1
+oid sha256:26738ff58c6bdcd398645b9912361ed9b3f3f7e2f1b352ed28d337de06ee2d73
+size 162

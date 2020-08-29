@@ -1,7 +1,3 @@
-GL_ARB_base_instance
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_base_instance.txt
-GL_ARB_base_instance
-
-	void glDrawArraysInstancedBaseInstance (GLenum mode, GLint first, GLsizei count, GLsizei primcount, GLuint baseinstance)
-	void glDrawElementsInstancedBaseInstance (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLuint baseinstance)
-	void glDrawElementsInstancedBaseVertexBaseInstance (GLenum mode, GLsizei count, GLenum type, const void *indices, GLsizei primcount, GLint basevertex, GLuint baseinstance)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2f8671dd29f2a50429d05fddb35d769bbcabf0f55863e24ad30e8a4779b85f04
+size 560

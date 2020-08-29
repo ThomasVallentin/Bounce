@@ -1,24 +1,3 @@
-//
-// Created by Thomas Vallentin on 04/08/2020.
-// Copyright (c) 2020. All rights reserved.
-//
-
-#ifndef BOUNCE_TRANSFORMOBJECT_HPP
-#define BOUNCE_TRANSFORMOBJECT_HPP
-
-#include "Transform.hpp"
-
-class TransformObject {
-public:
-    TransformObject() : t(Transform::Identity()) {}
-    explicit TransformObject(const Transform* objectToWorld) : t(objectToWorld) {}
-
-    const Transform &transform() const { return *t; }
-    void setTransform(const Transform *transform) { t = transform; }
-
-protected:
-    const Transform *t;
-};
-
-
-#endif //BOUNCE_TRANSFORMOBJECT_HPP
+version https://git-lfs.github.com/spec/v1
+oid sha256:e3b6c0fcec9cb557c439d39ce6b542ef5cb28711e901894c372005b792e44113
+size 562

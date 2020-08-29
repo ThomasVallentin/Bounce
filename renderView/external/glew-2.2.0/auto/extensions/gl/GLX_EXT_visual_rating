@@ -1,7 +1,3 @@
-GLX_EXT_visual_rating
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_EXT_visual_rating
-
-	GLX_VISUAL_CAVEAT_EXT 0x20
-	GLX_SLOW_VISUAL_EXT 0x8001
-	GLX_NON_CONFORMANT_VISUAL_EXT 0x800D
+version https://git-lfs.github.com/spec/v1
+oid sha256:bdb292c4de5d4c275cffdbc32d8afe3da3b0aa2a6de0d64fee5577e151f8f297
+size 198

@@ -1,5 +1,3 @@
-EGL_NV_stream_socket_inet
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_stream_socket_inet
-
-	EGL_SOCKET_TYPE_INET_NV 0x324F
+version https://git-lfs.github.com/spec/v1
+oid sha256:37f40e3e7d0bbb3c576b8415e15776ec8e996726810d12305e5db18a1e3fd752
+size 144

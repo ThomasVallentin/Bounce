@@ -1,9 +1,3 @@
-GL_EXT_framebuffer_blit
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_framebuffer_blit.txt
-GL_EXT_framebuffer_blit
-
-	GL_DRAW_FRAMEBUFFER_BINDING_EXT 0x8CA6
-	GL_READ_FRAMEBUFFER_EXT 0x8CA8
-	GL_DRAW_FRAMEBUFFER_EXT 0x8CA9
-	GL_READ_FRAMEBUFFER_BINDING_EXT 0x8CAA
-	void glBlitFramebufferEXT (GLint srcX0, GLint srcY0, GLint srcX1, GLint srcY1, GLint dstX0, GLint dstY0, GLint dstX1, GLint dstY1, GLbitfield mask, GLenum filter)
+version https://git-lfs.github.com/spec/v1
+oid sha256:beece16b84c806d6af3d4afe2ae455f13081a7437c1b4c19f85cba202bf18f09
+size 437

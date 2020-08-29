@@ -1,14 +1,3 @@
-# Support resources
-
-See the [latest documentation](http://www.glfw.org/docs/latest/) for tutorials,
-guides and the API reference.
-
-If you have questions about using GLFW, we have a
-[forum](https://discourse.glfw.org/), and the `#glfw` IRC channel on
-[Freenode](http://freenode.net/).
-
-Bugs are reported to our [issue tracker](https://github.com/glfw/glfw/issues).
-Please check the [contribution
-guide](https://github.com/glfw/glfw/blob/master/docs/CONTRIBUTING.md) for
-information on what to include when reporting a bug.
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:17e71349e059cf2516fe212b849bf9e88965e5cecf5575eb4a062b013ab9085e
+size 524

@@ -1,6 +1,3 @@
-EGL_KHR_display_reference
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_display_reference
-
-	EGL_TRACK_REFERENCES_KHR 0x3352
-	EGLBoolean eglQueryDisplayAttribKHR (EGLDisplay dpy, EGLint name, EGLAttrib* value)
+version https://git-lfs.github.com/spec/v1
+oid sha256:8e62db9d93fb0cc6ead5f66dc0d493e87ff9b9f5703a0c1b642a006a02e0908b
+size 230

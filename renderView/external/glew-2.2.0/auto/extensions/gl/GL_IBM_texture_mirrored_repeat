@@ -1,5 +1,3 @@
-GL_IBM_texture_mirrored_repeat
-https://www.khronos.org/registry/OpenGL/extensions/IBM/IBM_texture_mirrored_repeat.txt
-GL_IBM_texture_mirrored_repeat
-
-	GL_MIRRORED_REPEAT_IBM 0x8370
+version https://git-lfs.github.com/spec/v1
+oid sha256:66b4862b1a91e40fa150442938b3e785e96071b5d4f11f5697ed20791492d539
+size 181

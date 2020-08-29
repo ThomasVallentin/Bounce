@@ -1,6 +1,3 @@
-GL_EXT_multi_draw_indirect
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_multi_draw_indirect.txt
-GL_EXT_multi_draw_indirect
-
-	void glMultiDrawArraysIndirectEXT (GLenum mode, const void *indirect, GLsizei drawcount, GLsizei stride)
-	void glMultiDrawElementsIndirectEXT (GLenum mode, GLenum type, const void *indirect, GLsizei drawcount, GLsizei stride)
+version https://git-lfs.github.com/spec/v1
+oid sha256:16f6e1a12cfa4f8bb478cff2535c2bf7675e21fddfa7556bc682170a26907eeb
+size 365

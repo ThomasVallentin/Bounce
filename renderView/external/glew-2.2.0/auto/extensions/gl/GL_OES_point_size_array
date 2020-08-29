@@ -1,9 +1,3 @@
-GL_OES_point_size_array
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_point_size_array.txt
-GL_OES_point_size_array
-
-	GL_POINT_SIZE_ARRAY_TYPE_OES 0x898A
-	GL_POINT_SIZE_ARRAY_STRIDE_OES 0x898B
-	GL_POINT_SIZE_ARRAY_POINTER_OES 0x898C
-	GL_POINT_SIZE_ARRAY_OES 0x8B9C
-	GL_POINT_SIZE_ARRAY_BUFFER_BINDING_OES 0x8B9F
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b31c66bc05d19a5a0512eb642640cc71cd4e9d618089bd8e282a2a9c7c9e8cb
+size 324

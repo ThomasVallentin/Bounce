@@ -1,7 +1,3 @@
-EGL_EXT_platform_base
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_platform_base
-
-	EGLSurface eglCreatePlatformPixmapSurfaceEXT (EGLDisplay dpy, EGLConfig config, void* native_pixmap, const EGLint* attrib_list)
-	EGLSurface eglCreatePlatformWindowSurfaceEXT (EGLDisplay dpy, EGLConfig config, void* native_window, const EGLint* attrib_list)
-	EGLDisplay eglGetPlatformDisplayEXT (EGLenum platform, void* native_display, const EGLint* attrib_list)
+version https://git-lfs.github.com/spec/v1
+oid sha256:4043e597a6011959906877d0cb44a26c35f6aa9b88233af71009e1bab6d810a4
+size 467

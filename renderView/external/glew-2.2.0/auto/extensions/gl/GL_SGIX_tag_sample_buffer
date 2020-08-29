@@ -1,5 +1,3 @@
-GL_SGIX_tag_sample_buffer
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_tag_sample_buffer.txt
-GL_SGIX_tag_sample_buffer
-
-	void glTagSampleBufferSGIX (void)
+version https://git-lfs.github.com/spec/v1
+oid sha256:79ab7bcfec718b5a5b9173a3b48171b518585a52eff6748beaaeff0ddc69c624
+size 171

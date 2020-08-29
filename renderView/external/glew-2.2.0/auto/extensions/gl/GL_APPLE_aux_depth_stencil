@@ -1,5 +1,3 @@
-GL_APPLE_aux_depth_stencil
-https://www.khronos.org/registry/OpenGL/extensions/APPLE/APPLE_aux_depth_stencil.txt
-GL_APPLE_aux_depth_stencil
-
-	GL_AUX_DEPTH_STENCIL_APPLE 0x8A14
+version https://git-lfs.github.com/spec/v1
+oid sha256:12e47ac46557e3c5c81aa1e3079f284d5a97578d3c82dde7faabd93bc292a109
+size 175

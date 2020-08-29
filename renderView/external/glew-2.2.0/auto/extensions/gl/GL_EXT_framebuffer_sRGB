@@ -1,6 +1,3 @@
-GL_EXT_framebuffer_sRGB
-http://developer.download.nvidia.com/opengl/specs/GL_EXT_framebuffer_sRGB.txt
-GL_EXT_framebuffer_sRGB
-
-	GL_FRAMEBUFFER_SRGB_EXT 0x8DB9
-	GL_FRAMEBUFFER_SRGB_CAPABLE_EXT 0x8DBA
+version https://git-lfs.github.com/spec/v1
+oid sha256:2ff48618cde1786332bfb1eb5408eca5830eb23473021eaab3396f61a6a02c88
+size 199

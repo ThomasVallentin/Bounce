@@ -1,5 +1,3 @@
-EGL_NV_stream_cross_display
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_NV_stream_cross_display
-
-	EGL_STREAM_CROSS_DISPLAY_NV 0x334E
+version https://git-lfs.github.com/spec/v1
+oid sha256:a0db8cd09887451f8af4d726f9bfa72b1ef952978773353ddd10ce490bfad9a8
+size 152

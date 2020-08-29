@@ -1,6 +1,3 @@
-EGL_EXT_image_gl_colorspace
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_EXT_image_gl_colorspace
-
-	EGL_GL_COLORSPACE 0x309D
-	EGL_GL_COLORSPACE_DEFAULT_EXT 0x314D
+version https://git-lfs.github.com/spec/v1
+oid sha256:d537ee477ee814f1de054d34f377b57f4756e6648c08306e49df502794dca8fc
+size 180

@@ -1,7 +1,3 @@
-GL_EXT_timer_query
-http://www.nvidia.com/dev_content/nvopenglspecs/GL_EXT_timer_query.txt
-GL_EXT_timer_query
-
-	GL_TIME_ELAPSED_EXT 0x88BF
-	void glGetQueryObjecti64vEXT (GLuint id, GLenum pname, GLint64EXT *params)
-	void glGetQueryObjectui64vEXT (GLuint id, GLenum pname, GLuint64EXT *params)
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e6db745c0e7bb2a3b9191a77c13de9ec70aaeeb03b10fe3dfc13cf235961a30
+size 292

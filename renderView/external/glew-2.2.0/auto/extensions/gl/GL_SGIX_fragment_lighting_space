@@ -1,8 +1,3 @@
-GL_SGIX_fragment_lighting_space
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_fragment_lighting_space.txt
-GL_SGIX_fragment_lighting_space
-
-	GL_EYE_SPACE_SGIX 0x8436
-	GL_TANGENT_SPACE_SGIX 0x8437
-	GL_OBJECT_SPACE_SGIX 0x8438
-	GL_FRAGMENT_LIGHT_SPACE_SGIX 0x843D
+version https://git-lfs.github.com/spec/v1
+oid sha256:3edf2dfba7760f318e1c089d09dc6e27ed347a40fa40cf923de4f6ec582fded4
+size 276

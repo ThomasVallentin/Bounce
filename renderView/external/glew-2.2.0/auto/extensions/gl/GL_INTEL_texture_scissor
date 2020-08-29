@@ -1,6 +1,3 @@
-GL_INTEL_texture_scissor
-https://www.khronos.org/registry/OpenGL/extensions/INTEL/INTEL_texture_scissor.txt
-GL_INTEL_texture_scissor
-
-	void glTexScissorFuncINTEL (GLenum target, GLenum lfunc, GLenum hfunc)
-	void glTexScissorINTEL (GLenum target, GLclampf tlow, GLclampf thigh)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2f6e1e489bdfde686b68128579871b966f0569d939c25af5a973cb6a5073a6a3
+size 277

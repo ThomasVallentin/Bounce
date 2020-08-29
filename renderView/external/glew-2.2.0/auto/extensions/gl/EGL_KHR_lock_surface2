@@ -1,5 +1,3 @@
-EGL_KHR_lock_surface2
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_lock_surface2
-
-	EGL_BITMAP_PIXEL_SIZE_KHR 0x3110
+version https://git-lfs.github.com/spec/v1
+oid sha256:525714e2edef5df09a5a3ac091cebfbef2e2d267248bdaca7106f6da5438ee8d
+size 138

@@ -1,5 +1,3 @@
-EGL_ANGLE_surface_d3d_texture_2d_share_handle
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_ANGLE_surface_d3d_texture_2d_share_handle
-
-	EGL_D3D_TEXTURE_2D_SHARE_HANDLE_ANGLE 0x3200
+version https://git-lfs.github.com/spec/v1
+oid sha256:5eaa9e9919f36483adfe50f6139b911bf8dff426365c2c8127da67e5c8359457
+size 198

@@ -1,6 +1,3 @@
-GL_EXT_blend_subtract
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_blend_subtract.txt
-GL_EXT_blend_subtract
-
-	GL_FUNC_SUBTRACT_EXT 0x800A
-	GL_FUNC_REVERSE_SUBTRACT_EXT 0x800B
+version https://git-lfs.github.com/spec/v1
+oid sha256:f514f27fc6edb739d92bcb17e9f82bc878a1d2416a6555bf605d245829350a4f
+size 189

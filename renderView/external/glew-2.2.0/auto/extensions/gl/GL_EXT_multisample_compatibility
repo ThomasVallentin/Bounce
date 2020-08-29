@@ -1,6 +1,3 @@
-GL_EXT_multisample_compatibility
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_multisample_compatibility.txt
-GL_EXT_multisample_compatibility
-
-	GL_MULTISAMPLE_EXT 0x809D
-	GL_SAMPLE_ALPHA_TO_ONE_EXT 0x809F
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e2734a1014fd92c3d654c824f1659341bcdccbdb334e0b704657e9581364801
+size 218

@@ -1,5 +1,3 @@
-GL_NV_platform_binary
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_platform_binary.txt
-GL_NV_platform_binary
-
-	GL_NVIDIA_PLATFORM_BINARY_NV 0x890B
+version https://git-lfs.github.com/spec/v1
+oid sha256:a60669a3ef276e8a44d55b2bab4f0a3b90099ed0277931705727530097dc20e6
+size 159

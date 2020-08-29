@@ -1,8 +1,3 @@
-GLX_INTEL_swap_event
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_INTEL_swap_event
-
-	GLX_BUFFER_SWAP_COMPLETE_INTEL_MASK 0x04000000
-	GLX_EXCHANGE_COMPLETE_INTEL 0x8180
-	GLX_COPY_COMPLETE_INTEL 0x8181
-	GLX_FLIP_COMPLETE_INTEL 0x8182
+version https://git-lfs.github.com/spec/v1
+oid sha256:1564127cc432daff01e3561cee38c6574376098a4cc49efb225c2a92343be0d5
+size 250

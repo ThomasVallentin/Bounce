@@ -1,5 +1,3 @@
-GL_ARB_map_buffer_alignment
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_map_buffer_alignment.txt
-GL_ARB_map_buffer_alignment
-
-	GL_MIN_MAP_BUFFER_ALIGNMENT 0x90BC
+version https://git-lfs.github.com/spec/v1
+oid sha256:95c55f20a1dc46900cfff93c455b171d941ac0a7ca6752a1933dec3bee3dd0dc
+size 177

@@ -1,8 +1,3 @@
-GL_NV_clip_space_w_scaling
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_clip_space_w_scaling.txt
-GL_NV_clip_space_w_scaling
-
-	GL_VIEWPORT_POSITION_W_SCALE_NV 0x937C
-	GL_VIEWPORT_POSITION_W_SCALE_X_COEFF_NV 0x937D
-	GL_VIEWPORT_POSITION_W_SCALE_Y_COEFF_NV 0x937E
-	void glViewportPositionWScaleNV (GLuint index, GLfloat xcoeff, GLfloat ycoeff)
+version https://git-lfs.github.com/spec/v1
+oid sha256:4694010ffd093c67a6e743ad829b5203ed7d354629ce325f66357d41e5384eb3
+size 353

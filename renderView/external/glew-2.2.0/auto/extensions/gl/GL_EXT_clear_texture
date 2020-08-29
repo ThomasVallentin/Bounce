@@ -1,6 +1,3 @@
-GL_EXT_clear_texture
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_clear_texture.txt
-GL_EXT_clear_texture
-
-	void glClearTexImageEXT (GLuint texture, GLint level, GLenum format, GLenum type, const void *data)
-	void glClearTexSubImageEXT (GLuint texture, GLint level, GLint xoffset, GLint yoffset, GLint zoffset, GLsizei width, GLsizei height, GLsizei depth, GLenum format, GLenum type, const void *data)
+version https://git-lfs.github.com/spec/v1
+oid sha256:beee123a5841a5a17047a9e995c04a45f4554de0559e36b64e271f8af93de165
+size 416

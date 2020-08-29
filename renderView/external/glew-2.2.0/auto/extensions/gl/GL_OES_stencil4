@@ -1,5 +1,3 @@
-GL_OES_stencil4
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_stencil4.txt
-GL_OES_stencil4
-
-	GL_STENCIL_INDEX4_OES 0x8D47
+version https://git-lfs.github.com/spec/v1
+oid sha256:d5a214a6d8194e532aaf235ed18da39d9a3d60229efbcc2ec23fb8db40ceef15
+size 135

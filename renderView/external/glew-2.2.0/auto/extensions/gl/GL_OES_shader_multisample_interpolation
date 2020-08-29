@@ -1,7 +1,3 @@
-GL_OES_shader_multisample_interpolation
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_shader_multisample_interpolation.txt
-GL_OES_shader_multisample_interpolation
-
-	GL_MIN_FRAGMENT_INTERPOLATION_OFFSET_OES 0x8E5B
-	GL_MAX_FRAGMENT_INTERPOLATION_OFFSET_OES 0x8E5C
-	GL_FRAGMENT_INTERPOLATION_OFFSET_BITS_OES 0x8E5D
+version https://git-lfs.github.com/spec/v1
+oid sha256:9e26d22cd0ab2a5884a3d254b5d1dfa08b07ad5a673eac9f4052a8fcf1a5dae2
+size 325

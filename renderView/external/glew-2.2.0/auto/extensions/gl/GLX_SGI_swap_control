@@ -1,5 +1,3 @@
-GLX_SGI_swap_control
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_SGI_swap_control
-
-	int glXSwapIntervalSGI (int interval)
+version https://git-lfs.github.com/spec/v1
+oid sha256:6ea77910e3f04eefd5a6a1f8f40600b910fcd43c9e26c762bc8735b87ea6c5db
+size 141

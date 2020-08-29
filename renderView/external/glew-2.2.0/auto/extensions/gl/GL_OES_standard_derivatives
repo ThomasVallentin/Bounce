@@ -1,5 +1,3 @@
-GL_OES_standard_derivatives
-https://www.khronos.org/registry/OpenGL/extensions/OES/OES_standard_derivatives.txt
-GL_OES_standard_derivatives
-
-	GL_FRAGMENT_SHADER_DERIVATIVE_HINT_OES 0x8B8B
+version https://git-lfs.github.com/spec/v1
+oid sha256:d0fe91ac64d4b8384f9dd0480cb0e5545496eb1b21d1464e13160886049dfb2e
+size 188

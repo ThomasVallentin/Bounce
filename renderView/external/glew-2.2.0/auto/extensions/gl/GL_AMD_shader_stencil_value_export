@@ -1,4 +1,3 @@
-GL_AMD_shader_stencil_value_export
-https://www.khronos.org/registry/OpenGL/extensions/AMD/AMD_shader_stencil_value_export.txt
-GL_AMD_shader_stencil_value_export
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:747e4067af5a399f8c248dc36ae07a02bd991de02f27a60ce1a0826ded700a73
+size 162

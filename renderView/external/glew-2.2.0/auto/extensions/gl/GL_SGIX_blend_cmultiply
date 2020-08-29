@@ -1,5 +1,3 @@
-GL_SGIX_blend_cmultiply
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_blend_cmultiply.txt
-GL_SGIX_blend_cmultiply
-
-	GL_FUNC_COMPLEX_MULTIPLY_EXT 0x601B
+version https://git-lfs.github.com/spec/v1
+oid sha256:ff14b147a60ba291656f289a379485b64875fe6ab6edbad0be264faf6f58439e
+size 167

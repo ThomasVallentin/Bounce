@@ -1,4 +1,3 @@
-GL_ARB_sparse_texture2
-https://www.khronos.org/registry/OpenGL/extensions/ARB/ARB_sparse_texture2.txt
-GL_ARB_sparse_texture2
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:eac65d183930db0594f599360652c946e7a029433181e09d2a44dee106539691
+size 126

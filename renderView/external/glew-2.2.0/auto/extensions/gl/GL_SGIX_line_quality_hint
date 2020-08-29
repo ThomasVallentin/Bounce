@@ -1,5 +1,3 @@
-GL_SGIX_line_quality_hint
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_line_quality_hint.txt
-GL_SGIX_line_quality_hint
-
-	GL_LINE_QUALITY_HINT_SGIX 0x835B
+version https://git-lfs.github.com/spec/v1
+oid sha256:705dae35754a6baba365c2d3a061da2eacadc8945d690148431e5f4daf84843e
+size 170

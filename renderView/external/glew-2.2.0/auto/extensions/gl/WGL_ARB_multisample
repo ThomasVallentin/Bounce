@@ -1,6 +1,3 @@
-WGL_ARB_multisample
-https://www.khronos.org/registry/OpenGL/extensions/ARB/WGL_ARB_multisample.txt
-WGL_ARB_multisample
-
-	WGL_SAMPLE_BUFFERS_ARB 0x2041
-	WGL_SAMPLES_ARB 0x2042
+version https://git-lfs.github.com/spec/v1
+oid sha256:3bcee2e0007b315a7b325ee8db91dd078fb87cf22ef0c842de863c81152320e5
+size 175

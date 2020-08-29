@@ -1,5 +1,3 @@
-EGL_ANDROID_image_native_buffer
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_ANDROID_image_native_buffer
-
-	EGL_NATIVE_BUFFER_ANDROID 0x3140
+version https://git-lfs.github.com/spec/v1
+oid sha256:81018445fdfccc8ca1c67f19f5a32b707627005807a6cf1b390f472626b72bc0
+size 158

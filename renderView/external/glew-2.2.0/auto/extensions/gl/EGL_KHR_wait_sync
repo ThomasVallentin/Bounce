@@ -1,5 +1,3 @@
-EGL_KHR_wait_sync
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-EGL_KHR_wait_sync
-
-	EGLint eglWaitSyncKHR (EGLDisplay dpy, EGLSyncKHR sync, EGLint flags)
+version https://git-lfs.github.com/spec/v1
+oid sha256:ed22f9ad1c595189749d45eb08b5b673c12d7a4412b84e7c94a14e68576574bb
+size 167

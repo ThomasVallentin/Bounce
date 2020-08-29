@@ -1,4 +1,3 @@
-GL_NV_sample_mask_override_coverage
-https://www.khronos.org/registry/OpenGL/extensions/NV/NV_sample_mask_override_coverage.txt
-GL_NV_sample_mask_override_coverage
-
+version https://git-lfs.github.com/spec/v1
+oid sha256:5533fd9d0a367c2c799404648eb9ffff6879be62a37b799133a1e942042e417d
+size 164

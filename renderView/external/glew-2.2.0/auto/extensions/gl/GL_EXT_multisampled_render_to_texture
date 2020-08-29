@@ -1,9 +1,3 @@
-GL_EXT_multisampled_render_to_texture
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_multisampled_render_to_texture.txt
-GL_EXT_multisampled_render_to_texture
-
-	GL_RENDERBUFFER_SAMPLES_EXT 0x8CAB
-	GL_FRAMEBUFFER_INCOMPLETE_MULTISAMPLE_EXT 0x8D56
-	GL_MAX_SAMPLES_EXT 0x8D57
-	GL_FRAMEBUFFER_ATTACHMENT_TEXTURE_SAMPLES_EXT 0x8D6C
-	void glFramebufferTexture2DMultisampleEXT (GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level, GLsizei samples)
+version https://git-lfs.github.com/spec/v1
+oid sha256:150dc6886a1d4bf5e4841e36bb41dcd6919ea182d2dbab2e49850e562fc9e3f5
+size 480

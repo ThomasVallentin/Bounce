@@ -1,7 +1,3 @@
-GL_SGIX_fragments_instrument
-https://www.khronos.org/registry/OpenGL/extensions/SGIX/SGIX_fragments_instrument.txt
-GL_SGIX_fragments_instrument
-
-	GL_FRAGMENTS_INSTRUMENT_SGIX 0x8313
-	GL_FRAGMENTS_INSTRUMENT_COUNTERS_SGIX 0x8314
-	GL_FRAGMENTS_INSTRUMENT_MAX_SGIX 0x8315
+version https://git-lfs.github.com/spec/v1
+oid sha256:7131835e1ac458c2890f80f94bb35ede7b633e65a5cd8fdf12cd57c73965305d
+size 269

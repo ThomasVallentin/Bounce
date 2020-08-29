@@ -1,5 +1,3 @@
-GL_EXT_shared_texture_palette
-https://www.khronos.org/registry/OpenGL/extensions/EXT/EXT_shared_texture_palette.txt
-GL_EXT_shared_texture_palette
-
-	GL_SHARED_TEXTURE_PALETTE_EXT 0x81FB
+version https://git-lfs.github.com/spec/v1
+oid sha256:7b98dab326df7c37784704bfb55f55560eff2f07b77a24929e68c14f35d0a3b3
+size 185

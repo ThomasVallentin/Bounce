@@ -1,7 +1,3 @@
-GLX_ARB_context_flush_control
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_ARB_context_flush_control
-
-	GLX_CONTEXT_RELEASE_BEHAVIOR_NONE_ARB 0
-	GLX_CONTEXT_RELEASE_BEHAVIOR_ARB 0x2097
-	GLX_CONTEXT_RELEASE_BEHAVIOR_FLUSH_ARB 0x2098
+version https://git-lfs.github.com/spec/v1
+oid sha256:04679b789b862476a25e1d2ec05448d086f059498a387aa975008e961346d8d5
+size 249

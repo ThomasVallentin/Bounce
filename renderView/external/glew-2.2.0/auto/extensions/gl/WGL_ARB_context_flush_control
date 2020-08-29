@@ -1,7 +1,3 @@
-WGL_ARB_context_flush_control
-https://www.khronos.org/registry/OpenGL/extensions/ARB/WGL_ARB_context_flush_control.txt
-WGL_ARB_context_flush_control
-
-	WGL_CONTEXT_RELEASE_BEHAVIOR_NONE_ARB 0
-	WGL_CONTEXT_RELEASE_BEHAVIOR_ARB 0x2097
-	WGL_CONTEXT_RELEASE_BEHAVIOR_FLUSH_ARB 0x2098
+version https://git-lfs.github.com/spec/v1
+oid sha256:e9ae9307d9b351e8bf13f0a95381cf19f158b7f1ad87043ecde21721f3ed6d5e
+size 279

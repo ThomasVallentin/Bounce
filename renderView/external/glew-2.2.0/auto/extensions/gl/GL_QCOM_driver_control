@@ -1,8 +1,3 @@
-GL_QCOM_driver_control
-https://www.khronos.org/registry/OpenGL/extensions/QCOM/QCOM_driver_control.txt
-GL_QCOM_driver_control
-
-	void glDisableDriverControlQCOM (GLuint driverControl)
-	void glEnableDriverControlQCOM (GLuint driverControl)
-	void glGetDriverControlStringQCOM (GLuint driverControl, GLsizei bufSize, GLsizei* length, GLchar *driverControlString)
-	void glGetDriverControlsQCOM (GLint* num, GLsizei size, GLuint *driverControls)
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa6e0816e0dfb3ec9fc26e5f9c5e4b6188021c7495e391d5d4502d7d649f1bdb
+size 440

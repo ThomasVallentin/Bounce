@@ -1,5 +1,3 @@
-GLX_MESA_pixmap_colormap
-https://www.khronos.org/registry/egl/specs/eglspec.1.5.pdf
-GLX_MESA_pixmap_colormap
-
-	GLXPixmap glXCreateGLXPixmapMESA (Display* dpy, XVisualInfo* visual, Pixmap pixmap, Colormap cmap)
+version https://git-lfs.github.com/spec/v1
+oid sha256:991b7d1f5c58da96ff9969b1280be8276ba1b87b5a7468242bd8e539d74d6cbe
+size 210
