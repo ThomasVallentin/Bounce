@@ -11,10 +11,19 @@
 class DirectionalLight : public Light {
 public:
     DirectionalLight() : Light() {}
-    explicit DirectionalLight(const Transform* transform) : Light(transform) {}
-    DirectionalLight(const Transform* transform, const Color& c, const float& i) : Light(transform, c, i) {}
+    explicit DirectionalLight(const Transform* transform) :
+            Light(transform), TransformObject(transform), toLight(t->matrix.m[2][0] * -1,
+                                                                  t->matrix.m[2][1] * -1,
+                                                                  t->matrix.m[2][2] * -1) {}
+    DirectionalLight(const Transform *transform, const Color &c, const float &i) :
+            Light(transform, c, i), TransformObject(transform), toLight(t->matrix.m[2][0] * -1,
+                                                                        t->matrix.m[2][1] * -1,
+                                                                        t->matrix.m[2][2] * -1) {}
 
     Color getIllumination(const HitData &hitdata, Scene *scene) const override;
+
+private:
+    Vector3 toLight;
 };
 
 #endif //BOUNCE_DIRECTIONALLIGHT_HPP
