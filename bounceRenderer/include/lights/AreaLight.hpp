@@ -12,7 +12,6 @@
 
 class AreaLight : public Shape, public Light {
 public:
-    // TODO(tvallentin) : Make parent classes virtual !!
     AreaLight() :
             Shape(),
             Light(),
@@ -46,6 +45,8 @@ public:
 
     Color getIllumination(const HitData &hitdata, Scene *scene) const override;
     bool intersect(const Ray &ray, float tmin, float tmax, HitData &data) const override;
+    virtual void buildBBox() override;
+    virtual Point3 barycenter() override;
 
     float radius{};
 };

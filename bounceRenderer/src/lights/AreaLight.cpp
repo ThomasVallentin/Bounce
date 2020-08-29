@@ -28,7 +28,7 @@ Color DiscLight::getIllumination(const HitData &hitdata, Scene *scene) const {
             illumination += power() * std::max(0.0f, dot(hitdata.normal, lightRay.direction)) * std::max(0.0f, dot(lightNormal, lightRay.direction)) / powf(lightDistance, 2);
         }
     }
-    return illumination / samples;
+    return illumination / float(samples);
 }
 
 bool DiscLight::intersect(const Ray &ray, float tmin, float tmax, HitData &data) const {
@@ -48,4 +48,18 @@ bool DiscLight::intersect(const Ray &ray, float tmin, float tmax, HitData &data)
     data.t = parameter;
 
     return true;
+}
+
+Point3 DiscLight::barycenter() {
+    return Point3(t->matrix.m[3][0], t->matrix.m[3][1], t->matrix.m[3][2]);
+}
+
+void DiscLight::buildBBox() {
+    Point3 bary = barycenter();
+    bbox = BoundingBox(bary.x - radius,
+                       bary.y - radius,
+                       bary.z - radius,
+                       bary.x + radius,
+                       bary.y + radius,
+                       bary.z + radius);
 }
