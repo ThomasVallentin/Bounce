@@ -8,13 +8,15 @@
 
 #include "Ray.h"
 #include "Shape.hpp"
+#include "Accelerator.hpp"
 #include <vector>
 
 class Light;
 
 class Scene {
 public:
-    Scene() = default;
+    Scene() : accelerator(nullptr) {}
+    explicit Scene(Accelerator* accelerator) : accelerator(accelerator) {}
 
     void addShape(Shape* h) { shapes.push_back(h); }
     void addLight(Light* h) { lights.push_back(h); }
@@ -24,6 +26,8 @@ public:
 
     std::vector<Shape*> shapes;
     std::vector<Light*> lights;
+
+    Accelerator* accelerator;
 };
 
 #endif //BOUNCE_SCENE_HPP

@@ -7,6 +7,9 @@
 
 bool Scene::intersect(const Ray& ray, float tmin, float tmax, HitData& data) const
 {
+    if (accelerator != nullptr)
+        return accelerator->intersect(ray, tmin, tmax, data);
+
     float closest_so_far = tmax;
     bool hit_anything = false;
     HitData temp_data;
@@ -23,8 +26,13 @@ bool Scene::intersect(const Ray& ray, float tmin, float tmax, HitData& data) con
 }
 
 bool Scene::intersectAny(const Ray &ray, float tmin, float tmax) {
-    float closest_so_far = tmax;
     HitData temp_data;
+
+    if (accelerator != nullptr) {
+        return accelerator->intersectAny(ray, tmin, tmax, temp_data);
+    }
+
+    float closest_so_far = tmax;
 
     for (Shape *shape : shapes) {
         if (shape->intersect(ray, tmin, closest_so_far, temp_data)) {
