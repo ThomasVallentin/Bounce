@@ -7,6 +7,7 @@
 #include <vector>
 #include <memory>
 
+extern int intersect_count;
 
 struct TriangleMeshData {
     TriangleMeshData(const Transform &objectToWorld,

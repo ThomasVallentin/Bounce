@@ -31,6 +31,7 @@ Triangle::Triangle(const Transform *objectToWorld, const TriangleMeshData *mesh,
 
 
 bool Triangle::intersect(const Ray &ray, float tmin, float tmax, HitData &hit) const {
+    intersect_count += 1;
     // Getting the point data
     const Point3 &p0 = mesh->points[vertices[0]];
     const Point3 &p1 = mesh->points[vertices[1]];
