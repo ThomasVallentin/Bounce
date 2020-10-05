@@ -1,3 +1,34 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c6ed4878750b037c648ac19ee2bc6710d83de9f2e1715355ff7a4e20f00fdf13
-size 784
+//
+// Created by Thomas Vallentin on 01/10/2020.
+//
+
+#ifndef BOUNCE_PLASTIC_HPP
+#define BOUNCE_PLASTIC_HPP
+
+#include "core/Material.hpp"
+#include "core/BSDF.hpp"
+
+class PlasticMaterial : public Material {
+public:
+    PlasticMaterial(const Color &albedo, const Color &specularColor) :
+            albedo(albedo), specularColor(specularColor) {}
+
+    void computeScattering(HitData &hitdata) const override {
+        hitdata.bsdf = new BSDF(hitdata);
+
+        if (!specularColor.isBlack()) {
+            hitdata.bsdf->addBxDF(new SpecularBRDF(specularColor, 1.5));
+        }
+
+        if (!albedo.isBlack()) {
+            hitdata.bsdf->addBxDF(new LambertianBRDF(albedo));
+        }
+    }
+
+private:
+    const Color albedo;
+    const Color specularColor;
+};
+
+
+#endif //BOUNCE_PLASTIC_HPP

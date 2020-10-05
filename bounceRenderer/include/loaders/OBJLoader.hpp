@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:8e684fd081c301c8eac515d7c2b94514fe82ed79035595bf9043d03173987a18
-size 636
+//
+// Created by Thomas Vallentin on 29/08/2020.
+//
+
+#ifndef BOUNCE_OBJLOADER_HPP
+#define BOUNCE_OBJLOADER_HPP
+
+#include "core/FileLoaders.hpp"
+#include "shapes/TriangleMesh.hpp"
+
+
+class OBJLoader: public FileLoader
+{
+public:
+    OBJLoader() : FileLoader() { extension = "obj"; t = Transform::Identity(); };
+    OBJLoader(const Transform *trans) : FileLoader() { extension = "obj"; t = trans; };
+
+    bool load(const std::string &path, bool force) override;
+
+    void setTransform(const Transform *trans) { t = trans; }
+    const Transform *transform() { return t; }
+
+private:
+    const Transform *t;
+};
+
+
+#endif //BOUNCE_OBJLOADER_HPP

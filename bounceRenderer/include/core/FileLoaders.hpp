@@ -1,3 +1,25 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2e11e12dfc04ce0d04f5cb44245cd4fa676e5d604382566fd0f55719bd44b22e
-size 478
+#ifndef BOUNCERENDERER_FILELOADERS_HPP
+#define BOUNCERENDERER_FILELOADERS_HPP
+
+#include "core/Shape.hpp"
+#include "Camera.hpp"
+
+#include <map>
+#include <vector>
+#include <fstream>
+
+class FileLoader
+{
+public:
+    FileLoader() = default;
+    virtual bool load(const std::string &path, bool force);
+    std::vector<Shape*> shapes;
+    std::vector<Shape*> lights;
+    std::vector<Camera*> cameras;
+
+protected:
+    std::string extension;
+};
+
+
+#endif //BOUNCERENDERER_FILELOADERS_HPP

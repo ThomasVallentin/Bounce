@@ -1,3 +1,28 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:026d4ae31ffdf3a57cdc71e3c32259fc2e8583516f735f3a845fdeb03e074a41
-size 519
+//
+// Created by Thomas Vallentin on 01/09/2020.
+//
+
+#ifndef BOUNCE_SAMPLER_HPP
+#define BOUNCE_SAMPLER_HPP
+
+
+struct Tile;
+class RayTracer;
+class Ray;
+class Color;
+
+class Sampler {
+public:
+    Sampler() = default;;
+
+    virtual void initialize(RayTracer* tracer) = 0;
+    virtual bool sampleRay(unsigned int &u, unsigned int &v, Ray &ray) = 0;
+    virtual void sampleCamera(Ray &ray) = 0;
+    virtual void update(const unsigned int &u, const unsigned int &v, const Color& color) = 0;
+
+};
+
+
+
+
+#endif //BOUNCE_SAMPLER_HPP

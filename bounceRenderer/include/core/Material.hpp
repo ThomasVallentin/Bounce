@@ -1,3 +1,18 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7efd0ce1a7325167f5fe85deefd9bc7d6aa53061420898980db1e7496db2b13b
-size 276
+//
+// Created by Thomas Vallentin on 01/10/2020.
+//
+
+#ifndef BOUNCE_MATERIAL_HPP
+#define BOUNCE_MATERIAL_HPP
+
+class HitData;
+
+
+class Material {
+public:
+    Material() = default;
+    virtual void computeScattering(HitData &hitdata) const = 0;
+};
+
+
+#endif //BOUNCE_MATERIAL_HPP

@@ -1,3 +1,29 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d3ea1f83b6e3cb0abae30861554af25b2dc96184e03e8b52d8ba0b6a775dd742
-size 612
+//
+// Created by Thomas Vallentin on 03/10/2020.
+// Copyright (c) 2020. All rights reserved.
+//
+
+#ifndef BOUNCE_LAMBERT_HPP
+#define BOUNCE_LAMBERT_HPP
+
+#include "core/Material.hpp"
+#include "core/BSDF.hpp"
+
+class LambertMaterial : public Material {
+public:
+    explicit LambertMaterial(const Color &albedo) : albedo(albedo) {}
+
+    void computeScattering(HitData &hitdata) const override {
+        hitdata.bsdf = new BSDF(hitdata);
+
+        if (!albedo.isBlack()) {
+            hitdata.bsdf->addBxDF(new LambertianBRDF(albedo));
+        }
+    }
+
+private:
+    const Color albedo;
+};
+
+
+#endif //BOUNCE_LAMBERT_HPP
