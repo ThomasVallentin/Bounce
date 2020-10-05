@@ -1,3 +1,24 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:d911377d8a6beacafcbe7f1044f4c9c05c1ad635167b3a68a2718f793e945406
-size 691
+//
+// Created by Thomas Vallentin on 23/08/2020.
+// Copyright (c) 2020. All rights reserved.
+//
+
+#include "lights/PointLight.hpp"
+
+
+Color PointLight::getIllumination(const HitData &hitdata, Scene *scene) const {
+    Vector3 toLight;
+    Ray lightRay;
+
+    toLight = Point3(t->matrix.m[3][0], t->matrix.m[3][1], t->matrix.m[3][2]) - hitdata.position;
+    float lightDistance = toLight.length();
+
+    lightRay.origin = hitdata.position;
+    lightRay.direction = toLight.normalized();
+
+    if (!scene->intersectAny(lightRay, 0.0001, lightDistance)) {
+        return power() * std::max(0.0f, dot(hitdata.normal, lightRay.direction)) / powf(lightDistance, 2);
+    }
+
+    return Color::Black();
+}
