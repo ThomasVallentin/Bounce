@@ -83,3 +83,4 @@ bounceRenderer/ressources/geometries/attic.obj filter=lfs diff=lfs merge=lfs -te
 *.vert filter=lfs diff=lfs merge=lfs -text
 *.mtl filter=lfs diff=lfs merge=lfs -text
 bounceRenderer/ressources/geometries filter=lfs diff=lfs merge=lfs -text
+bounceRenderer/ressources/geometries/* filter=lfs diff=lfs merge=lfs -text
