@@ -35,9 +35,9 @@ public:
 };
 
 
-class LambertianBRDF: public BxDF {
+class LambertianReflection: public BxDF {
 public:
-    explicit LambertianBRDF(const Color &albedo) : BxDF(BxDFType::REFLECTION), albedo(albedo) {}
+    explicit LambertianReflection(const Color &albedo) : BxDF(BxDFType::REFLECTION), albedo(albedo) {}
 
     virtual Color evaluate(Vector3 &wo, Vector3 &wi) const override;
     float computePdf(Vector3 &wo, Vector3 &wi) const override;
@@ -47,20 +47,37 @@ private:
 };
 
 
-class SpecularBRDF: public BxDF {
+class SpecularReflection: public BxDF {
 public:
-    explicit SpecularBRDF(const Color &specularColor, const float &ior) :
+    explicit SpecularReflection(const Color &specularColor, const float &ior) :
             BxDF(BxDFType(REFLECTION | SPECULAR)),
             specularColor(specularColor),
             ior(ior) {}
 
     Color sample(Vector3 &wo, Vector3 &wi, float &pdf) const override;
-    Color evaluate(Vector3 &wo, Vector3 &wi) const override;
-    float computePdf(Vector3 &wo, Vector3 &wi) const override;
+    Color evaluate(Vector3 &wo, Vector3 &wi) const override { return Color::Black(); }
+    float computePdf(Vector3 &wo, Vector3 &wi) const override { return 0; }
 
 private:
     const Color specularColor;
     const float ior;
 };
+
+ class SpecularTransmission: public BxDF {
+ public:
+     explicit SpecularTransmission(const Color &specularColor, const float &ior) :
+             BxDF(BxDFType(TRANSMISSION | SPECULAR)),
+             specularColor(specularColor),
+             ior(ior) {}
+
+     Color sample(Vector3 &wo, Vector3 &wi, float &pdf) const override;
+     Color evaluate(Vector3 &wo, Vector3 &wi) const override { return Color::Black(); }
+     float computePdf(Vector3 &wo, Vector3 &wi) const override { return 0; }
+
+ private:
+     const Color specularColor;
+     const float ior;
+ };
+
 
 #endif //BOUNCE_BXDF_HPP

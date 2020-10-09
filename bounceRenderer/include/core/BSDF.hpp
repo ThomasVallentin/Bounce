@@ -18,25 +18,24 @@ public:
             N(data.normal), tan1(data.tan1), tan2(data.tan2) {}
 
     virtual Color sample(Vector3 &woWorld, Vector3 &wiWorld, float &pdf) const {
+        if (bxdfCount == 0) {
+            pdf = 0;
+            return Color::Black();
+        }
+
         float rand = uniform(engine);
 
-        size_t BxDFIdx = std::floor(rand * bxdfCount);
-//        std::cout << "BxDFIdx " << BxDFIdx << std::endl;
+        size_t BxDFIdx = std::min(size_t(std::floor(rand * bxdfCount)), bxdfCount - 1);
         BxDF *bxdf = bxdfs[BxDFIdx];
 
         // Initialize local wo, local wi & pdf
         Vector3 wi, wo = worldToLocal(woWorld);
-//        std::cout << "wo" << wo << std::endl;
+        if (wo.z == 0)
+            return Color::Black();
         pdf = 0;
 
         // Sample picked BxDF
         Color outColor = bxdf->sample(wo, wi, pdf);
-//        std::cout << "woWorld " << woWorld << std::endl;
-//        std::cout << "N " << N << std::endl;
-//        std::cout << "wo " << wo << std::endl;
-//        std::cout << "wi " << wi << std::endl;
-//        std::cout << "main pdf" << pdf << std::endl;
-//        std::cout << "outColor " << outColor << std::endl;
 
         // If there the returned sample has no probability, return black
         if (pdf == 0)
@@ -44,12 +43,13 @@ public:
 
         wiWorld = localToWorld(wi);
 
-        if (bxdf->type & BxDFType::SPECULAR)
-            for (size_t i = 0 ; i < bxdfCount ; i++)
-                if (bxdfs[i] != bxdf) {
-                    outColor += bxdfs[i]->evaluate(wo, wi);
+        if (!(bxdf->type & BxDFType::SPECULAR) && bxdfCount > 1) {
+            for (size_t i = 0; i < bxdfCount; i++)
+                if (i != BxDFIdx) {
                     pdf += bxdfs[i]->computePdf(wo, wi);
+                    outColor += bxdfs[i]->evaluate(wo, wi);
                 }
+        }
         pdf /= bxdfCount;
 
         return outColor;

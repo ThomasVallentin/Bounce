@@ -70,28 +70,42 @@ float schlickFresnel(const float &eta1, const float &eta2, const float &cosTheta
 }
 
 
-float fresnelDielectric(float cosThetaI, float eta1, float eta2) {
+float fresnelDielectric(float cosThetaI, float etaI, float etaT) {
     if (cosThetaI < 0) {
         // hit the surface in the opposite direction of the surface normal
         // -> inverting cosIn to get a positive value
-        std::swap(eta1, eta2);
+        std::swap(etaI, etaT);
+        cosThetaI = std::abs(cosThetaI);
     }
-    cosThetaI = fabsf(cosThetaI);
-
     // computing sinus using Snell's law
-    float sinThetaT = eta1 / eta2 * sqrtf(std::max(0.f, 1 - cosThetaI * cosThetaI)) ;
+    float sinThetaI =  sqrtf(std::max(0.f, 1 - cosThetaI * cosThetaI));
+    float sinThetaT = etaI / etaT * sinThetaI;
 
     if (sinThetaT >= 1) {
-        // Total intern reflection
         return 1;
     }
-    else {
-        float cosThetaT = sqrtf(std::max(0.f, 1 - sinThetaT * sinThetaT));
-        float reflectRatio = (eta2 * cosThetaI - eta1 * cosThetaT) / (eta2 * cosThetaI + eta1 * cosThetaT);
-        float refractRatio = (eta1 * cosThetaT - eta2 * cosThetaI) / (eta1 * cosThetaT + eta2 * cosThetaI);
-        return (reflectRatio * reflectRatio + refractRatio * refractRatio) / 2;
-    }
+
+    float cosThetaT = sqrtf(std::max(0.f, 1 - sinThetaT * sinThetaT));
+    float Rs = (etaT * cosThetaI - etaI * cosThetaT) / (etaT * cosThetaI + etaI * cosThetaT);
+    float Rp = (etaI * cosThetaI - etaT * cosThetaT) / (etaI * cosThetaI + etaT * cosThetaT);
+    return  (Rs * Rs + Rp * Rp) / 2;
 }
+
+
+bool refract(const Vector3 &wI, const Vector3 &N, const float eta, Vector3& wT) {
+    float cosThetaI = dot(N, wI);
+    float sin2ThetaI = std::max(0.0f, 1 - cosThetaI * cosThetaI);
+    float sin2ThetaT = eta * eta * sin2ThetaI;
+
+    if (sin2ThetaT >= 1)
+        return false;
+
+    float cosThetaT = std::sqrt(1 - sin2ThetaT);
+    wT = wI * (-eta) + N * (eta * cosThetaI - cosThetaT);
+
+    return true;
+}
+
 
 bool intersectPlane(const Ray& ray, const Vector3& normal, const Point3& pointOnPlane, float& outParameter) {
     float a = dot(normal, ray.direction);

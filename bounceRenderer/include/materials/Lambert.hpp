@@ -17,7 +17,7 @@ public:
         hitdata.bsdf = new BSDF(hitdata);
 
         if (!albedo.isBlack()) {
-            hitdata.bsdf->addBxDF(new LambertianBRDF(albedo));
+            hitdata.bsdf->addBxDF(new LambertianReflection(albedo));
         }
     }
 

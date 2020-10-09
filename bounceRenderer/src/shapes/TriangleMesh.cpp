@@ -89,7 +89,6 @@ bool Triangle::intersect(const Ray &ray, float tmin, float tmax, HitData &hit) c
             Vector3 n2 = mesh->normals[normals[2]];
 
             N = n0*(1 - u - v) + n1*u + n2*v;
-//            std::cout << "bary" << (1 - u - v) << u << v << std::endl;
         } else {
             N = cross(p0p1, p0p2);
             if (dot(ray.direction, N) > 0)

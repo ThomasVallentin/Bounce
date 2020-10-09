@@ -17,11 +17,11 @@ public:
         hitdata.bsdf = new BSDF(hitdata);
 
         if (!specularColor.isBlack()) {
-            hitdata.bsdf->addBxDF(new SpecularBRDF(specularColor, 1.5));
+            hitdata.bsdf->addBxDF(new SpecularReflection(specularColor, 1.5));
         }
 
         if (!albedo.isBlack()) {
-            hitdata.bsdf->addBxDF(new LambertianBRDF(albedo));
+            hitdata.bsdf->addBxDF(new LambertianReflection(albedo));
         }
     }
 

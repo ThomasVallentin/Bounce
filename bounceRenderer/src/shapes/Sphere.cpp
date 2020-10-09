@@ -20,11 +20,11 @@ bool Sphere::intersect(const Ray& ray, float tmin, float tmax, HitData& hit) con
 			// ray hits the first side of the sphere
 			hit.t = t;
 			hit.position = ray.pointAtParameter(t);
-			hit.normal = (hit.position - center());
-			hit.normal.normalize();
+			hit.normal = (hit.position - m_center) / m_radius;
             makeCoordinateSystem(hit.normal, hit.tan1, hit.tan2);
             hit.material = material;
-			return true;
+            hit.wo = ray.direction * -1;
+            return true;
 		}
 
 		t = float(-b + sqrt(discr)) / (2.0 * a);
@@ -32,7 +32,7 @@ bool Sphere::intersect(const Ray& ray, float tmin, float tmax, HitData& hit) con
 			// ray hits the second side of the sphere (the camera is inside the sphere)
 			hit.t = t;
 			hit.position = ray.pointAtParameter(t);
-			hit.normal = (hit.position - center()) / radius();
+			hit.normal = (hit.position - m_center) / m_radius;
             makeCoordinateSystem(hit.normal, hit.tan1, hit.tan2);
 			hit.material = material;
 			hit.wo = ray.direction * -1;
