@@ -141,17 +141,15 @@ Color RayTracer::computeIllumination(const Ray& ray, int depth) const
     }
 
     // Sample direct lighting
-    Ray toLight;
-    for (auto light : scene->lights) {
-        toLight = light->getIllumination()
-    }
+//    Ray toLight;
+//    for (auto light : scene->lights) {
+//        toLight = light->getIllumination();
+//    }
 
+    // Sample Indirect illumination
     float pdf(0);
     Vector3 wi, wo(hitdata.wo);
-//    std::cout << "wo " << wo << std::endl;
     Color f = hitdata.bsdf->sample(wo, wi, pdf);
-//    std::cout << "f " << f << std::endl;
-//    std::cout << "pdf " << pdf << std::endl;
 
     if (f.isBlack() || pdf == 0) {
         return Color::Black();

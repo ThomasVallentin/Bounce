@@ -3,3 +3,7 @@
 //
 
 #include "core/BSDF.hpp"
+
+HitData::~HitData() {
+    delete bsdf;
+}

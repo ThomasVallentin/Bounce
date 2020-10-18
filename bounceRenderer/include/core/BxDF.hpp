@@ -27,9 +27,12 @@ public:
         return (type & t) == type;
     }
 
+    virtual ~BxDF() {}
+
     virtual Color sample(Vector3 &wo, Vector3 &wi, float &pdf) const;
     virtual Color evaluate(Vector3 &wo, Vector3 &wi) const = 0;
     virtual float computePdf(Vector3 &wo, Vector3 &wi) const = 0;
+    virtual std::string toString() const = 0;
 
     const BxDFType type;
 };
@@ -39,8 +42,9 @@ class LambertianReflection: public BxDF {
 public:
     explicit LambertianReflection(const Color &albedo) : BxDF(BxDFType::REFLECTION), albedo(albedo) {}
 
-    virtual Color evaluate(Vector3 &wo, Vector3 &wi) const override;
+    Color evaluate(Vector3 &wo, Vector3 &wi) const override;
     float computePdf(Vector3 &wo, Vector3 &wi) const override;
+    virtual std::string toString() const override { return "BxDF(LambertianReflection)"; }
 
 private:
     const Color albedo;
@@ -57,6 +61,7 @@ public:
     Color sample(Vector3 &wo, Vector3 &wi, float &pdf) const override;
     Color evaluate(Vector3 &wo, Vector3 &wi) const override { return Color::Black(); }
     float computePdf(Vector3 &wo, Vector3 &wi) const override { return 0; }
+    std::string toString() const override { return "BxDF(SpecularReflection)"; }
 
 private:
     const Color specularColor;
@@ -73,6 +78,7 @@ private:
      Color sample(Vector3 &wo, Vector3 &wi, float &pdf) const override;
      Color evaluate(Vector3 &wo, Vector3 &wi) const override { return Color::Black(); }
      float computePdf(Vector3 &wo, Vector3 &wi) const override { return 0; }
+     std::string toString() const override { return "BxDF(SpecularReflection)"; }
 
  private:
      const Color specularColor;

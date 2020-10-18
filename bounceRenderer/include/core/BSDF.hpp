@@ -16,6 +16,10 @@ class BSDF {
 public:
     explicit BSDF(const HitData &data) :
             N(data.normal), tan1(data.tan1), tan2(data.tan2) {}
+    ~BSDF() {
+        for (int i=0 ; i< bxdfCount ; i++)
+            delete bxdfs[i];
+    }
 
     virtual Color sample(Vector3 &woWorld, Vector3 &wiWorld, float &pdf) const {
         if (bxdfCount == 0) {
@@ -72,8 +76,6 @@ private:
 
     const Vector3 N, tan1, tan2;
 };
-
-
 
 
 #endif //BOUNCE_BSDF_HPP

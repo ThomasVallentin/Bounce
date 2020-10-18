@@ -6,13 +6,15 @@
 #include "loaders/OBJLoader.hpp"
 #include "shapes/Sphere.h"
 #include "adapters/PPMAdapter.hpp"
+
 #include "lights/GradientLight.hpp"
 #include "lights/DirectionalLight.hpp"
 #include "lights/PointLight.hpp"
 #include "lights/AreaLight.hpp"
+
 #include "materials/Plastic.hpp"
 #include "materials/Lambert.hpp"
-#include "core/mathUtils.h"
+#include "materials/Glass.hpp"
 
 #include <iostream>
 #include <core/Matrix.hpp>
@@ -26,53 +28,61 @@ int main() {
     float nearClip = 0.002;
     float farClip = 100000;
     unsigned int minSamples = 8;
-    unsigned int maxSamples = 32;
+    unsigned int maxSamples = 128;
 
     Accelerator* accelerator = new BVH;
     Scene scene(accelerator);
 
     RayTracer tracer(nearClip, farClip, minSamples, maxSamples);
     tracer.setOutpath(std::string(getenv("BOUNCE_ROOT")) + R"(\bounceRenderer\output\output.ppm)");
+    std::cout << tracer.outpath() << std::endl;
     tracer.setAdapter(new PPMAdapter());
-    tracer.setThreadCount(8);
+    tracer.setThreadCount(1);
     tracer.setSampler(new RandomSampler());
-    //    tracer.setOutpath(R"(C:\REPOSITORIES\Bounce\bounceRenderer\output\output.ppm)");
 
-    Material *white = new PlasticMaterial(Color(.8, 0.08, 0.05),
-                                                 Color(1, 1, 1));
-
-    Material *red = new LambertMaterial(Color(.8, 0.8, 0.8));
+    Material *bunnyMat = new PlasticMaterial(Color(0, 0, 0),
+                                             Color(1, 1, 1));
+    Material *glassMat = new GlassMaterial(Color(1, 1, 1),
+                                           Color(1, 1, 1), 1.5);
+    Material *floorMat = new LambertMaterial(Color(1, 0, 0));
+    Material *defaultMat = new LambertMaterial(Color(.5, .5, .5));
 
     OBJLoader *loader = new OBJLoader();
 
     Transform *transform = Transform::Identity();
     transform->scale(100, 100, 100);
-//    transform->rotate(Axis::x, degToRad(90));
-//    transform->rotate(Axis::y, degToRad(30));
-    transform->translate(250, -50, -500);
+    transform->translate(25, 100, 0);
     loader->setTransform(transform);
 
-    loader->load(std::string(getenv("BOUNCE_ROOT")) + R"(\bounceRenderer\ressources\geometries\bunny.obj)", false);
+//    loader->load(std::string(getenv("BOUNCE_ROOT")) + R"(\bounceRenderer\ressources\geometries\bunny.obj)", false);
+//
+//    for (Shape *shape : loader->shapes) {
+//        shape->material = glassMat;
+//        scene.addShape(shape);
+//    }
 
-    for (Shape *shape : loader->shapes) {
-        shape->material = white;
-        scene.addShape(shape);
-    }
+    scene.addShape(new Sphere(transform, 100, glassMat));
+
+    transform = Transform::Identity();
+//    transform->rotate(Axis::x, degToRad(90));
+//    transform->rotate(Axis::y, degToRad(30));
+    transform->translate(0, 200, -200);
+
+    scene.addShape(new Sphere(transform, 100, defaultMat));
 
     // Loading the ground
     transform = Transform::Identity();
     transform->scale(100, 100, 100);
-    transform->translate(280, -50, -500);
     loader->setTransform(transform);
     loader->load(std::string(getenv("BOUNCE_ROOT")) + R"(\bounceRenderer\ressources\geometries\ground.obj)", false);
 
     for (Shape *shape : loader->shapes) {
-        shape->material = red;
+        shape->material = floorMat;
         scene.addShape(shape);
     }
 
-    GradientLight *gLight = new GradientLight();
-    gLight->intensity = 0.5f;
+    EnvironmentLight *gLight = new EnvironmentLight();
+//    gLight->intensity = 0.5f;
     scene.addLight(gLight);
 
 //    transform = Transform::Identity();
@@ -83,10 +93,12 @@ int main() {
 //    scene.addLight(pLight);
 
     // Camera
-    Vector3 from(211, 150, 390), to(211, 100, -500);
+    Vector3 from(-250, 120, 550), to(0, 120, 0);
     transform = Transform::LookAt(from, to, true);
+//    transform = Transform::Identity();
+//    transform->translate(0, 105, 650);
 
-    Camera cam(transform, 35, FilmGate::Film35mm);
+    Camera cam(transform, 25, FilmGate::Film35mm);
     cam.focusDistance = 1300;
     cam.apertureRadius = 0.0f;
     cam.setResolution(renderWidth, renderHeight);

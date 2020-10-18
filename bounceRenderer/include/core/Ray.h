@@ -30,6 +30,7 @@ struct HitData {
         if (material)
             material->computeScattering(*this);
     }
+    ~HitData();
 
     double t;
     Point3 position;

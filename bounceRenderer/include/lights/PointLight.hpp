@@ -16,9 +16,9 @@ public:
             Light(lightToWorld, c, i),
             TransformObject(lightToWorld) {}
 
-    virtual Color sample(const HitData &hitdata, Vector3 &toLight) const override {
-
-    }
+//    virtual Color sample(const HitData &hitdata, Vector3 &toLight) const override {
+//
+//    }
     Color getIllumination(const HitData &hitdata, Scene *scene) const override;
 };
 

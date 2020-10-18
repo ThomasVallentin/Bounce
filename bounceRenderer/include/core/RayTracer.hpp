@@ -29,9 +29,9 @@ class RayTracer {
 
 public:
 	RayTracer() :
-            nearClip(0.001), farClip(100000), samplesMin(8), samplesMax(50), m_max_depth(2), m_gamma(2.2), adapter(nullptr) {}
+            nearClip(0.001), farClip(100000), samplesMin(8), samplesMax(50), m_max_depth(3), m_gamma(2.2), adapter(nullptr) {}
 	RayTracer(float near_clip, float far_clip, const unsigned int& minsample, const unsigned int& maxsample) :
-            nearClip(near_clip), farClip(far_clip), samplesMin(minsample), samplesMax(maxsample), m_max_depth(2), m_gamma(2.2f), adapter(nullptr) {}
+            nearClip(near_clip), farClip(far_clip), samplesMin(minsample), samplesMax(maxsample), m_max_depth(3), m_gamma(2.2f), adapter(nullptr) {}
 
     std::string outpath() const { return m_outpath; }
 	void setOutpath(const std::string& str) { m_outpath = std::string(str); }
