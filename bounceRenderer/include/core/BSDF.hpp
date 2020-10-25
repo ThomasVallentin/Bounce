@@ -14,61 +14,16 @@
 
 class BSDF {
 public:
-    explicit BSDF(const HitData &data) :
-            N(data.normal), tan1(data.tan1), tan2(data.tan2) {}
-    ~BSDF() {
-        for (int i=0 ; i< bxdfCount ; i++)
-            delete bxdfs[i];
-    }
+    explicit BSDF(const HitData &data) : N(data.normal), tan1(data.tan1), tan2(data.tan2) {}
+    ~BSDF();
 
-    virtual Color sample(Vector3 &woWorld, Vector3 &wiWorld, float &pdf) const {
-        if (bxdfCount == 0) {
-            pdf = 0;
-            return Color::Black();
-        }
+    virtual Color sample(Vector3 &woWorld, Vector3 &wiWorld, float &pdf) const;
+    virtual Color evaluate(Vector3 &woWorld, Vector3 &wiWorld) const;
+    virtual float computePdf(Vector3 &woWorld, Vector3 &wiWorld) const;
 
-        float rand = uniform(engine);
-
-        size_t BxDFIdx = std::min(size_t(std::floor(rand * bxdfCount)), bxdfCount - 1);
-        BxDF *bxdf = bxdfs[BxDFIdx];
-
-        // Initialize local wo, local wi & pdf
-        Vector3 wi, wo = worldToLocal(woWorld);
-        if (wo.z == 0)
-            return Color::Black();
-        pdf = 0;
-
-        // Sample picked BxDF
-        Color outColor = bxdf->sample(wo, wi, pdf);
-
-        // If there the returned sample has no probability, return black
-        if (pdf == 0)
-            return Color::Black();
-
-        wiWorld = localToWorld(wi);
-
-        if (!(bxdf->type & BxDFType::SPECULAR) && bxdfCount > 1) {
-            for (size_t i = 0; i < bxdfCount; i++)
-                if (i != BxDFIdx) {
-                    pdf += bxdfs[i]->computePdf(wo, wi);
-                    outColor += bxdfs[i]->evaluate(wo, wi);
-                }
-        }
-        pdf /= bxdfCount;
-
-        return outColor;
-    }
-
-    void addBxDF(BxDF *bxdf) {
-        bxdfs[bxdfCount++] = bxdf;
-    }
-
-    Vector3 worldToLocal(const Vector3 &vec) const {
-        return ::worldToLocal(vec, tan1, tan2, N);
-    }
-    Vector3 localToWorld(const Vector3 &vec) const {
-        return ::localToWorld(vec, tan1, tan2, N);
-    }
+    void addBxDF(BxDF *bxdf) { bxdfs[bxdfCount++] = bxdf; }
+    Vector3 worldToLocal(const Vector3 &vec) const { return ::worldToLocal(vec, tan1, tan2, N); }
+    Vector3 localToWorld(const Vector3 &vec) const { return ::localToWorld(vec, tan1, tan2, N); }
 
 private:
     size_t bxdfCount = 0;

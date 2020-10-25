@@ -29,9 +29,9 @@ public:
 
     virtual ~BxDF() {}
 
-    virtual Color sample(Vector3 &wo, Vector3 &wi, float &pdf) const;
-    virtual Color evaluate(Vector3 &wo, Vector3 &wi) const = 0;
-    virtual float computePdf(Vector3 &wo, Vector3 &wi) const = 0;
+    virtual Color sample(const Vector3 &wo, Vector3 &wi, float &pdf) const;
+    virtual Color evaluate(const Vector3 &wo, const Vector3 &wi) const = 0;
+    virtual float computePdf(const Vector3 &wo, const Vector3 &wi) const = 0;
     virtual std::string toString() const = 0;
 
     const BxDFType type;
@@ -42,8 +42,8 @@ class LambertianReflection: public BxDF {
 public:
     explicit LambertianReflection(const Color &albedo) : BxDF(BxDFType::REFLECTION), albedo(albedo) {}
 
-    Color evaluate(Vector3 &wo, Vector3 &wi) const override;
-    float computePdf(Vector3 &wo, Vector3 &wi) const override;
+    Color evaluate(const Vector3 &wo, const Vector3 &wi) const override;
+    float computePdf(const Vector3 &wo, const Vector3 &wi) const override;
     virtual std::string toString() const override { return "BxDF(LambertianReflection)"; }
 
 private:
@@ -58,9 +58,9 @@ public:
             specularColor(specularColor),
             ior(ior) {}
 
-    Color sample(Vector3 &wo, Vector3 &wi, float &pdf) const override;
-    Color evaluate(Vector3 &wo, Vector3 &wi) const override { return Color::Black(); }
-    float computePdf(Vector3 &wo, Vector3 &wi) const override { return 0; }
+    Color sample(const Vector3 &wo, Vector3 &wi, float &pdf) const override;
+    Color evaluate(const Vector3 &wo, const Vector3 &wi) const override { return Color::Black(); }
+    float computePdf(const Vector3 &wo, const Vector3 &wi) const override { return 0; }
     std::string toString() const override { return "BxDF(SpecularReflection)"; }
 
 private:
@@ -68,22 +68,39 @@ private:
     const float ior;
 };
 
- class SpecularTransmission: public BxDF {
- public:
-     explicit SpecularTransmission(const Color &specularColor, const float &ior) :
-             BxDF(BxDFType(TRANSMISSION | SPECULAR)),
-             specularColor(specularColor),
+class SpecularTransmission: public BxDF {
+public:
+    explicit SpecularTransmission(const Color &specularColor, const float &ior) :
+            BxDF(BxDFType(TRANSMISSION | SPECULAR)),
+           specularColor(specularColor),
              ior(ior) {}
 
-     Color sample(Vector3 &wo, Vector3 &wi, float &pdf) const override;
-     Color evaluate(Vector3 &wo, Vector3 &wi) const override { return Color::Black(); }
-     float computePdf(Vector3 &wo, Vector3 &wi) const override { return 0; }
-     std::string toString() const override { return "BxDF(SpecularReflection)"; }
+    Color sample(const Vector3 &wo, Vector3 &wi, float &pdf) const override;
+    Color evaluate(const Vector3 &wo, const Vector3 &wi) const override { return Color::Black(); }
+    float computePdf(const Vector3 &wo, const  Vector3 &wi) const override { return 0; }
+    std::string toString() const override { return "BxDF(SpecularReflection)"; }
 
- private:
-     const Color specularColor;
-     const float ior;
- };
+private:
+    const Color specularColor;
+    const float ior;
+};
+
+
+class Matte: public BxDF {
+public:
+    explicit Matte(const Color &albedo) :
+            BxDF(BxDFType(REFLECTION)),
+            albedo(albedo)
+            {}
+
+    Color sample(const Vector3 &wo, Vector3 &wi, float &pdf) const override;
+    Color evaluate(const Vector3 &wo, const Vector3 &wi) const override { return albedo; }
+    float computePdf(const Vector3 &wo, const Vector3 &wi) const override { return 1; }
+    std::string toString() const override { return "BxDF(Matte)"; }
+
+private:
+    const Color albedo;
+};
 
 
 #endif //BOUNCE_BXDF_HPP

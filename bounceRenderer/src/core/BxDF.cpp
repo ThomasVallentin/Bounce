@@ -10,7 +10,7 @@ bool sameHemisphere(const Vector3 &v1, const Vector3 &v2) {
 
 
 
-Color BxDF::sample(Vector3 &wo, Vector3 &wi, float &pdf) const {
+Color BxDF::sample(const Vector3 &wo, Vector3 &wi, float &pdf) const {
 //    std::cout << "  BxDF::sample" << std::endl;
     wi = cosineSampleHemisphere();
     pdf = computePdf(wo, wi);
@@ -19,19 +19,19 @@ Color BxDF::sample(Vector3 &wo, Vector3 &wi, float &pdf) const {
 }
 
 
-Color LambertianReflection::evaluate(Vector3 &wo, Vector3 &wi) const {
+Color LambertianReflection::evaluate(const Vector3 &wo, const Vector3 &wi) const {
 //    std::cout << "LambertianReflection::evaluate" << std::endl;
-    return albedo / PI;
+    return sameHemisphere(wo, wi) ? albedo / PI : Color::Black();
 }
 
 
-float LambertianReflection::computePdf(Vector3 &wo, Vector3 &wi) const {
+float LambertianReflection::computePdf(const Vector3 &wo, const Vector3 &wi) const {
 //    std::cout << "LambertianReflection::computePdf" << std::endl;
     return sameHemisphere(wo, wi) ? absCosTheta(wi) / PI : 0;
 }
 
 
-Color SpecularReflection::sample(Vector3 &wo, Vector3 &wi, float &pdf) const {
+Color SpecularReflection::sample(const Vector3 &wo, Vector3 &wi, float &pdf) const {
     // Perfect reflection
     wi = Vector3(-wo.x, -wo.y, wo.z);
     pdf = 1;
@@ -40,7 +40,7 @@ Color SpecularReflection::sample(Vector3 &wo, Vector3 &wi, float &pdf) const {
 }
 
 
-Color SpecularTransmission::sample(Vector3 &wo, Vector3 &wi, float &pdf) const {
+Color SpecularTransmission::sample(const Vector3 &wo, Vector3 &wi, float &pdf) const {
     bool entering = cosTheta(wo) > 0.0f;
 
     float etaI = entering ? 1 : ior;
@@ -53,4 +53,11 @@ Color SpecularTransmission::sample(Vector3 &wo, Vector3 &wi, float &pdf) const {
 
     pdf = 1;
     return specularColor * (1 - fresnelDielectric(cosTheta(wi), 1, ior)) / absCosTheta(wi);
+}
+
+Color Matte::sample(const Vector3 &wo, Vector3 &wi, float &pdf) const {
+    wi = Vector3(0, 0, 0);
+    pdf = 1;
+
+    return albedo;
 }
