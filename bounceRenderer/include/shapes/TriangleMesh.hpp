@@ -30,7 +30,8 @@ public:
     Triangle(const Transform *objectToWorld, const TriangleMeshData *mesh, int triangleNb, Material *material);
     bool intersect(const Ray& ray, float tmin, float tmax, HitData& hit) const override;
     void buildBBox() override;
-    Point3 barycenter() override;
+    Point3 barycenter() const override;
+    float area() const override;
 
 protected:
     const TriangleMeshData *mesh; // Pointer to the struct that holds the points

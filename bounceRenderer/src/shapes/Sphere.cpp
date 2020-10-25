@@ -51,6 +51,10 @@ void Sphere::buildBBox() {
                        m_center.z + m_radius);
 }
 
-Point3 Sphere::barycenter() {
+Point3 Sphere::barycenter() const {
     return m_center;
+}
+
+float Sphere::area() const {
+    return 4 * PI * m_radius * m_radius;
 }

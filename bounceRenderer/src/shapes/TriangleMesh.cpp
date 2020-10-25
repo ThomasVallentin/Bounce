@@ -122,7 +122,14 @@ void Triangle::buildBBox() {
                        std::max(std::max(p0.z, p1.z), p2.z));
 }
 
-Point3 Triangle::barycenter() {
+Point3 Triangle::barycenter() const {
     return (mesh->points[vertices[0]] + mesh->points[vertices[1]] + mesh->points[vertices[2]]) / 3.0f;
+}
+
+float Triangle::area() const {
+    Point3 &A = mesh->points[vertices[0]];
+    Point3 &B = mesh->points[vertices[1]];
+    Point3 &C = mesh->points[vertices[2]];
+    return cross(B - A, C - A).length() * 0.5f;
 }
 

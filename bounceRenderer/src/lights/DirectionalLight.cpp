@@ -6,13 +6,11 @@
 #include "lights/DirectionalLight.hpp"
 
 
-Color DirectionalLight::getIllumination(const HitData &hitdata, Scene *scene) const {
-    Ray lightRay;
+Color DirectionalLight::sample(const HitData &hitdata, Vector3 &wi, Point3 &sampleP, float &pdf) const {
+    wi = toLight;
+    sampleP = Point3(toLight * 100000);
+    pdf = 1;
 
-    lightRay.origin = hitdata.position;
-    lightRay.direction = toLight;
-    if (!scene->intersectAny(lightRay, 0.0001, 9999999))
-        return power() * std::max(0.0f, dot(hitdata.normal, lightRay.direction));
-
-    return Color::Black();
+    return power();
 }
+

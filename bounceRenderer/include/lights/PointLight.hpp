@@ -11,17 +11,13 @@
 class PointLight : public Light {
 public:
     PointLight() : Light() {}
+
     explicit PointLight(const Transform *lightToWorld) : Light(lightToWorld) {}
+
     PointLight(const Transform *lightToWorld, const Color &c, const float &i) :
-            Light(lightToWorld, c, i),
-            TransformObject(lightToWorld) {}
+            Light(lightToWorld, c, i) {}
 
-//    virtual Color sample(const HitData &hitdata, Vector3 &toLight) const override {
-//
-//    }
-    Color getIllumination(const HitData &hitdata, Scene *scene) const override;
+    Color sample(const HitData &hitdata, Vector3 &wi, Point3 &sampleP, float &pdf) const override;
 };
-
-
 
 #endif //BOUNCE_POINT_HPP
