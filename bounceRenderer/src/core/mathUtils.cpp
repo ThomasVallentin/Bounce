@@ -110,7 +110,7 @@ bool refract(const Vector3 &wI, const Vector3 &N, const float eta, Vector3& wT) 
 bool intersectPlane(const Ray& ray, const Vector3& normal, const Point3& pointOnPlane, float& outParameter) {
     float a = dot(normal, ray.direction);
 
-    if (a < 0.000001)
+    if (a > 1e-9)
         return false;
 
     Vector3 b(pointOnPlane - ray.origin);

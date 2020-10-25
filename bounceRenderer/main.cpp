@@ -10,7 +10,7 @@
 #include "lights/GradientLight.hpp"
 #include "lights/DirectionalLight.hpp"
 #include "lights/PointLight.hpp"
-#include "lights/AreaLight.hpp"
+#include "lights/DiscLight.hpp"
 
 #include "materials/Plastic.hpp"
 #include "materials/Lambert.hpp"
@@ -25,10 +25,10 @@ int main() {
     int renderWidth = 500;
     int renderHeight = 500;
 
-    float nearClip = 0.002;
+    float nearClip = 0.0001;
     float farClip = 100000;
     unsigned int minSamples = 8;
-    unsigned int maxSamples = 128;
+    unsigned int maxSamples = 8;
 
     Accelerator* accelerator = new BVH;
     Scene scene(accelerator);
@@ -40,35 +40,42 @@ int main() {
     tracer.setThreadCount(1);
     tracer.setSampler(new RandomSampler());
 
-    Material *bunnyMat = new PlasticMaterial(Color(0, 0, 0),
-                                             Color(1, 1, 1));
+    Material *bunnyMat = new PlasticMaterial(Color(.8, .8, .8),
+                                             Color(0, 0, 0));
     Material *glassMat = new GlassMaterial(Color(1, 1, 1),
                                            Color(1, 1, 1), 1.5);
-    Material *floorMat = new LambertMaterial(Color(1, 0, 0));
+    Material *floorMat = new LambertMaterial(Color(.8, .8, .8));
     Material *defaultMat = new LambertMaterial(Color(.5, .5, .5));
 
     OBJLoader *loader = new OBJLoader();
-
-    Transform *transform = Transform::Identity();
-    transform->scale(100, 100, 100);
-    transform->translate(25, 100, 0);
-    loader->setTransform(transform);
-
-//    loader->load(std::string(getenv("BOUNCE_ROOT")) + R"(\bounceRenderer\ressources\geometries\bunny.obj)", false);
-//
-//    for (Shape *shape : loader->shapes) {
-//        shape->material = glassMat;
-//        scene.addShape(shape);
-//    }
-
-    scene.addShape(new Sphere(transform, 100, glassMat));
+    Transform *transform;
 
     transform = Transform::Identity();
+    transform->scale(100, 100, 100);
+    transform->translate(25, 0, 0);
+    loader->setTransform(transform);
+
+    loader->load(std::string(getenv("BOUNCE_ROOT")) + R"(\bounceRenderer\ressources\geometries\bunny.obj)", false);
+//    loader->shapes[0]->material = bunnyMat;
+//    scene.addShape(loader->shapes[0]);
+
+    for (Shape *shape : loader->shapes) {
+        shape->material = bunnyMat;
+        scene.addShape(shape);
+    }
+
+//    transform = Transform::Identity();
+//    transform->scale(100, 100, 100);
+//    transform->translate(25, 0, 0);
+//    loader->setTransform(transform);
+//    scene.addShape(new Sphere(transform, 100, defaultMat));
+
+//    transform = Transform::Identity();
 //    transform->rotate(Axis::x, degToRad(90));
 //    transform->rotate(Axis::y, degToRad(30));
-    transform->translate(0, 200, -200);
+//    transform->translate(0, 200, -200);
 
-    scene.addShape(new Sphere(transform, 100, defaultMat));
+//    scene.addShape(new Sphere(transform, 100, defaultMat));
 
     // Loading the ground
     transform = Transform::Identity();
@@ -77,28 +84,37 @@ int main() {
     loader->load(std::string(getenv("BOUNCE_ROOT")) + R"(\bounceRenderer\ressources\geometries\ground.obj)", false);
 
     for (Shape *shape : loader->shapes) {
-        shape->material = floorMat;
+        shape->material = bunnyMat;
         scene.addShape(shape);
     }
 
-    EnvironmentLight *gLight = new EnvironmentLight();
-//    gLight->intensity = 0.5f;
-    scene.addLight(gLight);
+//    EnvironmentLight *gLight = new EnvironmentLight();
+//    gLight->intensity = 0.2f;
+//    scene.addLight(gLight);
 
-//    transform = Transform::Identity();
-//    transform->rotate(Axis::x, degToRad(-20));
-//    transform->rotate(Axis::y, degToRad(60));
-//    transform->translate(-100, 200, -500);
-//    PointLight *pLight = new PointLight(transform, Color(1.0f, 1.0f, 1.0f), 60000.0f);
+    transform = Transform::Identity();
+    transform->rotate(Axis::x, degToRad(-20));
+    transform->rotate(Axis::y, degToRad(-145));
+    transform->translate(100, 200, 100);
+    Light *pLight = new PointLight(transform, Color(1.0f, 1.0f, 1.0f), 10000);
 //    scene.addLight(pLight);
 
+    transform = Transform::Identity();
+    transform->rotate(Axis::x, degToRad(-90));
+//    transform->rotate(Axis::y, degToRad(180));
+    transform->translate(0, 300, 0);
+    AreaLight *areaLight = new DiscLight(transform, 100, Color(1.0f, 1.0f, 1.0f), 200 * powf(2, 6), 2);
+    scene.addLight(areaLight);
+//    scene.addShape(areaLight->shape);
+//    scene.addShape(new Disc(transform, 50, bunnyMat));
+
     // Camera
-    Vector3 from(-250, 120, 550), to(0, 120, 0);
+    Vector3 from(-250, 120, 550), to(0, 100, 0);
     transform = Transform::LookAt(from, to, true);
 //    transform = Transform::Identity();
 //    transform->translate(0, 105, 650);
 
-    Camera cam(transform, 25, FilmGate::Film35mm);
+    Camera cam(transform, 15, FilmGate::Film35mm);
     cam.focusDistance = 1300;
     cam.apertureRadius = 0.0f;
     cam.setResolution(renderWidth, renderHeight);

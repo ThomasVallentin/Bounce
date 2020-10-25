@@ -7,8 +7,9 @@
 
 bool Scene::intersect(const Ray& ray, float tmin, float tmax, HitData& data) const
 {
-    if (accelerator != nullptr)
+    if (accelerator != nullptr){
         return accelerator->intersect(ray, tmin, tmax, data);
+    }
 
     float closest_so_far = tmax;
     bool hit_anything = false;

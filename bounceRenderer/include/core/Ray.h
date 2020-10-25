@@ -25,11 +25,19 @@ public:
 extern std::ostream& operator<<(std::ostream& os, const Ray& r);
 
 struct HitData {
-	Ray generateRay(Vector3 &direction) { return Ray(position, direction); }
+	Ray generateRay(const Vector3 &direction) { return Ray(position, direction); }
+
 	void computeScattering() {
         if (material)
             material->computeScattering(*this);
     }
+
+    Color getEmission() {
+		if (material)
+			return material->getEmission(*this, wo);
+		return Color::Black();
+	}
+
     ~HitData();
 
     double t;

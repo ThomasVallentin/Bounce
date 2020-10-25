@@ -29,8 +29,9 @@ void RayTracer::initialize(Scene* sc)
     }
 
     // Build the bbox of all the objects of the scene
-    for (Shape* shape : scene->shapes)
+    for (Shape* shape : scene->shapes) {
         shape->buildBBox();
+    }
 
     // build the scene accelerator
     if (scene->accelerator != nullptr) {
@@ -81,9 +82,6 @@ void RayTracer::trace()
 	std::cout << "Done ! Elapsed time : " << std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::high_resolution_clock::now() - startTime).count()/1000.0 << "s" << std::endl;
     std::cout << "Ray-triangle intersections : " << intersectCount << std::endl;
 
-//    for (auto &v : sampleBuffer)
-//        std::cout << v << std::endl;
-
     std::vector<float> sampleMap;
     sampleMap.resize(camera().width() * camera().height()*3);
     for (size_t i=0; i < camera().width() * camera().height(); i++) {
@@ -92,7 +90,6 @@ void RayTracer::trace()
         sampleMap[i*3 + 2] = sampleBuffer[i] / float(maxSamples());
     }
     writeImage();
-//    adapter->write(m_outpath, camera().width(), camera().height(), sampleMap.data());
 }
 
 using namespace std::chrono_literals;
@@ -124,7 +121,6 @@ Color RayTracer::computeIllumination(const Ray& ray, int depth) const
     HitData hitdata;
     Color outColor = Color::Black();
     bool hasHit = scene->intersect(ray, nearClip, farClip, hitdata);
-
 	if (!hasHit) {
         // hit nothing -> get color at infinity (EnvLights, SkyLights, etc...)
         for (auto light : scene->lights) {
@@ -137,14 +133,15 @@ Color RayTracer::computeIllumination(const Ray& ray, int depth) const
 	hitdata.computeScattering();
 
     if (hitdata.bsdf == nullptr) {
-        return Color::Black();
+        // hit surface doesn't have a bsdf -> spawing a new ray from the hit point with the same direction (going through)
+        return computeIllumination(hitdata.generateRay(ray.direction), depth);
     }
 
+    // Add emission contribution
+    outColor += hitdata.getEmission();
+
     // Sample direct lighting
-//    Ray toLight;
-//    for (auto light : scene->lights) {
-//        toLight = light->getIllumination();
-//    }
+    outColor += sampleAllLights(hitdata);
 
     // Sample Indirect illumination
     float pdf(0);
@@ -152,7 +149,7 @@ Color RayTracer::computeIllumination(const Ray& ray, int depth) const
     Color f = hitdata.bsdf->sample(wo, wi, pdf);
 
     if (f.isBlack() || pdf == 0) {
-        return Color::Black();
+        return outColor;
     }
 
     outColor += f * std::abs(dot(wi, hitdata.normal)) / pdf * computeIllumination(hitdata.generateRay(wi), depth + 1);
@@ -175,30 +172,51 @@ void RayTracer::mergeColorToPixel(const unsigned int &x, const unsigned int &y, 
     sampleBuffer[sampleIndex]++;
 }
 
-//Color RayTracer::computeReflection(const Ray &ray, HitData &hitdata, const int depth) const {
-//    Ray outRay;
-//    Color absorbance;
-//    if(hitdata.shader->sampleReflection(ray, hitdata, outRay, absorbance)) {
-//        return absorbance * computeIllumination(outRay, depth + 1);
-//    }
-//    return Color::Black();
-//}
-//
-//Color RayTracer::computeTransmission(const Ray &ray, HitData &hitdata, const int depth) const {
-//    Ray outRay;
-//    Color absorbance;
-//    if(hitdata.shader->sampleTransmission(ray, hitdata, outRay, absorbance)) {
-//        return absorbance * computeIllumination(outRay, depth + 1);
-//    }
-//    return Color::Black();
-//}
 
 bool RayTracer::writeImage() const {
-    if (adapter == nullptr)
+    if (adapter == nullptr) {
+        std::cout << "No file adapter found, skipping image save..." << std::endl;
         return false;
+    }
 
     adapter->write(m_outpath, m_camera.width(), m_camera.height(), pixelBuffer.data());
     return true;
 }
 
+Color RayTracer::sampleLight(const Light *light, HitData &hitdata) const {
+    Color L = Color::Black();
+    for (size_t s=0; s < light->samples; s++) {
+        Vector3 wi;
+        Point3 lightSample;
+        float pdf;
+
+        // Sample lighting from hit point
+        Color sampledLight = light->sample(hitdata, wi, lightSample, pdf);
+        if (sampledLight.isBlack() || pdf == 0) {
+            continue;
+        }
+
+        // Visibility check
+        Vector3 lightToHitP(hitdata.position - lightSample);
+        if (scene->intersectAny(Ray(lightSample, lightToHitP), nearClip, lightToHitP.length() - 0.0001f)) {
+            continue;
+        }
+
+        // Evaluate the bsdf with the resulting wi
+        Color f = hitdata.bsdf->evaluate(hitdata.wo, wi);
+
+        if (!f.isBlack())
+            L += sampledLight * f * std::abs(dot(wi, hitdata.normal)) / pdf;
+    }
+
+    return L / float(light->samples);
+}
+
+Color RayTracer::sampleAllLights(HitData &hitdata) const {
+    Color L;
+    for (Light *light : scene->lights)
+        L += sampleLight(light, hitdata);
+
+    return L;
+}
 
