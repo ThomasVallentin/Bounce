@@ -1,34 +1,32 @@
 #include "shapes/TriangleMesh.hpp"
+#include "core/Constants.hpp"
 
 // ===================================================================================
 // TRIANGLE MESH
 // ===================================================================================
 TriangleMeshData::TriangleMeshData(const Transform &objectToWorld,
-                                   int nTriangles, int nVertices,
+                                   const int &nTriangles, const int &nPoints, const int &nNormals,
                                    const int *vtxIndices, const Point3 *pnts,
                                    const int *normIndices, const Vector3 *norms) :
-        nbTriangles(nTriangles), nbVertices(nVertices),
+        nTriangles(nTriangles), nPoints(nPoints), nNormals(nNormals),
         vertexIndices(vtxIndices, vtxIndices + 3 * nTriangles),
         normalIndices(normIndices, normIndices + 3 * nTriangles)
 {
     // Creates a Vector3 array based on nbVertices
-    points = new Point3[nVertices];
+    points = new Point3[nPoints];
 
-    // Copying the points of pnts to points
-    for (int i = 0; i < nVertices; i++)
-    {
-        // Bake the transform to the objectSpaced points & normals to make them worldSpaced
-        points[i] = pnts[i] * objectToWorld;
-    }
+    // Copy points
+    for (int i = 0; i < nPoints; i++)
+        points[i] = pnts[i] * objectToWorld;  // Bake points in worldSpace
 
-    if (norms == nullptr) {
+    // Copy normals
+    if (norms == nullptr)
         normals = nullptr;
-    } else {
-        normals = new Vector3[nVertices];
-        for (int i = 0; i < nVertices; i++) {
-            normals[i] = (norms[i] * objectToWorld).normalized();
-//            std::cout << "norms[i] * objectToWorld " << (norms[i] * objectToWorld).normalized() << std::endl;
-//            std::cout << "norms[i] " << norms[i] << std::endl;
+    else {
+        normals = new Vector3[nNormals];
+
+        for (int i = 0; i < nNormals; i++) {
+            normals[i] = (norms[i] * objectToWorld).normalized();  // Bake normals in worldSpace
         }
     }
 }
@@ -57,9 +55,8 @@ bool Triangle::intersect(const Ray &ray, float tmin, float tmax, HitData &hit) c
     float determinant = dot(p0p1, perpendicularVector);
 
     // Testing if the determinant is very close to 0. If so, we skip rendering the triangle
-    if (fabsf(determinant) < 1e-8)
+    if (fabsf(determinant) < 1e-9)
         return false;
-    // TODO: Implement backface culling
 
     float invertDeterminant = 1 / determinant;
 
@@ -89,11 +86,19 @@ bool Triangle::intersect(const Ray &ray, float tmin, float tmax, HitData &hit) c
             Vector3 n2 = mesh->normals[normals[2]];
 
             N = n0*(1 - u - v) + n1*u + n2*v;
+
+            // If vertex normal is empty -> compute face normal
+            if (N.x == 0 && N.y == 0 && N.z == 0) {
+                N = cross(p0p1, p0p2);
+                if (dot(ray.direction, N) > 0)
+                    N *= -1;
+                N.normalize();
+            }
+
         } else {
             N = cross(p0p1, p0p2);
-            if (dot(ray.direction, N) > 0)
-                N *= -1;
-
+//            if (dot(ray.direction, N) > 0)
+//                N *= -1;
             N.normalize();
         }
 

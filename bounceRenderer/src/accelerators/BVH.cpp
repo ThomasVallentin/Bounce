@@ -3,6 +3,7 @@
 //
 
 #include "accelerators/BVH.hpp"
+#include "core/Constants.hpp"
 
 bool BVH::build() {
     buildSubnodes(0, scene->shapes.size());
@@ -57,7 +58,6 @@ bool BVH::intersectAny(const Ray &ray, float tmin, float tmax, HitData &tempdata
 }
 
 void BVH::buildSubnodes(const unsigned int &i0, const unsigned int &i1) {
-//    std::cout << i0 << " " << i1 << std::endl;
     iStart = i0;
     iEnd = i1;
     subnode1 = nullptr;
@@ -73,6 +73,7 @@ void BVH::buildSubnodes(const unsigned int &i0, const unsigned int &i1) {
     // compute diagonal
     Vector3 diagonal = baryBBox.max - baryBBox.min;
 
+    // Get split dimension by finding the biggest length between x, y or z
     unsigned int splitDimension;
     if (diagonal.x >= diagonal.y && diagonal.x >= diagonal.z)
         splitDimension = 0;
@@ -96,7 +97,7 @@ void BVH::buildSubnodes(const unsigned int &i0, const unsigned int &i1) {
     for (size_t i=iStart; i < iEnd; i++) {
         shapePivot = scene->shapes[i]->barycenter()[splitDimension];
 
-        if (shapePivot < splitValue) {
+        if (shapePivot <= splitValue) {
             std::swap(scene->shapes[i], scene->shapes[iSplit]);
             iSplit++;
         }

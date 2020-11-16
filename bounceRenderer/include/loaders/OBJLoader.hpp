@@ -13,7 +13,7 @@ class OBJLoader: public FileLoader
 {
 public:
     OBJLoader() : FileLoader() { extension = "obj"; t = Transform::Identity(); };
-    OBJLoader(const Transform *trans) : FileLoader() { extension = "obj"; t = trans; };
+    explicit OBJLoader(const Transform *trans) : FileLoader() { extension = "obj"; t = trans; };
 
     bool load(const std::string &path, bool force) override;
 

@@ -8,7 +8,7 @@
 #include "core/Vector3.hpp"
 #include "core/Color.hpp"
 
-class HitData;
+struct HitData;
 
 
 class Material {
