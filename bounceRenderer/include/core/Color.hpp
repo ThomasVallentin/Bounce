@@ -29,6 +29,7 @@ public:
 
     float operator[](const unsigned int& i) { float array[]{r, g, b}; return array[i]; }
 
+    explicit operator float() const { return r; }
 
     Color operator+() { return *this; }
     Color operator-() { return Color(-r, -g, -b, -a); }
