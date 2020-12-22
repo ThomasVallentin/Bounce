@@ -16,6 +16,8 @@ file(GLOB_RECURSE INCLUDE_FILES ${CMAKE_CURRENT_SOURCE_DIR}/include/*)
 file(GLOB_RECURSE VCPKG_LIBS C:/REPOSITORIES/vcpkg/installed/x64-windows/lib/*.lib)
 set(VCPKG_INCLUDE_DIR C:/REPOSITORIES/vcpkg/installed/x64-windows/include)
 
+
+message(${SOURCES_FILES})
 # Creating .exe
 add_executable(bounceRenderer main.cpp ${SOURCES_FILES})
 
