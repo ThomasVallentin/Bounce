@@ -1,6 +1,6 @@
 #include "core/RayTracer.hpp"
 
-int intersectCount;
+unsigned int intersectCount = 0;
 
 void printTimeInfo(const std::chrono::time_point<std::chrono::high_resolution_clock>& startTime, float percentage)
 {
@@ -75,6 +75,8 @@ void RayTracer::trace()
 
 	tileCount = threadPool.jobs.size();
     std::cout << "Rendering on " << threadPool.threadCount << " threads." << std::endl;
+    std::cout << "Resolution : " << camera().width() << "x" << camera().height() << std::endl;
+    std::cout << "Samples : " << "Min: " << samplesMin << " | Max: " << samplesMax << std::endl;
 
     threadPool.start();
 	threadPool.join();
@@ -101,7 +103,6 @@ bool RayTracer::threadedTrace() {
 
     // -- Main Render Loop --
     while (m_sampler->sampleRay(x, y, ray)) {
-
         // Computing & storing the light received by the ray
         renderedColor = computeIllumination(ray);
         {
@@ -198,7 +199,7 @@ Color RayTracer::sampleLight(const Light *light, HitData &hitdata) const {
 
         // Visibility check
         Vector3 lightToHitP(hitdata.position - lightSample);
-        if (scene->intersectAny(Ray(lightSample, lightToHitP), nearClip, lightToHitP.length() - 0.0001f)) {
+        if (scene->intersectAny(Ray(lightSample, lightToHitP), nearClip, lightToHitP.length() - 0.001f)) {
             continue;
         }
 

@@ -334,3 +334,5 @@ ASALocalRun/
 .mfractor/
 /tests/
 /bounceRenderer/output/
+/bounceRenderer/libraries/
+/bounceRenderer/bin/

@@ -8,16 +8,17 @@
 #include <vector>
 #include <memory>
 
-extern int intersectCount;
+extern unsigned int intersectCount;
 
 struct TriangleMeshData {
     TriangleMeshData(const Transform &objectToWorld,
-                     int nTriangles, int nVertices,
+                     const int &nTriangles, const int &nPoints, const int &nNormals,
                      const int *vtxIndices, const Point3 *pnts,
                      const int *normIndices, const Vector3 *norms);
 
     bool hasVertexNormal() const { return (normals != nullptr); }
-    const int nbTriangles, nbVertices;
+
+    const unsigned int nTriangles, nPoints, nNormals;
     std::vector<int> vertexIndices, normalIndices;
     Point3* points;
     Vector3* normals;

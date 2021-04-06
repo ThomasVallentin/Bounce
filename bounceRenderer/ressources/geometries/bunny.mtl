@@ -1,3 +1,6 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:c5dad0d54f253ee1895e8b05d0cf3d6d1762fccd2956a092cee4923cd820de69
-size 103
+newmtl bunny:initialShadingGroup
+illum 4
+Kd 0.50 0.50 0.50
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00

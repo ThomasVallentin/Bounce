@@ -4,7 +4,7 @@
 #include "Scene.hpp"
 #include "BSDF.hpp"
 #include "Light.hpp"
-#include "FileAdapters.hpp"
+#include "adapters/OIIOAdapter.hpp"
 #include "Sampler.hpp"
 #include "Shape.hpp"
 #include "Camera.hpp"
@@ -27,11 +27,12 @@ struct Tile {
 
 class RayTracer {
 
+
 public:
 	RayTracer() :
-            nearClip(0.001), farClip(100000), samplesMin(8), samplesMax(50), m_max_depth(1), m_gamma(2.2), adapter(nullptr) {}
+            nearClip(0.001), farClip(100000), samplesMin(8), samplesMax(50), m_max_depth(2), m_gamma(2.2), adapter(new OIIOAdapter()) {}
 	RayTracer(float near_clip, float far_clip, const unsigned int& minsample, const unsigned int& maxsample) :
-            nearClip(near_clip), farClip(far_clip), samplesMin(minsample), samplesMax(maxsample), m_max_depth(1), m_gamma(2.2f), adapter(nullptr) {}
+            nearClip(near_clip), farClip(far_clip), samplesMin(minsample), samplesMax(maxsample), m_max_depth(2), m_gamma(2.2f), adapter(new OIIOAdapter()) {}
 
     std::string outpath() const { return m_outpath; }
 	void setOutpath(const std::string& str) { m_outpath = std::string(str); }
@@ -65,7 +66,7 @@ public:
     Color computeIllumination(const Ray& ray, int depth=0) const;
     Color sampleLight(const Light *light, HitData &hitdata) const;
     Color sampleAllLights(HitData &hitdata) const;
-	void mergeColorToPixel(const unsigned int &x, const unsigned int &y, Color& color);
+    void mergeColorToPixel(const unsigned int &x, const unsigned int &y, Color& color);
     bool writeImage() const;
 
 //	Shader* m_default_shader = new Lambert(0.5f, 0.5f, 0.5f);

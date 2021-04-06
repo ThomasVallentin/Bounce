@@ -29,7 +29,7 @@ bool OBJLoader::load(const std::string &path, bool force) {
         return false;
     }
 
-    int nbTriangles(0), nbVertices(0);
+    int nTriangles(0);
     std::vector<int> vertexIndices, normalIndices;
     std::vector<Point3> positions;
     std::vector<Vector3> normals;
@@ -59,7 +59,6 @@ bool OBJLoader::load(const std::string &path, bool force) {
             pos.z = std::stof(splitted[2]);
 
             positions.push_back(pos);
-            nbVertices++;
         }
         else if (token == "vn")
         {
@@ -108,20 +107,21 @@ bool OBJLoader::load(const std::string &path, bool force) {
 
             }
 
-            nbTriangles++;
+            nTriangles++;
         }
 
     }
+
     const TriangleMeshData *meshData = new TriangleMeshData(*t,
-                                                            nbTriangles,
-                                                            nbVertices,
+                                                            nTriangles,
+                                                            positions.size(),
+                                                            normals.size(),
                                                             vertexIndices.data(),
                                                             positions.data(),
                                                             normalIndices.data(),
                                                             normals.data());
 
-    for (int i=0 ; i < nbTriangles ; i++)
-    {
+    for (int i=0 ; i < nTriangles ; i++) {
         shapes.push_back(new Triangle(t, meshData, i, nullptr));
     }
 

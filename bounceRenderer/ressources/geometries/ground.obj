@@ -1,3 +1,16 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:93b42db7b0e19812d2e99c5a836c978a30cf92f4d711c16ec013b7d8a52d0268
-size 390
+# This file uses centimeters as units for non-parametric coordinates.
+
+mtllib ground.mtl
+g default
+v -10.0000 0.000000 -10.000000
+v -10.0000 0.000000 10.000000
+v 10.0000 0.000000 -10.000000
+v 10.0000 0.000000 10.000000
+vn 0.000000 1.000000 0.0000000
+vn 0.000000 1.000000 0.0000000
+vn 0.000000 1.000000 0.0000000
+vn 0.000000 1.000000 0.0000000
+s off
+g mesh
+f 1//1 2//2 3//3
+f 3//3 2//2 4//4

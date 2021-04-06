@@ -37,5 +37,3 @@ bool FileLoader::load(const std::string &path, bool force) {
 
     return false;
 }
-
-
